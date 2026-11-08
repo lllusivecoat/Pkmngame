@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Intended GitHub Pages address after publishing is enabled: https://lllusivecoat.github.io/Pkmngame/
 
-For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 45 automated checks.
+For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 61 automated checks.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -77,3 +77,19 @@ The first party member follows on the previous walkable map tile; travel and cam
 Motion-off, device reduced-motion and still-art battle modes now use chibi art for the player's side as well as the opponent. Both sides share the available front-facing chibi pose; animated mode retains its rear-view animation.
 
 45 automated checks pass, including six-party save/order/battle state, follower terrain and travel handling, lead promotion, Shiny follower art, and the motion-off battle UI regression. Real-browser visual QA remains outstanding.
+
+## v0.11 — Official stats and species moves
+
+All 18 species now use their official six base stats and complete dual types. Individual battle stats use the Generation IX level formula with fixed IVs of 31, EVs of 0 and official nature modifiers. Historical Curious temperaments remain neutral; variants, size, traits and mastery do not increase stats. Level increases now change actual HP, Attack, Defence, Special Attack, Special Defence and Speed.
+
+`combat-data.json` and `type-chart.json` are offline PokeAPI snapshots; `combat-sources.json` records provenance and assumptions. `scripts/build-combat-data.py` (Python standard library) generates the dependency-free `combat-data.js` bundle. Runtime does not call an API. Scarlet/Violet level-up learnsets are used for 16 species. Pidgey and Caterpie are unavailable in those games and use their Brilliant Diamond/Shining Pearl learnsets.
+
+The reference catalog contains 168 moves. 144 are selectable where species and level allow; 24 with complex pending mechanics are explicitly marked unavailable in the full learnset view. Equipped moves are individual save fields; Details lets you choose up to four unique learned moves. New level-up moves become selectable rather than replacing a favourite move silently. Some early Pokémon naturally know fewer than four moves.
+
+`rules.js` owns stat/nature calculations, legal move selection, full 18-type effectiveness, damage, STAB, critical hits, random damage rolls and stage modifiers. Physical attacks use Attack/Defence; special attacks use Special Attack/Special Defence. Damage modifiers are rounded in order. `battle.js` tracks PP per Pokémon across trainer-team rounds, priorities, Speed ties, accuracy/evasion, stat stages, major statuses, confusion, residual damage, draining/recoil, multi-hit attacks, protecting/enduring, binding, Leech Seed, Disable/Spite, Rain Dance and supported field effects. AI selects from its own legal moves. PP replaces the old shared four-move/energy/Brace system; exploration Energy remains separate. No usable PP triggers Struggle and recoil. Party health and PP refresh at the beginning of each encounter/challenge. Potions restore 20 HP.
+
+Wild encounters keep each zone's level ranges; gym teams use their configured levels, which now affect their actual stats. Arena opponents scale to average party level (capped for the prototype). Six-member parties, followers, discovery-based region unlocks and badges remain intact. Older saves receive legal moves at their existing level while preserving individual IDs, Shiny variants, levels, collection and party order.
+
+This is the agreed core-stat/move upgrade, not full cartridge parity. Ability effects, held items, EV training/IV variation, evolution, TM/egg learning and the 24 deferred move effects are future work. Deferred effects are never replaced silently by a generic attack. Capture probability and progression rewards remain prototype rules. Overworld weather influences encounters; combat weather is set separately by supported moves.
+
+61 automated checks pass. New checks validate reference species data, known stat/damage examples, physical/special defence, modifier rounding, dual-type immunities, critical hits, nature, legal moves, level-up availability, PP/misses/Struggle, priority/paralysis, stages/status immunities, draining/seeding, Protect, side-condition persistence, old-save migration and the move-editor/battle UI. Existing exploration-to-capture, gyms, six-party, followers, themes and artwork checks also pass. Real-browser visual QA remains outstanding.

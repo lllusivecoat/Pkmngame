@@ -1,0 +1,27 @@
+{
+  "provider": "PokeAPI/api-data",
+  "repository": "https://github.com/PokeAPI/api-data",
+  "referenceCommit": "447bd5c378bf87da964bfe4dd7487a7bf1d97cbd",
+  "retrieved": "2026-11-08",
+  "species": 18,
+  "moves": 168,
+  "types": 18,
+  "files": [
+    "data/api/v2/pokemon/{national-dex-number}/index.json",
+    "data/api/v2/move/{move-number}/index.json",
+    "data/api/v2/type/{type-number}/index.json"
+  ],
+  "rules": "Generation IX single battles, Scarlet/Violet level-up learnsets; Brilliant Diamond/Shining Pearl for Pidgey and Caterpie",
+  "statAssumptions": {
+    "IV": 31,
+    "EV": 0,
+    "natures": "Official modifiers; legacy Curious temperament is neutral"
+  },
+  "snapshots": [
+    "combat-data.json",
+    "type-chart.json"
+  ],
+  "generated": "combat-data.js",
+  "deferredMoves": 24,
+  "notes": "Core subset, not full cartridge parity. Abilities, held items, TM/egg learning, evolution and 24 complex move effects are not implemented."
+}

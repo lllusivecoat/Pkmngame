@@ -1,0 +1,20 @@
+:root[data-theme] #app .creature-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}
+:root[data-theme] #app .creature-stats section{padding:14px;min-width:0}
+:root[data-theme] #app .creature-stats strong{font-size:26px;margin:7px 0;display:block}
+:root[data-theme] #app .move-editor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+:root[data-theme] #app .move-editor>div{background:var(--surface-soft);border:1px solid var(--line-color);border-radius:8px;padding:12px;min-width:0}
+:root[data-theme] #app .move-editor label{font-size:11px;color:var(--muted-text);display:block}
+:root[data-theme] #app .move-editor select{width:100%;max-width:100%;font-size:12px;margin:7px 0}
+:root[data-theme] #app .move-editor small{display:block;font-size:10px;line-height:1.7;color:var(--muted-text)}
+:root[data-theme] #app .move-editor p{font-size:11px;line-height:1.7;color:var(--text)}
+.learnset-reference{margin:18px 0;line-height:1.7}.learnset-reference summary{cursor:pointer}.learnset-reference p{font-size:11px;margin:8px 0}
+.move-resource{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:7px;font-size:10px;color:var(--text)}.move-resource small{color:var(--muted-text)}.move-resource strong{font-size:9px;text-transform:uppercase}
+:root[data-theme] #app .ability-button small{line-height:1.7;white-space:normal}
+@media(max-width:560px){:root[data-theme] #app .move-editor{grid-template-columns:1fr}.move-resource{font-size:7px;gap:4px;margin-top:4px}:root[data-theme] #app .creature-stats section{padding:10px}:root[data-theme] #app .creature-stats strong{font-size:21px}}
+:root[data-theme] #app .card .element-tag[data-element="Poison"]{color:var(--type-Poison)}
+:root[data-theme] #app .card .element-tag[data-element="Psychic"]{color:var(--type-Psychic)}
+:root[data-theme] #app .card .element-tag[data-element="Ice"]{color:var(--type-Ice)}
+:root[data-theme] #app .card .element-tag[data-element="Dark"]{color:var(--type-Dark)}
+:root[data-theme] #app .card .element-tag[data-element="Steel"]{color:var(--type-Steel)}
+:root[data-theme] #app .card .element-tag[data-element="Fairy"]{color:var(--type-Fairy)}
+:root[data-theme] #app .card .element-tag[data-element="Fighting"]{color:var(--type-Fighting)}
