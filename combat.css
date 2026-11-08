@@ -18,3 +18,14 @@
 :root[data-theme] #app .card .element-tag[data-element="Steel"]{color:var(--type-Steel)}
 :root[data-theme] #app .card .element-tag[data-element="Fairy"]{color:var(--type-Fairy)}
 :root[data-theme] #app .card .element-tag[data-element="Fighting"]{color:var(--type-Fighting)}
+/* Health belongs to a separate layout row, never to a sprite's scene layer. */
+.battle-status-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 12px;position:relative}
+.battle-status-row>section{min-width:0}
+:root[data-theme] #app .battle-side-label{display:block;font-size:9px;letter-spacing:1px;color:var(--muted-text);margin:0 0 6px}
+:root[data-theme] #app .battle-status-row .combat-hud{position:static;inset:auto;min-height:104px;padding:12px;border:1px solid var(--line-color);border-radius:8px;background:var(--surface-soft);box-shadow:none;backdrop-filter:none}
+:root[data-theme] #app .battle-status-row .combat-hud h3{display:flex;justify-content:space-between;flex-wrap:wrap;gap:5px;font-size:14px;line-height:1.4;color:var(--text);margin:0 0 7px}
+:root[data-theme] #app .battle-status-row .combat-hud h3 small,:root[data-theme] #app .battle-status-row .hud-hp{color:var(--muted-text);font-size:10px}
+:root[data-theme] #app .battle-status-row .bar{height:6px;margin:7px 0}
+:root[data-theme] #app .battle-status-row .hud-hp span{margin-left:5px;text-transform:capitalize}
+:root[data-theme] #app .scenic-battle .combat-ally .battle-creature,:root[data-theme] #app .scenic-battle .combat-enemy .battle-creature{padding:0}
+@media(max-width:560px){.battle-status-row{gap:8px;margin-bottom:10px}:root[data-theme] #app .battle-status-row .combat-hud{padding:9px;min-height:96px}:root[data-theme] #app .battle-status-row .combat-hud h3{font-size:12px}:root[data-theme] #app .battle-status-row .combat-hud h3 small,:root[data-theme] #app .battle-status-row .hud-hp{font-size:9px}:root[data-theme] #app .battle-side-label{font-size:8px}}
