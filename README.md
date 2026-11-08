@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Intended GitHub Pages address after publishing is enabled: https://lllusivecoat.github.io/Pkmngame/
 
-For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 41 automated checks.
+For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 45 automated checks.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -67,3 +67,13 @@ Gyms at (7, 7) have three-opponent AI teams: Rowan (Grass, Canopy Badge), Lyra (
 `world.js` owns map definitions, exits, arrival tiles, gym rosters, landmarks, travel validation and discovery. `core.js` uses the active map for movement, encounters, hunting and save migration. `battle.js` owns gym challenges and rewards. `visuals.js` caches zone SVG terrain; `world.css` handles responsive map markers and the route journal. The save adds region, unlocked zones, discovered locations, visited tiles and badges under the existing key; older collections and progression are retained. Dratini clues remain in Greenwood. Camps restore energy in every zone.
 
 41 automated checks cover reachable routes/landmarks/gyms, bidirectional travel through all zones, anti-teleport validation, full gym victories and one-time rewards, capture prevention, old saves, current-zone collisions and encounters, map rendering and UI interaction from walking to a gate through a gym challenge. Real-browser visual QA remains outstanding in this environment.
+
+## v0.10 — Six partners and an overworld companion
+
+Party capacity is six (`PARTY_LIMIT` in core.js), including automatic catch placement, manual adds/removals, save imports, battle HP/energy and swaps. Profile showcases still hold three. Existing party order and saves are preserved. Party controls wrap on desktop and mobile.
+
+The first party member follows on the previous walkable map tile; travel and camp defeat safely reset its position. It uses the matching normal/Shiny chibi artwork, an offline elemental fallback, a movement hop and reduced-motion support. Creature details provide “Make lead & follower” for party members; promoting a member also makes it the starting battler. No new creatures are added to old saves automatically.
+
+Motion-off, device reduced-motion and still-art battle modes now use chibi art for the player's side as well as the opponent. Both sides share the available front-facing chibi pose; animated mode retains its rear-view animation.
+
+45 automated checks pass, including six-party save/order/battle state, follower terrain and travel handling, lead promotion, Shiny follower art, and the motion-off battle UI regression. Real-browser visual QA remains outstanding.
