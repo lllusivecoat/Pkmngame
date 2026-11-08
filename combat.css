@@ -78,7 +78,7 @@
 @media(max-width:1100px){:root[data-theme] #app .encounter-layout{grid-template-columns:1fr}.battle-command-deck{grid-template-columns:minmax(180px,.7fr) minmax(0,1.3fr)}}
 @media(max-width:560px){.battle-opponent-band{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:8px}.battle-context{gap:4px;padding-bottom:10px}:root[data-theme] #app .battle-context strong{font-size:13px}:root[data-theme] #app .battle-context small{font-size:7px;letter-spacing:.7px}:root[data-theme] #app .battle-context span{font-size:8px}:root[data-theme] #app .battle-opponent-band .combat-hud{min-height:75px;padding:8px}:root[data-theme] #app .scenic-battle.battle-stage{min-height:240px;aspect-ratio:1.5}.battle-command-deck{grid-template-columns:1fr;gap:12px;margin-top:12px}:root[data-theme] #app .battle-player-band .combat-hud{min-height:0;padding:10px 12px}:root[data-theme] #app .battle-player-band .battle-side-label{margin-bottom:4px}:root[data-theme] #app .battle-move-menu .ability-button>span:last-child{font-size:12px}:root[data-theme] #app .battle-move-menu .ability-button small{font-size:9px!important}:root[data-theme] #app .move-matchup{font-size:9px}}
 /* Original cel-shaded biome atlas: each battle displays only its own quadrant. */
-:root[data-theme] #app .scenic-battle.battle-stage[data-biome]{background-image:url('assets/battle-biomes.webp');background-size:200% 200%;background-repeat:no-repeat;background-position:0% 0%;background-color:#a8ca8e}
+:root[data-theme] #app .scenic-battle.battle-stage[data-biome]{background-image:url('assets/battle-biomes.webp?v=20261108-2');background-size:200% 200%;background-repeat:no-repeat;background-position:0% 0%;background-color:#a8ca8e}
 :root[data-theme] #app .scenic-battle.battle-stage[data-biome="ridge"]{background-position:100% 0%;background-color:#a0a7c7}
 :root[data-theme] #app .scenic-battle.battle-stage[data-biome="ash"]{background-position:0% 100%;background-color:#e7ac8b}
 :root[data-theme] #app .scenic-battle.battle-stage[data-biome="frost"]{background-position:100% 100%;background-color:#c9e5f5}
@@ -86,3 +86,9 @@
 :root[data-theme] #app .scenic-battle .combatant:before{content:none}
 :root[data-theme] #app .scenic-battle .combat-enemy{bottom:28%}
 @media(max-width:560px){:root[data-theme] #app .scenic-battle .combat-enemy{bottom:28%}}
+
+/* A dedicated sticky toolbar keeps dismissal above decorative art and scroll content. */
+:root[data-theme] #app .detail .dialog-topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 12px;margin-bottom:8px;background:var(--surface);border-bottom:1px solid var(--line-color);isolation:isolate}
+:root[data-theme] #app .dialog-topbar>small{font-size:10px;letter-spacing:1px;color:var(--muted-text)}
+:root[data-theme] #app .detail .dialog-topbar .close{position:static;inset:auto;z-index:21;display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:0;line-height:1;font-size:26px;pointer-events:auto;touch-action:manipulation;cursor:pointer}
+:root[data-theme] #app .detail>.art{pointer-events:none}

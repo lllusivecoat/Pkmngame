@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Intended GitHub Pages address after publishing is enabled: https://lllusivecoat.github.io/Pkmngame/
 
-For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 61 automated checks.
+For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 62 automated checks.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -103,3 +103,5 @@ The battle screen now places the opponent HUD above-right and the player HUD bel
 
 ### Stylised biome battle backgrounds
 The detailed landscape has been replaced in battles by an original cel-shaded environment atlas (`assets/battle-biomes.webp`, approximately 55 KB). Each zone displays one quadrant: Greenwood woodland, Thunder Ridge rocks, Ashlands terracotta, or Frostfall snow. Broad shapes, quiet ground colours and integrated contact patches suit both chibi stills and animated game models. Sprite sizes remain compact. Background selection follows the active zone and is independent of interface appearance; no remote background service is needed. The homepage artwork is unchanged.
+
+Asset refresh / dialog fix: the HTML now versions the app entry, theme/combat CSS and biome atlas URL so browsers request the updated battle presentation. Detail and field-note dialogs use a dedicated sticky toolbar with a 44px close target above decorative artwork; closing also stops event propagation. No save reset is required. The 62 automated checks include both close paths.
