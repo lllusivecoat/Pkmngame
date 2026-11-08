@@ -1,0 +1,94 @@
+/* Trainer-device controls: theme-aware surfaces, clear action labels and tactile
+   feedback. Decoration does not change the game's action or keyboard bindings. */
+:root,:root[data-theme="light"]{--button-red:#b63043;--button-red-hover:#9e2134;--button-red-edge:#782233;--button-primary-ink:#ffffff;--button-case:#263947;--button-key-edge:#91a395;--button-glint:#ffffff75;--button-led:#e0555d}
+:root[data-theme="dark"]{--button-red:#c7354a;--button-red-hover:#b52c41;--button-red-edge:#7c2738;--button-primary-ink:#ffffff;--button-case:#0a131b;--button-key-edge:#435c60;--button-glint:#ffffff30;--button-led:#f08083}
+:root[data-theme] #app :is(.primary,.secondary,.danger){position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:system-ui,sans-serif;font-weight:650;letter-spacing:.15px;line-height:1.4;min-height:45px;padding:12px 19px;touch-action:manipulation;transition:transform .14s,box-shadow .14s,background-color .14s,border-color .14s}
+:root[data-theme] #app .primary{color:var(--button-primary-ink);background:linear-gradient(180deg,color-mix(in srgb,var(--button-red) 92%,#fff),var(--button-red));border:2px solid var(--button-case);border-radius:999px;box-shadow:inset 0 2px 0 var(--button-glint),inset 0 -3px 0 #00000018,0 4px 0 var(--button-red-edge),0 7px 14px #14232222;text-shadow:0 1px 1px #390d1833;overflow:hidden}
+:root[data-theme] #app .primary :is(strong,small,span){color:var(--button-primary-ink)}
+:root[data-theme] #app .primary::before{content:'';display:block;position:relative;width:21px;height:21px;box-sizing:border-box;border:2px solid #24333d;border-radius:50%;flex:0 0 21px;background:radial-gradient(circle,#ffffff 0 16%,#24333d 18% 27%,transparent 29%),linear-gradient(0deg,#f8f8ed 0 43%,#24333d 44% 56%,#ed6570 57% 100%);box-shadow:inset 0 1px 1px #fff8,0 1px 2px #4c112944}
+:root[data-theme] #app .primary::after{content:'';position:absolute;z-index:-1;inset:-80% auto -80% -50%;width:25%;background:linear-gradient(90deg,transparent,#ffffff24,transparent);transform:skewX(-25deg);pointer-events:none;transition:left .35s}
+:root[data-theme] #app .capture-button::before{display:none}
+:root[data-theme] #app .capture-button>svg{width:27px;height:27px;flex-shrink:0}
+:root[data-theme] #app .secondary{background:linear-gradient(180deg,var(--surface-raised),var(--surface-soft));color:var(--text);border:1px solid var(--strong-line);border-bottom-width:3px;border-radius:12px;box-shadow:inset 0 2px 0 var(--button-glint),0 3px 0 var(--button-key-edge),0 5px 10px #10232612;overflow:visible}
+:root[data-theme] #app .secondary::after{content:'';position:absolute;right:7px;bottom:6px;width:3px;height:3px;border-radius:50%;background:var(--strong-line);opacity:.55;pointer-events:none}
+:root[data-theme] #app .danger{border-width:2px;border-radius:12px;box-shadow:0 3px 0 var(--button-key-edge);font-weight:600}
+:root[data-theme] #app :is(.primary,.secondary,.danger):active:not(:disabled){transform:translateY(3px);box-shadow:inset 0 1px 2px #0002,0 1px 0 var(--button-key-edge);filter:none}
+:root[data-theme] #app :is(.primary,.secondary,.danger):focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+:root[data-theme] #app :is(.primary,.secondary,.danger):disabled{transform:none;background:var(--disabled-bg);border-color:var(--line-color);color:var(--disabled-ink);box-shadow:inset 0 1px 0 #ffffff10,0 1px 0 var(--line-color);text-shadow:none;cursor:not-allowed}
+:root[data-theme] #app :is(.primary,.secondary,.danger):disabled :is(span,strong,small){color:var(--disabled-ink)}
+:root[data-theme] #app .primary:disabled::before{background:radial-gradient(circle,var(--surface-raised) 0 16%,var(--disabled-ink) 18% 27%,transparent 29%),linear-gradient(0deg,var(--surface-soft) 0 44%,var(--disabled-ink) 45% 55%,var(--line-color) 56%);border-color:var(--disabled-ink);box-shadow:none}
+:root[data-theme] #app .primary:disabled::after{display:none}
+:root[data-theme] #app .trainer-icon{width:23px;height:23px;flex:0 0 23px;display:inline-block;vertical-align:middle;overflow:visible;pointer-events:none}
+:root[data-theme] #app .resource-bar>button{display:grid;place-items:center;padding:6px;border-radius:9px;background:var(--surface);border:1px solid var(--line-color);box-shadow:0 2px 0 var(--button-key-edge)}
+:root[data-theme] #app .sidebar nav{gap:9px}
+:root[data-theme] #app .sidebar nav button{position:relative;display:flex;align-items:center;gap:13px;min-height:47px;padding:12px 13px;border-radius:11px;border:1px solid transparent;border-bottom-width:2px;background:transparent;font-weight:550;transition:transform .14s,box-shadow .14s,background-color .14s}
+:root[data-theme] #app .sidebar nav button .nav-emblem{display:grid;place-items:center;width:25px;height:25px;flex:0 0 25px;color:inherit}
+:root[data-theme] #app .sidebar nav button .nav-caption{display:block;font-size:14px;line-height:1.4;height:auto;color:inherit;letter-spacing:.1px}
+:root[data-theme] #app .sidebar nav button.active{background:var(--soft-accent);border-color:var(--strong-line);box-shadow:inset 4px 0 0 var(--button-red),inset 0 1px 0 var(--button-glint),0 3px 0 var(--button-key-edge);color:var(--accent-text)}
+:root[data-theme] #app .sidebar nav button.active::after{content:'';position:absolute;right:9px;width:5px;height:5px;border:2px solid currentColor;border-left:0;border-bottom:0;transform:rotate(45deg);opacity:.75}
+:root[data-theme] #app .sidebar nav button:active{transform:translateY(2px)}
+:root[data-theme] #app .settings-link{display:flex;align-items:center;gap:11px;font-size:13px;font-weight:500;border-radius:10px}
+:root[data-theme] #app .theme-picker{border:2px solid var(--line-color);border-radius:13px;box-shadow:inset 0 2px 3px #0000000d;padding:4px}
+:root[data-theme] #app .theme-picker button{position:relative;border-radius:9px;min-height:35px;transition:transform .12s,background-color .12s}
+:root[data-theme] #app .theme-picker button[aria-pressed="true"]{border-color:var(--strong-line);box-shadow:inset 0 1px 0 var(--button-glint),0 2px 0 var(--button-key-edge);padding-right:13px}
+:root[data-theme] #app .theme-picker button[aria-pressed="true"]::after{content:'';position:absolute;right:4px;top:4px;width:4px;height:4px;border-radius:50%;background:var(--button-led);box-shadow:0 0 0 1px var(--surface)}
+:root[data-theme] #app .theme-picker button:active{transform:translateY(1px)}
+:root[data-theme] #app .region-tabs button{position:relative;overflow:hidden;padding:14px 16px 14px 20px;border-radius:12px;border:1px solid var(--line-color);border-bottom-width:3px;background:var(--surface);box-shadow:inset 0 1px 0 var(--button-glint),0 2px 0 var(--button-key-edge);color:var(--text);font-weight:600;transition:transform .14s,background-color .14s}
+:root[data-theme] #app .region-tabs button::before{content:'';position:absolute;inset:8px auto 8px 6px;width:4px;border-radius:4px;background:var(--region-accent,var(--accent))}
+:root[data-theme] #app .region-tabs button[data-region-element="Grass"]{--region-accent:var(--type-Grass)}
+:root[data-theme] #app .region-tabs button[data-region-element="Electric"]{--region-accent:var(--type-Electric)}
+:root[data-theme] #app .region-tabs button[data-region-element="Fire"]{--region-accent:var(--type-Fire)}
+:root[data-theme] #app .region-tabs button[data-region-element="Frost"]{--region-accent:var(--type-Water)}
+:root[data-theme] #app .region-tabs button.selected{background:var(--soft-accent);border-color:var(--strong-line)}
+:root[data-theme] #app .region-tabs button:active{transform:translateY(2px);box-shadow:0 1px 0 var(--button-key-edge)}
+:root[data-theme] #app .region-tabs button small{font-weight:400;letter-spacing:0}
+:root[data-theme] #app .ability-button{--move-ink:var(--text);--move-base:var(--surface-soft);border-radius:13px;border:1px solid var(--strong-line);border-bottom-width:3px;background:linear-gradient(150deg,var(--surface),color-mix(in srgb,var(--move-ink) 10%,var(--surface)));padding:13px 12px!important;gap:10px;justify-content:flex-start;box-shadow:inset 0 2px 0 var(--button-glint),0 3px 0 var(--button-key-edge)}
+:root[data-theme] #app .ability-button .ability-glyph{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;border:1px solid color-mix(in srgb,var(--move-ink) 40%,transparent);background:color-mix(in srgb,var(--move-ink) 10%,var(--surface));color:var(--move-ink)}
+:root[data-theme] #app .ability-glyph .trainer-icon{width:23px;height:23px;flex-basis:23px}
+:root[data-theme] #app .ability-button>span:last-child{color:var(--text);font-weight:650;line-height:1.5;white-space:normal}
+:root[data-theme] #app .ability-button small{color:var(--muted-text);font-weight:400;letter-spacing:0;font-size:12px!important}
+:root[data-theme] #app .ability-button[data-action-type="Grass"]{--move-ink:var(--type-Grass)}
+:root[data-theme] #app .ability-button[data-action-type="Fire"]{--move-ink:var(--type-Fire)}
+:root[data-theme] #app .ability-button[data-action-type="Water"]{--move-ink:var(--type-Water)}
+:root[data-theme] #app .ability-button[data-action-type="Electric"]{--move-ink:var(--type-Electric)}
+:root[data-theme] #app .ability-button[data-action-type="Flying"]{--move-ink:var(--type-Flying)}
+:root[data-theme] #app .ability-button[data-action-type="Bug"]{--move-ink:var(--type-Bug)}
+:root[data-theme] #app .ability-button[data-action-type="Normal"]{--move-ink:var(--type-Normal)}
+:root[data-theme] #app .ability-button[data-action-type="Rock"]{--move-ink:var(--type-Rock)}
+:root[data-theme] #app .ability-button[data-action-type="Ghost"]{--move-ink:var(--type-Ghost)}
+:root[data-theme] #app .ability-button[data-action-type="Dragon"]{--move-ink:var(--type-Dragon)}
+:root[data-theme] #app .ability-button[data-action-type="Ground"]{--move-ink:var(--type-Ground)}
+:root[data-theme] #app .ability-button[data-action-type="Guard"]{--move-ink:var(--type-Water)}
+:root[data-theme] #app .ability-button:disabled{background:var(--disabled-bg);border-color:var(--line-color);box-shadow:0 1px 0 var(--line-color)}
+:root[data-theme] #app .ability-button:disabled :is(.ability-glyph,.trainer-icon){color:var(--disabled-ink);border-color:var(--line-color);background:transparent}
+:root[data-theme] #app .swap-select{border-radius:12px;border-bottom-width:3px;box-shadow:inset 0 1px 0 var(--button-glint),0 3px 0 var(--button-key-edge)}
+:root[data-theme] #app .swap-select>span{display:flex;align-items:center;gap:6px;font-weight:600}
+:root[data-theme] #app .swap-select .trainer-icon{width:19px;height:19px;flex-basis:19px}
+:root[data-theme] #app .trap-option{border-radius:14px;border:1px solid var(--strong-line);border-bottom-width:3px;background:linear-gradient(var(--surface),var(--surface-soft));box-shadow:inset 0 2px 0 var(--button-glint),0 3px 0 var(--button-key-edge);transition:transform .15s,background-color .15s}
+:root[data-theme] #app .trap-option>svg{filter:drop-shadow(0 3px 2px #18243422);transition:transform .18s}
+:root[data-theme] #app .trap-option.selected{border-color:var(--accent);border-width:2px;border-bottom-width:3px;background:var(--soft-accent);box-shadow:inset 0 2px 0 var(--button-glint),0 3px 0 var(--button-key-edge)}
+:root[data-theme] #app .trap-option.selected>svg{transform:translateY(-2px) rotate(-7deg)}
+:root[data-theme] #app .trap-option:active{transform:translateY(2px);box-shadow:0 1px 0 var(--button-key-edge)}
+:root[data-theme] #app .trap-option>strong{font-weight:650}
+:root[data-theme] #app .trap-check{border:2px solid var(--surface);height:21px;width:21px}
+:root[data-theme] #app .dpad{gap:5px;padding:8px;border:2px solid var(--line-color);border-radius:18px;background:var(--surface-soft);box-shadow:inset 0 2px 4px #0000000d}
+:root[data-theme] #app .dpad button{background:linear-gradient(var(--surface-raised),var(--surface-hover));color:var(--text);border:1px solid var(--strong-line);border-bottom-width:3px;border-radius:9px;box-shadow:inset 0 1px 0 var(--button-glint),0 3px 0 var(--button-key-edge);font-size:20px;line-height:24px;min-height:37px;touch-action:manipulation}
+:root[data-theme] #app .dpad button:first-child{border-radius:12px 12px 7px 7px}
+:root[data-theme] #app .dpad button:nth-child(2){border-radius:12px 7px 7px 12px}
+:root[data-theme] #app .dpad button:last-child{border-radius:7px 12px 12px 7px}
+:root[data-theme] #app .dpad button:active{transform:translateY(3px);box-shadow:inset 0 2px 3px #0002;background:var(--soft-accent)}
+:root[data-theme] #app .close{width:36px;height:36px;border:2px solid var(--strong-line);border-radius:50%;font-weight:600;box-shadow:inset 0 1px 0 var(--button-glint),0 3px 0 var(--button-key-edge)}
+:root[data-theme] #app .close:active{transform:translateY(2px);box-shadow:0 1px 0 var(--button-key-edge)}
+:root[data-theme] #app .text{font-weight:600;text-decoration:none;border-radius:6px;padding:6px 4px}
+:root[data-theme] #app .text:hover{text-decoration:underline;text-underline-offset:4px}
+:root[data-theme] #app .hero .primary{font-size:15px;min-height:48px;padding:12px 23px}
+:root[data-theme] #app .starter .primary{border-radius:999px;min-height:41px;box-shadow:0 3px 0 var(--button-red-edge);font-size:12px;padding:9px 10px}
+:root[data-theme] #app .starter .primary::before{width:17px;height:17px;flex-basis:17px}
+:root[data-theme] #app .starter .primary :is(span,small,strong){color:var(--button-primary-ink)}
+:root[data-theme] #app .quest{font-size:12px}
+@media(hover:hover){:root[data-theme] #app .primary:hover:not(:disabled){background:var(--button-red-hover);color:var(--button-primary-ink);transform:translateY(-2px);box-shadow:inset 0 2px 0 var(--button-glint),0 6px 0 var(--button-red-edge),0 11px 18px #14232220;filter:none}:root[data-theme] #app .primary:hover:not(:disabled)::after{left:125%}:root[data-theme] #app .secondary:hover:not(:disabled){transform:translateY(-2px);box-shadow:inset 0 2px 0 var(--button-glint),0 5px 0 var(--button-key-edge),0 9px 14px #14232212;filter:none}:root[data-theme] #app .sidebar nav button:hover{transform:translateX(2px)}:root[data-theme] #app .trap-option:hover:not(:disabled)>svg{transform:translateY(-3px) rotate(-9deg)}:root[data-theme] #app :is(.primary,.secondary):active:not(:disabled){transform:translateY(3px);box-shadow:inset 0 1px 2px #0002,0 1px 0 var(--button-key-edge)}}
+@media(max-width:1200px){:root[data-theme] #app .ability-button{padding:12px 9px!important;gap:8px}:root[data-theme] #app .ability-button .ability-glyph{width:29px;height:29px;flex-basis:29px}:root[data-theme] #app .ability-glyph .trainer-icon{width:20px;height:20px;flex-basis:20px}:root[data-theme] #app .ability-button small{font-size:11px!important}}
+@media(max-width:800px){:root[data-theme] #app .sidebar nav button .nav-caption{display:none}:root[data-theme] #app .sidebar nav button{justify-content:center;padding:12px 5px}:root[data-theme] #app .sidebar nav button.active::after{display:none}}
+@media(max-width:560px){:root[data-theme] #app :is(.primary,.secondary,.danger){font-size:14px;padding:11px 15px;min-height:44px;gap:8px}:root[data-theme] #app .primary::before{width:20px;height:20px;flex-basis:20px}:root[data-theme] #app .sidebar nav{gap:3px}:root[data-theme] #app .sidebar nav button{flex-direction:column;padding:6px 0;min-height:56px;border-radius:9px;gap:4px;border-width:1px}:root[data-theme] #app .sidebar nav button .nav-emblem{width:23px;height:23px;flex-basis:23px}:root[data-theme] #app .sidebar nav button .trainer-icon{width:21px;height:21px;flex-basis:21px}:root[data-theme] #app .sidebar nav button .nav-caption{display:block;font-size:10px;line-height:14px;height:auto}:root[data-theme] #app .sidebar nav button.active{box-shadow:inset 0 -3px 0 var(--button-red);border-color:var(--line-color)}:root[data-theme] #app .sidebar nav button:active{transform:translateY(1px)}:root[data-theme] #app .theme-picker button{min-width:32px}:root[data-theme] #app .theme-picker button[aria-pressed="true"]{padding-right:9px}:root[data-theme] #app .ability-button{padding:12px 10px!important;gap:8px}:root[data-theme] #app .ability-button .ability-glyph{height:30px;width:30px;flex-basis:30px}:root[data-theme] #app .ability-button>span:last-child{font-size:13px}:root[data-theme] #app .ability-button small{font-size:11px!important}:root[data-theme] #app .trap-option{padding:10px 4px;gap:5px}:root[data-theme] #app .trap-option.selected{padding:9px 3px}:root[data-theme] #app .trap-option>strong{font-size:11px}:root[data-theme] #app .region-tabs button{padding:13px 12px 13px 19px;font-size:13px}:root[data-theme] #app .region-tabs small{font-size:12px}:root[data-theme] #app .dpad{padding:7px;gap:4px}:root[data-theme] #app .dpad button{font-size:19px;padding:5px;min-height:36px}:root[data-theme] #app .starter .primary{font-size:12px;padding:9px 8px;min-height:38px}:root[data-theme] #app .starter .primary::before{width:15px;height:15px;flex-basis:15px}:root[data-theme] #app .capture-button{min-height:46px;font-size:15px}}
+@media(prefers-reduced-motion:reduce){:root[data-theme] #app :is(.primary,.secondary,.danger,.trap-option,.trap-option>svg,.sidebar nav button,.region-tabs button,.theme-picker button){transition:none!important}:root[data-theme] #app .primary::after{display:none}:root[data-theme] #app :is(.primary,.secondary,.trap-option,.sidebar nav button):hover{transform:none}}
+.reduce-motion .primary::after{display:none}
