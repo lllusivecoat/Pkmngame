@@ -14,7 +14,7 @@ The static website is at the repository root: index.html, app.js, core.js, battl
 
 ## Saves
 
-Progress is saved in the browser under `greenwood.save.v2`. Settings provides JSON export/import and a confirmed reset. The existing Greenwood site uses the same save key on the same GitHub Pages origin, so progress is shared in the same browser/profile. Wayfarer’s Lantern uses separate save data and is not modified.
+Progress is saved in the browser under `greenwood.save.v2`. Settings provides JSON export/import and a confirmed reset. Earlier Greenwood versions used the same save key on this GitHub Pages origin, so existing progress remains available in the same browser/profile. Wayfarer’s Lantern uses separate save data and is not modified.
 
 ## Artwork and scope
 
