@@ -1,10 +1,10 @@
 {
   "name": "pkmngame-greenwood",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/artwork.test.mjs && node tests/backbone.test.mjs && node tests/gameplay.test.mjs && node tests/presentation.test.mjs && node tests/ui.test.mjs && node tests/theme.test.mjs",
+    "test": "node tests/artwork.test.mjs && node tests/backbone.test.mjs && node tests/gameplay.test.mjs && node tests/presentation.test.mjs && node tests/ui.test.mjs && node tests/theme.test.mjs && node tests/world.test.mjs",
     "start": "node serve.mjs"
   }
 }

@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Intended GitHub Pages address after publishing is enabled: https://lllusivecoat.github.io/Pkmngame/
 
-For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 33 automated checks.
+For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 41 automated checks.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -18,7 +18,7 @@ Progress is saved in the browser under `greenwood.save.v2`. Settings provides JS
 
 ## Artwork and scope
 
-Generated forest backgrounds are bundled locally. Full-body Pokémon sprites load from the public PokeAPI sprite repository; an offline symbol fallback is retained. This is a fan prototype, not an official product. Guild networking, multiplayer trading/PvP and other regions remain previews.
+Generated forest backgrounds are bundled locally. Full-body Pokémon sprites load from the public PokeAPI sprite repository; an offline symbol fallback is retained. This is a fan prototype, not an official product. Guild networking and multiplayer trading/PvP remain previews. All four connected zones are playable.
 
 33 automated checks cover progression, capture, combat, party, market, save migrations, navigation bindings and map/hunt consistency. A real-browser visual check remains outstanding.
 
@@ -47,7 +47,7 @@ The catching tools are displayed as Poké Ball, Great Ball and Ultra Ball, with 
 ### Trainer presentation (v0.8)
 The original chibi explorer uses a local transparent four-direction sprite atlas at `assets/trainer-atlas.webp`. `trainer.css` selects idle/walking frames; `visuals.js` renders it with an SVG fallback. Legal moves save the facing direction, while old saves default to facing forward. Movement respects both the in-game motion toggle and device reduced-motion preference. No remote trainer image service is required.
 
-Connected regions can later use separate map definitions with exits linking a destination map and arrival tile. Keep only the current map rendered, with collection, world conditions, and progression shared across regions. Region tabs currently remain previews; this release does not add region travel.
+The connected region system is now implemented in v0.9 (below), retaining separate map definitions and rendering only the active area.
 
 Normal-colour front-facing still fallbacks now use local chibi artwork in `assets/chibi/`. Animated sources remain first choice; rear views retain their existing sources. Each SVG contains its own static atlas image, so it works without remote image dependencies.
 
@@ -55,3 +55,15 @@ Normal-colour front-facing still fallbacks now use local chibi artwork in `asset
 All 18 species have individually recoloured stills in `assets/chibi/shiny/`, using the same chibi silhouettes as their normal counterparts. `palettes.json` records material choices and Shiny reference URLs. The optional offline Pillow tool `scripts/build-shiny-art.py` rebuilds the art from the existing atlas; it checks unchanged alpha for every pixel. Production remains dependency-free. Body, wool, gas, shell, markings, flame and other materials are treated separately, preserving shading rather than applying one universal hue rotation.
 
 These are stylised palette adaptations checked against canonical Shiny references, not exact pixel copies of official artwork. Animated sprites remain animated; reduced-motion and still-art modes use the matching chibi Shiny assets. Existing saves and collection variants need no migration.
+
+## v0.9 — Connected exploration and local gyms
+
+Greenwood, Thunder Ridge, Ashlands and Frostfall each have a separate 10×10 map (up from 8×8), camp, two discoverable landmarks, distinct encounter pool/level range, terrain palette and local gym.
+
+Walk to the eastern/northeastern route gate at (9, 1) to discover and unlock the next zone. Use the gate action to cross. Reverse gates at (0, 8) allow return journeys. Unlocking depends on physically finding the gate, not trainer level or a menu shortcut. The trail guide gives coordinates; discovered routes and locations persist. Only the active map is rendered.
+
+Gyms at (7, 7) have three-opponent AI teams: Rowan (Grass, Canopy Badge), Lyra (Electric, Tempest Badge), Flint (Fire, Cinder Badge) and Sera (Water, Glacier Badge). Reach the gym to challenge the leader. Captures are disabled, party health is restored at the start, first victories grant a badge and 400 coins/100 XP bonus, and rematches cannot duplicate the bonus. Gym wins do not alter arena rank. Gyms are optional side challenges; traversal unlocks new zones.
+
+`world.js` owns map definitions, exits, arrival tiles, gym rosters, landmarks, travel validation and discovery. `core.js` uses the active map for movement, encounters, hunting and save migration. `battle.js` owns gym challenges and rewards. `visuals.js` caches zone SVG terrain; `world.css` handles responsive map markers and the route journal. The save adds region, unlocked zones, discovered locations, visited tiles and badges under the existing key; older collections and progression are retained. Dratini clues remain in Greenwood. Camps restore energy in every zone.
+
+41 automated checks cover reachable routes/landmarks/gyms, bidirectional travel through all zones, anti-teleport validation, full gym victories and one-time rewards, capture prevention, old saves, current-zone collisions and encounters, map rendering and UI interaction from walking to a gate through a gym challenge. Real-browser visual QA remains outstanding in this environment.

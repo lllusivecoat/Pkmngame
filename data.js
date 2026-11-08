@@ -1,3 +1,4 @@
+import {zones} from './world.js';
 // Static species data and encounter configuration. No network is required.
 export const roster = [
   ['bulbasaur',1,'Bulbasaur','Grass',45,49,49,45,'Common','A quiet woodland partner that thrives in the morning rain.','Forest','Morning','Rain','Overgrow'],
@@ -22,7 +23,7 @@ export const roster = [
 export const get=id=>roster.find(p=>p.id===id);
 export const colors={Grass:'#a6d69d',Fire:'#e8ac84',Water:'#8dc5dd',Electric:'#e0cd88',Flying:'#bfc9d1',Bug:'#c1d18b',Normal:'#c6b8a9',Rock:'#c9b997',Ghost:'#c3a5db',Dragon:'#adacd9',Ground:'#d6b892'};
 export const icons={Grass:'❧',Fire:'♨',Water:'≈',Electric:'ϟ',Flying:'⋎',Bug:'♧',Normal:'✧',Rock:'⬡',Ghost:'☽',Dragon:'♜',Ground:'◈'};
-export const map=['FFFFGGGG','FGGGWWGF','FGPPWWGF','GGPPGBGF','FGPPGWRR','FGGPGWRR','FGGPGBGR','FFFGGWFF'];
+export const map=zones[0].map;
 export const signs={'3,3':0,'6,4':1,'3,6':2};
 export const clues=['Dratini has been spotted along the eastern shoreline. Search east of column 5.','Rain brings it out of hiding. Return when rain falls.','It surfaces at dusk. Watch the water as daylight fades.'];
 export const weatherOptions=['Clear','Rain','Storm','Fog'];
