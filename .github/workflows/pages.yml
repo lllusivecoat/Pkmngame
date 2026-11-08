@@ -21,13 +21,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: npm ci
       - run: npm test
+      - run: npm run stage
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: .site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

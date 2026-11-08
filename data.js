@@ -1,3 +1,4 @@
+import {expandedSpecies} from './species-data.js';
 import {officialSpecies} from './combat-data.js';
 import {zones} from './world.js';
 // Static species data and encounter configuration. No network is required.
@@ -21,6 +22,8 @@ export const roster = [
   ['phanpy',231,'Phanpy','Ground',90,60,60,40,'Uncommon','Its playful tracks loop around the sandy woodland path.','Path','Morning','Clear','Pickup'],
   ['lapras',131,'Lapras','Water',130,85,80,60,'Rare','A gentle silhouette sometimes glides past the distant shoreline.','Shoreline','Morning','Rain','Water Absorb']
 ].map(([id,number,name,type,hp,attack,defence,speed,rarity,description,habitat,activity,weather,passive])=>({id,number,name,type,hp,attack,defence,speed,rarity,description,habitat,activity,weather,passive,...officialSpecies[id].baseStats,types:officialSpecies[id].types,type:officialSpecies[id].types[0]}));
+export const starterRosterIds=roster.map(p=>p.id);
+for(const s of Object.values(expandedSpecies)){if(roster.some(p=>p.id===s.id))continue;const origin=roster.find(p=>p.id===s.origin);roster.push({...origin,id:s.id,number:s.number,name:s.name,type:s.types[0],types:s.types,...s.baseStats,rarity:'Rare',passive:s.abilities['0'],description:`The evolved form of ${s.prevo}. A companion shaped by your journey.`})}
 export const get=id=>roster.find(p=>p.id===id);
 export const colors={Grass:'#a6d69d',Fire:'#e8ac84',Water:'#8dc5dd',Electric:'#e0cd88',Flying:'#bfc9d1',Bug:'#c1d18b',Normal:'#c6b8a9',Rock:'#c9b997',Ghost:'#c3a5db',Dragon:'#adacd9',Ground:'#d6b892',Poison:'#c7a1db',Psychic:'#efa6c4',Ice:'#a2dddd',Dark:'#b4a8c4',Steel:'#b7cad3',Fairy:'#f0b9dd',Fighting:'#dfaa90'};
 export const icons={Grass:'❧',Fire:'♨',Water:'≈',Electric:'ϟ',Flying:'⋎',Bug:'♧',Normal:'✧',Rock:'⬡',Ghost:'☽',Dragon:'♜',Ground:'◈',Poison:'◉',Psychic:'◎',Ice:'❄',Dark:'☾',Steel:'⬢',Fairy:'✦',Fighting:'✊'};

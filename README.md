@@ -6,9 +6,9 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 ## Play
 
-Intended GitHub Pages address after publishing is enabled: https://lllusivecoat.github.io/Pkmngame/
+Play online: https://lllusivecoat.github.io/Pkmngame/
 
-For local use, run `npm start`, then visit http://localhost:4173. No dependency installation is needed. Run `npm test` to execute the 62 automated checks.
+For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 82 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -20,7 +20,7 @@ Progress is saved in the browser under `greenwood.save.v2`. Settings provides JS
 
 Generated forest backgrounds are bundled locally. Full-body Pokémon sprites load from the public PokeAPI sprite repository; an offline symbol fallback is retained. This is a fan prototype, not an official product. Guild networking and multiplayer trading/PvP remain previews. All four connected zones are playable.
 
-33 automated checks cover progression, capture, combat, party, market, save migrations, navigation bindings and map/hunt consistency. A real-browser visual check remains outstanding.
+Current verification: 82 automated checks cover gameplay, saves, UI, item mechanics and simulator integration. Chromium checks also cover desktop/mobile navigation, the bag, held items, battle controls and modal closing. Historical release notes below describe verification at the time of those releases.
 
 ## v0.5 — modern animated Pokémon
 
@@ -105,3 +105,22 @@ The battle screen now places the opponent HUD above-right and the player HUD bel
 The detailed landscape has been replaced in battles by an original cel-shaded environment atlas (`assets/battle-biomes.webp`, approximately 55 KB). Each zone displays one quadrant: Greenwood woodland, Thunder Ridge rocks, Ashlands terracotta, or Frostfall snow. Broad shapes, quiet ground colours and integrated contact patches suit both chibi stills and animated game models. Sprite sizes remain compact. Background selection follows the active zone and is independent of interface appearance; no remote background service is needed. The homepage artwork is unchanged.
 
 Asset refresh / dialog fix: the HTML now versions the app entry, theme/combat CSS and biome atlas URL so browsers request the updated battle presentation. Detail and field-note dialogs use a dedicated sticky toolbar with a 44px close target above decorative artwork; closing also stops event propagation. No save reset is required. The 62 automated checks include both close paths.
+
+## v0.12 — Items, abilities and evolution
+
+The Bag and Market now expose 992 item records: 39 balls, 108 medicine, 36 battle items, 457 held items, 40 evolution items, 83 berries and 229 Scarlet/Violet TMs. Buy, heal, revive, restore PP, train EVs, use mints or Ability Capsule/Patch, equip held items and teach compatible moves. All 317 official ability records have searchable explanations. Live combat uses the Pokémon Showdown simulator through the MIT `@pkmn/sim` package, handling ability interactions, held items, move effects, immunities and battle conditions.
+
+The roster includes 53 species across the original species' evolution families. Evolution preserves the individual, variant, moves and legal ability slot. Level/friendship evolutions appear in Pokémon details; stones and a prototype Linking Cord work through the Bag. Party HP, status, PP, friendship, EVs, learned TMs and equipment persist. Camps restore the party.
+
+This is a Generation 9 battle prototype with selected legacy mechanics supported by the engine. Historical mode-specific items remain visible with explicit restrictions (for example Hisui throwing tools and Wonder Launcher supplies). Species-specific items need their compatible species; field/fishing/underwater conditions only apply when that context exists. A searchable catalogue is not a claim that every retired game mode is implemented. See [mechanics and source notes](docs/items-abilities.md).
+
+### Structure and future server migration
+
+- `items-data.js`, `ability-data.js`, `moves-data.js`, `species-data.js`: checked-in, versioned data snapshots.
+- `items.js`, `progression.js`, `capture.js`: inventory, growth, evolution and capture rules.
+- `sim-adapter.js`, `battle.js`: serialized battle engine and game-level rewards/actions.
+- `core.js`, `world.js`: save migration, exploration, encounter tables and region unlocks.
+- `inventory-ui.js`, `app.js`: UI and interaction bindings.
+- `scripts/build-engine.mjs`, `scripts/stage-site.mjs`: reproducible bundle and static release output.
+
+A future backend can retain the data modules and action contracts, move battle simulation/encounter RNG/rewards to a trusted server, and replace localStorage reads/writes with authenticated repository calls. Real player trades, guilds, multiplayer PvP, server events, professions, breeding, raids, world bosses and new regions remain future systems. Export your save in Settings before moving browsers or devices.

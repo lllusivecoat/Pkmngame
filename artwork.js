@@ -4,7 +4,7 @@ const spriteRoot='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprit
 export function spriteCandidates(c,style='modern',reducedMotion=false,perspective='front'){
  const s=get(c.species);if(!s)return [];
  const variant=c.variant==='Shiny'?'shiny/':'';
- const still=[...((perspective==='front'||style==='home'||reducedMotion)?[c.variant==='Shiny'?`assets/chibi/shiny/${s.number}.png`:`assets/chibi/${s.number}.svg`]:[]),`${spriteRoot}/other/home/${variant}${s.number}.png`,`${spriteRoot}/other/official-artwork/${variant}${s.number}.png`];
+ const still=[...(([1,4,7,25,16,10,133,74,92,43,54,147,58,37,179,198,231,131].includes(s.number))&&(perspective==='front'||style==='home'||reducedMotion)?[c.variant==='Shiny'?`assets/chibi/shiny/${s.number}.png`:`assets/chibi/${s.number}.svg`]:[]),`${spriteRoot}/other/home/${variant}${s.number}.png`,`${spriteRoot}/other/official-artwork/${variant}${s.number}.png`];
  if(style==='home'||reducedMotion)return still;
  const facing=perspective==='back'?'back/':'';
  return [...(modernSources[s.number]||[]).map(game=>`${spriteRoot}/versions/${game==='sword-shield'?'generation-viii':'generation-ix'}/${game}/${facing}${variant}${s.number}.webp`),...still];

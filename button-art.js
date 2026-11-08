@@ -4,6 +4,7 @@ const paths={
  explore:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20 M16 8l-3 5-5 3 3-5Z',
  creatures:'M2 12a10 10 0 1 0 20 0 10 10 0 0 0-20 0 M2 12h6m8 0h6 M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0',
  pokedex:'M5 2h12l3 3v17H4V3Z M7 5h3v3H7Z M7 11h10v6H7Z M8 20h2m4 0h2',
+ bag:'M6 8h12l2 13H4Z M8 8V6a4 4 0 0 1 8 0v2 M8 13h8v5H8Z',
  market:'M4 7h16l-1 15H5Z M8 7V5a4 4 0 0 1 8 0v2 M9 14a3 3 0 1 0 6 0 3 3 0 0 0-6 0 M6 14h3m6 0h3',
  guild:'M12 2 3 6v7q0 6 9 9 9-3 9-9V6Z M8 13h8 M12 9v8',
  arena:'M3 2l8 7-2 3-7-8Z M21 2l-8 7 2 3 7-8Z M8 11l12 11 M16 11 4 22 M5 13l6-6 M13 7l6 6',

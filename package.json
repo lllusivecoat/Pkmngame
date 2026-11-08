@@ -1,10 +1,20 @@
 {
   "name": "pkmngame-greenwood",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/artwork.test.mjs && node tests/backbone.test.mjs && node tests/gameplay.test.mjs && node tests/presentation.test.mjs && node tests/ui.test.mjs && node tests/theme.test.mjs && node tests/world.test.mjs && node tests/rules.test.mjs",
-    "start": "node serve.mjs"
+    "test": "node tests/artwork.test.mjs && node tests/backbone.test.mjs && node tests/gameplay.test.mjs && node tests/presentation.test.mjs && node tests/ui.test.mjs && node tests/theme.test.mjs && node tests/world.test.mjs && node tests/rules.test.mjs && node tests/items-abilities.test.mjs",
+    "start": "node serve.mjs",
+    "build:engine": "node scripts/build-engine.mjs",
+    "build": "npm run build:engine && npm run stage",
+    "pretest": "npm run build:engine",
+    "stage": "node scripts/stage-site.mjs"
+  },
+  "dependencies": {
+    "@pkmn/sim": "0.10.15"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
   }
 }
