@@ -97,3 +97,6 @@ This is the agreed core-stat/move upgrade, not full cartridge parity. Ability ef
 Battle health panels now occupy a dedicated two-column row outside the battlefield scene. HP, levels, status and PP remain visible without covering either sprite, including on mobile. Pokémon abilities remain descriptive only; their effects are not active yet.
 
 Battle presentation uses a teal player panel and a warm coral opponent panel, with mirrored corner shapes, edge accents and HP bars. The battlefield reserves smaller, separate sprite areas and more space between opponents, with responsive size caps. These are visual changes only.
+
+### Battlefield presentation references
+The battle screen now places the opponent HUD above-right and the player HUD below-left, with a grouped move command menu and type-effectiveness hints. The wide scene keeps compact sprites, contact shadows and an open centre; mobile stacks the command area. Health panels stay outside the sprite scene. References and adaptation notes are documented in [docs/battlefield-reference.md](docs/battlefield-reference.md). This is a 2D visual refinement; battle rules and saves are unchanged.
