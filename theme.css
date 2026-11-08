@@ -1,0 +1,226 @@
+/* Appearance tokens only: the world, weather, sprite palettes and combat data
+   never derive from these values. Loaded last to replace legacy fixed colours. */
+:root,:root[data-theme="light"]{
+ --page:#f4f6f1;--surface:#ffffff;--surface-raised:#ffffff;--surface-soft:#eaf0e8;--surface-hover:#e0e9df;--text:#1b2a27;--muted-text:#53665e;--line-color:#bdcabc;--strong-line:#7c927e;--accent:#246448;--accent-hover:#194f37;--accent-ink:#ffffff;--soft-accent:#dfece0;--accent-text:#245d3e;--rare-bg:#fff2d0;--rare-ink:#76510e;--rare-line:#c8a14d;--event-bg:#eee9f8;--event-ink:#5e457e;--danger-bg:#f8e5df;--danger-ink:#943728;--disabled-bg:#e5e9e2;--disabled-ink:#657069;--shadow:0 7px 24px #243a2710;--overlay:#12212799;--focus:#1769aa;--ring-bg:#dbe5da;--ring-fill:#246448;--hero-text:#f0f2e5;--hero-muted:#d6e2d1;--type-Grass:#25663a;--type-Fire:#9a3f1b;--type-Water:#1c6283;--type-Electric:#765514;--type-Flying:#4b5876;--type-Bug:#52651e;--type-Normal:#655546;--type-Rock:#695624;--type-Ghost:#694586;--type-Dragon:#514786;--type-Ground:#795521;color-scheme:light;
+}
+:root[data-theme="dark"]{
+ --page:#111a21;--surface:#1b2931;--surface-raised:#22333d;--surface-soft:#23343b;--surface-hover:#2c4147;--text:#e6eee8;--muted-text:#b0c1b9;--line-color:#4e6665;--strong-line:#819b8d;--accent:#abd5ad;--accent-hover:#c0e2bc;--accent-ink:#142a1d;--soft-accent:#2b4538;--accent-text:#c0dfbc;--rare-bg:#3b3323;--rare-ink:#f0d38d;--rare-line:#a18b54;--event-bg:#332f45;--event-ink:#dcc8f0;--danger-bg:#452c2a;--danger-ink:#f3b8aa;--disabled-bg:#2a373b;--disabled-ink:#a3b0aa;--shadow:0 8px 26px #00000020;--overlay:#050e13d9;--focus:#a9d7ff;--ring-bg:#40534c;--ring-fill:#abd5ad;--hero-text:#f0f2e5;--hero-muted:#d6e2d1;--type-Grass:#a5d6ac;--type-Fire:#f4b390;--type-Water:#a2d3ea;--type-Electric:#e4ce8c;--type-Flying:#c7cfe7;--type-Bug:#c4d599;--type-Normal:#d4c4b2;--type-Rock:#decb9c;--type-Ghost:#d6b4ed;--type-Dragon:#c7bcf2;--type-Ground:#e2c398;color-scheme:dark;
+}
+:root[data-theme]{background:var(--page);color:var(--text);--mint:var(--accent-text);--muted:var(--muted-text);--line:var(--line-color);--panel:var(--surface)}
+:root[data-theme] body{background:var(--page);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+:root[data-theme] #app{color:var(--text);font-size:15px}
+:root[data-theme] #app :is(h1,h2,h3,strong){color:var(--text)}
+:root[data-theme] #app h1{font-size:34px;font-weight:550;line-height:1.3}
+:root[data-theme] #app :is(p,.intro){color:var(--muted-text);font-size:14px;line-height:1.75}
+:root[data-theme] #app :is(small,.muted,.eyebrow,.nav-label,.hint,.legend,.initiative,.encounter-location){color:var(--muted-text);font-size:12px;line-height:1.6}
+:root[data-theme] #app .eyebrow{font-size:11px;letter-spacing:1.2px}
+:root[data-theme] #app :is(.panel,.card,.bestiary-card,.modal,.recent-list,.discoveries,.offer-footer,.stats section,.member,.achievement,.capture-panel,.party-chip,.world-status,.collection-banner,.empty-slot,.empty-state){background:var(--surface);border-color:var(--line-color);box-shadow:var(--shadow)}
+:root[data-theme] #app :is(.panel,.modal){border-radius:10px}
+:root[data-theme] #app :is(.card:hover,.party-chip:hover,.bestiary-card:hover){background:var(--surface-hover);border-color:var(--strong-line);filter:none}
+:root[data-theme] #app .card{background:var(--surface);border-color:var(--line-color);padding:18px}
+:root[data-theme] #app .card :is(h3,.card-name){font:600 18px/1.4 system-ui,sans-serif;color:var(--text)}
+:root[data-theme] #app .card p{font-size:13px;line-height:1.65;color:var(--muted-text)}
+:root[data-theme] #app .card :is(.card-bottom,.card-foot){border-color:var(--line-color);color:var(--muted-text);font-size:12px;gap:8px;line-height:1.6}
+:root[data-theme] #app .card :is(.card-bottom,.card-foot)>span{color:var(--muted-text)}
+:root[data-theme] #app .card .spread>small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .card .variant-tag{border:1px solid var(--line-color);background:var(--surface-soft);padding:3px 6px;border-radius:4px;color:var(--muted-text);font-size:11px}
+:root[data-theme] #app .card .variant-tag.variant-shiny{background:var(--rare-bg);border-color:var(--rare-line);color:var(--rare-ink)}
+:root[data-theme] #app .element-tag{font-size:12px;font-weight:600;background:transparent;border:0;padding:0;color:var(--text)}
+:root[data-theme] #app .card .element-tag[data-element="Grass"]{color:var(--type-Grass)}
+:root[data-theme] #app .card .element-tag[data-element="Fire"]{color:var(--type-Fire)}
+:root[data-theme] #app .card .element-tag[data-element="Water"]{color:var(--type-Water)}
+:root[data-theme] #app .card .element-tag[data-element="Electric"]{color:var(--type-Electric)}
+:root[data-theme] #app .card .element-tag[data-element="Flying"]{color:var(--type-Flying)}
+:root[data-theme] #app .card .element-tag[data-element="Bug"]{color:var(--type-Bug)}
+:root[data-theme] #app .card .element-tag[data-element="Normal"]{color:var(--type-Normal)}
+:root[data-theme] #app .card .element-tag[data-element="Rock"]{color:var(--type-Rock)}
+:root[data-theme] #app .card .element-tag[data-element="Ghost"]{color:var(--type-Ghost)}
+:root[data-theme] #app .card .element-tag[data-element="Dragon"]{color:var(--type-Dragon)}
+:root[data-theme] #app .card .element-tag[data-element="Ground"]{color:var(--type-Ground)}
+:root[data-theme] #app .sidebar{background:var(--surface);border-color:var(--line-color)}
+:root[data-theme] #app .brand{color:var(--accent-text)}
+:root[data-theme] #app .brand small{font-size:9px;color:var(--muted-text);letter-spacing:1px}
+:root[data-theme] #app .sidebar nav button{color:var(--muted-text);background:transparent;font-size:14px;border:1px solid transparent}
+:root[data-theme] #app .sidebar nav button span{color:inherit}
+:root[data-theme] #app .sidebar nav button:hover{background:var(--surface-hover);filter:none}
+:root[data-theme] #app .sidebar nav button.active{background:var(--soft-accent);color:var(--accent-text);border-color:var(--strong-line);box-shadow:inset 3px 0 var(--accent)}
+:root[data-theme] #app .sidebar :is(.settings-link,.account,.single-player){color:var(--muted-text);border-color:var(--line-color)}
+:root[data-theme] #app .account>span{background:var(--soft-accent);color:var(--accent-text);border-color:var(--line-color)}
+:root[data-theme] #app .nav-label{font-size:10px;letter-spacing:1px}
+:root[data-theme] #app .single-player{font-size:9px}
+:root[data-theme] #app .account small{font-size:11px}
+:root[data-theme] #app .workspace>header{height:74px;background:var(--surface);border-color:var(--line-color);color:var(--muted-text);gap:16px;padding:0 28px}
+:root[data-theme] #app .workspace>header>.resource-bar{background:var(--surface-soft);border-color:var(--line-color);color:var(--accent-text);padding:8px 11px;font-size:13px;white-space:nowrap}
+:root[data-theme] #app .resource-bar :is(small,strong,button){color:var(--text);font-size:12px}
+:root[data-theme] #app .resource-bar button{background:transparent;color:var(--muted-text);font-size:21px;padding:3px 6px}
+:root[data-theme] #app .breadcrumbs{font-size:12px;white-space:nowrap}
+:root[data-theme] #app .breadcrumbs b{color:var(--text);font-weight:500}
+:root[data-theme] #app .workspace>header>.theme-toolbar{background:none;border:0;box-shadow:none;padding:0;margin-left:auto}
+:root[data-theme] #app .theme-picker{display:flex;gap:3px;align-items:center;padding:4px;background:var(--surface-soft);border:1px solid var(--line-color);border-radius:8px;flex-shrink:0}
+:root[data-theme] #app .theme-picker button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:6px 9px;background:transparent;border:1px solid transparent;border-radius:5px;color:var(--muted-text);font-size:12px;font-weight:500;white-space:nowrap;line-height:1.2}
+:root[data-theme] #app .theme-picker button>span:first-child{font-size:18px;line-height:20px}
+:root[data-theme] #app .theme-picker button[aria-pressed="true"]{background:var(--surface-raised);border-color:var(--strong-line);color:var(--accent-text);box-shadow:0 1px 4px #00000010}
+:root[data-theme] #app .theme-picker button:hover{background:var(--surface-hover);filter:none}
+:root[data-theme] #app :is(button,a,input,select,summary):focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+:root[data-theme] #app :is(input,select){background:var(--surface-raised);border:1px solid var(--strong-line);color:var(--text);font-size:14px;min-height:42px;border-radius:6px;padding:10px 12px;accent-color:var(--accent)}
+:root[data-theme] #app input::placeholder{color:var(--muted-text);opacity:1}
+:root[data-theme] #app select option{background:var(--surface-raised);color:var(--text)}
+:root[data-theme] #app label{color:var(--muted-text);font-size:13px;line-height:1.6}
+:root[data-theme] #app .search{background:var(--surface-raised);border-color:var(--strong-line);color:var(--muted-text)}
+:root[data-theme] #app .search input{border:0;background:none}
+:root[data-theme] #app :is(.primary,.secondary,.danger){font-size:14px;min-height:42px;padding:11px 16px;line-height:1.5}
+:root[data-theme] #app .primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);box-shadow:none}
+:root[data-theme] #app .primary:hover:not(:disabled){background:var(--accent-hover);color:var(--accent-ink);filter:none}
+:root[data-theme] #app .primary :is(small,strong){color:var(--accent-ink)}
+:root[data-theme] #app .secondary{background:var(--surface-soft);color:var(--text);border-color:var(--strong-line);box-shadow:none}
+:root[data-theme] #app .secondary:hover:not(:disabled){background:var(--surface-hover);filter:none}
+:root[data-theme] #app :is(.secondary small,.secondary strong){color:var(--text)}
+:root[data-theme] #app :is(.text,.text-button,.quiet){color:var(--accent-text);font-size:12px;line-height:1.6}
+:root[data-theme] #app .danger{background:var(--danger-bg);color:var(--danger-ink);border-color:var(--danger-ink)}
+:root[data-theme] #app button:disabled{opacity:1;box-shadow:none;color:var(--disabled-ink);background:var(--disabled-bg);border-color:var(--line-color);cursor:not-allowed;filter:none}
+:root[data-theme] #app button:disabled :is(small,strong,span){color:var(--disabled-ink)}
+:root[data-theme] #app .hero{border-color:var(--strong-line);box-shadow:var(--shadow)}
+:root[data-theme] #app .hero h2{color:var(--hero-text);font-size:43px}
+:root[data-theme] #app .hero :is(p,.eyebrow){color:var(--hero-muted)}
+:root[data-theme] #app .hero .eyebrow{font-size:11px}
+:root[data-theme] #app .hero-badge{background:#142a23e6;color:var(--hero-text);border-color:#a4bb9180;font-size:12px}
+:root[data-theme] #app :is(.stats,.recent-list,.discoveries){background:var(--line-color);border-color:var(--line-color)}
+:root[data-theme] #app .stats section{box-shadow:none}
+:root[data-theme] #app .stats strong{font-size:29px;color:var(--text)}
+:root[data-theme] #app .stats small{font-size:12px}
+:root[data-theme] #app .bar{background:var(--ring-bg)}
+:root[data-theme] #app .bar i{background:var(--accent)}
+:root[data-theme] #app :is(.recent-list button,.discoveries button){background:var(--surface);border-color:var(--line-color);color:var(--text)}
+:root[data-theme] #app .recent-list button:hover{background:var(--surface-hover)}
+:root[data-theme] #app .recent-list strong{font-size:14px;color:var(--text)}
+:root[data-theme] #app .recent-list p{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .recent-list button>span{color:var(--accent-text);border-color:var(--strong-line)}
+:root[data-theme] #app .recent-list .mini-art{background:var(--surface-soft)}
+:root[data-theme] #app .event{background:var(--event-bg);border-color:var(--line-color)}
+:root[data-theme] #app .event :is(h3,p,.eyebrow){color:var(--event-ink)}
+:root[data-theme] #app .event h3{font-size:17px}
+:root[data-theme] #app .event p{font-size:13px}
+:root[data-theme] #app :is(.world-status h2,.panel h3,.goal h3){font-size:19px}
+:root[data-theme] #app .world-status p{font-size:13px}
+:root[data-theme] #app :is(.hunt-shortcut,.rare-banner,.reward){background:var(--rare-bg);color:var(--rare-ink);border-color:var(--rare-line)}
+:root[data-theme] #app .hunt-shortcut :is(h3,p,.eyebrow){color:var(--rare-ink)}
+:root[data-theme] #app .hunt-shortcut p{font-size:13px}
+:root[data-theme] #app .hunt-shortcut h3{font-size:20px}
+:root[data-theme] #app .collection-banner{background:var(--surface-soft)}
+:root[data-theme] #app .collection-banner :is(strong,span){color:var(--accent-text)}
+:root[data-theme] #app .collection-banner strong{font-size:14px}
+:root[data-theme] #app .collection-banner p{font-size:13px}
+:root[data-theme] #app .card .art{background:radial-gradient(ellipse at center,color-mix(in srgb,var(--tint) 12%,transparent),transparent 68%)}
+:root[data-theme] #app :is(.unknown,.dex-grid .unknown){background:var(--surface-soft);border-color:var(--line-color)}
+:root[data-theme] #app .dex-grid .unknown .art>.art-fallback{background:var(--surface);color:var(--muted-text);border-color:var(--strong-line)}
+:root[data-theme] #app :is(.region-tabs button,.dpad button){background:var(--surface-soft);border-color:var(--strong-line);color:var(--text);font-size:14px}
+:root[data-theme] #app .region-tabs button small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .region-tabs button.selected{background:var(--soft-accent);border-color:var(--accent);color:var(--accent-text)}
+:root[data-theme] #app .region-preview{background:var(--surface);border-color:var(--line-color)}
+:root[data-theme] #app .explore>.panel>.spread>small{background:var(--surface-soft);border-color:var(--line-color);color:var(--muted-text);font-size:12px}
+:root[data-theme] #app .explore>.panel>.spread h2{color:var(--text)}
+:root[data-theme] #app .explore>.panel>.spread small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .legend{font-size:12px;line-height:1.7;color:var(--muted-text)}
+:root[data-theme] #app :is(.field-log,.battle-log-panel .field-log){background:var(--surface-soft);color:var(--text);border-color:var(--line-color);font-size:13px;line-height:1.8}
+:root[data-theme] #app .controls small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .dpad button{font-size:20px;min-height:38px;padding:6px}
+:root[data-theme] #app .clue-note{color:var(--muted-text);border-color:var(--line-color);font-size:13px;line-height:1.7}
+:root[data-theme] #app .clue-note.found{color:var(--accent-text)}
+:root[data-theme] #app .hunt-panel h2{font-size:27px;color:var(--text)}
+:root[data-theme] #app .hunt-panel>p{font-size:13px}
+:root[data-theme] #app .hunt-panel>.spread strong{color:var(--rare-ink);font-size:26px}
+:root[data-theme] #app .conditions span{background:var(--surface-soft);color:var(--muted-text);border-color:var(--line-color);font-size:12px;padding:6px 8px}
+:root[data-theme] #app .conditions .met{background:var(--soft-accent);border-color:var(--strong-line);color:var(--accent-text)}
+:root[data-theme] #app :is(.field-party,.card-bottom,.encounter-footer,footer,hr){border-color:var(--line-color)}
+:root[data-theme] #app :is(.party-strip,.encounter-footer .party-strip){background:var(--surface-soft);border-color:var(--line-color)}
+:root[data-theme] #app .party-chip{box-shadow:none}
+:root[data-theme] #app .party-chip strong{font-size:13px;color:var(--text)}
+:root[data-theme] #app .party-chip small{font-size:11px;color:var(--muted-text)}
+:root[data-theme] #app .party-chip.active{background:var(--soft-accent);border-color:var(--accent)}
+:root[data-theme] #app .party-strip-label{color:var(--muted-text);font-size:10px;line-height:1.6}
+:root[data-theme] #app .party-active-dot{background:var(--accent)}
+:root[data-theme] #app .shop .secondary strong{font-size:13px}
+:root[data-theme] #app .shop .secondary small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .shop h3{font-size:18px}
+:root[data-theme] #app .offer-footer small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app :is(.guild-hero,.arena-hero){background:var(--surface);border-color:var(--line-color)}
+:root[data-theme] #app :is(.guild-emblem,.arena-emblem){color:var(--accent-text)}
+:root[data-theme] #app .guild-member{border-color:var(--line-color);color:var(--text);font-size:14px}
+:root[data-theme] #app .guild-member>span{background:var(--soft-accent);color:var(--accent-text)}
+:root[data-theme] #app .guild-member small{font-size:12px}
+:root[data-theme] #app .profile-avatar{background:var(--soft-accent);border-color:var(--strong-line);color:var(--accent-text)}
+:root[data-theme] #app .profile-card p{font-size:14px;color:var(--muted-text)}
+:root[data-theme] #app .achievement{opacity:1;background:var(--surface-soft);color:var(--muted-text);padding:18px}
+:root[data-theme] #app .achievement h3{font-size:15px;color:var(--text)}
+:root[data-theme] #app .achievement p{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .achievement>span{color:var(--muted-text)}
+:root[data-theme] #app .achievement.earned{background:var(--soft-accent);border-color:var(--strong-line)}
+:root[data-theme] #app .achievement.earned>span,:root[data-theme] #app .achievement.earned>small{color:var(--accent-text)}
+:root[data-theme] #app .overlay{background:var(--overlay)}
+:root[data-theme] #app .modal{background:var(--surface-raised);border-color:var(--strong-line);box-shadow:0 25px 90px #00000040}
+:root[data-theme] #app .starter{background:var(--surface-raised)}
+:root[data-theme] #app .starter p{font-size:14px}
+:root[data-theme] #app .starter .cards .card{background:var(--surface)}
+:root[data-theme] #app .starter .card:hover{background:var(--surface-hover)}
+:root[data-theme] #app .starter-theme{display:flex;justify-content:center;margin:0 0 22px}
+:root[data-theme] #app .close{background:var(--surface-soft);color:var(--text);border:1px solid var(--strong-line);width:34px;height:34px}
+:root[data-theme] #app .detail .stats>section{background:var(--surface-soft);border-color:var(--line-color)}
+:root[data-theme] #app .detail :is(.facts strong,.fact-grid strong){color:var(--text);font-size:14px}
+:root[data-theme] #app :is(.ability-detail>div,.abilities-list span){border-color:var(--line-color);background:var(--surface-soft)}
+:root[data-theme] #app .ability-detail strong{font-size:14px;color:var(--text)}
+:root[data-theme] #app .ability-detail small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .detail .passive{font-size:13px;color:var(--accent-text)}
+:root[data-theme] #app .encounter-heading h2{color:var(--text);font-size:29px}
+:root[data-theme] #app .encounter-heading .theme-label{display:none}
+:root[data-theme] #app .encounter-heading .theme-picker button{padding:5px 7px;min-width:32px}
+:root[data-theme] #app .encounter-heading .eyebrow{font-size:10px}
+:root[data-theme] #app .encounter-main .rare-banner{background:var(--rare-bg);color:var(--rare-ink);border-color:var(--rare-line);font-size:11px}
+:root[data-theme] #app .combat-hud{background:var(--surface-raised);border-color:var(--strong-line);box-shadow:0 3px 10px #00000020}
+:root[data-theme] #app .combat-hud h3{color:var(--text);font-size:15px}
+:root[data-theme] #app .combat-hud h3 small{color:var(--muted-text);font-size:12px}
+:root[data-theme] #app .hud-hp{color:var(--text);font-size:12px}
+:root[data-theme] #app .hud-hp span{color:var(--muted-text);font-size:11px}
+:root[data-theme] #app .combat-hud .bar{background:var(--ring-bg)}
+:root[data-theme] #app .combat-enemy .combat-hud .bar i{background:var(--rare-line)}
+:root[data-theme] #app .energy-pips small{color:var(--muted-text);font-size:11px}
+:root[data-theme] #app .energy-pips i{background:var(--ring-bg)}
+:root[data-theme] #app .energy-pips i.filled{background:var(--accent);box-shadow:none}
+:root[data-theme] #app .ability-button>span:last-child{color:var(--text);font-size:14px}
+:root[data-theme] #app .ability-button small{color:var(--muted-text);font-size:12px!important;line-height:1.6}
+:root[data-theme] #app .ability-button .ability-glyph{color:var(--accent-text);font-size:25px}
+:root[data-theme] #app .ability-button.ability-1{background:var(--soft-accent);border-color:var(--strong-line)}
+:root[data-theme] #app .swap-select{background:var(--surface-soft);border-color:var(--strong-line);color:var(--text);font-size:13px}
+:root[data-theme] #app .swap-select select{background:transparent;border:0;font-size:12px;min-height:34px;max-width:190px}
+:root[data-theme] #app .battle-utilities .secondary{font-size:13px;min-height:42px}
+:root[data-theme] #app .battle-utilities .secondary small{font-size:12px}
+:root[data-theme] #app .capture-panel>h2{color:var(--text);font-size:29px}
+:root[data-theme] #app .capture-panel>p{color:var(--muted-text);font-size:13px}
+:root[data-theme] #app .trap-option{background:var(--surface-soft);border-color:var(--strong-line);color:var(--text)}
+:root[data-theme] #app .trap-option.selected{background:var(--soft-accent);border-color:var(--accent)}
+:root[data-theme] #app .trap-option>strong{color:var(--text);font-size:11px}
+:root[data-theme] #app .trap-option>small{color:var(--muted-text);font-size:11px}
+:root[data-theme] #app .trap-check{background:var(--accent);color:var(--accent-ink)}
+:root[data-theme] #app .chance-ring{background:conic-gradient(var(--ring-fill) var(--chance),var(--ring-bg) 0);box-shadow:none}
+:root[data-theme] #app .chance-ring>div{background:var(--surface-raised)}
+:root[data-theme] #app .chance-ring strong{color:var(--accent-text);font-size:38px}
+:root[data-theme] #app .chance-ring small{color:var(--muted-text);font-size:12px}
+:root[data-theme] #app .capture-tip{background:var(--surface-soft);border-color:var(--line-color);color:var(--muted-text);font-size:12px}
+:root[data-theme] #app .capture-button{font-size:14px}
+:root[data-theme] #app .result-modal{background:var(--surface-raised);border-color:var(--strong-line)}
+:root[data-theme] #app .result-modal :is(h2,h3){color:var(--text)}
+:root[data-theme] #app .result-modal p{color:var(--muted-text);font-size:14px}
+:root[data-theme] #app .result-modal>small{font-size:12px;color:var(--muted-text)}
+:root[data-theme] #app .result-tags span{color:var(--accent-text);background:var(--soft-accent);border-color:var(--strong-line);font-size:12px}
+:root[data-theme] #app .result-sparkles{color:var(--rare-line);opacity:.13}
+:root[data-theme] #app .appearance-settings{margin:25px 0;padding:20px;background:var(--surface-soft);border:1px solid var(--line-color);border-radius:8px}
+:root[data-theme] #app .appearance-settings h3{font-family:Georgia,serif;font-size:22px}
+:root[data-theme] #app .settings-panel .hint{font-size:13px!important;line-height:1.8}
+:root[data-theme] #app footer{color:var(--muted-text);font-size:11px;border-color:var(--line-color)}
+:root[data-theme] #app footer span{color:var(--muted-text);font-size:11px}
+:root[data-theme] #notice{background:var(--surface-raised);border-color:var(--strong-line);color:var(--text);font-size:14px;line-height:1.6;box-shadow:var(--shadow)}
+@media(max-width:1200px){:root[data-theme] #app .workspace>header{padding:0 22px;gap:12px}:root[data-theme] #app .theme-toolbar .theme-label{display:none}:root[data-theme] #app .theme-picker button{min-width:34px;padding:6px}:root[data-theme] #app .dashboard-grid{grid-template-columns:minmax(0,1fr) 280px}:root[data-theme] #app .explore{grid-template-columns:minmax(0,1fr) 280px}:root[data-theme] #app .capture-panel{padding:20px 13px}:root[data-theme] #app .ability-button>span:last-child{font-size:12px}:root[data-theme] #app .ability-button small{font-size:11px!important}}
+@media(max-width:1000px){:root[data-theme] #app .dashboard-grid{grid-template-columns:1fr}:root[data-theme] #app .capture-panel>p{font-size:12px}:root[data-theme] #app .combat-hud h3{font-size:12px}:root[data-theme] #app .combat-hud h3 small{font-size:11px}:root[data-theme] #app .hud-hp{font-size:11px}:root[data-theme] #app .combat-hud{right:0;padding:9px}:root[data-theme] #app .combat-enemy .combat-hud{left:0}:root[data-theme] #app .battle-utilities{gap:8px}:root[data-theme] #app .encounter-footer{grid-template-columns:1fr}:root[data-theme] #app .party-chip strong{font-size:13px}}
+@media(max-width:800px){:root[data-theme] #app .explore{grid-template-columns:1fr}:root[data-theme] #app .sidebar nav button{font-size:0;padding:12px 5px}:root[data-theme] #app .brand{font-size:0}:root[data-theme] #app .sidebar nav button span{font-size:22px}:root[data-theme] #app .workspace>header{height:68px}:root[data-theme] #app .breadcrumbs{font-size:11px}:root[data-theme] #app .hero h2{font-size:36px}:root[data-theme] #app .hero p{font-size:14px}:root[data-theme] #app .party-strip-label{display:none}}
+@media(max-width:660px){:root[data-theme] #app .encounter-heading{flex-wrap:wrap;align-items:center;gap:10px}:root[data-theme] #app .encounter-heading>div:first-child{flex:1;min-width:150px}:root[data-theme] #app .encounter-heading h2{font-size:25px}:root[data-theme] #app .encounter-location{width:100%;max-width:none;text-align:left;font-size:12px}:root[data-theme] #app .trap-option{grid-template-columns:34px 1fr}:root[data-theme] #app .capture-panel{padding:18px}:root[data-theme] #app .capture-panel>p:not(.hint){font-size:13px}:root[data-theme] #app .chance-ring small{font-size:11px}:root[data-theme] #app .chance-ring strong{font-size:32px}}
+@media(max-width:560px){:root[data-theme] #app{font-size:14px}:root[data-theme] #app h1{font-size:29px}:root[data-theme] #app :is(p,.intro){font-size:14px}:root[data-theme] #app .workspace>header{height:66px;padding:0 14px;gap:8px}:root[data-theme] #app .breadcrumbs{display:none}:root[data-theme] #app .workspace>header>.theme-toolbar{margin-left:0}:root[data-theme] #app .theme-picker{padding:3px;gap:2px}:root[data-theme] #app .theme-picker button{min-width:33px;min-height:36px;padding:5px}:root[data-theme] #app .resource-bar{gap:4px;padding:7px!important;font-size:12px!important}:root[data-theme] #app .resource-bar small{font-size:11px}:root[data-theme] #app .resource-bar strong{font-size:12px;margin-left:5px}:root[data-theme] #app .resource-bar button{margin-left:4px}:root[data-theme] #app .hero{height:auto;min-height:350px;padding:28px 22px}:root[data-theme] #app .hero h2{font-size:36px}:root[data-theme] #app .hero .eyebrow{font-size:10px}:root[data-theme] #app .hero p{font-size:14px;margin:20px 0 23px}:root[data-theme] #app .stats section{padding:16px}:root[data-theme] #app .stats small{font-size:12px}:root[data-theme] #app .stats strong{font-size:28px}:root[data-theme] #app .dashboard-grid .cards{grid-template-columns:1fr;gap:12px}:root[data-theme] #app .dashboard-grid .card{display:grid;grid-template-columns:120px 1fr;column-gap:16px;padding:16px}:root[data-theme] #app .dashboard-grid .card>.art{grid-column:1;grid-row:1/5;height:135px}:root[data-theme] #app .dashboard-grid .card>.spread,:root[data-theme] #app .dashboard-grid .card>p,:root[data-theme] #app .dashboard-grid .card>.card-bottom{grid-column:2}:root[data-theme] #app .dashboard-grid .card h3{font-size:18px}:root[data-theme] #app .dashboard-grid .card p{font-size:13px}:root[data-theme] #app .dashboard-grid .card .spread>small{font-size:12px}:root[data-theme] #app .dashboard-grid .card .card-bottom{font-size:12px;line-height:1.7}:root[data-theme] #app .empty-slot{min-height:120px;display:flex;flex-direction:column;justify-content:center;gap:5px;padding:20px}:root[data-theme] #app .empty-slot>span{display:none}:root[data-theme] #app .empty-slot h3{font-size:15px}:root[data-theme] #app .empty-slot p{font-size:13px;margin:0}:root[data-theme] #app .section-title h2{font-size:19px}:root[data-theme] #app .section-title .text{font-size:12px}:root[data-theme] #app .collection .card{padding:14px}:root[data-theme] #app .collection .card h3{font-size:17px}:root[data-theme] #app .card .spread>small,:root[data-theme] #app .card .card-bottom{font-size:12px}:root[data-theme] #app .collection .card>.spread{flex-wrap:wrap;gap:8px}:root[data-theme] #app .card p{font-size:12px}:root[data-theme] #app .sidebar{height:70px;background:var(--surface);border-color:var(--line-color)}:root[data-theme] #app .sidebar nav button{padding:7px 0;gap:6px;font-size:10px;min-width:0;border:0;box-shadow:none}:root[data-theme] #app .sidebar nav button.active{border:0;box-shadow:none}:root[data-theme] #app .sidebar nav button span{font-size:18px;line-height:22px;height:22px}:root[data-theme] #app main{padding-bottom:95px}:root[data-theme] #app .explore>.panel>.spread{flex-wrap:wrap;gap:10px}:root[data-theme] #app .explore>.panel>.spread small{font-size:12px}:root[data-theme] #app .region-tabs button{font-size:14px;padding:12px}:root[data-theme] #app .region-tabs small{font-size:12px}:root[data-theme] #app .field-party .party-chip,:root[data-theme] #app .encounter-footer .party-chip{flex-direction:column;text-align:center;align-items:center;padding:10px 5px}:root[data-theme] #app .party-chip>div:last-of-type{width:100%}:root[data-theme] #app .party-chip-art{width:42px;height:38px}:root[data-theme] #app .party-chip strong{font-size:12px}:root[data-theme] #app .party-chip small{font-size:11px}:root[data-theme] #app .party-strip-label{display:none}:root[data-theme] #app .field-log,:root[data-theme] #app .battle-log-panel .field-log{font-size:13px;padding:12px}:root[data-theme] #app .legend{font-size:12px}:root[data-theme] #app .controls small{font-size:12px;line-height:1.7;max-width:180px}:root[data-theme] #app .dpad{grid-template-columns:repeat(3,34px)}:root[data-theme] #app .dpad button{min-height:36px;padding:5px}:root[data-theme] #app .hunt-panel .clue-note{font-size:14px}:root[data-theme] #app .conditions span{font-size:12px}:root[data-theme] #app .shop .secondary strong{font-size:12px}:root[data-theme] #app .shop .secondary small{font-size:12px}:root[data-theme] #app .offer-footer .secondary{font-size:13px}:root[data-theme] #app .shop .secondary{padding:12px 8px;min-width:42%}:root[data-theme] #app .starter .cards .card h3{font-size:17px}:root[data-theme] #app .starter .cards .card p{font-size:12px}:root[data-theme] #app .starter .primary{font-size:12px;padding:10px}:root[data-theme] #app .starter>.eyebrow{font-size:10px}:root[data-theme] #app .starter p{font-size:13px}:root[data-theme] #app .starter-theme .theme-label{display:inline;font-size:11px}:root[data-theme] #app .starter-theme{margin-bottom:18px}:root[data-theme] #app .modal{padding:23px 16px}:root[data-theme] #app .encounter-modal{padding:20px 12px}:root[data-theme] #app .encounter-heading .eyebrow{font-size:10px}:root[data-theme] #app .encounter-heading h2{font-size:25px}:root[data-theme] #app .combat-hud{padding:8px;right:0}:root[data-theme] #app .combat-hud h3{font-size:12px;line-height:1.4;flex-wrap:wrap}:root[data-theme] #app .combat-hud h3 small{font-size:11px}:root[data-theme] #app .hud-hp{font-size:11px;line-height:1.5}:root[data-theme] #app .hud-hp span{font-size:10px}:root[data-theme] #app .energy-pips{gap:3px}:root[data-theme] #app .energy-pips small{font-size:10px}:root[data-theme] #app .energy-pips i{width:4px;height:4px}:root[data-theme] #app .ability-button>span:last-child{font-size:13px;white-space:normal}:root[data-theme] #app .ability-button small{font-size:11px!important}:root[data-theme] #app .ability-button{padding:12px 9px!important;gap:7px}:root[data-theme] #app .ability-button .ability-glyph{font-size:22px}:root[data-theme] #app .battle-utilities{display:grid;grid-template-columns:1fr 1fr;gap:8px}:root[data-theme] #app .swap-select{grid-column:1/-1;justify-content:center;font-size:13px}:root[data-theme] #app .swap-select select{font-size:13px;max-width:220px}:root[data-theme] #app .battle-utilities>.secondary{font-size:13px}:root[data-theme] #app .battle-utilities .initiative{grid-column:1/-1;font-size:12px}:root[data-theme] #app .capture-panel{padding:18px}:root[data-theme] #app .capture-panel>p:not(.hint){font-size:13px}:root[data-theme] #app .trap-options{grid-template-columns:repeat(3,1fr);gap:7px}:root[data-theme] #app .trap-option{display:flex;flex-direction:column;align-items:center;padding:10px 5px;gap:5px;text-align:center}:root[data-theme] #app .trap-option.selected{padding:9px 4px}:root[data-theme] #app .trap-option>svg{width:34px;height:34px}:root[data-theme] #app .trap-option>strong{font-size:11px}:root[data-theme] #app .trap-option>small{font-size:11px}:root[data-theme] #app .capture-button{font-size:15px}:root[data-theme] #app .capture-panel .hint{font-size:12px!important}:root[data-theme] #app .result-modal>h2{font-size:29px}:root[data-theme] #app .result-modal>.actions>button{font-size:14px}:root[data-theme] #app .result-tags span{font-size:12px}:root[data-theme] #app .achievement{padding:14px;gap:10px}:root[data-theme] #app .achievement h3{font-size:14px}:root[data-theme] #app .achievement p{font-size:12px}:root[data-theme] #app .guild-member{font-size:13px;gap:8px}:root[data-theme] #app .guild-member small{font-size:11px}:root[data-theme] #app .profile-card{align-items:flex-start;gap:14px}:root[data-theme] #app .profile-card p{font-size:13px}:root[data-theme] #app .profile-card .eyebrow{font-size:10px}:root[data-theme] #app .appearance-settings{padding:16px}:root[data-theme] #app .settings-panel .hint{font-size:13px!important}}
+@media(prefers-reduced-motion:no-preference){:root[data-theme] #app :is(.panel,.card,.sidebar,.theme-picker,.theme-picker button){transition:background-color .15s,border-color .15s,color .15s}}
