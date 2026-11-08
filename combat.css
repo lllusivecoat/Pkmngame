@@ -77,3 +77,12 @@
 :root[data-theme] #app .move-matchup{display:block;font-size:8px;font-style:normal;line-height:1.6;opacity:.85;margin-top:4px}
 @media(max-width:1100px){:root[data-theme] #app .encounter-layout{grid-template-columns:1fr}.battle-command-deck{grid-template-columns:minmax(180px,.7fr) minmax(0,1.3fr)}}
 @media(max-width:560px){.battle-opponent-band{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:8px}.battle-context{gap:4px;padding-bottom:10px}:root[data-theme] #app .battle-context strong{font-size:13px}:root[data-theme] #app .battle-context small{font-size:7px;letter-spacing:.7px}:root[data-theme] #app .battle-context span{font-size:8px}:root[data-theme] #app .battle-opponent-band .combat-hud{min-height:75px;padding:8px}:root[data-theme] #app .scenic-battle.battle-stage{min-height:240px;aspect-ratio:1.5}.battle-command-deck{grid-template-columns:1fr;gap:12px;margin-top:12px}:root[data-theme] #app .battle-player-band .combat-hud{min-height:0;padding:10px 12px}:root[data-theme] #app .battle-player-band .battle-side-label{margin-bottom:4px}:root[data-theme] #app .battle-move-menu .ability-button>span:last-child{font-size:12px}:root[data-theme] #app .battle-move-menu .ability-button small{font-size:9px!important}:root[data-theme] #app .move-matchup{font-size:9px}}
+/* Original cel-shaded biome atlas: each battle displays only its own quadrant. */
+:root[data-theme] #app .scenic-battle.battle-stage[data-biome]{background-image:url('assets/battle-biomes.webp');background-size:200% 200%;background-repeat:no-repeat;background-position:0% 0%;background-color:#a8ca8e}
+:root[data-theme] #app .scenic-battle.battle-stage[data-biome="ridge"]{background-position:100% 0%;background-color:#a0a7c7}
+:root[data-theme] #app .scenic-battle.battle-stage[data-biome="ash"]{background-position:0% 100%;background-color:#e7ac8b}
+:root[data-theme] #app .scenic-battle.battle-stage[data-biome="frost"]{background-position:100% 100%;background-color:#c9e5f5}
+:root[data-theme] #app .scenic-battle .battle-atmosphere{background:none}
+:root[data-theme] #app .scenic-battle .combatant:before{content:none}
+:root[data-theme] #app .scenic-battle .combat-enemy{bottom:28%}
+@media(max-width:560px){:root[data-theme] #app .scenic-battle .combat-enemy{bottom:28%}}

@@ -100,3 +100,6 @@ Battle presentation uses a teal player panel and a warm coral opponent panel, wi
 
 ### Battlefield presentation references
 The battle screen now places the opponent HUD above-right and the player HUD below-left, with a grouped move command menu and type-effectiveness hints. The wide scene keeps compact sprites, contact shadows and an open centre; mobile stacks the command area. Health panels stay outside the sprite scene. References and adaptation notes are documented in [docs/battlefield-reference.md](docs/battlefield-reference.md). This is a 2D visual refinement; battle rules and saves are unchanged.
+
+### Stylised biome battle backgrounds
+The detailed landscape has been replaced in battles by an original cel-shaded environment atlas (`assets/battle-biomes.webp`, approximately 55 KB). Each zone displays one quadrant: Greenwood woodland, Thunder Ridge rocks, Ashlands terracotta, or Frostfall snow. Broad shapes, quiet ground colours and integrated contact patches suit both chibi stills and animated game models. Sprite sizes remain compact. Background selection follows the active zone and is independent of interface appearance; no remote background service is needed. The homepage artwork is unchanged.
