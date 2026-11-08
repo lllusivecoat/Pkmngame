@@ -1,0 +1,110 @@
+[
+  {
+    "number": 1,
+    "name": "Bulbasaur",
+    "materials": "Lime-green skin; deeper green bulb",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png"
+  },
+  {
+    "number": 4,
+    "name": "Charmander",
+    "materials": "Golden-yellow skin; original flame",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png"
+  },
+  {
+    "number": 7,
+    "name": "Squirtle",
+    "materials": "Periwinkle skin; green shell",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png"
+  },
+  {
+    "number": 25,
+    "name": "Pikachu",
+    "materials": "Deeper orange-gold coat",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"
+  },
+  {
+    "number": 16,
+    "name": "Pidgey",
+    "materials": "Olive-gold plumage; cream underside",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/16.png"
+  },
+  {
+    "number": 10,
+    "name": "Caterpie",
+    "materials": "Golden body; red antenna retained",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png"
+  },
+  {
+    "number": 133,
+    "name": "Eevee",
+    "materials": "Silver coat; pale ivory ruff",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/133.png"
+  },
+  {
+    "number": 74,
+    "name": "Geodude",
+    "materials": "Gold stone; white eyes",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/74.png"
+  },
+  {
+    "number": 92,
+    "name": "Gastly",
+    "materials": "Blue gas; purple core",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/92.png"
+  },
+  {
+    "number": 43,
+    "name": "Oddish",
+    "materials": "Green body; bright green leaves",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/43.png"
+  },
+  {
+    "number": 54,
+    "name": "Psyduck",
+    "materials": "Blue body; cream bill",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/54.png"
+  },
+  {
+    "number": 147,
+    "name": "Dratini",
+    "materials": "Pink body; white fins and belly",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/147.png"
+  },
+  {
+    "number": 58,
+    "name": "Growlithe",
+    "materials": "Golden coat; cream mane and dark stripes",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/58.png"
+  },
+  {
+    "number": 37,
+    "name": "Vulpix",
+    "materials": "Golden-yellow coat; orange-gold curls",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/37.png"
+  },
+  {
+    "number": 179,
+    "name": "Mareep",
+    "materials": "Pink wool; blue face and gold orb",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/179.png"
+  },
+  {
+    "number": 198,
+    "name": "Murkrow",
+    "materials": "Magenta plumage; yellow bill",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/198.png"
+  },
+  {
+    "number": 231,
+    "name": "Phanpy",
+    "materials": "Paler blue skin; coral markings",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/231.png"
+  },
+  {
+    "number": 131,
+    "name": "Lapras",
+    "materials": "Purple body; unchanged shell and cream underside",
+    "reference": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/131.png"
+  }
+]

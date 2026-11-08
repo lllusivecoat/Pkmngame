@@ -49,4 +49,9 @@ The original chibi explorer uses a local transparent four-direction sprite atlas
 
 Connected regions can later use separate map definitions with exits linking a destination map and arrival tile. Keep only the current map rendered, with collection, world conditions, and progression shared across regions. Region tabs currently remain previews; this release does not add region travel.
 
-Normal-colour front-facing still fallbacks now use local chibi artwork in `assets/chibi/`. Animated sources remain first choice; Shiny palettes and rear views retain their existing sources. Each SVG contains its own static atlas image, so it works without remote image dependencies.
+Normal-colour front-facing still fallbacks now use local chibi artwork in `assets/chibi/`. Animated sources remain first choice; rear views retain their existing sources. Each SVG contains its own static atlas image, so it works without remote image dependencies.
+
+### Matching Shiny chibi art
+All 18 species have individually recoloured stills in `assets/chibi/shiny/`, using the same chibi silhouettes as their normal counterparts. `palettes.json` records material choices and Shiny reference URLs. The optional offline Pillow tool `scripts/build-shiny-art.py` rebuilds the art from the existing atlas; it checks unchanged alpha for every pixel. Production remains dependency-free. Body, wool, gas, shell, markings, flame and other materials are treated separately, preserving shading rather than applying one universal hue rotation.
+
+These are stylised palette adaptations checked against canonical Shiny references, not exact pixel copies of official artwork. Animated sprites remain animated; reduced-motion and still-art modes use the matching chibi Shiny assets. Existing saves and collection variants need no migration.
