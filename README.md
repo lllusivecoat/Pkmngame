@@ -95,3 +95,5 @@ This is the agreed core-stat/move upgrade, not full cartridge parity. Ability ef
 61 automated checks pass. New checks validate reference species data, known stat/damage examples, physical/special defence, modifier rounding, dual-type immunities, critical hits, nature, legal moves, level-up availability, PP/misses/Struggle, priority/paralysis, stages/status immunities, draining/seeding, Protect, side-condition persistence, old-save migration and the move-editor/battle UI. Existing exploration-to-capture, gyms, six-party, followers, themes and artwork checks also pass. Real-browser visual QA remains outstanding.
 
 Battle health panels now occupy a dedicated two-column row outside the battlefield scene. HP, levels, status and PP remain visible without covering either sprite, including on mobile. Pokémon abilities remain descriptive only; their effects are not active yet.
+
+Battle presentation uses a teal player panel and a warm coral opponent panel, with mirrored corner shapes, edge accents and HP bars. The battlefield reserves smaller, separate sprite areas and more space between opponents, with responsive size caps. These are visual changes only.

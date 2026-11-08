@@ -29,3 +29,23 @@
 :root[data-theme] #app .battle-status-row .hud-hp span{margin-left:5px;text-transform:capitalize}
 :root[data-theme] #app .scenic-battle .combat-ally .battle-creature,:root[data-theme] #app .scenic-battle .combat-enemy .battle-creature{padding:0}
 @media(max-width:560px){.battle-status-row{gap:8px;margin-bottom:10px}:root[data-theme] #app .battle-status-row .combat-hud{padding:9px;min-height:96px}:root[data-theme] #app .battle-status-row .combat-hud h3{font-size:12px}:root[data-theme] #app .battle-status-row .combat-hud h3 small,:root[data-theme] #app .battle-status-row .hud-hp{font-size:9px}:root[data-theme] #app .battle-side-label{font-size:8px}}
+/* Opposing sides have distinct shapes, accents and health colours in both themes. */
+:root,:root[data-theme="light"]{--ally-hud-bg:#e6f4f5;--ally-hud-line:#559a9d;--ally-hud-ink:#174d55;--enemy-hud-bg:#fff0e8;--enemy-hud-line:#bb7352;--enemy-hud-ink:#7c3824}
+:root[data-theme="dark"]{--ally-hud-bg:#163d45;--ally-hud-line:#4d99a3;--ally-hud-ink:#beeaf1;--enemy-hud-bg:#452d32;--enemy-hud-line:#b77868;--enemy-hud-ink:#f3cbc0}
+:root[data-theme] #app .battle-status-ally .combat-hud{background:var(--ally-hud-bg);border-color:var(--ally-hud-line);border-left-width:4px;border-radius:16px 6px 16px 6px}
+:root[data-theme] #app .battle-status-enemy .combat-hud{background:var(--enemy-hud-bg);border-color:var(--enemy-hud-line);border-right-width:4px;border-radius:6px 16px 6px 16px}
+:root[data-theme] #app .battle-status-ally .combat-hud h3,:root[data-theme] #app .battle-status-ally .combat-hud h3 small,:root[data-theme] #app .battle-status-ally .hud-hp,:root[data-theme] #app .battle-status-ally .move-resource,:root[data-theme] #app .battle-status-ally .move-resource small,:root[data-theme] #app .battle-status-ally .battle-side-label{color:var(--ally-hud-ink)}
+:root[data-theme] #app .battle-status-enemy .combat-hud h3,:root[data-theme] #app .battle-status-enemy .combat-hud h3 small,:root[data-theme] #app .battle-status-enemy .hud-hp,:root[data-theme] #app .battle-status-enemy .battle-side-label{color:var(--enemy-hud-ink)}
+:root[data-theme] #app .battle-status-ally .bar i{background:linear-gradient(90deg,#2c8b9b,#78c8cc)}
+:root[data-theme] #app .battle-status-enemy .bar i{background:linear-gradient(90deg,#c96b52,#f0ba75)}
+:root[data-theme] #app .battle-status-enemy .battle-side-label,:root[data-theme] #app .battle-status-enemy .hud-hp{text-align:right}
+:root[data-theme] #app .battle-status-enemy .combat-hud h3{flex-direction:row-reverse}
+/* Keep sprites in separate, smaller staging areas with room between them. */
+:root[data-theme] #app .scenic-battle.battle-stage{min-height:360px;aspect-ratio:1.65;background-position:center 58%}
+:root[data-theme] #app .scenic-battle .combat-ally{left:8%;right:auto;bottom:8%;width:32%;height:54%}
+:root[data-theme] #app .scenic-battle .combat-enemy{left:auto;right:12%;bottom:30%;width:26%;height:44%}
+:root[data-theme] #app .scenic-battle .battle-creature .art>.sprite{max-width:220px;max-height:220px;object-fit:contain}
+:root[data-theme] #app .scenic-battle .combat-enemy .battle-creature .art>.sprite{max-width:180px;max-height:180px}
+:root[data-theme] #app .scenic-battle .battle-creature .art>.art-fallback{font-size:65px;max-width:90px;max-height:90px}
+@media(max-width:800px){:root[data-theme] #app .scenic-battle.battle-stage{min-height:300px;aspect-ratio:1.55}}
+@media(max-width:560px){:root[data-theme] #app .scenic-battle.battle-stage{min-height:250px;aspect-ratio:1.4}:root[data-theme] #app .scenic-battle .combat-ally{left:6%;width:35%;height:51%;bottom:9%}:root[data-theme] #app .scenic-battle .combat-enemy{right:9%;width:29%;height:42%;bottom:32%}:root[data-theme] #app .scenic-battle .battle-creature .art>.sprite{max-width:145px;max-height:145px}:root[data-theme] #app .scenic-battle .combat-enemy .battle-creature .art>.sprite{max-width:120px;max-height:120px}}
