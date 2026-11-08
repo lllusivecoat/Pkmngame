@@ -23,7 +23,7 @@ Base combat uses Generation 9 custom-game rules, allowing older available moves/
 - Available species comprise 53 members of the current roster's evolution families. A held item for another species can be collected, but has no special effect on an incompatible holder.
 - Trade evolutions use a local Linking Cord; actual player trading is not implemented. Friendship/level evolution is confirmed from the detail panel. Time uses the prototype world's period.
 - Battle damage, statuses, ability triggers, temporary item interactions and initiative use the engine. Capture, exploration, trainer rewards, inventory, persistent conditions and field evolution remain game-level adapters. Outside-battle ability mechanics for future professions/breeding are not implemented.
-- The full ability registry is integrated; 82 automated checks and browser smoke tests do not exhaustively test every pair of 317 abilities and hundreds of items. The engine snapshot is versioned so later fixes can be tested and migrated.
+- The full ability registry is integrated; 87 automated checks and browser smoke tests do not exhaustively test every pair of 317 abilities and hundreds of items. The engine snapshot is versioned so later fixes can be tested and migrated.
 
 ## Save and deployment
 

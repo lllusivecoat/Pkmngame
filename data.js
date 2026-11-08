@@ -9,7 +9,7 @@ export const roster = [
   ['pikachu',25,'Pikachu','Electric',35,55,40,90,'Uncommon','Listen for a crackle in the trees when storm clouds gather.','Forest','Dusk','Storm','Static'],
   ['pidgey',16,'Pidgey','Flying',40,45,40,56,'Common','A familiar sight along open paths at the start of a new day.','Path','Morning','Clear','Keen Eye'],
   ['caterpie',10,'Caterpie','Bug',45,30,35,45,'Common','Freshly nibbled leaves reveal where this tiny traveller feeds.','Forest','Morning','Rain','Shield Dust'],
-  ['eevee',133,'Eevee','Normal',55,55,50,55,'Rare','Curiosity draws this adaptable companion toward woodland camps.','Grass','Dusk','Clear','Adaptability'],
+  ['eevee',133,'Eevee','Normal',55,55,50,55,'Rare','Curiosity draws this adaptable companion toward woodland villages.','Grass','Dusk','Clear','Adaptability'],
   ['geodude',74,'Geodude','Rock',40,80,100,20,'Common','It can be difficult to tell a resting Geodude from a stone.','Rocky clearing','Day','Clear','Sturdy'],
   ['gastly',92,'Gastly','Ghost',30,35,30,80,'Uncommon','It gathers in the cool mist around the old observatory.','Ruins','Night','Fog','Levitate'],
   ['oddish',43,'Oddish','Grass',45,50,55,30,'Common','Its little tracks crisscross the grass after the sun sets.','Grass','Night','Rain','Chlorophyll'],
