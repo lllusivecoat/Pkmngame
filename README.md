@@ -48,3 +48,5 @@ The catching tools are displayed as Poké Ball, Great Ball and Ultra Ball, with 
 The original chibi explorer uses a local transparent four-direction sprite atlas at `assets/trainer-atlas.webp`. `trainer.css` selects idle/walking frames; `visuals.js` renders it with an SVG fallback. Legal moves save the facing direction, while old saves default to facing forward. Movement respects both the in-game motion toggle and device reduced-motion preference. No remote trainer image service is required.
 
 Connected regions can later use separate map definitions with exits linking a destination map and arrival tile. Keep only the current map rendered, with collection, world conditions, and progression shared across regions. Region tabs currently remain previews; this release does not add region travel.
+
+Normal-colour front-facing still fallbacks now use local chibi artwork in `assets/chibi/`. Animated sources remain first choice; Shiny palettes and rear views retain their existing sources. Each SVG contains its own static atlas image, so it works without remote image dependencies.
