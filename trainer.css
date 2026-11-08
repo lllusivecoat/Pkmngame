@@ -1,0 +1,18 @@
+/* One local four-direction atlas: idle above, walking below. */
+.trainer-sprite{--trainer-column:0;position:relative;display:block;aspect-ratio:1;overflow:hidden;isolation:isolate;flex:none}
+.trainer-sprite.facing-left{--trainer-column:1}
+.trainer-sprite.facing-right{--trainer-column:2}
+.trainer-sprite.facing-up{--trainer-column:3}
+.trainer-sprite .trainer-atlas{position:absolute;display:block;width:400%;height:200%;max-width:none;max-height:none;left:calc(var(--trainer-column) * -100%);top:0;object-fit:fill;pointer-events:none;user-select:none}
+.trainer-sprite>svg{display:none}
+.trainer-sprite.sprite-unavailable>.trainer-atlas{display:none}
+.trainer-sprite.sprite-unavailable>svg{display:block;width:100%;height:100%;max-width:none}
+.world-player{animation:none}
+.world-player.is-moving{animation:world-step .24s ease-out}
+.world-player>.trainer-sprite{width:112%;height:112%;position:absolute;bottom:4%;filter:drop-shadow(0 2px 1px #10292166)}
+.world-player i{top:-13%;z-index:1}
+.trainer-sprite.is-walking .trainer-atlas{animation:trainer-stride .24s steps(1,end)}
+.profile-avatar>.trainer-sprite{width:100%;height:100%;border-radius:inherit}
+@keyframes trainer-stride{0%,75%{top:-100%}40%,100%{top:0}}
+.reduce-motion .world-player,.reduce-motion .trainer-atlas{animation:none!important}
+@media(prefers-reduced-motion:reduce){.world-player,.trainer-atlas{animation:none!important}}
