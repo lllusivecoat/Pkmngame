@@ -192,3 +192,7 @@ Wait until Settings says “Offline game files are ready” before disconnecting
 `pwa.js` manages install/update UI, `manifest.webmanifest` defines the app, and `sw.js` provides scoped offline caching. `scripts/build-precache.mjs` generates a content-hashed asset list during staging; no paid service or backend is required.
 
 New successful painted Mega Raichu X and Mega Steelix sprites are integrated in the gallery, form library and chibi battles. Shiny art remains unchanged. Other sequential image attempts were blocked and retain their previous form-specific art. 113 automated checks cover the release; CI additionally verifies real Chromium gameplay and offline launch, movement, artwork and saved progress before deployment.
+
+## Mega Charizard artwork correction
+
+Both normal-colour Mega Charizard X/Y now use the supplied painted chibi artwork in the gallery, form library and chibi battles. X has a successfully generated transparent background. Y retains the supplied white background because the image service blocked its background-removal request. Shiny form sprites remain their correct separate canonical art. Both WebP files are bundled for offline play; the release tag is `20261109-char8`.

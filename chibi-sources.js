@@ -7,3 +7,6 @@ chibiAtlas.blastoisemega={sheet:"assets/chibi-painted/mega-blastoise.webp",index
 chibiAtlas.raichumegax={sheet:"assets/chibi-painted/mega-raichu-x.webp",index:0,columns:1,rows:1};
 
 chibiAtlas.steelixmega={sheet:"assets/chibi-painted/mega-steelix.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.charizardmegax={sheet:"assets/chibi-painted/mega-charizard-x.webp",index:0,columns:1,rows:1};
+chibiAtlas.charizardmegay={sheet:"assets/chibi-painted/mega-charizard-y.webp",index:0,columns:1,rows:1};
