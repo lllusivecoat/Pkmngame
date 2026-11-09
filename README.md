@@ -200,3 +200,5 @@ Both normal-colour Mega Charizard X/Y now use the supplied painted chibi artwork
 ## Additional painted Mega sprites
 
 Sequential retries produced transparent painted Mega Pidgeot and Mega Gengar. Both are registered for the developer gallery, form library and chibi battles, bundled for offline play. Their separate Shiny art is preserved. Mega Ampharos, Mega Raichu Y and Mega Dragonite requests were blocked; their existing form-specific art remains. Release tag: `20261109-mega9`.
+
+Mega Gengar anatomy correction: replaced the initial legged drawing with the corrected legless painted sprite, `assets/chibi-painted/mega-gengar-corrected.webp`. Release tag `20261109-gengar10` refreshes installed/offline artwork too.
