@@ -1,11 +1,11 @@
-import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261109-charY11';
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261109-charY11';
-import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261109-charY11';
-import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261109-charY11';
-import {defaultMoveIds,moveIds} from './rules.js?v=20261109-charY11';
-import {zones,currentZone,zoneByName,discoverLocation,zoneSpecies} from './world.js?v=20261109-charY11';
-import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261109-charY11';
-export {roster,get,map,signs,clues} from './data.js?v=20261109-charY11';
+import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261109-clear12';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261109-clear12';
+import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261109-clear12';
+import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261109-clear12';
+import {defaultMoveIds,moveIds} from './rules.js?v=20261109-clear12';
+import {zones,currentZone,zoneByName,discoverLocation,zoneSpecies} from './world.js?v=20261109-clear12';
+import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261109-clear12';
+export {roster,get,map,signs,clues} from './data.js?v=20261109-clear12';
 export const PARTY_LIMIT=6;
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
 export function createCreature(id,level=5,random=Math.random){const c={uid:globalThis.crypto.randomUUID(),species:id,level,variant:random()<.05?'Shiny':'Normal',nature:pick(['Calm','Bold','Timid','Hardy'],random),size:pick(['Small','Average','Large'],random),trait:pick(['Alert','Resilient','Keen-eyed'],random),mastery:0,xp:0,xpRules:'canonical-v1',friendship:expandedSpecies[id]?.friendship??50,ability:toID(expandedSpecies[id]?.abilities['0']),heldItem:null,gigantamax:false,dynamaxLevel:0,evs:{},ivs:{},ppRemaining:{},ppUps:{},knownTM:[],currentHP:null,status:'',gender:expandedSpecies[id]?.gender||((random()<(expandedSpecies[id]?.genderRatio?.F??.5))?'F':'M'),caughtAt:new Date().toISOString(),location:'Greenwood'};const options=abilityOptions(c),hidden=options.find(a=>a.slot==='H'),normal=options.filter(a=>a.slot!=='H');c.ability=(hidden&&random()<.05?hidden:normal[Math.min(normal.length-1,Math.floor(random()*normal.length))])?.id||validAbility(c);c.moves=defaultMoveIds(c);return c}
