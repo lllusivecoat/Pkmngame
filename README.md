@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Play online: https://lllusivecoat.github.io/Pkmngame/
 
-For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 104 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
+For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 105 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -176,3 +176,9 @@ The developer gallery now opens with **all 83 entries** visible and cleared filt
 Normal and Shiny full-body artwork for all 83 entries, plus 65 Shiny pixel-chibi sources, are now bundled under `assets/artwork/`. The 18 existing painted Shiny sprites and generated chibi atlases are retained. All artwork therefore loads from the same host as the game rather than depending on the external image host. Static WebP encoding reduces the new assets from about 22.5 MB of source PNGs to 3.7 MB, preserving transparency. Missing images are labelled explicitly instead of silently disappearing.
 
 104 automated checks include file/format coverage for every entry and variant. The Chromium gate blocks the external image host, loads every gallery image in Normal and Shiny modes, checks the full normal/chibi counts, tests mobile layout and visits the final entry. This fixes gallery visibility/loading; it does not introduce the replacement final-evolution drawings that were rejected by the image service. Source notes: [artwork assets](docs/artwork-assets.md).
+
+## v0.16.2 — Painted Mega Venusaur and Mega Blastoise
+
+The two successful generated transparent sprites now replace the pixel chibi previews for normal-colour Mega Venusaur and Mega Blastoise. Both are integrated into the developer gallery, form library and chibi-mode battles. The standard artwork remains available beside them. Shiny variants retain their correct canonical pixel art; no ordinary-colour sprite is relabelled as Shiny.
+
+The painted renderer supports one-cell standalone assets as well as the existing 6×4 atlases. Source PNGs were encoded as transparent 512×512 WebP files under `assets/chibi-painted/`. Labels are derived from the actual registered artwork. 105 automated checks plus the Chromium gallery checks verify the new source mappings and previews. The other blocked Mega generations and the backgrounded Charizard uploads have not been replaced.
