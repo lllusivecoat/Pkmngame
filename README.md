@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Play online: https://lllusivecoat.github.io/Pkmngame/
 
-For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 100 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
+For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 103 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -160,3 +160,11 @@ Open **Pokédex → Evolution & battle-form library** to compare normal and chib
 `additional-species.js` stores the expansion snapshot and form registry, sourced from the pinned simulator and PokeAPI species/evolution/stat CSV. `forms.js` separates battle forms from permanent species. `chibi-sources.js` and `chibi-art.js` map local atlas cells; `assets/form-icons/` contains the canonical pixel sprites from PokeAPI/sprites. All current forms have normal and chibi routes.
 
 100 automated checks cover the current release, including every Mega/Gigantamax activation, reversion, regional evolution requirements and Brock’s rewards. GitHub Actions additionally runs Chromium gameplay checks before deployment, including desktop/mobile, the leader gallery, actual form artwork, and Brock’s badge/save flow. Its pinned Playwright driver is installed only for CI; build dependencies and screenshots are excluded from the static site. Public GitHub Pages/Actions remain the free hosting path. Release-tagged module imports prevent cached modules from mixing releases.
+
+## v0.16 — Developer artwork gallery and resource reset
+
+**Settings → Developer tools → Pokémon artwork gallery** lists every one of the 83 current entries (64 species/evolutions and 19 temporary forms), independently of collection unlocks or the artwork visibility setting. Search by name, filter species/Mega/Gigantamax, choose Normal/Shiny, and page through side-by-side normal and chibi artwork. Painted/pixel sources are identified. Normal and expanded Shiny artwork requires internet access; local painted chibi atlases and form icons remain available offline.
+
+**Reset all items & gold** asks for confirmation, then sets coins to zero, empties the bag, removes every held item and synchronizes the legacy ball/potion counters. It preserves Pokémon, individual training, party order, mastery, appearance, badges, quests, purchased creatures and exploration. Inventory migration does not refill a cleared bag. The separate **Reset entire save** retains its own confirmation.
+
+103 automated checks plus the CI Chromium flow cover gallery coverage/filtering and the reset’s cancel/confirm/save-reload behavior. `developer-tools.js` owns the pure resource reset and gallery catalogue. No backend or paid hosting was added.

@@ -1,7 +1,7 @@
-import {supportsGmax} from './forms.js?v=20261109-league3';
-import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261109-league3';
-import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261109-league3';
-import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261109-league3';
+import {supportsGmax} from './forms.js?v=20261109-tools4';
+import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261109-tools4';
+import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261109-tools4';
+import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261109-tools4';
 export {itemCatalog,abilityCatalog};
 export const ITEM_CATEGORIES=['All','Balls','Medicine','Battle items','Berries','Held items','TMs','Evolution'];
 const aliases={pokeball:'traps',potion:'potions'};
