@@ -1,7 +1,7 @@
-import {supportsGmax} from './forms.js?v=20261109-gengar10';
-import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261109-gengar10';
-import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261109-gengar10';
-import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261109-gengar10';
+import {supportsGmax} from './forms.js?v=20261109-charY11';
+import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261109-charY11';
+import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261109-charY11';
+import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261109-charY11';
 export {itemCatalog,abilityCatalog};
 export const ITEM_CATEGORIES=['All','Balls','Medicine','Battle items','Berries','Held items','TMs','Evolution'];
 const aliases={pokeball:'traps',potion:'potions'};
