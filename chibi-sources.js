@@ -15,3 +15,5 @@ chibiAtlas.pidgeotmega={sheet:"assets/chibi-painted/mega-pidgeot.webp",index:0,c
 chibiAtlas.gengarmega={sheet:"assets/chibi-painted/mega-gengar-corrected.webp",index:0,columns:1,rows:1};
 
 chibiAtlas.dragonitemega={sheet:"assets/chibi-painted/mega-dragonite.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.ampharosmega={sheet:"assets/chibi-painted/mega-ampharos.webp",index:0,columns:1,rows:1};

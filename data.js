@@ -1,6 +1,6 @@
-import {expandedSpecies} from './engine-data.js?v=20261109-dragon14';
-import {officialSpecies} from './combat-data.js?v=20261109-dragon14';
-import {zones} from './world.js?v=20261109-dragon14';
+import {expandedSpecies} from './engine-data.js?v=20261109-amph15';
+import {officialSpecies} from './combat-data.js?v=20261109-amph15';
+import {zones} from './world.js?v=20261109-amph15';
 // Static species data and encounter configuration. No network is required.
 export const roster = [
   ['bulbasaur',1,'Bulbasaur','Grass',45,49,49,45,'Common','A quiet woodland partner that thrives in the morning rain.','Forest','Morning','Rain','Overgrow'],

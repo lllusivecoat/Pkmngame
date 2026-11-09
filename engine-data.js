@@ -1,7 +1,7 @@
-import {expandedSpecies as originalSpecies} from './species-data.js?v=20261109-dragon14';
-import {additionalSpecies} from './additional-species.js?v=20261109-dragon14';
+import {expandedSpecies as originalSpecies} from './species-data.js?v=20261109-amph15';
+import {additionalSpecies} from './additional-species.js?v=20261109-amph15';
 export const expandedSpecies={...originalSpecies,...additionalSpecies};
-export {battleForms} from './additional-species.js?v=20261109-dragon14';
-export {engineMoves} from './moves-data.js?v=20261109-dragon14';
-export {abilityCatalog} from './ability-data.js?v=20261109-dragon14';
-export {itemCatalog} from './items-data.js?v=20261109-dragon14';
+export {battleForms} from './additional-species.js?v=20261109-amph15';
+export {engineMoves} from './moves-data.js?v=20261109-amph15';
+export {abilityCatalog} from './ability-data.js?v=20261109-amph15';
+export {itemCatalog} from './items-data.js?v=20261109-amph15';

@@ -1,2 +1,2 @@
-import {chibiAtlas} from './chibi-sources.js?v=20261109-dragon14';
+import {chibiAtlas} from './chibi-sources.js?v=20261109-amph15';
 export function chibiSprite(c){if(c.variant==='Shiny')return '';const cell=chibiAtlas[c.form||c.species];if(!cell)return '';const columns=cell.columns||6,rows=cell.rows||4,col=cell.index%columns,row=Math.floor(cell.index/columns);return `<svg class="sprite chibi-sheet-sprite" data-chibi-source="${cell.sheet}" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><svg width="200" height="200" viewBox="0 0 200 200" overflow="hidden"><image href="${cell.sheet}" x="${-col*200}" y="${-row*200}" width="${columns*200}" height="${rows*200}" preserveAspectRatio="none"/></svg></svg>`}
