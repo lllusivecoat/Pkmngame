@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Play online: https://lllusivecoat.github.io/Pkmngame/
 
-For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 103 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
+For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 104 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -168,3 +168,11 @@ Open **Pokédex → Evolution & battle-form library** to compare normal and chib
 **Reset all items & gold** asks for confirmation, then sets coins to zero, empties the bag, removes every held item and synchronizes the legacy ball/potion counters. It preserves Pokémon, individual training, party order, mastery, appearance, badges, quests, purchased creatures and exploration. Inventory migration does not refill a cleared bag. The separate **Reset entire save** retains its own confirmation.
 
 103 automated checks plus the CI Chromium flow cover gallery coverage/filtering and the reset’s cancel/confirm/save-reload behavior. `developer-tools.js` owns the pure resource reset and gallery catalogue. No backend or paid hosting was added.
+
+## v0.16.1 — Complete, locally hosted gallery
+
+The developer gallery now opens with **all 83 entries** visible and cleared filters, with optional 12/24-entry pagination, navigation at both ends, and a Show all artwork button. The Pokédex also links directly to the complete gallery. Search accepts name/form words in either order.
+
+Normal and Shiny full-body artwork for all 83 entries, plus 65 Shiny pixel-chibi sources, are now bundled under `assets/artwork/`. The 18 existing painted Shiny sprites and generated chibi atlases are retained. All artwork therefore loads from the same host as the game rather than depending on the external image host. Static WebP encoding reduces the new assets from about 22.5 MB of source PNGs to 3.7 MB, preserving transparency. Missing images are labelled explicitly instead of silently disappearing.
+
+104 automated checks include file/format coverage for every entry and variant. The Chromium gate blocks the external image host, loads every gallery image in Normal and Shiny modes, checks the full normal/chibi counts, tests mobile layout and visits the final entry. This fixes gallery visibility/loading; it does not introduce the replacement final-evolution drawings that were rejected by the image service. Source notes: [artwork assets](docs/artwork-assets.md).
