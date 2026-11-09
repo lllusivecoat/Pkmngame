@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Play online: https://lllusivecoat.github.io/Pkmngame/
 
-For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 87 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
+For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 92 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -20,7 +20,7 @@ Progress is saved in the browser under `greenwood.save.v2`. Settings provides JS
 
 Generated forest backgrounds are bundled locally. Full-body Pokémon sprites load from the public PokeAPI sprite repository; an offline symbol fallback is retained. This is a fan prototype, not an official product. Guild networking and multiplayer trading/PvP remain previews. All four connected zones are playable.
 
-Current verification: 87 automated checks cover gameplay, saves, UI, item mechanics and simulator integration. Chromium checks also cover desktop/mobile navigation, the bag, held items, battle controls and modal closing. Historical release notes below describe verification at the time of those releases.
+Current verification: 92 automated checks cover gameplay, saves, UI, item mechanics and simulator integration. Chromium checks also cover desktop/mobile navigation, the bag, held items, battle controls and modal closing. Historical release notes below describe verification at the time of those releases.
 
 ## v0.5 — modern animated Pokémon
 
@@ -131,4 +131,12 @@ Each of the four regions now has two optional trainers with distinct local chibi
 
 Each map has a red-roof Pokémon Center at (2, 3), replacing the old camp. Arriving heals party HP, status and PP for free; a Heal my party button is available there too. Defeats return the player to the local Center. Equipment and consumable stock are preserved by healing.
 
-Travel energy, energy recovery, energy controls and campfire artwork have been removed. Walking is unlimited. Existing saves drop the retired energy fields and migrate discovered camp locations to Centers without resetting progress. 87 automated checks cover the current release, including trainer rewards/rematches, map reachability, healing and save migration.
+Travel energy, energy recovery, energy controls and campfire artwork have been removed. Walking is unlimited. Existing saves drop the retired energy fields and migrate discovered camp locations to Centers without resetting progress. 92 automated checks cover the current release, including trainer rewards/rematches, map reachability, healing and save migration.
+
+## v0.14 — Your trainer, your style
+
+Open **Profile → Customise trainer** or **Settings → Customise trainer**. Six male/female presets offer Explorer, Ranger and Academy Traveller outfits. Choose from six skin tones, six hair colours, six outfit colours, three hairstyles and cap/beanie/no-headwear options. A live preview shows all four directions; custom avatars also animate their limbs when walking, respecting motion and reduced-motion preferences.
+
+Change the trainer name (up to 20 characters), preview freely, then Save. Cancel, the close button, backdrop or Escape discard unsaved changes. Appearance is cosmetic and free. Profile, map, sidebar, guild preview and rankings use the saved identity. Simulator victory checks use the player's actual battle identity, including when a player shares an NPC's name.
+
+`trainer-customization.js` contains the original layered SVG art, palette IDs, presets and validation. `trainer-editor.js` renders the editor; `trainer.css` handles layout and walking. These avatars require no downloaded assets or paid service. Saves retain the existing key and progression, adding a validated `trainer` appearance object; old saves get a default look. Export/import includes appearance and name. 92 automated checks and Chromium desktop/mobile flows cover this release.
