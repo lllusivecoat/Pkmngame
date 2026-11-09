@@ -24,6 +24,18 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run stage
+      - name: Install pinned browser test driver
+        run: npm install --no-save --package-lock=false --ignore-scripts --no-audit --no-fund playwright-core@1.56.1
+      - name: Browser gameplay checks
+        run: node scripts/browser-smoke.mjs
+      - name: Save browser failure screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failure
+          path: .browser-artifacts
+          if-no-files-found: ignore
+          retention-days: 3
       - uses: actions/configure-pages@v5
         with:
           enablement: true

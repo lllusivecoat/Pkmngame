@@ -8,7 +8,7 @@ This is an independent repository. Its releases do not deploy or change Wayfarer
 
 Play online: https://lllusivecoat.github.io/Pkmngame/
 
-For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 92 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
+For local use (Node 22+), run `npm ci`, `npm run build`, then `npm start` and visit http://localhost:4173. Run `npm test` for the 100 automated checks. The pinned MIT battle engine is bundled locally at build time; playing does not call a battle server. GitHub Actions builds and deploys only the staged static site, with no paid hosting or backend.
 
 The static website is at the repository root: index.html, app.js, core.js, battle.js, data.js, artwork.js, visuals.js, style.css, polish.css and assets/. Tests are in tests/.
 
@@ -146,3 +146,17 @@ Change the trainer name (up to 20 characters), preview freely, then Save. Cancel
 The original male explorer atlas is restored, alongside a matching detailed female atlas generated from that design. Both retain the cap, orange scarf, vest, backpack and boots in four facing directions and idle/walking frames. The same editor supports trainer name, gender, six skin tones, six hair colours and six outfit colours. Six quick presets combine male/female with Woodland, Coastal and Twilight palettes. Individual hairstyle/headwear controls from the geometric avatar renderer are replaced by the fixed classic explorer silhouette. Existing names, colour choices and progress are retained.
 
 `trainer-customization.js` clips each atlas cell and applies local material colour masks, preserving the source shading and leaving the default male sprite unaltered. `assets/trainer-atlas.webp` remains the original male art; `assets/trainer-female-atlas.webp` is the matching female art. No external avatar service or paid hosting is required.
+
+## v0.15 — The league, evolution families and battle forms
+
+The original detailed explorer art is now the common trainer style. Eight route trainers, all four local Gym Leaders, the Arena opponent and future default NPC portraits use `trainer-portraits.js` and the matching local atlas. Home has a five-leader gallery: Rowan is Greenwood’s original female Grass leader, and Brock visits Thunder Ridge at (6, 8). Brock has a playable Geodude/Onix/Golem challenge and a separate, persistent Boulder Badge. He does not replace Lyra or award her badge.
+
+The permanent roster now contains **64 species**, including Pichu, Onix/Steelix and the Alolan/Hisuian branches of the existing families. Added roots appear in regional encounter pools; their available level, stone, friendship and trade evolutions use the existing individual-preserving evolution system. Steelix requires a held Metal Coat and Linking Cord. Alolan Raichu can be encountered as a regional visitor; its separate Alolan evolution location is not a full playable region.
+
+The **19 temporary battle forms** comprise 11 Mega forms and eight Gigantamax forms. Mega Evolution uses the species’ own held stone. For Gigantamax, use Max Soup on a compatible individual, remove a held Mega Stone, and choose **Settings → Battle format → Gigantamax (Generation 8)**. Dynamax Candy increases Dynamax level, up to 10; battle HP scales with that level. Gigantamax lasts three turns. Pikachu/Eevee with the Gigantamax factor must have it removed with Max Soup before ordinary evolution. Transformations do not replace the saved species or create a new collection individual.
+
+Open **Pokédex → Evolution & battle-form library** to compare normal and chibi artwork, or select an evolution line. The original painted chibi sprites are retained; two new local atlases cover evolved/regional species. Onix and 17 special forms use clearly labelled official pixel chibi sprites; painted Gigantamax Lapras and Mega Steelix are included. Normal form artwork uses the correct PokeAPI form number. The image service rejected the separate painted Mega/Gigantamax sheet, so the game uses correct canonical pixel sprites rather than mislabelling base art. New Shiny forms use canonical Shiny game artwork.
+
+`additional-species.js` stores the expansion snapshot and form registry, sourced from the pinned simulator and PokeAPI species/evolution/stat CSV. `forms.js` separates battle forms from permanent species. `chibi-sources.js` and `chibi-art.js` map local atlas cells; `assets/form-icons/` contains the canonical pixel sprites from PokeAPI/sprites. All current forms have normal and chibi routes.
+
+100 automated checks cover the current release, including every Mega/Gigantamax activation, reversion, regional evolution requirements and Brock’s rewards. GitHub Actions additionally runs Chromium gameplay checks before deployment, including desktop/mobile, the leader gallery, actual form artwork, and Brock’s badge/save flow. Its pinned Playwright driver is installed only for CI; build dependencies and screenshots are excluded from the static site. Public GitHub Pages/Actions remain the free hosting path. Release-tagged module imports prevent cached modules from mixing releases.

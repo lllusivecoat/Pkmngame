@@ -1,0 +1,2 @@
+import {chibiAtlas} from './chibi-sources.js?v=20261109-league3';
+export function chibiSprite(c){if(c.variant==='Shiny')return '';const cell=chibiAtlas[c.form||c.species];if(!cell)return '';const col=cell.index%6,row=Math.floor(cell.index/6);return `<svg class="sprite chibi-sheet-sprite" viewBox="0 0 200 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><svg width="200" height="200" viewBox="0 0 200 200" overflow="hidden"><image href="${cell.sheet}" x="${-col*200}" y="${-row*200}" width="1200" height="800" preserveAspectRatio="none"/></svg></svg>`}

@@ -10,7 +10,7 @@ Pokemon names and game imagery remain their owners' property; the MIT engine lic
 
 ## What works
 
-The catalogue has 992 item records and 317 official abilities (excluding simulator-only custom abilities). Battle abilities and held items execute through the simulator in applicable contexts, rather than a generic stat multiplier. Examples tested include contact effects, entry effects, weather/speed, immunity and absorption, low-HP boosts, Choice locks, Assault Vest, Focus Sash, automatic berries and Leftovers.
+The catalogue has 993 item records and 317 official abilities (excluding simulator-only custom abilities). Battle abilities and held items execute through the simulator in applicable contexts, rather than a generic stat multiplier. Examples tested include contact effects, entry effects, weather/speed, immunity and absorption, low-HP boosts, Choice locks, Assault Vest, Focus Sash, automatic berries and Leftovers.
 
 The Bag implements medicine, revival, status/PP recovery, PP Ups, vitamins/feathers, EV-reducing berries, mints, Hyper Training, experience candy, Ability Capsule/Patch, compatible TMs and evolution items. Invalid or no-effect uses do not spend an item. Equipment transfers return the previous item to the bag. Battle medicine and X items take a turn. Capture balls use species catch rates, HP/status and context bonuses. Master Ball guarantees an ordinary wild capture; trainer catches are prohibited.
 
@@ -20,13 +20,17 @@ Base combat uses Generation 9 custom-game rules, allowing older available moves/
 
 - Mode-only items (Hisui throws, Let's Go candy, Wonder Launcher, event-only balls and unavailable forms) are explained and blocked instead of selling a fake effect.
 - Fishing, underwater and special-species bonuses require their actual context; ordinary exploration does not pretend to be underwater or fishing.
-- Available species comprise 53 members of the current roster's evolution families. A held item for another species can be collected, but has no special effect on an incompatible holder.
+- Available species comprise 64 members of the current roster's evolution families. A held item for another species can be collected, but has no special effect on an incompatible holder.
 - Trade evolutions use a local Linking Cord; actual player trading is not implemented. Friendship/level evolution is confirmed from the detail panel. Time uses the prototype world's period.
 - Battle damage, statuses, ability triggers, temporary item interactions and initiative use the engine. Capture, exploration, trainer rewards, inventory, persistent conditions and field evolution remain game-level adapters. Outside-battle ability mechanics for future professions/breeding are not implemented.
-- The full ability registry is integrated; 92 automated checks and browser smoke tests do not exhaustively test every pair of 317 abilities and hundreds of items. The engine snapshot is versioned so later fixes can be tested and migrated.
+- The full ability registry is integrated; 100 automated checks and browser smoke tests do not exhaustively test every pair of 317 abilities and hundreds of items. The engine snapshot is versioned so later fixes can be tested and migrated.
 
 ## Save and deployment
 
 `greenwood.save.v2` remains the save key. Migration initializes inventory once from legacy stock, validates legal abilities and keeps creature IDs, levels, variants and party order. New individual fields include equipment, EVs/IVs, persistent HP/status/PP, known TMs, friendship and XP-growth metadata. Settings can export/import or reset with confirmation.
 
 `npm ci` installs pinned build dependencies. `npm test` first builds the browser engine and runs the checks. `npm run build` writes `.site` for static hosting; development dependencies are never deployed. GitHub Pages is the existing free hosting path and only the Pkmngame repository is changed.
+
+## v0.15 additions
+
+The separate Generation 8 Gigantamax ruleset now supports Max Soup (factor toggle), Dynamax Candy and three-turn Gigantamax. Modern battles retain Generation 9 rules. Mega forms use their own stones in the simulator, including the current pinned Dex’s Mega Raichu X/Y and Mega Dragonite entries. All 19 battle forms have been exercised by integration checks. Species IDs remain permanent while the battle snapshot records the active form and actual maximum HP; persistent HP is converted back from Dynamax HP.

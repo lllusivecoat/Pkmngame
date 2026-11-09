@@ -1,4 +1,7 @@
-export {expandedSpecies} from './species-data.js';
-export {engineMoves} from './moves-data.js';
-export {abilityCatalog} from './ability-data.js';
-export {itemCatalog} from './items-data.js';
+import {expandedSpecies as originalSpecies} from './species-data.js?v=20261109-league3';
+import {additionalSpecies} from './additional-species.js?v=20261109-league3';
+export const expandedSpecies={...originalSpecies,...additionalSpecies};
+export {battleForms} from './additional-species.js?v=20261109-league3';
+export {engineMoves} from './moves-data.js?v=20261109-league3';
+export {abilityCatalog} from './ability-data.js?v=20261109-league3';
+export {itemCatalog} from './items-data.js?v=20261109-league3';

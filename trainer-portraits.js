@@ -1,0 +1,3 @@
+// All new NPCs inherit this detailed art family. Unknown IDs receive an explorer portrait.
+const portraits=['fern','milo','iris','hugo','ruby','ashby','skye','marin','rowan','lyra','flint','sera','brock','explorer-male','explorer-female','professor'];
+export function trainerPortrait(id,gender='male'){const index=portraits.includes(id)?portraits.indexOf(id):gender==='female'?14:13,col=index%4,row=Math.floor(index/4);return `<svg class="npc-portrait" viewBox="0 0 256 256" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" overflow="hidden"><svg x="0" y="0" width="256" height="256" viewBox="0 0 256 256" overflow="hidden"><image href="assets/trainers-classic.webp" x="${-col*256}" y="${-row*256}" width="1024" height="1024" preserveAspectRatio="none"/></svg></svg>`}
