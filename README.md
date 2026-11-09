@@ -140,3 +140,9 @@ Open **Profile → Customise trainer** or **Settings → Customise trainer**. Si
 Change the trainer name (up to 20 characters), preview freely, then Save. Cancel, the close button, backdrop or Escape discard unsaved changes. Appearance is cosmetic and free. Profile, map, sidebar, guild preview and rankings use the saved identity. Simulator victory checks use the player's actual battle identity, including when a player shares an NPC's name.
 
 `trainer-customization.js` contains the original layered SVG art, palette IDs, presets and validation. `trainer-editor.js` renders the editor; `trainer.css` handles layout and walking. These avatars require no downloaded assets or paid service. Saves retain the existing key and progression, adding a validated `trainer` appearance object; old saves get a default look. Export/import includes appearance and name. 92 automated checks and Chromium desktop/mobile flows cover this release.
+
+## v0.14.1 — Classic detailed trainer design
+
+The original male explorer atlas is restored, alongside a matching detailed female atlas generated from that design. Both retain the cap, orange scarf, vest, backpack and boots in four facing directions and idle/walking frames. The same editor supports trainer name, gender, six skin tones, six hair colours and six outfit colours. Six quick presets combine male/female with Woodland, Coastal and Twilight palettes. Individual hairstyle/headwear controls from the geometric avatar renderer are replaced by the fixed classic explorer silhouette. Existing names, colour choices and progress are retained.
+
+`trainer-customization.js` clips each atlas cell and applies local material colour masks, preserving the source shading and leaving the default male sprite unaltered. `assets/trainer-atlas.webp` remains the original male art; `assets/trainer-female-atlas.webp` is the matching female art. No external avatar service or paid hosting is required.
