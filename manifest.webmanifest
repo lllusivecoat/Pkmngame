@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Greenwood — Pokémon Adventure",
+  "short_name": "Greenwood",
+  "description": "Explore, battle and collect companions in Greenwood.",
+  "start_url": "./?source=app",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14242a",
+  "theme_color": "#14242a",
+  "orientation": "any",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {"src": "assets/app/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/app/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

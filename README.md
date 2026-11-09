@@ -182,3 +182,13 @@ Normal and Shiny full-body artwork for all 83 entries, plus 65 Shiny pixel-chibi
 The two successful generated transparent sprites now replace the pixel chibi previews for normal-colour Mega Venusaur and Mega Blastoise. Both are integrated into the developer gallery, form library and chibi-mode battles. The standard artwork remains available beside them. Shiny variants retain their correct canonical pixel art; no ordinary-colour sprite is relabelled as Shiny.
 
 The painted renderer supports one-cell standalone assets as well as the existing 6×4 atlases. Source PNGs were encoded as transparent 512×512 WebP files under `assets/chibi-painted/`. Labels are derived from the actual registered artwork. 105 automated checks plus the Chromium gallery checks verify the new source mappings and previews. The other blocked Mega generations and the backgrounded Charizard uploads have not been replaced.
+
+## v0.17 — Installable Greenwood app
+
+Open https://lllusivecoat.github.io/Pkmngame/ in your usual browser, then choose **Settings → Install Greenwood**. On Android use Chrome’s Install app menu; on iPhone/iPad use Safari → Share → Add to Home Screen. Desktop Chrome/Edge also provide an install icon. This is a free progressive web app, not an App Store download, and launches independently of ChatGPT.
+
+Wait until Settings says “Offline game files are ready” before disconnecting. The service worker caches the complete static game and artwork. Existing saves stay in `greenwood.save.v2`. Saves are specific to the browser/device: export your save before switching and import it if the installed app starts fresh. There is no automatic cloud sync. Updates wait for **Update & restart**, which is guarded during battles; only this game’s scoped caches are managed. Wayfarer’s Lantern is untouched.
+
+`pwa.js` manages install/update UI, `manifest.webmanifest` defines the app, and `sw.js` provides scoped offline caching. `scripts/build-precache.mjs` generates a content-hashed asset list during staging; no paid service or backend is required.
+
+New successful painted Mega Raichu X and Mega Steelix sprites are integrated in the gallery, form library and chibi battles. Shiny art remains unchanged. Other sequential image attempts were blocked and retain their previous form-specific art. 113 automated checks cover the release; CI additionally verifies real Chromium gameplay and offline launch, movement, artwork and saved progress before deployment.

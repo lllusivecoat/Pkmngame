@@ -3,3 +3,7 @@ export const chibiAtlas={"ivysaur":{"sheet":"assets/evolution-chibi-1.webp","ind
 
 chibiAtlas.venusaurmega={sheet:"assets/chibi-painted/mega-venusaur.webp",index:0,columns:1,rows:1};
 chibiAtlas.blastoisemega={sheet:"assets/chibi-painted/mega-blastoise.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.raichumegax={sheet:"assets/chibi-painted/mega-raichu-x.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.steelixmega={sheet:"assets/chibi-painted/mega-steelix.webp",index:0,columns:1,rows:1};
