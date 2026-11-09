@@ -10,3 +10,6 @@ chibiAtlas.steelixmega={sheet:"assets/chibi-painted/mega-steelix.webp",index:0,c
 
 chibiAtlas.charizardmegax={sheet:"assets/chibi-painted/mega-charizard-x.webp",index:0,columns:1,rows:1};
 chibiAtlas.charizardmegay={sheet:"assets/chibi-painted/mega-charizard-y.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.pidgeotmega={sheet:"assets/chibi-painted/mega-pidgeot.webp",index:0,columns:1,rows:1};
+chibiAtlas.gengarmega={sheet:"assets/chibi-painted/mega-gengar.webp",index:0,columns:1,rows:1};

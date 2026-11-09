@@ -196,3 +196,7 @@ New successful painted Mega Raichu X and Mega Steelix sprites are integrated in 
 ## Mega Charizard artwork correction
 
 Both normal-colour Mega Charizard X/Y now use the supplied painted chibi artwork in the gallery, form library and chibi battles. X has a successfully generated transparent background. Y retains the supplied white background because the image service blocked its background-removal request. Shiny form sprites remain their correct separate canonical art. Both WebP files are bundled for offline play; the release tag is `20261109-char8`.
+
+## Additional painted Mega sprites
+
+Sequential retries produced transparent painted Mega Pidgeot and Mega Gengar. Both are registered for the developer gallery, form library and chibi battles, bundled for offline play. Their separate Shiny art is preserved. Mega Ampharos, Mega Raichu Y and Mega Dragonite requests were blocked; their existing form-specific art remains. Release tag: `20261109-mega9`.
