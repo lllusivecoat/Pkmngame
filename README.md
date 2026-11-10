@@ -253,3 +253,17 @@ These are encounter selection weights, not guarantees or battle-stat bonuses. Ex
 `world-events.js` centralizes definitions, regional swarms, visitors, multipliers and countdown calculation; `data.js` re-exports the event catalogue. `core.encounterPool`, movement and `hunting.js` consume the actual effect functions. The save remains version 3 under `greenwood.save.v2`, using the existing `event` and `worldAt` fields. A server can later replace that local schedule with an authoritative event and expiry timestamp.
 
 138 automated checks cover exact weight ratios, visitor expiry, each regional swarm, actual movement XP, hunt bonuses, rotation drift and save continuity. CI Chromium checks the countdown, manual conditions, survey XP/hunt boost, mobile layout and reload before deployment.
+
+## v0.22 — Local Arena ladder and milestone rewards
+
+**Arena → Find AI ladder match** starts a three-opponent battle with a restored party. A full victory earns **+24 local rating and 200 bonus coins**; a defeat loses **16 rating**, floored at zero, and returns your party safely to its regional Center. Existing round coins, experience, research and mastery remain in place. Leaving a match has no penalty and is not recorded as a completed match in this prototype.
+
+**Unrated practice** uses the same battle engine but awards no ladder rating/win or full-match bonus. Normal round rewards still apply. All opponents are local AI; the comparison rankings are clearly labelled fictional. Four opponent teams rotate with completed victories, and their levels follow the party average, capped at 35. The current Season of Storms is a persistent demo season with no automatic reset or real-player matchmaking.
+
+Rank labels and progress are derived from saved rating, from Bronze through Silver/Gold to Platinum/Diamond. The starting 1,284 remains Silver III; Silver II begins at 1,350. The Profile uses the same rank calculation. Peak rating, win streak, ladder losses and the last 20 completed matches are saved. A completed match ID cannot settle again while present in the recent ledger. Gym and route-trainer battles never change ladder stats.
+
+**Arena → Rewards** grants actual coins and Bag items once per milestone: first victory, three victories, five victories, Silver contender and Gold contender. Rank milestones use peak rating and require at least one ladder victory. Claimed IDs survive losses, evolution, save reload and the item/gold reset, preventing repeat claims. Existing rating and win counts migrate without a reset; no fictional losses or history are added.
+
+`arena.js` provides rank thresholds, AI team plans, normalization, settlement, reward eligibility and UI. `battle.js` settles only completed pure Arena matches; `core.claimArenaReward` adds the awarded coins/items. State lives under `arena` alongside the original `rating` and `arenaWins`. A future backend should own matchmaking, rating/season records and atomic battle/reward settlement. This remains free static hosting.
+
+146 automated checks include actual ladder wins/losses, promotion, rating floor, unrated rewards, Gym/trainer guards, reward Bag contents, duplicate settlement and legacy migration. Chromium additionally completes a ladder match, verifies promotion/history, claims a reward, checks persisted state, views rankings, withdraws from practice and tests mobile layout before publishing.

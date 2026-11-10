@@ -1,4 +1,4 @@
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-events23';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-arena24';
 export const toID=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 export function xpAtLevel(level,growth='medium'){const n=Math.max(1,Math.min(100,level)),cube=n**3;let xp=cube;if(growth==='fast')xp=cube*.8;else if(growth==='slow')xp=cube*1.25;else if(growth==='medium-slow')xp=1.2*cube-15*n*n+100*n-140;else if(growth==='erratic')xp=n<=50?cube*(100-n)/50:n<=68?cube*(150-n)/100:n<=98?cube*Math.floor((1911-10*n)/3)/500:cube*(160-n)/100;else if(growth==='fluctuating')xp=n<=15?cube*(Math.floor((n+1)/3)+24)/50:n<=36?cube*(n+14)/50:cube*(Math.floor(n/2)+32)/50;return Math.max(0,Math.floor(xp))}
 export const levelXP=c=>c.level>=100?0:xpAtLevel(c.level+1,expandedSpecies[c.species]?.growth)-xpAtLevel(c.level,expandedSpecies[c.species]?.growth);
