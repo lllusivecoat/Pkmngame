@@ -17,3 +17,6 @@ chibiAtlas.gengarmega={sheet:"assets/chibi-painted/mega-gengar-corrected.webp",i
 chibiAtlas.dragonitemega={sheet:"assets/chibi-painted/mega-dragonite.webp",index:0,columns:1,rows:1};
 
 chibiAtlas.ampharosmega={sheet:"assets/chibi-painted/mega-ampharos.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.onix={sheet:"assets/chibi-painted/onix.webp",index:0,columns:1,rows:1};
+chibiAtlas.golemalola={sheet:"assets/chibi-painted/alolan-golem.webp",index:0,columns:1,rows:1};
