@@ -1,7 +1,7 @@
-import {supportsGmax} from './forms.js?v=20261110-arena24';
-import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-arena24';
-import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261110-arena24';
-import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261110-arena24';
+import {supportsGmax} from './forms.js?v=20261110-guild25';
+import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-guild25';
+import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261110-guild25';
+import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261110-guild25';
 export {itemCatalog,abilityCatalog};
 export const ITEM_CATEGORIES=['All','Balls','Medicine','Battle items','Berries','Held items','TMs','Evolution'];
 const aliases={pokeball:'traps',potion:'potions'};

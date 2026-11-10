@@ -1,12 +1,13 @@
-import {arenaOpponent,settleArena,arenaResultText} from './arena.js?v=20261110-arena24';
-import {awardEVs,addExperience,validAbility} from './progression.js?v=20261110-arena24';
-import {currentZone,trainerAt} from './world.js?v=20261110-arena24';
-import {createCreature,catchCreature,award,grow,updateAchievements,record} from './core.js?v=20261110-arena24';
-import {statsFor,movesFor,moveCatalog,gameMoveId} from './rules.js?v=20261110-arena24';
-import {abilityCatalog,expandedSpecies} from './engine-data.js?v=20261110-arena24';
-import {ensureInventory,itemCount,spendItem,addItem,applyMedicine,itemCatalog,healParty,currentHP,itemContext,ppMaximum} from './items.js?v=20261110-arena24';
-import {createSimulation,restoreSimulation,synchronize,settleSwitches,commitTurn,applyBattleMedicine,pokemonFor,Dex} from './sim-adapter.js?v=20261110-arena24';
-import {fullCaptureChance,legacyBalls} from './capture.js?v=20261110-arena24';
+import {earnGuildPoints} from './guild.js?v=20261110-guild25';
+import {arenaOpponent,settleArena,arenaResultText} from './arena.js?v=20261110-guild25';
+import {awardEVs,addExperience,validAbility} from './progression.js?v=20261110-guild25';
+import {currentZone,trainerAt} from './world.js?v=20261110-guild25';
+import {createCreature,catchCreature,award,grow,updateAchievements,record} from './core.js?v=20261110-guild25';
+import {statsFor,movesFor,moveCatalog,gameMoveId} from './rules.js?v=20261110-guild25';
+import {abilityCatalog,expandedSpecies} from './engine-data.js?v=20261110-guild25';
+import {ensureInventory,itemCount,spendItem,addItem,applyMedicine,itemCatalog,healParty,currentHP,itemContext,ppMaximum} from './items.js?v=20261110-guild25';
+import {createSimulation,restoreSimulation,synchronize,settleSwitches,commitTurn,applyBattleMedicine,pokemonFor,Dex} from './sim-adapter.js?v=20261110-guild25';
+import {fullCaptureChance,legacyBalls} from './capture.js?v=20261110-guild25';
 export const maxHP=c=>statsFor(c).hp;
 export const combatState=(b,c)=>b.states[c.uid]||{};
 export const battleMoves=(b,c)=>c.uid===b.active?b.moveChoices||[]:movesFor(c);
@@ -15,7 +16,7 @@ function make(s,team,{arena=false,gym=null,leader=null,trainer=null,gymData=null
 export function beginBattle(s,wild,arena=false,{rated=true}={}){if(!arena)return make(s,[wild]);const level=Math.max(6,Math.min(35,Math.round(s.party.reduce((n,id)=>n+s.collection.find(c=>c.uid===id).level,0)/s.party.length))),opponent=arenaOpponent(s);return make(s,opponent.team.map((id,i)=>createCreature(id,Math.min(100,level+(i===2?1:0)))),{arena,rated,leader:opponent.name})}
 export function beginGymBattle(s){const z=currentZone(s);if(s.position.x!==z.gym.x||s.position.y!==z.gym.y||!s.started||!s.party.length)return null;return make(s,z.gym.team.map((id,i)=>createCreature(id,z.levels[1]+i)),{arena:true,gym:z.name,leader:z.gym.leader})}
 export function beginTrainerBattle(s){const t=trainerAt(s);if(!s.started||!t||!s.party.length)return null;return make(s,t.team.map((id,i)=>createCreature(id,t.level+i)),{arena:true,trainer:t.id,leader:t.name,gym:t.challenge?.name||null,gymData:t.challenge||null})}
-function rewards(s,b,sim){for(const p of sim.p2.pokemon){const uid=b.names[p.set.name];if(!p.fainted||b.rewarded.includes(uid))continue;b.rewarded.push(uid);record(s,b.creatures[uid],false,{battle:true});s.wins++;const active=s.collection.find(c=>c.uid===b.active),money=active?.heldItem==='amuletcoin'||active?.heldItem==='luckincense'?160:80;s.coins+=money;award(s,60);b.pendingRewards??=[];b.pendingRewards.push({active:b.active,species:b.creatures[uid].species});}}
+function rewards(s,b,sim){for(const p of sim.p2.pokemon){const uid=b.names[p.set.name];if(!p.fainted||b.rewarded.includes(uid))continue;b.rewarded.push(uid);earnGuildPoints(s,5);record(s,b.creatures[uid],false,{battle:true});s.wins++;const active=s.collection.find(c=>c.uid===b.active),money=active?.heldItem==='amuletcoin'||active?.heldItem==='luckincense'?160:80;s.coins+=money;award(s,60);b.pendingRewards??=[];b.pendingRewards.push({active:b.active,species:b.creatures[uid].species});}}
 function finishGrowth(s,b){for(const reward of b.pendingRewards||[]){for(const uid of s.party){const c=s.collection.find(c=>c.uid===uid);if(!c||currentHP(c)<=0)continue;const old=maxHP(c);awardEVs(c,expandedSpecies[reward.species]?.evYield||{});if(uid===reward.active)grow(c);else addExperience(c,c.heldItem==='luckyegg'?22:15);c.currentHP=Math.min(maxHP(c),(c.currentHP??old)+maxHP(c)-old)}}b.pendingRewards=[]}
 function finish(s,b,sim,custom=''){finishGrowth(s,b);updateAchievements(s);if(sim.ended){if(sim.winner===sim.p1.name){if(b.trainer&&b.gym){s.defeatedTrainers??=[];if(!s.defeatedTrainers.includes(b.trainer))s.defeatedTrainers.push(b.trainer)}if(b.gym){const gym=b.gymData||currentZone(s).gym;if(!s.badges.includes(gym.badge)){s.badges.push(gym.badge);s.coins+=400;award(s,100)}}else if(b.trainer){s.defeatedTrainers??=[];if(!s.defeatedTrainers.includes(b.trainer)){s.defeatedTrainers.push(b.trainer);s.coins+=120;award(s,50)}}else if(b.arena){b.arenaResult=settleArena(s,b,true);if(b.arenaResult?.rated)s.coins+=200;updateAchievements(s)}return {battle:null,finalBattle:b,event:b.gym?`GYM VICTORY · ${b.leader} defeated · ${(b.gymData||currentZone(s).gym).badge}`:b.trainer?`TRAINER VICTORY · ${b.leader} defeated · progress saved`:b.arena?'ARENA VICTORY · '+arenaResultText(b.arenaResult)+(b.arenaResult?.rated?' · +200 bonus coins':''):'BATTLE WON · experience and coins earned'}}b.arenaResult=settleArena(s,b,false);s.position={x:currentZone(s).center.x,y:currentZone(s).center.y};s.followerPosition=null;healParty(s);return {battle:null,finalBattle:b,event:'Party exhausted. Safely returned to the Pokémon Center; HP, status and PP restored.'+(b.arenaResult?' · '+arenaResultText(b.arenaResult):'')}}return {battle:null,event:custom}}
 function afterTurn(s,b,sim){rewards(s,b,sim);settleSwitches(sim);synchronize(b,sim,s,{persist:true});if(sim.ended)return finish(s,b,sim);updateAchievements(s);return {battle:b,event:b.effects.length?'':b.log.at(-1)||''}}
