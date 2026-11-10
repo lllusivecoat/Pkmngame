@@ -20,3 +20,13 @@ chibiAtlas.ampharosmega={sheet:"assets/chibi-painted/mega-ampharos.webp",index:0
 
 chibiAtlas.onix={sheet:"assets/chibi-painted/onix.webp",index:0,columns:1,rows:1};
 chibiAtlas.golemalola={sheet:"assets/chibi-painted/alolan-golem.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.venusaurgmax={sheet:"assets/chibi-painted/venusaurgmax.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.charizardgmax={sheet:"assets/chibi-painted/charizardgmax.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.blastoisegmax={sheet:"assets/chibi-painted/blastoisegmax.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.butterfreegmax={sheet:"assets/chibi-painted/butterfreegmax.webp",index:0,columns:1,rows:1};
+
+chibiAtlas.eeveegmax={sheet:"assets/chibi-painted/eeveegmax.webp",index:0,columns:1,rows:1};

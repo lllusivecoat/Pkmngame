@@ -202,3 +202,5 @@ Both normal-colour Mega Charizard X/Y now use the supplied painted chibi artwork
 Sequential retries produced transparent painted Mega Pidgeot and Mega Gengar. Both are registered for the developer gallery, form library and chibi battles, bundled for offline play. Their separate Shiny art is preserved. Mega Ampharos, Mega Raichu Y and Mega Dragonite requests were blocked; their existing form-specific art remains. Release tag: `20261109-mega9`.
 
 Mega Gengar anatomy correction: replaced the initial legged drawing with the corrected legless painted sprite, `assets/chibi-painted/mega-gengar-corrected.webp`. Release tag `20261109-gengar10` refreshes installed/offline artwork too.
+
+Painted Gigantamax Venusaur, Charizard, Blastoise, Butterfree and Eevee now use standalone transparent assets in the gallery, form library and chibi battles. Butterfree’s surrounding glow was removed using standard image editing. Shiny artwork and transformation rules are unchanged. Dragonite’s rejected anatomy edit was not integrated; Raichu Y, Gigantamax Pikachu and Gengar requests were blocked. Release tag: `20261110-gmax17`.
