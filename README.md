@@ -238,3 +238,18 @@ Catch a wild tracked target in its region to complete that trail; all clues are 
 `hunting.js` stores the trail catalogue, clue coordinates/text, knowledge gates, normalization and panel. `core.step` discovers clues and rolls encounters; wild captures mark completion. New state is `hunts.target`, bounded `hunts.notes`, `hunts.caught` and `hunts.claimed`. Old Dratini knowledge remains in `clues` as its canonical source. Migration keeps saves compatible; no reset is needed. A future backend can store notes/completions per player and award hunt claims transactionally. No multiplayer service or paid hosting is added.
 
 131 automated checks verify reachability, conditions, actual target encounters and captures, one-time clue XP/rewards, pausing and legacy migration. CI Chromium tests regional clue markers, movement, tracking controls, mobile layout, completion claims and reload persistence before publication.
+
+## v0.21 — Functional rotating world events
+
+Home and Explore show an event panel with its exact effect, live countdown and next event. The local prototype rotates weather, time and events together every three minutes, retaining the original timestamp anchor across refresh/offline periods. Rotation announcements appear when it is safe to redraw the screen; a battle or detail dialog is not interrupted. Explore’s existing tester controls can set conditions manually and restart the interval.
+
+- **Stormfront:** Electric/Water species gain 50% more selection weight after a normal terrain encounter triggers.
+- **Moonlit gathering:** Murkrow temporarily joins every regional table, including Thunder Ridge and Ashlands where it is ordinarily absent. Gastly and Murkrow receive double selection weight. Owned visitors remain yours after the event.
+- **Regional swarm:** Caterpie in Greenwood, Mareep in Thunder Ridge, Geodude in Ashlands or Psyduck in Frostfall receives triple weight.
+- **Wayfarer survey:** Valid movement earns 5 trainer XP instead of 3. Dedicated hunting rolls are multiplied by 1.25, with the fully learned matching hunt increasing from 8% to 10%. Wrong-region hunt rolls remain zero.
+
+These are encounter selection weights, not guarantees or battle-stat bonuses. Existing weather, time and terrain modifiers still apply. No extra creature variants or authentication/backend services were added.
+
+`world-events.js` centralizes definitions, regional swarms, visitors, multipliers and countdown calculation; `data.js` re-exports the event catalogue. `core.encounterPool`, movement and `hunting.js` consume the actual effect functions. The save remains version 3 under `greenwood.save.v2`, using the existing `event` and `worldAt` fields. A server can later replace that local schedule with an authoritative event and expiry timestamp.
+
+138 automated checks cover exact weight ratios, visitor expiry, each regional swarm, actual movement XP, hunt bonuses, rotation drift and save continuity. CI Chromium checks the countdown, manual conditions, survey XP/hunt boost, mobile layout and reload before deployment.
