@@ -214,3 +214,15 @@ Cards and details show progress, battle/capture results report gains and rank un
 `mastery.js` defines thresholds, reward choices, validation and the detail panel. Cosmetic selections live on each individual as `bondStyle`; existing `mastery` remains the point counter. Both survive the current migration, evolution, party changes, export/import and local reload. Rendering validates choices against rank and an allowlist, including imported data. A backend can later store these fields on the individual creature record and award points authoritatively at battle settlement.
 
 118 automated checks include real capture and Arena rewards, lock validation, max-rank progress and evolution/save persistence without stat effects. The CI Chromium gate checks mobile cosmetics, rank locks and save reload before Pages deployment.
+
+## v0.19 — Living Pokédex research
+
+Open **Pokédex → species → Species research**. Each species has five goals: identify it, own a specimen, observe three different wild individuals, observe two weather/time combinations, and defeat the species in a wild/trainer/Gym/Arena battle. Every task awards **75 coins and 25 trainer XP once**, claimed from that entry; completed goals and ready rewards are visible on the journal cards and overview. Battle/capture results and field encounters report research updates.
+
+The first encounter reveals name, types and a silhouette. Ownership reveals description and habitat. Field observations in two combinations reveal activity and preferred weather; battle study reveals the species ability and evolution notes. Traits come from owned individuals; variants are recorded when encountered. Earlier saves keep habits learned after two catches and ability knowledge after three. Their historical sightings are credited toward the observer task without inventing weather observations or battle records. No save reset is required.
+
+`journal.js` owns validated research data, goal evaluation, reward claims and the panel. `core.record` records discoveries and bounded wild-individual IDs/conditions, while battle settlement records species study once per defeated opponent. Re-recording a capture cannot create another wild sighting. Market purchases, starters and evolutions grant ownership knowledge without field sightings. Store species research on a future server-owned player/species record and issue rewards atomically from the same rules.
+
+Save data remains `greenwood.save.v2`; research fields live under `dex[species].research` and include at most three sighting IDs, two conditions, battle-study flag, legacy sighting credit and claimed goal IDs. Migration preserves and validates these fields. The item/gold reset keeps claimed research rewards, preventing repeat claims.
+
+124 automated checks cover captures, actual battle study, distinct observation conditions, duplicate prevention, legacy migration and persistent one-time rewards. Chromium additionally checks the mobile research panel, claim and reload persistence before publishing.

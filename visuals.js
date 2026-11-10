@@ -1,10 +1,10 @@
-import {chibiSprite} from './chibi-art.js?v=20261110-mastery20';
-import {trainerPortrait} from './trainer-portraits.js?v=20261110-mastery20';
-import {trainerSVG} from './trainer-customization.js?v=20261110-mastery20';
-import {spriteCandidates} from './artwork.js?v=20261110-mastery20';
-import {get,icons} from './data.js?v=20261110-mastery20';
-import {zones,currentZone} from './world.js?v=20261110-mastery20';
-import {map,signs} from './data.js?v=20261110-mastery20';
+import {chibiSprite} from './chibi-art.js?v=20261110-journal21';
+import {trainerPortrait} from './trainer-portraits.js?v=20261110-journal21';
+import {trainerSVG} from './trainer-customization.js?v=20261110-journal21';
+import {spriteCandidates} from './artwork.js?v=20261110-journal21';
+import {get,icons} from './data.js?v=20261110-journal21';
+import {zones,currentZone} from './world.js?v=20261110-journal21';
+import {map,signs} from './data.js?v=20261110-journal21';
 const rng=n=>{let value=n+31;return ()=>{value=(value*1664525+1013904223)>>>0;return value/4294967296}};
 function tree(x,y,scale=1,seed=0){const r=rng(seed),leaves=Array.from({length:13},(_,i)=>{const a=i*2.4,d=8+r()*20,cx=Math.cos(a)*d,cy=Math.sin(a)*d*.65;return `<path d="M${cx-10} ${cy-9}h16l8 8-3 12-16 4-12-8 1-9Z" fill="${['#335e3c','#477748','#5d8e4f','#3f7041'][i%4]}"/><path d="M${cx-6} ${cy-6}h9l3 3h-10Z" fill="#8bad6233"/>`}).join('');return `<g transform="translate(${x} ${y}) scale(${scale})"><ellipse cy="20" rx="35" ry="15" fill="#102b2370"/><path d="M-7 3h14v34l-8 6-13-6 7-12Z" fill="#66543a"/><path d="M-1 12h5v22l-5 3Z" fill="#957752"/><g transform="translate(0 -12)"><path d="M-30-15l20-19 28 5 17 22-5 24-31 12-29-13Z" fill="#244c35"/>${leaves}</g></g>`}
 function rock(x,y,scale=1){return `<g transform="translate(${x} ${y}) scale(${scale})"><ellipse cy="15" rx="25" ry="12" fill="#132e2540"/><path d="M-25 8l6-23 21-9 23 17 2 23-25 9Z" fill="#718576"/><path d="M-19-15l21-9 23 17-25 5Z" fill="#9ca98b"/><path d="M0-2v24l27-6-2-23Z" fill="#607368"/><path d="M-22 5l7-4 5 3-2 5-9 2Z" fill="#4f774b"/></g>`}

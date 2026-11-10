@@ -1,7 +1,7 @@
-import {roster} from './data.js?v=20261110-mastery20';
-import {battleForms} from './forms.js?v=20261110-mastery20';
-import {syncLegacy} from './items.js?v=20261110-mastery20';
-import {chibiAtlas} from './chibi-sources.js?v=20261110-mastery20';
+import {roster} from './data.js?v=20261110-journal21';
+import {battleForms} from './forms.js?v=20261110-journal21';
+import {syncLegacy} from './items.js?v=20261110-journal21';
+import {chibiAtlas} from './chibi-sources.js?v=20261110-journal21';
 export const artworkEntries=[...roster.map(s=>({id:s.id,name:s.name,species:s.id,kind:'species'})),...Object.values(battleForms).map(f=>({id:f.id,name:f.name,species:f.base,form:f.id,kind:f.kind}))];
 export function galleryEntries({search='',kind='all'}={}){const words=search.trim().toLowerCase().split(/\s+/).filter(Boolean);return artworkEntries.filter(e=>(kind==='all'||e.kind===kind)&&words.every(w=>e.name.toLowerCase().replace(/-/g,' ').includes(w)))}
 export function chibiLabel(entry,variant='Normal'){return variant==='Normal'&&(chibiAtlas[entry.id]||roster.slice(0,18).some(p=>p.id===entry.id))||variant==='Shiny'&&roster.slice(0,18).some(p=>p.id===entry.id)?'Painted chibi':'Pixel chibi · official game sprite'}
