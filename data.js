@@ -1,6 +1,6 @@
-import {expandedSpecies} from './engine-data.js?v=20261110-journal21';
-import {officialSpecies} from './combat-data.js?v=20261110-journal21';
-import {zones} from './world.js?v=20261110-journal21';
+import {expandedSpecies} from './engine-data.js?v=20261110-hunts22';
+import {officialSpecies} from './combat-data.js?v=20261110-hunts22';
+import {zones} from './world.js?v=20261110-hunts22';
 // Static species data and encounter configuration. No network is required.
 export const roster = [
   ['bulbasaur',1,'Bulbasaur','Grass',45,49,49,45,'Common','A quiet woodland partner that thrives in the morning rain.','Forest','Morning','Rain','Overgrow'],

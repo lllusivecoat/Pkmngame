@@ -226,3 +226,15 @@ The first encounter reveals name, types and a silhouette. Ownership reveals desc
 Save data remains `greenwood.save.v2`; research fields live under `dex[species].research` and include at most three sighting IDs, two conditions, battle-study flag, legacy sighting credit and claimed goal IDs. Migration preserves and validates these fields. The item/gold reset keeps claimed research rewards, preventing repeat claims.
 
 124 automated checks cover captures, actual battle study, distinct observation conditions, duplicate prevention, legacy migration and persistent one-time rewards. Chromium additionally checks the mobile research panel, claim and reload persistence before publishing.
+
+## v0.20 — Regional hunting trails
+
+**Explore → Hunting journal** now tracks Dratini (Greenwood), Eevee (Thunder Ridge), Vulpix (Ashlands) or Lapras (Frostfall). Switch targets freely or pause tracking; all clues remain saved. The regional map marks three clue sites per trail. Walk onto them to uncover habitat, weather and activity hints and earn 30 trainer XP per new clue. A clue on a landmark is discovered on the same visit. Centers and special sites do not trigger encounters.
+
+Each eligible movement step rolls the active hunt before the normal terrain table. Its dedicated probability is 0.2% in the correct region, 1% after learning and reaching the target habitat, 3% with the learned matching weather, and 8% with all three clues and matching time. Outside the target region it is zero. Ordinary terrain encounters are separate: species such as Eevee can also appear naturally, so the panel explicitly labels the dedicated hunt roll. Pausing removes only this dedicated roll. The existing Dratini probability and clues are retained.
+
+Catch a wild tracked target in its region to complete that trail; all clues are helpful but not required. Claim **300 coins + 100 trainer XP** once per trail from Explore. Purchases, starters and evolutions do not complete hunts. Tracking can remain active after completion for further collection hunting.
+
+`hunting.js` stores the trail catalogue, clue coordinates/text, knowledge gates, normalization and panel. `core.step` discovers clues and rolls encounters; wild captures mark completion. New state is `hunts.target`, bounded `hunts.notes`, `hunts.caught` and `hunts.claimed`. Old Dratini knowledge remains in `clues` as its canonical source. Migration keeps saves compatible; no reset is needed. A future backend can store notes/completions per player and award hunt claims transactionally. No multiplayer service or paid hosting is added.
+
+131 automated checks verify reachability, conditions, actual target encounters and captures, one-time clue XP/rewards, pausing and legacy migration. CI Chromium tests regional clue markers, movement, tracking controls, mobile layout, completion claims and reload persistence before publication.
