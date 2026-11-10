@@ -204,3 +204,13 @@ Sequential retries produced transparent painted Mega Pidgeot and Mega Gengar. Bo
 Mega Gengar anatomy correction: replaced the initial legged drawing with the corrected legless painted sprite, `assets/chibi-painted/mega-gengar-corrected.webp`. Release tag `20261109-gengar10` refreshes installed/offline artwork too.
 
 Painted Gigantamax Venusaur, Charizard, Blastoise, Butterfree and Eevee now use standalone transparent assets in the gallery, form library and chibi battles. Butterfree’s surrounding glow was removed using standard image editing. Shiny artwork and transformation rules are unchanged. Dragonite’s rejected anatomy edit was not integrated; Raichu Y, Gigantamax Pikachu and Gengar requests were blocked. Release tag: `20261110-gmax17`.
+
+## v0.18 — Visible companion mastery
+
+Open **Creatures → choose a Pokémon → Companion mastery**. Existing bond points and ranks are retained: Mastery I starts at 0 points; II/III/IV/V unlock at 3/6/9/12. A successful capture gives the active partner one point. Each defeated opponent credits the active partner once when the battle settles; that partner must still be healthy. Bench XP, walking and fleeing without a victory do not earn mastery. A three-opponent Arena match can therefore award three points.
+
+Cards and details show progress, battle/capture results report gains and rank unlocks, and the Profile shows bond totals. Rewards are visible cosmetic unlocks: I bond badge, II selectable ribbon, III gold/silver portrait frame, IV gold/teal aura, V companion title. Pick rewards in the detail panel; None disables an effect. Aura and frames appear around artwork; ribbons and titles appear on collection/showcase cards. Effects are static and respect reduced-motion preferences. No battle stats, canonical moves, abilities or mastery earning rates were changed.
+
+`mastery.js` defines thresholds, reward choices, validation and the detail panel. Cosmetic selections live on each individual as `bondStyle`; existing `mastery` remains the point counter. Both survive the current migration, evolution, party changes, export/import and local reload. Rendering validates choices against rank and an allowlist, including imported data. A backend can later store these fields on the individual creature record and award points authoritatively at battle settlement.
+
+118 automated checks include real capture and Arena rewards, lock validation, max-rank progress and evolution/save persistence without stat effects. The CI Chromium gate checks mobile cosmetics, rank locks and save reload before Pages deployment.

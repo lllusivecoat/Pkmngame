@@ -1,11 +1,12 @@
-import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261110-restore19';
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-restore19';
-import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261110-restore19';
-import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261110-restore19';
-import {defaultMoveIds,moveIds} from './rules.js?v=20261110-restore19';
-import {zones,currentZone,zoneByName,discoverLocation,zoneSpecies} from './world.js?v=20261110-restore19';
-import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261110-restore19';
-export {roster,get,map,signs,clues} from './data.js?v=20261110-restore19';
+import {masteryRank} from './mastery.js?v=20261110-mastery20';
+import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261110-mastery20';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-mastery20';
+import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261110-mastery20';
+import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261110-mastery20';
+import {defaultMoveIds,moveIds} from './rules.js?v=20261110-mastery20';
+import {zones,currentZone,zoneByName,discoverLocation,zoneSpecies} from './world.js?v=20261110-mastery20';
+import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261110-mastery20';
+export {roster,get,map,signs,clues} from './data.js?v=20261110-mastery20';
 export const PARTY_LIMIT=6;
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
 export function createCreature(id,level=5,random=Math.random){const c={uid:globalThis.crypto.randomUUID(),species:id,level,variant:random()<.05?'Shiny':'Normal',nature:pick(['Calm','Bold','Timid','Hardy'],random),size:pick(['Small','Average','Large'],random),trait:pick(['Alert','Resilient','Keen-eyed'],random),mastery:0,xp:0,xpRules:'canonical-v1',friendship:expandedSpecies[id]?.friendship??50,ability:toID(expandedSpecies[id]?.abilities['0']),heldItem:null,gigantamax:false,dynamaxLevel:0,evs:{},ivs:{},ppRemaining:{},ppUps:{},knownTM:[],currentHP:null,status:'',gender:expandedSpecies[id]?.gender||((random()<(expandedSpecies[id]?.genderRatio?.F??.5))?'F':'M'),caughtAt:new Date().toISOString(),location:'Greenwood'};const options=abilityOptions(c),hidden=options.find(a=>a.slot==='H'),normal=options.filter(a=>a.slot!=='H');c.ability=(hidden&&random()<.05?hidden:normal[Math.min(normal.length-1,Math.floor(random()*normal.length))])?.id||validAbility(c);c.moves=defaultMoveIds(c);return c}
@@ -24,7 +25,7 @@ export function spendTool(s,i){return [0,1,2].includes(i)&&spendItem(s,['pokebal
 export function toggleParty(s,id){if(!s.collection.some(c=>c.uid===id))return 'Companion not owned.';if(s.party.includes(id)){if(s.party.length===1)return 'Keep at least one partner in your party.';s.party=s.party.filter(p=>p!==id);return 'Partner moved to collection.'}if(s.party.length>=PARTY_LIMIT)return 'Party full. Remove another partner first.';s.party.push(id);return 'Partner added to party.'}
 export function setLead(s,id){if(!s.party.includes(id))return 'Add this companion to your party first.';s.party=[id,...s.party.filter(p=>p!==id)];return get(s.collection.find(c=>c.uid===id).species).name+' is now your lead and map companion.'}
 export function updateAchievements(s){const done=[s.collection.length>1,s.steps>=10,Object.keys(s.dex).length>=8,s.clues.length===3,s.collection.length>=10,s.collection.some(c=>c.variant==='Shiny'),s.arenaWins>0,s.collection.some(c=>c.mastery>=6),s.collection.some(c=>c.species==='dratini'),s.wins>=5];const ids=['first-catch','first-steps','research','hunter','collector','shiny','arena','mastery','dratini','battler'];s.achievements=[...new Set([...s.achievements,...ids.filter((_,i)=>done[i])])]}
-export function masteryLevel(c){return Math.min(5,1+Math.floor(c.mastery/3))}
+export function masteryLevel(c){return masteryRank(c)}
 export function grow(c){c.mastery++;addExperience(c,c.heldItem==='luckyegg'?45:30)}
 export function useInventoryItem(s,id,uid,options){const result=useBagItem(s,id,uid,options);if(result.evolved){const c=s.collection.find(c=>c.uid===uid);record(s,c,true)}updateAchievements(s);return result}
 export function evolveCompanion(s,uid,target){const result=evolveByLevel(s,uid,target);if(result.evolved)record(s,s.collection.find(c=>c.uid===uid),true);updateAchievements(s);return result}
