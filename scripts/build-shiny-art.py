@@ -9,7 +9,7 @@ from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 IDS=[1,4,7,25,16,10,133,74,92,43,54,147,58,37,179,198,231,131]
 NAMES=['Bulbasaur','Charmander','Squirtle','Pikachu','Pidgey','Caterpie','Eevee','Geodude','Gastly','Oddish','Psyduck','Dratini','Growlithe','Vulpix','Mareep','Murkrow','Phanpy','Lapras']
-NOTES=['Lime-green skin; deeper green bulb','Golden-yellow skin; original flame','Periwinkle skin; green shell','Deeper orange-gold coat','Olive-gold plumage; cream underside','Golden body; red antenna retained','Silver coat; pale ivory ruff','Gold stone; white eyes','Blue gas; purple core','Green body; bright green leaves','Blue body; cream bill','Pink body; white fins and belly','Golden coat; cream mane and dark stripes','Golden-yellow coat; orange-gold curls','Pink wool; blue face and gold orb','Magenta plumage; yellow bill','Paler blue skin; coral markings','Purple body; unchanged shell and cream underside']
+NOTES=['Lime-green skin; deeper green bulb','Golden-yellow skin; original flame','Periwinkle skin; green shell','Deeper orange-gold coat','Olive-gold plumage; cream underside','Golden body; red antenna retained','Silver coat; pale ivory ruff','Gold stone; white eyes','Blue gas; purple core','Green body; bright green leaves','Blue body; cream bill','Pink body; white fins and belly','Golden coat; cream mane and dark stripes','Pale yellow-green coat; orange-gold curls; green eyes and olive paws/inner ears','Pink wool; blue face and gold orb','Magenta plumage; yellow bill','Paler blue skin; coral markings','Purple body; unchanged shell and cream underside']
 def recolour(n,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Leave transparent pixels, near-black ink, and neutral white highlights alone.
@@ -48,10 +48,15 @@ def recolour(n,r,g,b,x,y):
  elif n==58:
   if 5<h<42 and s>.45:H,S,V=tint(52,s,1.02)
  elif n==37:
-  if 5<h<55 and s>.25:
-   # Curled crown and tails remain orange-gold; body turns yellow-green.
-   curls=y<.43 or x>.66
-   H,S,V=tint(38 if curls else 58,s,1.04)
+  eye=(((x-.16)/.055)**2+((y-.47)/.085)**2<1 or ((x-.405)/.075)**2+((y-.48)/.095)**2<1)
+  inner_ear=(.07<x<.29 and .15<y<.4) or (.55<x<.76 and .26<y<.46)
+  chest=.23<x<.36 and .69<y<.84 and v>.75 and s<.4
+  if chest:return r,g,b
+  if eye and s>.15 and v<.65:H,S,V=145,.5,min(1,v*1.05+.05)
+  elif (inner_ear or y>.83 and x<.62) and 5<h<60 and s>.15 and v<.7:H,S,V=tint(80,.43,.95)
+  elif 5<h<55 and s>.25:
+   curls=(y<.43 and .20<x<.57) or (x>.57 and y>.35)
+   H,S,V=tint(36,min(.65,s*.75),1.02) if curls else tint(62,.42+.1*s,.95)
  elif n==179:
   if 25<h<65 and .10<s<.48:H,S,V=tint(321,max(.20,s*.8))
  elif n==198:
@@ -74,8 +79,6 @@ def main():
   for polygon in polygons.get(n,[]):m.polygon(polygon,fill=1)
   if n==133:
    m.ellipse((38,82,54,110),fill=1);m.ellipse((87,85,103,114),fill=1)
-  if n==37:
-   m.ellipse((23,82,37,106),fill=1);m.ellipse((68,82,86,109),fill=1)
   for y in range(200):
    for x in range(200):
     r,g,b,a=src[x,y]

@@ -18,10 +18,14 @@ steelix_crystal_mask=Image.new('1',(512,512));_crystal_draw=ImageDraw.Draw(steel
 for polygon in [[(365,149),(391,87),(424,47),(448,43),(444,76),(417,128),(387,169),(373,181)],[(354,136),(367,137),(381,162),(385,178),(374,195),(357,190),(347,164)],[(393,266),(418,246),(454,225),(477,218),(482,224),(473,243),(449,262),(419,281),(398,284)],[(401,354),(426,358),(454,367),(463,376),(453,384),(425,386),(401,380),(394,369)],[(112,444),(139,424),(180,409),(210,412),(226,426),(224,440),(200,455),(166,462),(135,453)],[(239,342),(242,322),(256,295),(279,272),(298,279),(299,299),(282,319),(256,337),(246,344)],[(245,360),(260,360),(288,372),(305,384),(287,394),(265,383),(250,374)]]:_crystal_draw.polygon(polygon,fill=1)
 steelix_mouth_mask=Image.new('1',(200,200));ImageDraw.Draw(steelix_mouth_mask).polygon([(23,73),(50,78),(77,73),(91,69),(88,84),(80,94),(62,101),(42,100),(29,93)],fill=1)
 
+butterfree_eye_mask=Image.new('1',(200,200));_eyes=ImageDraw.Draw(butterfree_eye_mask)
+_eyes.ellipse((48,77,74,112),fill=1);_eyes.ellipse((86,75,115,111),fill=1)
+butterfree_hand_mask=Image.new('1',(200,200));_hands=ImageDraw.Draw(butterfree_hand_mask)
+_hands.ellipse((65,121,84,143),fill=1);_hands.ellipse((88,121,108,144),fill=1)
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
- if v<.13 or (s<.09 and v>.94):return r,g,b
+ if v<.13 or (s<.09 and v>.94 and id!='espeon'):return r,g,b
  H,S,V=h,s,v
  def tint(hue,sat=None,gain=1):return hue,s if sat is None else sat,min(1,v*gain)
  blue=175<h<250 and s>.16;red=(h<25 or h>335) and s>.32;purple=245<h<315 and s>.15;warm=10<h<65 and s>.25
@@ -66,8 +70,11 @@ def recolour(id,r,g,b,x,y):
  elif id=='metapod':
   if 55<h<150 and s>.2:H,S,V=tint(18,.8,1.05)
  elif id=='butterfree':
-  if red and .2<x<.8 and .2<y<.45:H,S,V=tint(115,.8)
-  elif blue and y>.5:H,S,V=tint(345,.5)
+  eye=butterfree_eye_mask.getpixel((min(199,int(x*200)),min(199,int(y*200))))
+  hand=butterfree_hand_mask.getpixel((min(199,int(x*200)),min(199,int(y*200))))
+  if eye and (h<30 or h>330) and s>.15:H,S,V=tint(116,.78,.88)
+  elif 175<h<225 and s>.16 and (hand or y>.72):H,S,V=tint(350,.43)
+  elif 180<h<275 and s>.15 and y>.3:H,S,V=tint(267,.35,.92)
  elif id=='butterfreegmax':
   if red and .4<x<.61 and .38<y<.63:H,S,V=tint(115,.7)
   elif 175<h<250 and s>.25 and .37<x<.64 and y>.6:H,S,V=tint(345,.48)
@@ -79,7 +86,7 @@ def recolour(id,r,g,b,x,y):
  elif id=='flareon':
   if 5<h<60 and s>.35:H,S,V=tint(44,s*.78,1.02)
  elif id=='espeon':
-  if 235<h<325 and s>.15:H,S,V=tint(115,.7)
+  if 275<h<335:H,S,V=116,.52+.2*s,min(1,v*.80+.035)
  elif id=='umbreon':
   if 35<h<80 and s>.35:H,S,V=tint(210,.9)
   elif red:H,S,V=tint(48,.85)

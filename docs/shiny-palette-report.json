@@ -52,7 +52,7 @@
     },
     {
       "id": "butterfree",
-      "changed": 2631,
+      "changed": 5057,
       "visible": 29158
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "id": "espeon",
-      "changed": 16472,
+      "changed": 19957,
       "visible": 24442
     },
     {
@@ -320,7 +320,7 @@
         800
       ],
       "sourceSHA256": "2ebca0249f8a0fca067af442659c38561cc18d5e697af12c8d66991f25523415",
-      "shinySHA256": "0c5c36e91b7d9ef218f8ebc6f1f2b22e5d7534db8832856e43771b3fb6989a64",
+      "shinySHA256": "94e37bff9a842b9da7a4d5e5a8e78e5b66136c3aacda0fa9f7f39759706bd4b0",
       "alphaSHA256": "a3919b875f307f33a4f5fd6a37d2d56182b7d18b1035d651ba0ae1209dc8ffb6",
       "alphaPreserved": true
     },

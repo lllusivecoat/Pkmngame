@@ -327,3 +327,9 @@ Older evolution sheets have paired `assets/evolution-chibi-1-shiny.webp` and `as
 Shiny Steelix and Mega Steelix retain the same approved Normal drawings. Replaced an overly broad face/teeth exemption with precise material masks: the complete metal face and segments now use canonical pale gold, the Mega’s rings use teal-green, and eyes/teeth/prismatic crystals retain their distinct colours. No Alolan Golem or Normal artwork was changed. Both edited files preserve their source alpha exactly; browser tests decode the actual files to check golden face pixels and matching alpha/silhouettes.
 
 Painted SVG artwork requests include the release tag so an existing installed app can fetch corrected palette files even while its older offline cache is still active.
+
+
+## v0.27.2 — Vulpix, Butterfree and Espeon Shiny palettes
+Corrected material masks while retaining the existing Normal drawings and alpha. Vulpix now has green irises, olive inner ears/paws, a pale yellow-green coat and warmer orange-gold curls, with its cream chest and mouth protected. Butterfree’s complete irises become green; its cyan hands and feet become pink while the head/torso remain purple. Espeon’s fur uses a softer canonical green including the former pink highlight pixels; its purple irises, blue-purple inner ears and red gem are preserved. Starter-area Shiny PNG requests also carry the release tag to bypass stale installed-app caches. Browser checks sample the decoded sprite files to guard these colours.
+
+Two one-at-a-time generation attempts each for Gigantamax Pikachu, Mega Raichu Y and Gigantamax Gengar were rejected by the image service. No replacement artwork for those forms was published; their existing canonical pixel chibis and Shiny sprites remain available.
