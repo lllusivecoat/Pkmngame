@@ -1,8 +1,8 @@
-import {chibiAtlas} from './chibi-sources.js?v=20261111-regions27';
-import {localArtwork} from './local-artwork.js?v=20261111-regions27';
-import {battleForms} from './forms.js?v=20261111-regions27';
-import {get} from './data.js?v=20261111-regions27';
-import {modernSources} from './modern-sources.js?v=20261111-regions27';
+import {chibiAtlas} from './chibi-sources.js?v=20261111-world28';
+import {localArtwork} from './local-artwork.js?v=20261111-world28';
+import {battleForms} from './forms.js?v=20261111-world28';
+import {get} from './data.js?v=20261111-world28';
+import {modernSources} from './modern-sources.js?v=20261111-world28';
 const spriteRoot='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon';
 export function spriteCandidates(c,style='modern',reducedMotion=false,perspective='front'){
  const s=battleForms[c.form]||get(c.species);if(!s)return [];

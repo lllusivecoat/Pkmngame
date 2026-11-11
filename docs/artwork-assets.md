@@ -13,3 +13,7 @@ Tests validate every bundled standard image as a non-animated WebP and check loc
 These are Pokémon fan-game assets sourced through the public PokeAPI sprite project, not original intellectual property or an official product. This gallery update does not replace the evolved-species drawings: attempted new matching sheets were rejected by the image service and were not published.
 
 Eleven habitat species were added on 2026-11-11 with 44 lossless WebP assets: standard Normal/Shiny and official pixel Normal/Shiny. `pixel-chibi` stores their unaltered canonical game sprites.
+
+### Painted habitat chibis (v0.26)
+
+`assets/habitat-chibi-normal.webp` and `assets/habitat-chibi-shiny.webp` are matching generated painted 2D chibi sheets, 1448×1086, laid out as four columns by three rows. Order: Ralts, Kirlia, Gardevoir, Gallade; Shinx, Luxio, Luxray, Numel; Camerupt, Snover, Abomasnow, blank. Both use real alpha transparency. Shiny body and eye colours were checked against the bundled canonical Shiny reference artwork. They are encoded as WebP for delivery without altering the generated design. Existing canonical pixel files remain as fallback resources. New species/form artwork must satisfy the frozen-legacy coverage check in `tests/world-polish.test.mjs` for both variants.

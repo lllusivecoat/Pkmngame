@@ -1,3 +1,4 @@
+import {areaDesigns} from './area-designs.js?v=20261111-world28';
 // Separate, connected areas. Only the active map is rendered.
 const greenwood=['FFFFGGGGGG','FGGGWWGFPP','FGPPWWGFPG','GGPPGBGPPP','FGPPGWRRPG','FGGPGWRRPG','FGGPGBGRPG','FFFGGWFPPR','FGGPPPPPGG','FFGGGFFFFF'];
 const ridge=['RRRRGGRRRR','RRGGPPPPPP','RRGPPWRGPG','RGPPGWRGPG','RGPPRBRGPG','RGGPGWRGPG','RGGPGGRGPG','RGGPPPPPPG','PPPPGRRGGG','RRRGGGGRRR'];
@@ -32,15 +33,9 @@ const areaDefinitions=[
  [['hub','Emberfall Settlement','Rest at the Pokémon Center before Flint’s Fire Gym.',null],['caldera','Cinder Caldera','Numel grazes between warm volcanic stones.',['numel','charmander','growlithe','geodude']],['springs','Ember Springs','Mineral pools interrupt the warm, grassy trails.',['numel','vulpix','growlithehisui','phanpy']],['quarry','Obsidian Quarry','A rough rock trail climbs through old workings.',['numel','geodude','onix','growlithe']],['ruins','Ashen Ruins','Smoky paths lead past forgotten stone walls.',['numel','gastly','vulpix','charmander']]],
  [['hub','Snowbell Village','Sera’s Water Gym and the regional Pokémon Center welcome travellers.',null],['pines','Frostpine Forest','Snover hides among the snow-laden pines.',['snover','vulpixalola','eevee','pidgey']],['lake','Mirrorfrost Lake','Walk the frozen banks; keep clear of the deep water.',['snover','psyduck','squirtle','lapras']],['glade','Aurora Glade','A quiet clearing catches the changing northern sky.',['snover','vulpixalola','ralts','eevee']],['sanctuary','Glacier Sanctuary','The far trail winds through ancient snow-covered stones.',['snover','lapras','murkrow','raichualola']]]
 ];
-// Hand-authored terrain templates; rotation and the regional palette distinguish each area.
-const habitats=[
- ['FFFFGGFFFF','PPPPGFGGGG','FGGPGGFFGG','FGGPPPGFGG','FFGGWBGGGF','FGGGWBGGFF','FGFPPPPPGF','FGGPGFFPGG','GGGPGGGPPP','FFFFGGFFFF'],
- ['GGGGGGGGGG','PPPPGGWWGG','GGGPGGWWGG','GGGPPPBPGG','GGGGGWWPGG','GGGGGWWPGG','GGGPPPPPGG','GGGPWWGPGG','GGGPGGGPPP','GGGGGGGGGG'],
- ['RRRRGGRRRR','PPPPGGRGGR','RRGPGGRGGR','RGGPPPGGGR','RRGGRPGGRR','RGGGGPGGRR','RRGPPPPPGG','RGGPGGRPGG','GGGPGGGPPP','RRRRGGRRRR'],
- ['FFGGGGGGFF','PPPPGGGGGG','FGGPGGWWGG','FGGPPGWWGG','GGGGPBWWGG','GGGGPGWWGG','GGGPPPPPGG','FGGPGGGPGG','GGGPGGGPPP','FFGGGGGGFF']
-];
 for(const [index,z]of zones.entries()){
- z.areas=areaDefinitions[index].map(([id,name,description,species],i)=>({id,name,description,species,map:i===0?z.map:habitats[(i-1+index)%habitats.length],center:i===0?z.center:null,gym:i===0?z.gym:null,trainers:i===0?z.trainers:[],landmarks:i===0?z.landmarks:[{x:5,y:6,name:name+' viewpoint'}],exits:i===0?[...z.exits]:[]}));
+ z.areas=areaDefinitions[index].map(([id,name,description,species],i)=>({id,name,description,species,...areaDesigns[z.name+'/'+id],map:i===0?z.map:areaDesigns[z.name+'/'+id].map,center:i===0?z.center:null,gym:i===0?z.gym:null,trainers:i===0?z.trainers:[],landmarks:i===0?z.landmarks:[{x:5,y:6,name:name+' viewpoint'}],exits:i===0?[...z.exits]:[]}));
+ for(const a of z.areas)a.landmarks.push(...a.points);
  for(let i=0;i<5;i++){
   const a=z.areas[i],next=z.areas[(i+1)%5],prev=z.areas[(i+4)%5];
   a.exits.push({x:9,y:8,to:next.name,toArea:next.id,arrival:{x:1,y:1}},{x:0,y:1,to:prev.name,toArea:prev.id,arrival:{x:8,y:8}});

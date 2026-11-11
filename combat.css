@@ -84,8 +84,8 @@
 :root[data-theme] #app .scenic-battle.battle-stage[data-biome="frost"]{background-position:100% 100%;background-color:#c9e5f5}
 :root[data-theme] #app .scenic-battle .battle-atmosphere{background:none}
 :root[data-theme] #app .scenic-battle .combatant:before{content:none}
-:root[data-theme] #app .scenic-battle .combat-enemy{bottom:35%}
-@media(max-width:560px){:root[data-theme] #app .scenic-battle .combat-enemy{bottom:35%}}
+:root[data-theme] #app .scenic-battle .combat-enemy{bottom:44%}
+@media(max-width:560px){:root[data-theme] #app .scenic-battle .combat-enemy{bottom:44%}}
 
 /* A dedicated sticky toolbar keeps dismissal above decorative art and scroll content. */
 :root[data-theme] #app .detail .dialog-topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 12px;margin-bottom:8px;background:var(--surface);border-bottom:1px solid var(--line-color);isolation:isolate}

@@ -6,3 +6,6 @@
 - Mega and Gigantamax are temporary battle transformations, never permanent species replacements. Use the pinned simulator, matching stones, Max Soup and the explicit Generation 8 ruleset for Gigantamax.
 - Supply correct form-specific artwork. Do not silently reuse a base-species picture as a Mega/Gigantamax form. Use clearly labelled canonical pixel sprites if a painted chibi is unavailable.
 - Run `npm test` and stage with `npm run stage`. Build dependencies and scratch files must not be deployed. Hosting remains the free static GitHub Pages workflow.
+
+- Every newly added Pokémon or battle form must ship with matching painted, full-body chibi art for BOTH Normal and canonical Shiny palettes. Include it in the gallery, collection, follower and motion-off battle render paths. Use the existing painted style; do not call pixel sprites finished chibi artwork. `tests/world-polish.test.mjs` enforces coverage for entries beyond the explicitly frozen legacy roster. Preserve true alpha transparency, never a baked-in checkerboard.
+- Areas within a region must have distinct authored geography, individual colour treatment and contextual scenery/landmarks; do not rotate a shared map template for multiple areas. Keep all gates, Gym/Center entrances, hunt clues and saved positions safely reachable.
