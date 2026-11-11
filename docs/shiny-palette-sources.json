@@ -1,0 +1,548 @@
+[
+  {
+    "id": "ivysaur",
+    "name": "Ivysaur",
+    "species": "ivysaur",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 0
+  },
+  {
+    "id": "venusaur",
+    "name": "Venusaur",
+    "species": "venusaur",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 1
+  },
+  {
+    "id": "charmeleon",
+    "name": "Charmeleon",
+    "species": "charmeleon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 2
+  },
+  {
+    "id": "charizard",
+    "name": "Charizard",
+    "species": "charizard",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 3
+  },
+  {
+    "id": "wartortle",
+    "name": "Wartortle",
+    "species": "wartortle",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 4
+  },
+  {
+    "id": "blastoise",
+    "name": "Blastoise",
+    "species": "blastoise",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 5
+  },
+  {
+    "id": "raichu",
+    "name": "Raichu",
+    "species": "raichu",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 6
+  },
+  {
+    "id": "pidgeotto",
+    "name": "Pidgeotto",
+    "species": "pidgeotto",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 7
+  },
+  {
+    "id": "pidgeot",
+    "name": "Pidgeot",
+    "species": "pidgeot",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 8
+  },
+  {
+    "id": "metapod",
+    "name": "Metapod",
+    "species": "metapod",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 9
+  },
+  {
+    "id": "butterfree",
+    "name": "Butterfree",
+    "species": "butterfree",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 10
+  },
+  {
+    "id": "vaporeon",
+    "name": "Vaporeon",
+    "species": "vaporeon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 11
+  },
+  {
+    "id": "jolteon",
+    "name": "Jolteon",
+    "species": "jolteon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 12
+  },
+  {
+    "id": "flareon",
+    "name": "Flareon",
+    "species": "flareon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 13
+  },
+  {
+    "id": "espeon",
+    "name": "Espeon",
+    "species": "espeon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 14
+  },
+  {
+    "id": "umbreon",
+    "name": "Umbreon",
+    "species": "umbreon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 15
+  },
+  {
+    "id": "leafeon",
+    "name": "Leafeon",
+    "species": "leafeon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 16
+  },
+  {
+    "id": "glaceon",
+    "name": "Glaceon",
+    "species": "glaceon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 17
+  },
+  {
+    "id": "sylveon",
+    "name": "Sylveon",
+    "species": "sylveon",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 18
+  },
+  {
+    "id": "graveler",
+    "name": "Graveler",
+    "species": "graveler",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 19
+  },
+  {
+    "id": "golem",
+    "name": "Golem",
+    "species": "golem",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 20
+  },
+  {
+    "id": "haunter",
+    "name": "Haunter",
+    "species": "haunter",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 21
+  },
+  {
+    "id": "gengar",
+    "name": "Gengar",
+    "species": "gengar",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 22
+  },
+  {
+    "id": "gloom",
+    "name": "Gloom",
+    "species": "gloom",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-1.webp",
+    "index": 23
+  },
+  {
+    "id": "vileplume",
+    "name": "Vileplume",
+    "species": "vileplume",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 0
+  },
+  {
+    "id": "bellossom",
+    "name": "Bellossom",
+    "species": "bellossom",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 1
+  },
+  {
+    "id": "golduck",
+    "name": "Golduck",
+    "species": "golduck",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 2
+  },
+  {
+    "id": "dragonair",
+    "name": "Dragonair",
+    "species": "dragonair",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 3
+  },
+  {
+    "id": "dragonite",
+    "name": "Dragonite",
+    "species": "dragonite",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 4
+  },
+  {
+    "id": "arcanine",
+    "name": "Arcanine",
+    "species": "arcanine",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 5
+  },
+  {
+    "id": "ninetales",
+    "name": "Ninetales",
+    "species": "ninetales",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 6
+  },
+  {
+    "id": "flaaffy",
+    "name": "Flaaffy",
+    "species": "flaaffy",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 7
+  },
+  {
+    "id": "ampharos",
+    "name": "Ampharos",
+    "species": "ampharos",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 8
+  },
+  {
+    "id": "honchkrow",
+    "name": "Honchkrow",
+    "species": "honchkrow",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 9
+  },
+  {
+    "id": "donphan",
+    "name": "Donphan",
+    "species": "donphan",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 10
+  },
+  {
+    "id": "pichu",
+    "name": "Pichu",
+    "species": "pichu",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 11
+  },
+  {
+    "id": "onix",
+    "name": "Onix",
+    "species": "onix",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/onix.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "steelix",
+    "name": "Steelix",
+    "species": "steelix",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 13
+  },
+  {
+    "id": "raichualola",
+    "name": "Raichu-Alola",
+    "species": "raichualola",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 14
+  },
+  {
+    "id": "vulpixalola",
+    "name": "Vulpix-Alola",
+    "species": "vulpixalola",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 15
+  },
+  {
+    "id": "ninetalesalola",
+    "name": "Ninetales-Alola",
+    "species": "ninetalesalola",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 16
+  },
+  {
+    "id": "geodudealola",
+    "name": "Geodude-Alola",
+    "species": "geodudealola",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 17
+  },
+  {
+    "id": "graveleralola",
+    "name": "Graveler-Alola",
+    "species": "graveleralola",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 18
+  },
+  {
+    "id": "golemalola",
+    "name": "Golem-Alola",
+    "species": "golemalola",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/alolan-golem.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "growlithehisui",
+    "name": "Growlithe-Hisui",
+    "species": "growlithehisui",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 20
+  },
+  {
+    "id": "arcaninehisui",
+    "name": "Arcanine-Hisui",
+    "species": "arcaninehisui",
+    "kind": "species",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 21
+  },
+  {
+    "id": "venusaurmega",
+    "name": "Venusaur-Mega",
+    "species": "venusaur",
+    "form": "venusaurmega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-venusaur.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "venusaurgmax",
+    "name": "Venusaur-Gmax",
+    "species": "venusaur",
+    "form": "venusaurgmax",
+    "kind": "gmax",
+    "sheet": "assets/chibi-painted/venusaurgmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "charizardmegax",
+    "name": "Charizard-Mega-X",
+    "species": "charizard",
+    "form": "charizardmegax",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-charizard-x.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "charizardmegay",
+    "name": "Charizard-Mega-Y",
+    "species": "charizard",
+    "form": "charizardmegay",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-charizard-y-final.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "charizardgmax",
+    "name": "Charizard-Gmax",
+    "species": "charizard",
+    "form": "charizardgmax",
+    "kind": "gmax",
+    "sheet": "assets/chibi-painted/charizardgmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "blastoisemega",
+    "name": "Blastoise-Mega",
+    "species": "blastoise",
+    "form": "blastoisemega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-blastoise.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "blastoisegmax",
+    "name": "Blastoise-Gmax",
+    "species": "blastoise",
+    "form": "blastoisegmax",
+    "kind": "gmax",
+    "sheet": "assets/chibi-painted/blastoisegmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "butterfreegmax",
+    "name": "Butterfree-Gmax",
+    "species": "butterfree",
+    "form": "butterfreegmax",
+    "kind": "gmax",
+    "sheet": "assets/chibi-painted/butterfreegmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "pidgeotmega",
+    "name": "Pidgeot-Mega",
+    "species": "pidgeot",
+    "form": "pidgeotmega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-pidgeot.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "raichumegax",
+    "name": "Raichu-Mega-X",
+    "species": "raichu",
+    "form": "raichumegax",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-raichu-x.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "gengarmega",
+    "name": "Gengar-Mega",
+    "species": "gengar",
+    "form": "gengarmega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-gengar-corrected.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "laprasgmax",
+    "name": "Lapras-Gmax",
+    "species": "lapras",
+    "form": "laprasgmax",
+    "kind": "gmax",
+    "sheet": "assets/evolution-chibi-2.webp",
+    "index": 23
+  },
+  {
+    "id": "eeveegmax",
+    "name": "Eevee-Gmax",
+    "species": "eevee",
+    "form": "eeveegmax",
+    "kind": "gmax",
+    "sheet": "assets/chibi-painted/eeveegmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "dragonitemega",
+    "name": "Dragonite-Mega",
+    "species": "dragonite",
+    "form": "dragonitemega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-dragonite.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "ampharosmega",
+    "name": "Ampharos-Mega",
+    "species": "ampharos",
+    "form": "ampharosmega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-ampharos.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "steelixmega",
+    "name": "Steelix-Mega",
+    "species": "steelix",
+    "form": "steelixmega",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/mega-steelix.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  }
+]

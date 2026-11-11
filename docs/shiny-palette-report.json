@@ -1,0 +1,544 @@
+{
+  "species": [
+    {
+      "id": "ivysaur",
+      "changed": 12524,
+      "visible": 26092
+    },
+    {
+      "id": "venusaur",
+      "changed": 13469,
+      "visible": 30388
+    },
+    {
+      "id": "charmeleon",
+      "changed": 13799,
+      "visible": 23541
+    },
+    {
+      "id": "charizard",
+      "changed": 19165,
+      "visible": 28311
+    },
+    {
+      "id": "wartortle",
+      "changed": 12824,
+      "visible": 27432
+    },
+    {
+      "id": "blastoise",
+      "changed": 11921,
+      "visible": 28879
+    },
+    {
+      "id": "raichu",
+      "changed": 19290,
+      "visible": 25009
+    },
+    {
+      "id": "pidgeotto",
+      "changed": 22581,
+      "visible": 27038
+    },
+    {
+      "id": "pidgeot",
+      "changed": 24390,
+      "visible": 29992
+    },
+    {
+      "id": "metapod",
+      "changed": 14476,
+      "visible": 15929
+    },
+    {
+      "id": "butterfree",
+      "changed": 2631,
+      "visible": 29158
+    },
+    {
+      "id": "vaporeon",
+      "changed": 13982,
+      "visible": 26883
+    },
+    {
+      "id": "jolteon",
+      "changed": 17607,
+      "visible": 24851
+    },
+    {
+      "id": "flareon",
+      "changed": 17035,
+      "visible": 29999
+    },
+    {
+      "id": "espeon",
+      "changed": 16472,
+      "visible": 24442
+    },
+    {
+      "id": "umbreon",
+      "changed": 3743,
+      "visible": 21726
+    },
+    {
+      "id": "leafeon",
+      "changed": 26181,
+      "visible": 28661
+    },
+    {
+      "id": "glaceon",
+      "changed": 21738,
+      "visible": 28679
+    },
+    {
+      "id": "sylveon",
+      "changed": 9252,
+      "visible": 26780
+    },
+    {
+      "id": "graveler",
+      "changed": 19098,
+      "visible": 22701
+    },
+    {
+      "id": "golem",
+      "changed": 22960,
+      "visible": 25957
+    },
+    {
+      "id": "haunter",
+      "changed": 17882,
+      "visible": 19938
+    },
+    {
+      "id": "gengar",
+      "changed": 20251,
+      "visible": 24621
+    },
+    {
+      "id": "gloom",
+      "changed": 21014,
+      "visible": 23972
+    },
+    {
+      "id": "vileplume",
+      "changed": 25485,
+      "visible": 34694
+    },
+    {
+      "id": "bellossom",
+      "changed": 20937,
+      "visible": 38097
+    },
+    {
+      "id": "golduck",
+      "changed": 24390,
+      "visible": 39895
+    },
+    {
+      "id": "dragonair",
+      "changed": 18667,
+      "visible": 39992
+    },
+    {
+      "id": "dragonite",
+      "changed": 15713,
+      "visible": 39872
+    },
+    {
+      "id": "arcanine",
+      "changed": 10846,
+      "visible": 38627
+    },
+    {
+      "id": "ninetales",
+      "changed": 37278,
+      "visible": 39815
+    },
+    {
+      "id": "flaaffy",
+      "changed": 874,
+      "visible": 39999
+    },
+    {
+      "id": "ampharos",
+      "changed": 18020,
+      "visible": 39917
+    },
+    {
+      "id": "honchkrow",
+      "changed": 13449,
+      "visible": 39997
+    },
+    {
+      "id": "donphan",
+      "changed": 37359,
+      "visible": 39996
+    },
+    {
+      "id": "pichu",
+      "changed": 12843,
+      "visible": 34620
+    },
+    {
+      "id": "onix",
+      "changed": 103988,
+      "visible": 122064
+    },
+    {
+      "id": "steelix",
+      "changed": 35201,
+      "visible": 39895
+    },
+    {
+      "id": "raichualola",
+      "changed": 8353,
+      "visible": 39991
+    },
+    {
+      "id": "vulpixalola",
+      "changed": 3193,
+      "visible": 39999
+    },
+    {
+      "id": "ninetalesalola",
+      "changed": 18796,
+      "visible": 40000
+    },
+    {
+      "id": "geodudealola",
+      "changed": 30723,
+      "visible": 37186
+    },
+    {
+      "id": "graveleralola",
+      "changed": 24342,
+      "visible": 33984
+    },
+    {
+      "id": "golemalola",
+      "changed": 21002,
+      "visible": 112560
+    },
+    {
+      "id": "growlithehisui",
+      "changed": 7093,
+      "visible": 39765
+    },
+    {
+      "id": "arcaninehisui",
+      "changed": 28916,
+      "visible": 39466
+    },
+    {
+      "id": "venusaurmega",
+      "changed": 74055,
+      "visible": 137799
+    },
+    {
+      "id": "venusaurgmax",
+      "changed": 81263,
+      "visible": 117607
+    },
+    {
+      "id": "charizardmegax",
+      "changed": 80522,
+      "visible": 116779
+    },
+    {
+      "id": "charizardmegay",
+      "changed": 81164,
+      "visible": 112714
+    },
+    {
+      "id": "charizardgmax",
+      "changed": 66287,
+      "visible": 159222
+    },
+    {
+      "id": "blastoisemega",
+      "changed": 48746,
+      "visible": 122698
+    },
+    {
+      "id": "blastoisegmax",
+      "changed": 90011,
+      "visible": 166473
+    },
+    {
+      "id": "butterfreegmax",
+      "changed": 21558,
+      "visible": 72430
+    },
+    {
+      "id": "pidgeotmega",
+      "changed": 91553,
+      "visible": 107152
+    },
+    {
+      "id": "raichumegax",
+      "changed": 34843,
+      "visible": 77353
+    },
+    {
+      "id": "gengarmega",
+      "changed": 113711,
+      "visible": 122271
+    },
+    {
+      "id": "laprasgmax",
+      "changed": 7299,
+      "visible": 39748
+    },
+    {
+      "id": "eeveegmax",
+      "changed": 103831,
+      "visible": 121083
+    },
+    {
+      "id": "dragonitemega",
+      "changed": 63277,
+      "visible": 152518
+    },
+    {
+      "id": "ampharosmega",
+      "changed": 46830,
+      "visible": 127474
+    },
+    {
+      "id": "steelixmega",
+      "changed": 68974,
+      "visible": 133575
+    }
+  ],
+  "assets": [
+    {
+      "source": "assets/evolution-chibi-1.webp",
+      "shiny": "assets/evolution-chibi-1-shiny.webp",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "sourceSHA256": "2ebca0249f8a0fca067af442659c38561cc18d5e697af12c8d66991f25523415",
+      "shinySHA256": "0c5c36e91b7d9ef218f8ebc6f1f2b22e5d7534db8832856e43771b3fb6989a64",
+      "alphaSHA256": "a3919b875f307f33a4f5fd6a37d2d56182b7d18b1035d651ba0ae1209dc8ffb6",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/evolution-chibi-2.webp",
+      "shiny": "assets/evolution-chibi-2-shiny.webp",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "sourceSHA256": "9f0474461c4cd58ca4ccb4fbc78dab284fabdc3523fc558780a89bef6af60132",
+      "shinySHA256": "3123aed8e82a68e6f21dbfc51011ca1fb7d084d10c424cf54a5292ec20957d3b",
+      "alphaSHA256": "7a9902ca9974915d6c12c5cb7b4d55a2e4278624eb4334f9d0afbb96827d8dd6",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/onix.webp",
+      "shiny": "assets/chibi-painted/shiny/onix.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "8812fdd98a5e6daea7a2651614dc7d2a3b74f130460c753a621183461d51e0c8",
+      "shinySHA256": "17b647160cad1634bd2f8b164cff45438144c9dfe52d4e404b9195aa751ce869",
+      "alphaSHA256": "f691f8bc351beb362f6d4292cd0e4e018d54f1e0577fa5af900a71b337c29130",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/alolan-golem.webp",
+      "shiny": "assets/chibi-painted/shiny/alolan-golem.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "5bc97c55b9ade767cdf95e5020a1e6d33dc320cb721f31b1c8dd10fe442d797b",
+      "shinySHA256": "462f7e66e9a3156e3efbb1775821b6f4f86e30518e82de4918063e899aed52b0",
+      "alphaSHA256": "18a20d707bfe4a2ce9d8bafd3170c28b7ca93d838fcd0a3bf96a07c5c3d38f6f",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-venusaur.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-venusaur.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "c4b9771b2d6df8c4108987b6e482ad1cff110501fe7d2874b6d43a47aeec0f15",
+      "shinySHA256": "f9ef82395be3533ae90916b3f3a80807a873539fee01b12db7f1a07ac56d35fe",
+      "alphaSHA256": "d71363c2f7a8bfb8ba8c5b54d967efae762a4ef0c815cf57fb93fdbfde23c6e1",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/venusaurgmax.webp",
+      "shiny": "assets/chibi-painted/shiny/venusaurgmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "7a50c0590fcdd533f6732224c8e1bdf8b9a0eddd867108b7e7841faf240e75aa",
+      "shinySHA256": "4d24ee9ab9d1fbc94eb066e7f40d488687875d51994e5dcfca61c3c1eb9f9068",
+      "alphaSHA256": "3e1f03935fb3f5c8e3d31fa21d6ddd3dd83f5c4dc8e502efc269de1a3aec1e9f",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-charizard-x.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-charizard-x.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "faae9d35ef204585e061de2fa1acd14da378251970a0f89e4baa29c4a899404d",
+      "shinySHA256": "509a62664c0769390c674eea395c67a612c99b3286137d60aba75ac83fba4d6b",
+      "alphaSHA256": "b18b1c6ca8fbf7dca78caca00a5c36e690ec617cafb2eebe81d21124dd7a6990",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-charizard-y-final.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-charizard-y-final.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "392e748fa89ab967ca2775c003191ee29af43285fda558344d3aad4c23073cbe",
+      "shinySHA256": "3fc85b11eb3cab76c19b6a98a8cbf9c336ed38f49ff4140ed3c2bb061aa10dad",
+      "alphaSHA256": "0a4543f5ea2c5951283ec797db0d386f0a071ddb68e9c5fe517ea9c4dd868b34",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/charizardgmax.webp",
+      "shiny": "assets/chibi-painted/shiny/charizardgmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "0bf8857c6aa29e7f9316a361376ab2a3465fd2f39232a124ba31bdeb7899fce0",
+      "shinySHA256": "7d6f2a6e0eb438d24b3fc96592708820d5e4b285482c46c0e3ad609a6e8396fe",
+      "alphaSHA256": "1260d796e585822db0b6d09d484e6f164feb55629b585296f9531623b5d3cedd",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-blastoise.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-blastoise.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "1ad6f84f77ee5efad1ff6f371fb505b06f28c6da7361094f852e22d698600c80",
+      "shinySHA256": "8f34241641c33938b13feb13f53a52e32d188ea7003cef19177dafa01da5d55d",
+      "alphaSHA256": "eda7d2e6578bcee036d3abd937120cfbc57c82f17a1667ee07d29653edb21462",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/blastoisegmax.webp",
+      "shiny": "assets/chibi-painted/shiny/blastoisegmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "e7c27fa62519cec8afe180f60cfff7bd54dd81024567e63b2ee3b2d04f1a9d2c",
+      "shinySHA256": "cdff489580126ffe1eb69d51e1a303407175e93bbd2e894f98f2182eb0a13149",
+      "alphaSHA256": "a825eb9e8018f63efa9b27100781975ba37a80835b525db6f5b0ca857cb1db59",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/butterfreegmax.webp",
+      "shiny": "assets/chibi-painted/shiny/butterfreegmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "9ea05673698b9f2023491dda010ef8d4606d82f0a5cbafdce1745ce174bbe789",
+      "shinySHA256": "a4c0e2852509d5284fab30b1b2293be39c58da5169060ac925ff6191488068f6",
+      "alphaSHA256": "89bef176b1e7d401775e71bb17372e86bc65cd3dfde3f0f05f703225a55b8dd3",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-pidgeot.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-pidgeot.webp",
+      "dimensions": [
+        512,
+        410
+      ],
+      "sourceSHA256": "60307ca6b24ec1d2eb4f351a0c6ef47cac36d2d14788b89fd7b5adf36c2cc561",
+      "shinySHA256": "9377e141c90ab8d4ad33a6051ad9f4dca514afc22b2c0cc22737978aac1720de",
+      "alphaSHA256": "496c9d95edcf55e814342e61d77e9df7c0d29f6462147d646b7f1d7f352d4477",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-raichu-x.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-raichu-x.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "395ddd7b1bd449e2ae12c2775561bde78b720d596a37f20fe0dac041c01d6ac7",
+      "shinySHA256": "d8d28f98dbf474052c6910a8668e8f7266b14422d3a438d21587b6192e3a6093",
+      "alphaSHA256": "951d6e9e111923e654b221755ee6f92d2f2a4c5f7ca83d1ccd0799adff5524de",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-gengar-corrected.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-gengar-corrected.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "e0c685acf890e123a07803e6cfe5a0c04adf950e2b4b6cbe1b44efee593c6b42",
+      "shinySHA256": "3d50f3885779f11b71d278720790dc4b67651424d229702ae721762128905f2a",
+      "alphaSHA256": "2597b371578f33e12e8471faa45fa9ae9f351d55a710f770fed386253a296072",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/eeveegmax.webp",
+      "shiny": "assets/chibi-painted/shiny/eeveegmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3ca9f6295cbf8a0f407fcc19b8b94eec57eafc968283b25446eb6fcbd444d93c",
+      "shinySHA256": "31028cde1d496cdec97ad23023f78c3cbb25c9e651101c49e53dec5a78dc5225",
+      "alphaSHA256": "eacee4bb7429753eba5eadbbf679fc0c671fdd6ef72de504aa6738bf943fbe4a",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-dragonite.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-dragonite.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "985ef6d67d339179218ede1a4778c17d5bb5ec0a94f356d4bc06cc2e80475aa6",
+      "shinySHA256": "fcbfe8dd40268f21725c4d231146f2f36ff904cb48eef9f919fc8522de5d7244",
+      "alphaSHA256": "53201bd7d7f7ae7189925a7559b3bfa8887169c9c3286d5b0666bd318efd32eb",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-ampharos.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-ampharos.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "f8865960539a63a5a37d56f97ca323f711e3c667d626dc6fa12dfbfd556ef2af",
+      "shinySHA256": "01cb4be84e77382fd7ebcade8291aca69b123cc2175fb6114e7d1698e9c98132",
+      "alphaSHA256": "d2e06222e1d6ffd5fd393084c2eed71e9cac30936639905c8073dc44b16f87c6",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-steelix.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-steelix.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "fd6c102e68c8425040e25d1709f828d4b0bb227b3acd08cbc81610d948f07060",
+      "shinySHA256": "fc3ff1d3ffff580f507b175f635b652228ef094a1addc9bf70f87aa54170a7fc",
+      "alphaSHA256": "3096afd232380f6d4ebc413ce40ced669860ad7b653a80bbdc86ad90831d102e",
+      "alphaPreserved": true
+    }
+  ]
+}

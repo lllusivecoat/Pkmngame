@@ -1,0 +1,187 @@
+"""User-authorized exact palette edits. Preserve every source pixel's position and alpha.
+Each species has material-specific HSV masks checked against bundled canonical Shiny references.
+Run from the project root: python scripts/build-paired-shiny.py (Pillow required).
+No generated redraws are used; existing poses and outlines remain intact.
+"""
+from pathlib import Path
+import colorsys,json,hashlib
+from PIL import Image,ImageDraw
+ROOT=Path(__file__).resolve().parents[1]
+entries=json.loads((ROOT/'docs/shiny-palette-sources.json').read_text())
+# Material mask separates Gigantamax Charizard's orange skin from its orange flames.
+charizard_gmax_mask=Image.new('1',(512,512));_draw=ImageDraw.Draw(charizard_gmax_mask)
+for polygon in [ [(344,30),(376,40),(380,58),(354,65),(347,91),(360,124),(348,157),(365,181),(363,222),(335,222),(315,170),(294,145),(285,104),(301,75),(313,45)],[(248,162),(310,168),(361,206),(397,220),(459,216),(495,244),(499,286),(471,305),(435,290),(438,329),(452,387),(473,420),(445,470),(391,481),(347,456),(300,470),(238,466),(190,482),(137,478),(133,454),(169,411),(158,380),(143,352),(164,315),(155,277),(143,246),(153,222),(200,202),(203,183)],[(89,201),(109,200),(104,249),(104,290),(113,326),(142,348),(176,356),(193,379),(181,402),(149,399),(120,383),(95,364),(82,343),(68,307),(64,264),(69,224)] ]:_draw.polygon(polygon,fill=1)
+_draw.rectangle((45,205,215,450),fill=1)
+_draw.rectangle((430,260,511,400),fill=1)
+def recolour(id,r,g,b,x,y):
+ h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
+ # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
+ if v<.13 or (s<.09 and v>.94):return r,g,b
+ H,S,V=h,s,v
+ def tint(hue,sat=None,gain=1):return hue,s if sat is None else sat,min(1,v*gain)
+ blue=175<h<250 and s>.16;red=(h<25 or h>335) and s>.32;purple=245<h<315 and s>.15;warm=10<h<65 and s>.25
+ if id in ['ivysaur','venusaur','venusaurmega']:
+  if blue:H,S,V=tint(108,max(.36,s),1.03)
+  elif h>300 and s>.25 and y<.56:H,S,V=tint(50,.75,1.02)
+ elif id=='venusaurgmax':
+  if 155<h<230 and s>.22:H,S,V=tint(112,.58,1.03)
+  elif (h>300 or h<20) and s>.08 and .27<y<.65:H,S,V=tint(48,.75,1.04)
+ elif id=='charmeleon':
+  if warm and not(x>.7 and y<.65):H,S,V=tint(46,.85,1.04)
+ elif id=='charizard':
+  if 5<h<60 and s>.45 and not(x>.78 and y>.48):H,S,V=235,.12,.10+v*.27
+  elif 155<h<240 and s>.25:H,S,V=tint(350,.75)
+ elif id=='charizardmegax':
+  if 195<h<240 and s>.25 and v<.68 and (x<.38 or x>.62):H,S,V=tint(350,.78,1.05)
+  elif 175<h<220 and s>.2 and .34<x<.68 and y>.45:H,S,V=tint(160,.3)
+  elif s<.22 and .14<v<.76:H,S,V=165,.58,min(1,v*1.25)
+ elif id=='charizardmegay':
+  if 5<h<48 and s>.5 and not(x>.83 and .5<y<.83):H,S,V=tint(260,.23,.90)
+  elif 155<h<235 and s>.2:H,S,V=tint(348,.8)
+ elif id=='charizardgmax':
+  if 4<h<45 and s>.4 and charizard_gmax_mask.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and not(.63<x<.73 and .11<y<.23 and h>35):H,S,V=260,.25,.12+v*.23
+ elif id in ['wartortle','blastoise','blastoisemega']:
+  if blue:H,S,V=tint(267,min(.6,s*.85))
+  elif 12<h<48 and s>.4 and not(.25<x<.7 and y>.48):H,S,V=tint(110,.45)
+ elif id=='blastoisegmax':
+  if blue:H,S,V=tint(265,s*.75)
+  elif 290<h<350 and .15<s<.55 and .05<x<.85:H,S,V=tint(65,.3,.95)
+ elif id=='raichu':
+  if 20<h<65 and s>.4:H,S,V=tint(26,min(.9,s*1.1),.97)
+ elif id=='raichumegax':
+  if red and v>.7 and not(.43<x<.61 and .32<y<.44):H,S,V=tint(48,.85,1.12)
+  elif 35<h<70 and s>.4:H,S,V=tint(48 if y>.55 or y<.26 else 35,.85)
+ elif id in ['pidgeotto','pidgeot']:
+  if red:H,S,V=tint(46,.8,1.05)
+  elif 15<h<50 and s>.2:H,S,V=tint(55,s*.85,1.04)
+ elif id=='pidgeotmega':
+  if blue:H,S,V=tint(265,.65)
+  elif red:H,S,V=tint(46,.85,1.02)
+  elif 15<h<65 and s>.25:H,S,V=tint(48,s*.9,1.05)
+ elif id=='metapod':
+  if 55<h<150 and s>.2:H,S,V=tint(18,.8,1.05)
+ elif id=='butterfree':
+  if red and .2<x<.8 and .2<y<.45:H,S,V=tint(115,.8)
+  elif blue and y>.5:H,S,V=tint(345,.5)
+ elif id=='butterfreegmax':
+  if red and .4<x<.61 and .38<y<.63:H,S,V=tint(115,.7)
+  elif 175<h<250 and s>.25 and .37<x<.64 and y>.6:H,S,V=tint(345,.48)
+  elif 135<h<180 and s>.25:H,S,V=tint(155,s*.8)
+ elif id=='vaporeon':
+  if 155<h<250 and s>.2:H,S,V=tint(285,s*.9)
+ elif id=='jolteon':
+  if 35<h<90 and s>.3:H,S,V=tint(78,.65)
+ elif id=='flareon':
+  if 5<h<60 and s>.35:H,S,V=tint(44,s*.78,1.02)
+ elif id=='espeon':
+  if 235<h<325 and s>.15:H,S,V=tint(115,.7)
+ elif id=='umbreon':
+  if 35<h<80 and s>.35:H,S,V=tint(210,.9)
+  elif red:H,S,V=tint(48,.85)
+ elif id=='leafeon':
+  if 20<h<65 and s>.15:H,S,V=tint(35,min(1,s*1.13),.96)
+  elif 65<h<160 and s>.2:H,S,V=tint(100,min(1,s*1.1),.93)
+ elif id=='glaceon':
+  if 170<h<235 and s>.15:H,S,V=tint(215 if s>.5 else 195,s*.72,1.05)
+ elif id=='sylveon':
+  if h>300 and s>.15:H,S,V=tint(205,s)
+  elif blue:H,S,V=tint(330,s*.8)
+ elif id=='graveler':
+  if s<.28 and .17<v<.9:H,S,V=tint(29,.42,1.02)
+ elif id=='golem':
+  if s<.28 and .17<v<.9:H,S,V=tint(32,.35)
+  elif warm:H,S,V=tint(44,s)
+ elif id=='haunter':
+  if red and y>.45:H,S,V=tint(220,.75)
+  elif purple:H,S,V=tint(255,s*.85,.9)
+ elif id=='gengar':
+  if 235<h<320 and s>.15:H,S,V=tint(255,s*.65,.85)
+ elif id=='gengarmega':
+  if 245<h<315 and s>.15:H,S,V=265,.035,.72+v*.28
+  elif 305<h<350 and s>.25:H,S,V=330,.14,.78+v*.22
+  elif red:H,S,V=0,.03,v*.35
+ elif id=='gloom':
+  if blue or 240<h<290 and s>.2:H,S,V=tint(110,.55)
+  elif red and y<.3:H,S,V=tint(40,.48,.9)
+  elif (h<65 or h>295) and s>.3 and not(.3<x<.7 and y>.55):H,S,V=tint(48,.75)
+ elif id=='vileplume':
+  if blue or 240<h<290 and s>.15:H,S,V=tint(110,.6)
+  elif red or h>300 and s>.3:H,S,V=tint(30,.75,1.03)
+ elif id=='bellossom':
+  if 45<h<165 and s>.2 and (.27<y<.57 or y<.7 and (x<.28 or x>.72)):H,S,V=tint(275,.42)
+  elif 35<h<80 and s>.3 and y<.3:H,S,V=tint(80,.6)
+  elif red or 10<h<40 and s>.4:H,S,V=tint(325,.6)
+ elif id=='golduck':
+  if blue:H,S,V=tint(218,s*.95,.94)
+  elif 30<h<65 and s>.2:H,S,V=tint(350,.45)
+ elif id=='dragonair':
+  if blue:H,S,V=tint(42,.85) if s>.82 else tint(325,s*.85)
+ elif id=='dragonite':
+  if 10<h<60 and s>.45:H,S,V=tint(110,.4,.95)
+  elif 150<h<235 and s>.25:H,S,V=tint(295,.6)
+ elif id=='dragonitemega':
+  if 5<h<60 and s>.45 and not(x<.27 and y>.7):H,S,V=tint(210,.6)
+  elif 150<h<205 and s>.25:H,S,V=tint(280,.65)
+ elif id in ['arcanine','growlithehisui','arcaninehisui']:
+  if 5<h<50 and s>.4:H,S,V=tint(48,.85,1.04)
+  elif id=='arcaninehisui' and 15<h<75 and .1<s<.4:H,S,V=tint(65,.22,.94)
+ elif id=='ninetales':
+  if 20<h<80 and s>.12:H,S,V=240,.035,min(1,v*1.02)
+  if x>.9 and .25<y<.8 and 20<h<80 and s>.15:H,S,V=225,.38,v
+ elif id=='flaaffy':
+  if 160<h<255 and s>.25 and x>.7:H,S,V=tint(130,.8)
+ elif id in ['ampharos','ampharosmega']:
+  if 35<h<75 and s>.35:H,S,V=tint(325,.43)
+  elif red:H,S,V=tint(230,.8)
+ elif id=='honchkrow':
+  if 190<h<275 and s>.25:H,S,V=tint(295,.7,1.08)
+ elif id=='donphan':
+  if s<.3 and .15<v<.9:H,S,V=tint(30,.65,1.3) if v<.45 else tint(78,.3)
+ elif id=='pichu':
+  if 35<h<80 and s>.3:H,S,V=tint(47,s,.98)
+ elif id=='onix':
+  if s<.3 and .15<v<.94:H,S,V=tint(65,.5,1.03)
+ elif id in ['steelix','steelixmega']:
+  if s<.28 and .16<v<.94 and not(x<.45 and .25<y<.5 and v>.68):H,S,V=tint(48,.55,1.04)
+  elif id=='steelixmega' and 175<h<240 and s>.4 and not(x<.4 and y<.4):H,S,V=tint(165,.7,.68)
+ elif id=='raichualola':
+  if 10<h<45 and s>.35 and .2<x<.8 and y<.82:H,S,V=tint(25,.7,.62)
+ elif id=='vulpixalola':
+  if 170<h<250 and s>.1 and (y<.35 or x>.56):H,S,V=tint(265,s*.72)
+ elif id=='ninetalesalola':
+  if 170<h<250 and s>.1:H,S,V=tint(270,s*.8)
+ elif id in ['geodudealola','graveleralola']:
+  if s<.3 and .35<v<.92:H,S,V=tint(35,.8,1.05)
+ elif id=='golemalola':
+  if 40<h<100 and s<.35 and .4<v<.94:H,S,V=tint(42,.75,.95)
+ elif id=='laprasgmax':
+  if 170<h<255 and s>.2 and (x<.5 or y>.65):H,S,V=tint(275,s*.8,.95)
+ elif id=='eeveegmax':
+  if 10<h<45 and s>.3:H,S,V=tint(30,s*.35,.95)
+  elif 30<h<80 and .1<s<.45 and v>.6:H,S,V=tint(45,.035,1.05)
+ else:raise ValueError('No palette for '+id)
+ R,G,B=colorsys.hsv_to_rgb((H%360)/360,max(0,min(1,S)),max(0,min(1,V)))
+ return round(R*255),round(G*255),round(B*255)
+outputs={};images={};report=[]
+for e in entries:
+ source=e['sheet'];im=images.setdefault(source,Image.open(ROOT/source).convert('RGBA'))
+ if source not in outputs:outputs[source]=im.copy()
+ out=outputs[source];columns=e.get('columns',6);rows=e.get('rows',4);index=e['index'];cw=im.width//columns;ch=im.height//rows;ox=index%columns*cw;oy=index//columns*ch
+ changed=visible=0
+ for yy in range(oy,oy+ch):
+  for xx in range(ox,ox+cw):
+   r,g,b,a=im.getpixel((xx,yy))
+   if not a:continue
+   visible+=1;rgb=recolour(e['id'],r,g,b,(xx-ox)/cw,(yy-oy)/ch)
+   if rgb!=(r,g,b):changed+=1
+   out.putpixel((xx,yy),(*rgb,a))
+ report.append({'id':e['id'],'changed':changed,'visible':visible})
+registry={};asset_report=[]
+for source,out in outputs.items():
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',quality=90,method=6)
+ assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
+ asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
+ for e in entries:
+  if e['sheet']==source:registry[e['id']]={'sheet':str(dest.relative_to(ROOT)),'index':e['index'],**{k:e[k]for k in ['columns','rows']if k in e}}
+(ROOT/'docs/shiny-palette-report.json').write_text(json.dumps({'species':report,'assets':asset_report},indent=2)+'\n');Path('/tmp/shiny-paired-registry.json').write_text(json.dumps(registry));print('Paired',len(registry),'painted Shiny entries across',len(outputs),'assets; alpha unchanged.')
+assert all(r['changed']>0 for r in report),report
