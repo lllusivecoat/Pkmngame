@@ -1,21 +1,22 @@
-import {normalizeGuild,earnGuildPoints,collectGuildReward} from './guild.js?v=20261110-guild25';
-import {normalizeArena,collectArenaReward} from './arena.js?v=20261110-guild25';
-import {eventWeight,eventVisitors,eventStepBonus,WORLD_PERIOD} from './world-events.js?v=20261110-guild25';
-import {normalizeHunts,activeHunt,targetHuntOdds,discoverHuntClue,recordHuntCapture,collectHuntReward} from './hunting.js?v=20261110-guild25';
-import {normalizeResearch,observeResearch,collectResearchReward} from './journal.js?v=20261110-guild25';
-import {masteryRank} from './mastery.js?v=20261110-guild25';
-import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261110-guild25';
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261110-guild25';
-import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261110-guild25';
-import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261110-guild25';
-import {defaultMoveIds,moveIds} from './rules.js?v=20261110-guild25';
-import {zones,currentZone,zoneByName,discoverLocation,zoneSpecies} from './world.js?v=20261110-guild25';
-import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261110-guild25';
-export {roster,get,map,signs,clues} from './data.js?v=20261110-guild25';
+import {normalizeQuests,collectQuestReward} from './quests.js?v=20261111-quests26';
+import {normalizeGuild,earnGuildPoints,collectGuildReward} from './guild.js?v=20261111-quests26';
+import {normalizeArena,collectArenaReward} from './arena.js?v=20261111-quests26';
+import {eventWeight,eventVisitors,eventStepBonus,WORLD_PERIOD} from './world-events.js?v=20261111-quests26';
+import {normalizeHunts,activeHunt,targetHuntOdds,discoverHuntClue,recordHuntCapture,collectHuntReward} from './hunting.js?v=20261111-quests26';
+import {normalizeResearch,observeResearch,collectResearchReward} from './journal.js?v=20261111-quests26';
+import {masteryRank} from './mastery.js?v=20261111-quests26';
+import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261111-quests26';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261111-quests26';
+import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261111-quests26';
+import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261111-quests26';
+import {defaultMoveIds,moveIds} from './rules.js?v=20261111-quests26';
+import {zones,currentZone,zoneByName,discoverLocation,zoneSpecies} from './world.js?v=20261111-quests26';
+import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261111-quests26';
+export {roster,get,map,signs,clues} from './data.js?v=20261111-quests26';
 export const PARTY_LIMIT=6;
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
 export function createCreature(id,level=5,random=Math.random){const c={uid:globalThis.crypto.randomUUID(),species:id,level,variant:random()<.05?'Shiny':'Normal',nature:pick(['Calm','Bold','Timid','Hardy'],random),size:pick(['Small','Average','Large'],random),trait:pick(['Alert','Resilient','Keen-eyed'],random),mastery:0,xp:0,xpRules:'canonical-v1',friendship:expandedSpecies[id]?.friendship??50,ability:toID(expandedSpecies[id]?.abilities['0']),heldItem:null,gigantamax:false,dynamaxLevel:0,evs:{},ivs:{},ppRemaining:{},ppUps:{},knownTM:[],currentHP:null,status:'',gender:expandedSpecies[id]?.gender||((random()<(expandedSpecies[id]?.genderRatio?.F??.5))?'F':'M'),caughtAt:new Date().toISOString(),location:'Greenwood'};const options=abilityOptions(c),hidden=options.find(a=>a.slot==='H'),normal=options.filter(a=>a.slot!=='H');c.ability=(hidden&&random()<.05?hidden:normal[Math.min(normal.length-1,Math.floor(random()*normal.length))])?.id||validAbility(c);c.moves=defaultMoveIds(c);return c}
-export function fresh(){const s={version:3,started:false,name:'Shaun',trainer:{...defaultTrainer},level:18,xp:0,coins:8240,party:[],collection:[],dex:{},clues:[],steps:0,position:{x:2,y:3},facing:'down',followerPosition:null,region:'Greenwood',unlockedZones:['Greenwood'],discoveredLocations:[],visitedTiles:{},badges:[],defeatedTrainers:[],hunts:normalizeHunts(),weather:'Rain',time:'Dusk',traps:20,betterTraps:[8,3],potions:5,event:'stormfront',log:['Welcome to Greenwood. Choose a partner to begin.'],achievements:[],claimedQuest:false,wins:0,arenaWins:0,rating:1284,guild:normalizeGuild(),arena:normalizeArena(undefined,1284,0),showcase:[],purchased:[],artwork:true,artStyle:'modern',motion:true,battleMode:'modern',joined:new Date().toISOString(),worldAt:Date.now()};ensureInventory(s);return s}
+export function fresh(){const s={version:3,started:false,name:'Shaun',trainer:{...defaultTrainer},level:18,xp:0,coins:8240,party:[],collection:[],dex:{},clues:[],steps:0,position:{x:2,y:3},facing:'down',followerPosition:null,region:'Greenwood',unlockedZones:['Greenwood'],discoveredLocations:[],visitedTiles:{},badges:[],defeatedTrainers:[],hunts:normalizeHunts(),weather:'Rain',time:'Dusk',traps:20,betterTraps:[8,3],potions:5,event:'stormfront',log:['Welcome to Greenwood. Choose a partner to begin.'],achievements:[],claimedQuest:false,quests:normalizeQuests(),wins:0,arenaWins:0,rating:1284,guild:normalizeGuild(),arena:normalizeArena(undefined,1284,0),showcase:[],purchased:[],artwork:true,artStyle:'modern',motion:true,battleMode:'modern',joined:new Date().toISOString(),worldAt:Date.now()};ensureInventory(s);return s}
 export function record(s,c,caught=false,context={}){const d=s.dex[c.species]??{seen:0,caught:0,variants:[],traits:[],research:normalizeResearch({})};d.seen++;if(caught)d.caught++;d.variants=[...new Set([...d.variants,c.variant])];d.traits=[...new Set([...(d.traits||[]),...(caught?[c.trait]:[])])];s.dex[c.species]=d;observeResearch(s,c,context)}
 export function claimJournalReward(s,id){if(!get(id))return 'Unknown species.';const r=collectResearchReward(s.dex[id]);if(!r.count)return 'No research reward ready.';s.coins+=r.coins;award(s,r.xp);updateAchievements(s);return `RESEARCH REWARD · +${r.coins} coins · +${r.xp} trainer XP`}
 
@@ -38,7 +39,8 @@ export function masteryLevel(c){return masteryRank(c)}
 export function grow(c){c.mastery++;addExperience(c,c.heldItem==='luckyegg'?45:30)}
 export function useInventoryItem(s,id,uid,options){const result=useBagItem(s,id,uid,options);if(result.evolved){const c=s.collection.find(c=>c.uid===uid);record(s,c,true)}updateAchievements(s);return result}
 export function evolveCompanion(s,uid,target){const result=evolveByLevel(s,uid,target);if(result.evolved)record(s,s.collection.find(c=>c.uid===uid),true);updateAchievements(s);return result}
-export function claimQuest(s){if(s.claimedQuest||Object.keys(s.dex).length<3)return false;s.claimedQuest=true;s.coins+=150;award(s,100);return true}
+export function claimQuest(s){const reward=collectQuestReward(s,'curious');if(!reward)return false;s.coins+=reward.coins;award(s,reward.xp);return true}
+export function claimAdventureQuest(s,id){const reward=collectQuestReward(s,id);if(!reward)return 'Quest locked, incomplete or already claimed.';s.coins+=reward.coins;award(s,reward.xp);for(const [item,count]of reward.items)addItem(s,item,count);updateAchievements(s);return `QUEST COMPLETE · ${reward.name} · +${reward.coins} coins · +${reward.xp} XP${reward.items.length?' · items added to Bag':''}`}
 export function tick(s,now=Date.now()){const n=Math.floor(Math.max(0,now-s.worldAt)/WORLD_PERIOD);if(n){const ws=['Clear','Rain','Storm','Fog'],ts=['Morning','Day','Dusk','Night'];s.weather=ws[(ws.indexOf(s.weather)+n)%4];s.time=ts[(ts.indexOf(s.time)+n)%4];s.event=events[(events.findIndex(e=>e.id===s.event)+n)%events.length].id;s.worldAt+=n*WORLD_PERIOD}return s}
 export function migrate(raw){
   if(!raw||![2,3].includes(raw.version)||!Array.isArray(raw.collection)||!raw.position||!raw.dex||typeof raw.dex!=='object')return fresh();
@@ -66,7 +68,7 @@ export function migrate(raw){
   s.achievements=(Array.isArray(s.achievements)?s.achievements:[]).filter(n=>typeof n==='string');
   s.weather=['Clear','Rain','Storm','Fog'].includes(s.weather)?s.weather:d.weather;s.time=['Morning','Day','Dusk','Night'].includes(s.time)?s.time:d.time;s.event=events.some(e=>e.id===s.event)?s.event:d.event;
   s.dex=Object.fromEntries(Object.entries(s.dex).filter(([id,k])=>get(id)&&k&&typeof k==='object').map(([id,k])=>[id,{research:normalizeResearch(k.research,k),seen:num(k.seen,1),caught:num(k.caught,0),variants:(Array.isArray(k.variants)?k.variants:[]).filter(v=>['Normal','Shiny'].includes(v)),traits:(Array.isArray(k.traits)?k.traits:[]).filter(v=>['Alert','Resilient','Keen-eyed'].includes(v))}]));
-  s.log=Array.isArray(s.log)?s.log.slice(0,5).map(v=>String(v).slice(0,500)):d.log;s.joined=Number.isFinite(Date.parse(s.joined))?s.joined:d.joined;s.name=trainerName(raw.name);s.trainer=normalizeTrainer(raw.trainer);s.artwork=!!s.artwork;s.artStyle=s.artStyle==='home'?'home':'modern';s.motion=s.motion!==false;s.battleMode=s.battleMode==='max'?'max':'modern';s.claimedQuest=!!s.claimedQuest;ensureInventory(s);updateAchievements(s);return s;
+  s.log=Array.isArray(s.log)?s.log.slice(0,5).map(v=>String(v).slice(0,500)):d.log;s.joined=Number.isFinite(Date.parse(s.joined))?s.joined:d.joined;s.name=trainerName(raw.name);s.trainer=normalizeTrainer(raw.trainer);s.artwork=!!s.artwork;s.artStyle=s.artStyle==='home'?'home':'modern';s.motion=s.motion!==false;s.battleMode=s.battleMode==='max'?'max':'modern';s.quests=normalizeQuests(raw.quests,!!s.claimedQuest);s.claimedQuest=s.quests.claimed.includes('curious');ensureInventory(s);updateAchievements(s);return s;
 }
 export function load(storage){try{const raw=JSON.parse(storage.getItem('greenwood.save.v2'));return tick(migrate(raw))}catch{return fresh()}}
 export function persist(storage,s){storage.setItem('greenwood.save.v2',JSON.stringify(s))}
