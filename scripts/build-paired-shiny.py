@@ -13,6 +13,11 @@ charizard_gmax_mask=Image.new('1',(512,512));_draw=ImageDraw.Draw(charizard_gmax
 for polygon in [ [(344,30),(376,40),(380,58),(354,65),(347,91),(360,124),(348,157),(365,181),(363,222),(335,222),(315,170),(294,145),(285,104),(301,75),(313,45)],[(248,162),(310,168),(361,206),(397,220),(459,216),(495,244),(499,286),(471,305),(435,290),(438,329),(452,387),(473,420),(445,470),(391,481),(347,456),(300,470),(238,466),(190,482),(137,478),(133,454),(169,411),(158,380),(143,352),(164,315),(155,277),(143,246),(153,222),(200,202),(203,183)],[(89,201),(109,200),(104,249),(104,290),(113,326),(142,348),(176,356),(193,379),(181,402),(149,399),(120,383),(95,364),(82,343),(68,307),(64,264),(69,224)] ]:_draw.polygon(polygon,fill=1)
 _draw.rectangle((45,205,215,450),fill=1)
 _draw.rectangle((430,260,511,400),fill=1)
+# The Mega's prismatic crystals are a separate material and keep their existing colours.
+steelix_crystal_mask=Image.new('1',(512,512));_crystal_draw=ImageDraw.Draw(steelix_crystal_mask)
+for polygon in [[(365,149),(391,87),(424,47),(448,43),(444,76),(417,128),(387,169),(373,181)],[(354,136),(367,137),(381,162),(385,178),(374,195),(357,190),(347,164)],[(393,266),(418,246),(454,225),(477,218),(482,224),(473,243),(449,262),(419,281),(398,284)],[(401,354),(426,358),(454,367),(463,376),(453,384),(425,386),(401,380),(394,369)],[(112,444),(139,424),(180,409),(210,412),(226,426),(224,440),(200,455),(166,462),(135,453)],[(239,342),(242,322),(256,295),(279,272),(298,279),(299,299),(282,319),(256,337),(246,344)],[(245,360),(260,360),(288,372),(305,384),(287,394),(265,383),(250,374)]]:_crystal_draw.polygon(polygon,fill=1)
+steelix_mouth_mask=Image.new('1',(200,200));ImageDraw.Draw(steelix_mouth_mask).polygon([(23,73),(50,78),(77,73),(91,69),(88,84),(80,94),(62,101),(42,100),(29,93)],fill=1)
+
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
@@ -142,8 +147,16 @@ def recolour(id,r,g,b,x,y):
  elif id=='onix':
   if s<.3 and .15<v<.94:H,S,V=tint(65,.5,1.03)
  elif id in ['steelix','steelixmega']:
-  if s<.28 and .16<v<.94 and not(x<.45 and .25<y<.5 and v>.68):H,S,V=tint(48,.55,1.04)
-  elif id=='steelixmega' and 175<h<240 and s>.4 and not(x<.4 and y<.4):H,S,V=tint(165,.7,.68)
+  # No broad rectangular face exemption: the whole metal face must turn pale gold.
+  # Protect ink, the teeth inside the mouth, the Mega's cyan eye and prismatic crystals.
+  mega=id=='steelixmega'
+  crystal=mega and steelix_crystal_mask.getpixel((min(511,int(x*512)),min(511,int(y*512))))
+  mouth=(.17<x<.29 and .44<y<.53) if mega else (.10<x<.51 and .33<y<.54)
+  tooth=(mouth and v>.65 and (s<.1 or h<80)) if mega else bool(steelix_mouth_mask.getpixel((min(199,int(x*200)),min(199,int(y*200)))))
+  eye=mega and .28<x<.42 and .31<y<.5 and s>.45
+  if crystal or tooth or eye or v<.26:return r,g,b
+  if s<.13 or 185<h<265 and s<.5:H,S,V=tint(51,.33+.2*(1-v),1.05)
+  elif mega and 175<h<240 and s>.45:H,S,V=tint(164,.7,.82)
  elif id=='raichualola':
   if 10<h<45 and s>.35 and .2<x<.8 and y<.82:H,S,V=tint(25,.7,.62)
  elif id=='vulpixalola':

@@ -9,3 +9,5 @@
 
 - Every painted chibi must use a matching canonical Shiny palette when the individual is Shiny; never substitute its Normal palette or a different art style. Every newly added Pokémon or battle form must ship with matching painted, full-body chibi art for BOTH Normal and canonical Shiny palettes. Include it in the gallery, collection, follower and motion-off battle render paths. Use the existing painted style; do not call pixel sprites finished chibi artwork. `tests/world-polish.test.mjs` enforces coverage for entries beyond the explicitly frozen legacy roster. Preserve true alpha transparency, never a baked-in checkerboard.
 - Areas within a region must have distinct authored geography, individual colour treatment and contextual scenery/landmarks; do not rotate a shared map template for multiple areas. Keep all gates, Gym/Center entrances, hunt clues and saved positions safely reachable.
+
+- Shiny variants must be direct material-specific colour edits of the approved Normal chibi, preserving its exact pose, silhouette and alpha. Do not regenerate or redesign a Shiny sprite. Keep white teeth, eyes and prismatic crystals separate from metal recolouring.
