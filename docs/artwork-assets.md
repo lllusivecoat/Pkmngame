@@ -1,13 +1,15 @@
 # Bundled gallery artwork
 
-The gallery has 83 entries: 64 permanent species/evolutions and 19 temporary battle forms. It defaults to showing all entries and resets filters when reopened. Normal and Shiny variants each have two previews: standard artwork and the available painted/pixel chibi source.
+The gallery has 94 entries: 75 permanent species/evolutions and 19 temporary battle forms. It defaults to showing all entries and resets filters when reopened. Normal and Shiny variants each have two previews: standard artwork and the available painted/pixel chibi source.
 
 The files in `assets/artwork/normal/` and `assets/artwork/shiny/` were obtained from `PokeAPI/sprites` at `sprites/pokemon/other/home/{number}.png` and `sprites/pokemon/other/home/shiny/{number}.png` on 2026-11-09. They were encoded as static WebP at quality 90 for delivery, preserving transparency. No character designs, colours, proportions or poses were edited. IDs are the actual PokeAPI species/form artwork IDs from the registry.
 
 `assets/artwork/shiny-chibi/` preserves the canonical PNG game sprites from `PokeAPI/sprites`, `sprites/pokemon/shiny/{number}.png`. The original 18 painted Shiny images remain in `assets/chibi/shiny/`; other painted chibi figures use the existing local atlases. A pixel sprite is labelled as pixel artwork, not a new painted redraw.
 
-`local-artwork.js` lists the 83 standard, 83 Shiny standard and 65 additional Shiny chibi files. The renderer prefers these bundled paths, keeping external source URLs only as fallback paths. Developer previews override the artwork visibility setting without changing it. The complete gallery does not record discoveries or modify the collection.
+`local-artwork.js` lists the 94 standard, 94 Shiny standard and 76 additional Shiny chibi files. The renderer prefers these bundled paths, keeping external source URLs only as fallback paths. Developer previews override the artwork visibility setting without changing it. The complete gallery does not record discoveries or modify the collection.
 
-Tests validate every bundled standard image as a non-animated WebP and check local chibi coverage for both variants. The browser test disables the external image host and verifies actual loaded images and all 83 normal/chibi previews for each variant. Lazy images are forced to load in that test; normal browsing retains lazy loading for efficiency.
+Tests validate every bundled standard image as a non-animated WebP and check local chibi coverage for both variants. The browser test disables the external image host and verifies actual loaded images and all 94 normal/chibi previews for each variant. Lazy images are forced to load in that test; normal browsing retains lazy loading for efficiency.
 
 These are Pokémon fan-game assets sourced through the public PokeAPI sprite project, not original intellectual property or an official product. This gallery update does not replace the evolved-species drawings: attempted new matching sheets were rejected by the image service and were not published.
+
+Eleven habitat species were added on 2026-11-11 with 44 lossless WebP assets: standard Normal/Shiny and official pixel Normal/Shiny. `pixel-chibi` stores their unaltered canonical game sprites.
