@@ -296,11 +296,6 @@
       "visible": 121083
     },
     {
-      "id": "dragonitemega",
-      "changed": 63277,
-      "visible": 152518
-    },
-    {
       "id": "ampharosmega",
       "changed": 46830,
       "visible": 127474
@@ -309,6 +304,16 @@
       "id": "steelixmega",
       "changed": 94464,
       "visible": 133575
+    },
+    {
+      "id": "dragonitemega",
+      "changed": 64674,
+      "visible": 152518
+    },
+    {
+      "id": "raichumegay",
+      "changed": 62892,
+      "visible": 89742
     }
   ],
   "assets": [
@@ -505,18 +510,6 @@
       "alphaPreserved": true
     },
     {
-      "source": "assets/chibi-painted/mega-dragonite.webp",
-      "shiny": "assets/chibi-painted/shiny/mega-dragonite.webp",
-      "dimensions": [
-        512,
-        512
-      ],
-      "sourceSHA256": "985ef6d67d339179218ede1a4778c17d5bb5ec0a94f356d4bc06cc2e80475aa6",
-      "shinySHA256": "fcbfe8dd40268f21725c4d231146f2f36ff904cb48eef9f919fc8522de5d7244",
-      "alphaSHA256": "53201bd7d7f7ae7189925a7559b3bfa8887169c9c3286d5b0666bd318efd32eb",
-      "alphaPreserved": true
-    },
-    {
       "source": "assets/chibi-painted/mega-ampharos.webp",
       "shiny": "assets/chibi-painted/shiny/mega-ampharos.webp",
       "dimensions": [
@@ -538,6 +531,30 @@
       "sourceSHA256": "fd6c102e68c8425040e25d1709f828d4b0bb227b3acd08cbc81610d948f07060",
       "shinySHA256": "7577e4d7ac640764063a126f2e2bcbe6ab4c29d75c97f2f20a9284bd33a68ff9",
       "alphaSHA256": "3096afd232380f6d4ebc413ce40ced669860ad7b653a80bbdc86ad90831d102e",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-dragonite.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-dragonite.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "985ef6d67d339179218ede1a4778c17d5bb5ec0a94f356d4bc06cc2e80475aa6",
+      "shinySHA256": "379c9f0342df0d447c20b287e1e07eb78c5820f4a71cdedc74c505fe66e21a20",
+      "alphaSHA256": "53201bd7d7f7ae7189925a7559b3bfa8887169c9c3286d5b0666bd318efd32eb",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-raichu-y.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-raichu-y.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "5b3e60d31ce4c2480aa0730be4cedb3c4c60546396ec3ea5b34d36beb1a4536d",
+      "shinySHA256": "bae4ba7ab90345edfbc04a0b57c5dded90a42c3dcb2fa6c6b9874502686cf401",
+      "alphaSHA256": "950247ffab1301c9938ed0cc3e9d073950e32dd24e9e0d91a3934b4344e6f658",
       "alphaPreserved": true
     }
   ]

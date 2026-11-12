@@ -22,6 +22,8 @@ butterfree_eye_mask=Image.new('1',(200,200));_eyes=ImageDraw.Draw(butterfree_eye
 _eyes.ellipse((48,77,74,112),fill=1);_eyes.ellipse((86,75,115,111),fill=1)
 butterfree_hand_mask=Image.new('1',(200,200));_hands=ImageDraw.Draw(butterfree_hand_mask)
 _hands.ellipse((65,121,84,143),fill=1);_hands.ellipse((88,121,108,144),fill=1)
+dragonite_orb_mask=Image.new('1',(512,512))
+ImageDraw.Draw(dragonite_orb_mask).polygon([(39,436),(44,417),(57,402),(77,396),(99,403),(113,416),(117,428),(104,434),(96,440),(93,451),(96,460),(105,468),(91,476),(72,479),(55,472),(43,458)],fill=1)
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
@@ -131,8 +133,16 @@ def recolour(id,r,g,b,x,y):
  elif id=='dragonite':
   if 10<h<60 and s>.45:H,S,V=tint(110,.4,.95)
   elif 150<h<235 and s>.25:H,S,V=tint(295,.6)
+ elif id=='raichumegay':
+  # Cheeks and lightning appendages have separate canonical Shiny colours.
+  cheek=((x*512-227)/15)**2+((y*512-243)/17)**2<1 or ((x*512-133)/6)**2+((y*512-263)/13)**2<1
+  if cheek and 25<h<75 and s>.3:H,S,V=tint(3,.8)
+  elif 20<h<75 and s>.3 and v>.65:H,S,V=tint(51,.88) if h<48 else tint(36,.9)
  elif id=='dragonitemega':
-  if 5<h<60 and s>.45 and not(x<.27 and y>.7):H,S,V=tint(210,.6)
+  # Preserve the rainbow orb as one material; a rectangular exclusion cut through the tail.
+  orb=dragonite_orb_mask.getpixel((min(511,int(x*512)),min(511,int(y*512))))
+  if orb:return r,g,b
+  if 5<h<60 and s>.45:H,S,V=tint(210,.6)
   elif 150<h<205 and s>.25:H,S,V=tint(280,.65)
  elif id in ['arcanine','growlithehisui','arcaninehisui']:
   if 5<h<50 and s>.4:H,S,V=tint(48,.85,1.04)
@@ -198,7 +208,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',quality=90,method=6)
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:

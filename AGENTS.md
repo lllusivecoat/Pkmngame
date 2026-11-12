@@ -12,4 +12,4 @@
 
 - Shiny variants must be direct material-specific colour edits of the approved Normal chibi, preserving its exact pose, silhouette and alpha. Do not regenerate or redesign a Shiny sprite. Keep white teeth, eyes and prismatic crystals separate from metal recolouring.
 
-- The user explicitly selected the supplied full-body reference images for Mega Raichu Y, Gigantamax Gengar and Gigantamax Pikachu. `selected-artwork.js` overrides their legacy pixel fallback in static/motion-off views. Keep these choices unless the user replaces them; label them Selected reference artwork rather than claiming they are painted chibis. Their Shiny versions retain the selected Normal images’ exact alpha/silhouette.
+- The supplied Mega Raichu Y, Gigantamax Gengar and Gigantamax Pikachu images are references for painted chibi generation. Mega Raichu Y now has paired painted art. Keep the other two clearly labelled reference artwork until successful painted replacements exist. Shiny variants must recolour the matching Normal drawing.
