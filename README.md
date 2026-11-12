@@ -343,3 +343,11 @@ The user selected the supplied full-body references for Mega Raichu Y, Gigantama
 ## v0.27.4 — painted Mega Raichu Y and Dragonite palette repair
 
 Mega Raichu Y now uses matching painted Normal/Shiny chibis in the gallery and motion-off battles. The Shiny is a direct material palette edit with identical alpha. Mega Dragonite’s Shiny tail is consistently blue; the rainbow orb is preserved with its own material mask. The requested slimmer tail and painted Gigantamax Gengar/Pikachu remain pending because image generation rejected those attempts; their existing artwork is retained. No saved progress changes.
+
+## v0.28.0 — Kanto Leaders exhibition and map jumps
+
+Explore → Jump to map offers all 20 regional areas plus Kanto Leaders Courtyard and Hall. You can also reach the courtyard from Greenwood Village at (2, 8), walk to the building entrance at (5, 4), and choose Enter Kanto Leaders Hall. Inside, walk to any of the 14 named trainers to talk and challenge a three-Pokémon exhibition team. The hall exit is at (5, 9). Both exhibition maps have no wild encounters. Teams use the currently playable roster, with appropriate substitutes where Kanto team members are not yet available. These are exhibition trainer challenges, not extra regional Gym badges.
+
+Map jumps are prototype convenience controls and open the selected destination without granting coins, XP, healing, items or badges. Location, trainer victories, discoveries, party and collection persist in the existing save. The five-area loops and one Gym/Center per region remain intact. Data lives in `kanto-leaders.js`; `world.js` integrates extra maps, doors and quick travel. The building and interior are original lightweight local SVG scenes.
+
+**Portrait import pending:** the supplied contact sheet is visible in chat but its source file is not mounted in the workspace. Image-based extraction was rejected. Brock keeps his existing painted portrait; the other thirteen trainers currently use clearly disclosed temporary painted male/female explorer portraits. Attach the original PNG/WebP sheet to replace these with the exact supplied portraits; do not claim those portraits have already been imported or regenerate them as substitutes.

@@ -13,3 +13,6 @@
 - Shiny variants must be direct material-specific colour edits of the approved Normal chibi, preserving its exact pose, silhouette and alpha. Do not regenerate or redesign a Shiny sprite. Keep white teeth, eyes and prismatic crystals separate from metal recolouring.
 
 - The supplied Mega Raichu Y, Gigantamax Gengar and Gigantamax Pikachu images are references for painted chibi generation. Mega Raichu Y now has paired painted art. Keep the other two clearly labelled reference artwork until successful painted replacements exist. Shiny variants must recolour the matching Normal drawing.
+
+- Kanto Leaders uses two extra Greenwood exhibition maps, separate from each region’s five-area loop. Keep the courtyard entrance, hall exit and all 14 trainers reachable. Jump to map must include every destination, preserve saves and grant no free battle rewards or healing. Trainer wins use stable `kanto-*` IDs.
+- The user supplied a labelled contact sheet for the Kanto portraits, but its actual file is not mounted yet. Brock retains the existing portrait. The other 13 use disclosed temporary painted explorer portraits until the exact PNG/WebP is attached. Import the supplied designs when available; do not call the temporary portraits the user’s imported art.

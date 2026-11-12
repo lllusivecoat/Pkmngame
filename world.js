@@ -1,4 +1,5 @@
-import {areaDesigns} from './area-designs.js?v=20261112-painted34';
+import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261113-kanto35';
+import {areaDesigns} from './area-designs.js?v=20261113-kanto35';
 // Separate, connected areas. Only the active map is rendered.
 const greenwood=['FFFFGGGGGG','FGGGWWGFPP','FGPPWWGFPG','GGPPGBGPPP','FGPPGWRRPG','FGGPGWRRPG','FGGPGBGRPG','FFFGGWFPPR','FGGPPPPPGG','FFGGGFFFFF'];
 const ridge=['RRRRGGRRRR','RRGGPPPPPP','RRGPPWRGPG','RGPPGWRGPG','RGPPRBRGPG','RGGPGWRGPG','RGGPGGRGPG','RGGPPPPPPG','PPPPGRRGGG','RRRGGGGRRR'];
@@ -41,19 +42,27 @@ for(const [index,z]of zones.entries()){
   a.exits.push({x:9,y:8,to:next.name,toArea:next.id,arrival:{x:1,y:1}},{x:0,y:1,to:prev.name,toArea:prev.id,arrival:{x:8,y:8}});
  }
 }
+// Exhibition maps are extra destinations; the five-area regional loops remain intact.
+const greenwoodHub=zones[0].areas[0];
+greenwoodHub.exits.push({x:2,y:8,to:'Kanto Leaders Courtyard',toArea:'kanto-courtyard',arrival:{x:5,y:8}});
+export const allTrainers=[...zones.flatMap(z=>z.trainers),...kantoLeaders];
+export function mapDestinations(){return [...zones.flatMap(z=>z.areas.map(a=>({key:z.name+'/'+a.id,region:z.name,id:a.id,name:a.name,spawn:a.center?{x:a.center.x,y:a.center.y+1}:{x:1,y:1}}))),...kantoMaps.map(a=>({key:a.region+'/'+a.id,region:a.region,id:a.id,name:a.name,spawn:a.spawn}))]}
 export const zoneByName=name=>zones.find(z=>z.name===name);
-export const areaById=(region,id)=>zoneByName(region)?.areas.find(a=>a.id===id);
+export const areaById=(region,id)=>[...(zoneByName(region)?.areas||[]),...kantoMaps.filter(a=>a.region===region)].find(a=>a.id===id);
 export const areaKey=s=>!s.area||s.area==='hub'?s.region:`${s.region}/${s.area}`;
-export function currentZone(s){const z=zoneByName(s.region)||zones[0],a=z.areas.find(a=>a.id===s.area)||z.areas[0];return {...z,...a,name:z.name,areaName:a.name,regionGym:z.gym,regionCenter:z.center}}
+export function currentZone(s){const z=zoneByName(s.region)||zones[0],a=areaById(z.name,s.area)||z.areas[0];return {...z,...a,name:z.name,areaName:a.name,regionGym:z.gym,regionCenter:z.center}}
 export function normalizeAreas(s,raw=s){
  s.area=areaById(s.region,raw.area)?.id||'hub';
- const valid=new Set(zones.flatMap(z=>z.areas.map(a=>`${z.name}/${a.id}`)));
+ const valid=new Set(mapDestinations().map(a=>a.key));
  s.discoveredAreas=[...new Set([...(Array.isArray(raw.discoveredAreas)?raw.discoveredAreas:[]).filter(k=>valid.has(k)),`${s.region}/${s.area}`])];
  s.visitedTiles=Object.fromEntries(Object.entries(raw.visitedTiles||{}).filter(([k,v])=>Array.isArray(v)&&(zoneByName(k)||valid.has(k))).map(([k,v])=>[k,[...new Set(v.filter(t=>typeof t==='string'&&/^[0-9],[0-9]$/.test(t)))]]));
 }
 export function returnToCenter(s){s.area='hub';const center=zoneByName(s.region)?.center||zones[0].center;s.position={x:center.x,y:center.y};s.followerPosition=null;normalizeAreas(s);return center}
 export function locationAt(s){const z=currentZone(s),{x,y}=s.position;return z.exits.find(l=>l.x===x&&l.y===y)?{...z.exits.find(l=>l.x===x&&l.y===y),kind:'exit'}:z.gym&&x===z.gym.x&&y===z.gym.y?{...z.gym,kind:'gym'}:z.center&&x===z.center.x&&y===z.center.y?{...z.center,kind:'center'}:trainerAt(s)?{...trainerAt(s),kind:'trainer'}:z.landmarks.find(l=>l.x===x&&l.y===y)?{...z.landmarks.find(l=>l.x===x&&l.y===y),kind:'landmark'}:null}
 export function discoverLocation(s){const z=currentZone(s),l=locationAt(s),key=areaKey(s);s.visitedTiles??={};s.visitedTiles[key]=[...new Set([...(s.visitedTiles[key]||[]),`${s.position.x},${s.position.y}`])];if(!l)return '';const id=`${key}:${l.kind}:${l.x},${l.y}`;if(s.discoveredLocations.includes(id))return '';s.discoveredLocations.push(id);if(l.kind==='exit'){if(l.toArea){s.discoveredAreas=[...new Set([...(s.discoveredAreas||[]),`${s.region}/${l.toArea}`])];return `NEW AREA DISCOVERED · ${l.to}! Use the trail gate to enter.`}s.unlockedZones=[...new Set([...s.unlockedZones,l.to])];return `NEW ROUTE DISCOVERED · ${l.to} unlocked! Use the route gate to travel.`}return `LOCATION DISCOVERED · ${l.kind==='gym'?l.name+' · Leader '+l.leader:l.name}`}
-export function travel(s,to){const z=currentZone(s),exit=z.exits.find(e=>e.to===to&&e.x===s.position.x&&e.y===s.position.y);if(!s.started||!exit||(!exit.toArea&&!s.unlockedZones.includes(to)))return {ok:false,message:'Reach the connecting route gate on foot first.'};if(exit.toArea)s.area=exit.toArea;else{s.region=to;s.area='hub'}s.followerPosition=null;s.position={...exit.arrival};s.facing=exit.x===9?'right':'left';normalizeAreas(s);discoverLocation(s);return {ok:true,message:`Arrived in ${currentZone(s).areaName}, ${s.region}. Explore the trails; the region’s Gym and Pokémon Center are in ${zoneByName(s.region).areas[0].name}.`}}
+export function travel(s,to){const z=currentZone(s),exit=z.exits.find(e=>e.to===to&&e.x===s.position.x&&e.y===s.position.y);if(!s.started||!exit||(!exit.toArea&&!s.unlockedZones.includes(to)))return {ok:false,message:'Reach the connecting route gate on foot first.'};if(exit.toArea)s.area=exit.toArea;else{s.region=to;s.area='hub'}s.followerPosition=null;s.position={...exit.arrival};s.facing=exit.x===9?'right':'left';normalizeAreas(s);discoverLocation(s);return {ok:true,message:`Arrived in ${currentZone(s).areaName}, ${s.region}. ${currentZone(s).peaceful?'Meet the visiting trainers. No wild encounters here.':'Explore the trails; the region’s Gym and Pokémon Center are in '+zoneByName(s.region).areas[0].name+'.'}`}}
 export const zoneSpecies={Greenwood:null,'Thunder Ridge':['mareep','pikachu','geodude','pidgey','phanpy','eevee','onix','geodudealola'],'Ashlands':['charmander','growlithe','vulpix','geodude','gastly','phanpy','growlithehisui'],Frostfall:['squirtle','psyduck','lapras','murkrow','eevee','pidgey','vulpixalola','raichualola']};
 export function areaGuide(s){const z=zoneByName(s.region)||zones[0];return `<section class="panel region-areas"><div class="eyebrow">${z.name.toUpperCase()} · FIVE CONNECTED AREAS</div><h2>Follow the regional trails.</h2><p>Walk to an arrow gate to enter the next area. One ${z.gym.type} Gym and one Pokémon Center serve this region, in ${z.areas[0].name}.</p><ol>${z.areas.map((a,i)=>`<li class="${currentZone(s).id===a.id?'current':''}"><span>${String(i+1).padStart(2,'0')}</span><div><strong>${a.name}</strong><small>${currentZone(s).id===a.id?'You are here':s.discoveredAreas?.includes(`${s.region}/${a.id}`)?'Trail discovered':'Unexplored'}${i===0?' · Gym + Center':''}</small></div></li>`).join('')}</ol><p class="hint">The trails form a loop: travel in either direction. Regional routes leave from the settlement.</p></section>`}
+
+// Explicit tester convenience: no XP, coins, items, healing or badges are awarded by jumping.
+export function jumpToMap(s,key){const target=mapDestinations().find(d=>d.key===key);if(!s.started||!target)return {ok:false,message:'Choose a partner and a valid map first.'};s.region=target.region;s.area=target.id;s.unlockedZones=[...new Set([...s.unlockedZones,target.region])];s.position={...target.spawn};s.facing='down';s.followerPosition=null;normalizeAreas(s);return {ok:true,message:'Map jump · '+target.name}}
