@@ -92,3 +92,8 @@
 :root[data-theme] #app .dialog-topbar>small{font-size:10px;letter-spacing:1px;color:var(--muted-text)}
 :root[data-theme] #app .detail .dialog-topbar .close{position:static;inset:auto;z-index:21;display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:0;line-height:1;font-size:26px;pointer-events:auto;touch-action:manipulation;cursor:pointer}
 :root[data-theme] #app .detail>.art{pointer-events:none}
+
+/* Species dimensions affect the picture, not HP, damage or individual stats. */
+:root[data-theme] #app .art[data-pokemon-size]>.sprite{scale:var(--portrait-scale,1);transform-origin:50% 75%}
+:root[data-theme] #app .scenic-battle .art[data-pokemon-size]>.sprite{scale:var(--pokemon-scale,1);transform-origin:50% 85%}
+:root[data-theme] #app .gallery-entry .art>.sprite,:root[data-theme] #app .party-chip .art>.sprite,:root[data-theme] #app .mini-art .art>.sprite{scale:1}

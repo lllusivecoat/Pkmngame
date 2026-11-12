@@ -16,3 +16,5 @@
 
 - Kanto Leaders uses two extra Greenwood exhibition maps, separate from each region’s five-area loop. Keep the courtyard entrance, hall exit and all 14 trainers reachable. Jump to map must include every destination, preserve saves and grant no free battle rewards or healing. Trainer wins use stable `kanto-*` IDs.
 - The user supplied a labelled contact sheet for the Kanto portraits, but its actual file is not mounted yet. Brock retains the existing portrait. The other 13 use disclosed temporary painted explorer portraits until the exact PNG/WebP is attached. Import the supplied designs when available; do not call the temporary portraits the user’s imported art.
+
+- Pokémon presentation dimensions live in `pokemon-size-data.js` and `pokemon-sizing.js`. Refresh the former with `node scripts/build-pokemon-sizes.mjs` for new species/forms. Keep relative size bounded for mobile, matching between Normal/Shiny and separate from combat stats. Map trainer/leader name labels must not show exclamation marks.
