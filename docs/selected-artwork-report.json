@@ -1,0 +1,50 @@
+[
+  {
+    "id": "raichumegay",
+    "number": 10305,
+    "normal": "assets/artwork/normal/10305.webp",
+    "shiny": "assets/selected-forms/shiny/10305.webp",
+    "canonicalShiny": "assets/artwork/shiny/10305.webp",
+    "dimensions": [
+      512,
+      512
+    ],
+    "changedPixels": 69197,
+    "alphaPreserved": true,
+    "alphaSHA256": "c4ece6d9c25d36d76920accf3a2c8c43d2b96e577756c51a09b2c7f49743eeaf",
+    "normalSHA256": "527ff188970db167c90ffdcf299bf691919e9ff0eb03bdbd60a95fe8a4c6d664",
+    "shinySHA256": "fda6d04cc24d9f7751536c0ff495553fc7d5b6bc4d6a205ac2f9cf10cf6e6ef9"
+  },
+  {
+    "id": "gengargmax",
+    "number": 10202,
+    "normal": "assets/artwork/normal/10202.webp",
+    "shiny": "assets/selected-forms/shiny/10202.webp",
+    "canonicalShiny": "assets/artwork/shiny/10202.webp",
+    "dimensions": [
+      512,
+      512
+    ],
+    "changedPixels": 120252,
+    "alphaPreserved": true,
+    "alphaSHA256": "56de12eac5754b94b2089e7414667f13f67834725a48f607e7958f449de52dad",
+    "normalSHA256": "3d15306a2294de485ec8800bb6d24cc4788867c5346acd8530fed050ac46a5f8",
+    "shinySHA256": "d18edb76713a0f028185a8f6e96a1b24705c50aa0e51cd30b422c82cc7a71d5c"
+  },
+  {
+    "id": "pikachugmax",
+    "number": 10199,
+    "normal": "assets/artwork/normal/10199.webp",
+    "shiny": "assets/selected-forms/shiny/10199.webp",
+    "canonicalShiny": "assets/artwork/shiny/10199.webp",
+    "dimensions": [
+      512,
+      512
+    ],
+    "changedPixels": 76247,
+    "alphaPreserved": true,
+    "alphaSHA256": "cfe725e3cf7522df8774285371340b807768f638995bd3b78bb2a5bebeca0b66",
+    "normalSHA256": "d2c8e6f6a70b1e90537e56d7b2391aa98544e29524e4dfaf1eedbaeaee0f1b50",
+    "shinySHA256": "309ea30ed74eb9eccfa2220837005713473678028f3e81314f2fd997e44f0a6b"
+  }
+]

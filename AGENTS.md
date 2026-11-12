@@ -11,3 +11,5 @@
 - Areas within a region must have distinct authored geography, individual colour treatment and contextual scenery/landmarks; do not rotate a shared map template for multiple areas. Keep all gates, Gym/Center entrances, hunt clues and saved positions safely reachable.
 
 - Shiny variants must be direct material-specific colour edits of the approved Normal chibi, preserving its exact pose, silhouette and alpha. Do not regenerate or redesign a Shiny sprite. Keep white teeth, eyes and prismatic crystals separate from metal recolouring.
+
+- The user explicitly selected the supplied full-body reference images for Mega Raichu Y, Gigantamax Gengar and Gigantamax Pikachu. `selected-artwork.js` overrides their legacy pixel fallback in static/motion-off views. Keep these choices unless the user replaces them; label them Selected reference artwork rather than claiming they are painted chibis. Their Shiny versions retain the selected Normal images’ exact alpha/silhouette.
