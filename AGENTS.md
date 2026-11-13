@@ -19,4 +19,4 @@
 
 - Pokémon presentation dimensions live in `pokemon-size-data.js` and `pokemon-sizing.js`. Refresh the former with `node scripts/build-pokemon-sizes.mjs` for new species/forms. Keep relative size bounded for mobile, matching between Normal/Shiny and separate from combat stats. Map trainer/leader name labels must not show exclamation marks.
 
-- Alakazam is directly catchable as a rare Observatory Woods encounter, with canonical stats/moves and paired painted artwork. Abra/Kadabra and the other pending draft species are not registered until their artwork is available. Preserve Alakazam captures and the stable `alakazam` ID.
+- Alakazam is directly catchable as a rare Observatory Woods encounter, with canonical stats/moves and paired painted artwork. Kadabra is also catchable there, with paired art and Linking Cord evolution into Alakazam. Abra and the other pending draft species remain unregistered until their artwork is available. Preserve Alakazam captures and the stable `alakazam` ID.

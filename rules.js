@@ -1,6 +1,6 @@
-import {officialSpecies as originalSpecies,moveCatalog as originalMoves,typeChart} from './combat-data.js?v=20261113-art39';
-import {expandedSpecies,engineMoves} from './engine-data.js?v=20261113-art39';
-import {toID} from './progression.js?v=20261113-art39';
+import {officialSpecies as originalSpecies,moveCatalog as originalMoves,typeChart} from './combat-data.js?v=20261113-art40';
+import {expandedSpecies,engineMoves} from './engine-data.js?v=20261113-art40';
+import {toID} from './progression.js?v=20261113-art40';
 export const officialSpecies={...originalSpecies,...expandedSpecies};
 const originalIDs=Object.fromEntries(Object.keys(originalMoves).map(id=>[toID(id),id]));
 export const gameMoveId=id=>originalIDs[toID(id)]||toID(id);

@@ -149,6 +149,9 @@ def recolour(id,r,g,b,x,y):
   if .42<x<.7 and .26<y<.41 and 0<h<90 and s>.3:H,S,V=tint(235,.5,.22)
   elif y>.42 and s>.08 and (h>315 or h<25):H,S,V=tint(275+25*tongue,.2-.02*tongue,.32+.1*tongue)
   elif 255<h<320 and s>.12:H,S,V=287+41*hand,s*.5*(1-hand)+.2*hand,min(1,v*(.72+.38*hand))
+ elif id=='kadabra':
+  if y>.3 and (h>260 or h<30) and .08<s<.55 and v<.85:H,S,V=tint(27,min(.55,s*1.7),.92)
+  elif 35<h<75 and s>.25:H,S,V=tint(54,s*.65,1.02)
  elif id=='alakazam':
   # Preserve silver spoons, white moustache/claws and yellow skin; armour turns pink.
   if 275<h<355 and s>.08:H,S,V=tint(325,min(.65,s*1.7),1.08)
@@ -230,7 +233,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp'] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:
