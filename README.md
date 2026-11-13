@@ -355,3 +355,17 @@ Map jumps are prototype convenience controls and open the selected destination w
 ## v0.28.1 — relative Pokémon size and cleaner trainer labels
 
 All 94 current species/forms use canonical height and weight from the pinned simulator (`pokemon-size-data.js`). `pokemon-sizing.js` compresses those dimensions into bounded display scales so Onix, Steelix and bulky Donphan read larger than small partners, while fitting desktop/mobile battle scenes and map followers. Collection portraits use a gentler bounded scale; gallery comparisons and party thumbnails retain their preview framing. Normal and Shiny share identical sizing, and battle stats/individual saved properties are unchanged. Refresh metadata with `node scripts/build-pokemon-sizes.mjs` whenever species/forms are added. Map trainer names no longer include an exclamation mark; defeated checkmarks remain.
+
+## v0.28.2 — supplied Kanto trainer portraits
+
+Imported the supplied `assets/trainers-kanto/` files from branch `cursor/kanto-chibi-portraits-9f3d`, following its README. `trainer-portraits.js` registers all fourteen canonical IDs; Brock continues to use his unchanged atlas cell. The other thirteen load individual 256×256 WebP images with PNG error fallbacks. If both files fail, the original explorer atlas fallback remains available. All existing atlas portraits and unknown-trainer gender fallbacks are preserved. The Kanto exhibition now references the canonical portrait IDs; saved trainer IDs, teams, levels, dialogue, map positions and challenge rules are unchanged.
+
+To give a trainer one of these portraits, set its `portrait` field in `world.js` (or `kanto-leaders.js` for the exhibition):
+
+```js
+{ id: 'guest-misty', name: 'Misty', portrait: 'misty', gender: 'female',
+  title: 'Visiting Trainer', x: 3, y: 2, team: ['vaporeon', 'golduck'],
+  level: 20, dialogue: 'Ready for a friendly battle?' }
+```
+
+Supported portrait IDs: `brock`, `misty`, `lt-surge`, `erika`, `koga`, `sabrina`, `blaine`, `giovanni`, `lorelei`, `bruno`, `agatha`, `lance`, `blue`, `red`. An omitted `portrait` field falls back to the trainer's `id`. Existing `kanto-*` aliases also work, including `kanto-surge`. Use an unused walkable coordinate when adding a new trainer. Call `bindTrainerPortrait` on inserted `img.npc-portrait-file` elements if rendering outside the app's existing render/bind flow.

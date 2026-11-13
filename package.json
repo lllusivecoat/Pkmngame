@@ -1,10 +1,10 @@
 {
   "name": "pkmngame-greenwood",
-  "version": "0.28.1",
+  "version": "0.28.2",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/artwork.test.mjs && node tests/backbone.test.mjs && node tests/gameplay.test.mjs && node tests/presentation.test.mjs && node tests/ui.test.mjs && node tests/theme.test.mjs && node tests/world.test.mjs && node tests/rules.test.mjs && node tests/items-abilities.test.mjs && node tests/trainers-center.test.mjs && node tests/trainer-customization.test.mjs && node tests/forms-leaders.test.mjs && node tests/developer-tools.test.mjs && node tests/pwa.test.mjs && node tests/mastery.test.mjs && node tests/journal.test.mjs && node tests/hunting.test.mjs && node tests/world-events.test.mjs && node tests/arena.test.mjs && node tests/guild.test.mjs && node tests/quests.test.mjs && node tests/region-areas.test.mjs && node tests/world-polish.test.mjs && node tests/kanto-leaders.test.mjs && node tests/pokemon-sizing.test.mjs",
+    "test": "node tests/artwork.test.mjs && node tests/backbone.test.mjs && node tests/gameplay.test.mjs && node tests/presentation.test.mjs && node tests/ui.test.mjs && node tests/theme.test.mjs && node tests/world.test.mjs && node tests/rules.test.mjs && node tests/items-abilities.test.mjs && node tests/trainers-center.test.mjs && node tests/trainer-customization.test.mjs && node tests/forms-leaders.test.mjs && node tests/developer-tools.test.mjs && node tests/pwa.test.mjs && node tests/mastery.test.mjs && node tests/journal.test.mjs && node tests/hunting.test.mjs && node tests/world-events.test.mjs && node tests/arena.test.mjs && node tests/guild.test.mjs && node tests/quests.test.mjs && node tests/region-areas.test.mjs && node tests/world-polish.test.mjs && node tests/kanto-leaders.test.mjs && node tests/pokemon-sizing.test.mjs && node tests/kanto-portraits.test.mjs",
     "start": "node serve.mjs",
     "build:engine": "node scripts/build-engine.mjs",
     "build": "npm run build:engine && npm run stage",

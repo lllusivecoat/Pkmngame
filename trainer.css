@@ -24,3 +24,6 @@
 /* Detailed original atlas art, with separate idle/walk frames and material recolouring. */
 .custom-trainer-art .atlas-walk{display:none}.custom-trainer.is-walking .atlas-idle{animation:atlas-idle .24s steps(1,end)}.custom-trainer.is-walking .atlas-walk{display:block;animation:atlas-walk .24s steps(1,end)}.trainer-sprite.custom-trainer{aspect-ratio:1;overflow:hidden}.detailed-trainer-art{overflow:hidden}@keyframes atlas-idle{0%,74%{opacity:0}75%,100%{opacity:1}}@keyframes atlas-walk{0%,74%{opacity:1}75%,100%{opacity:0}}.reduce-motion .custom-trainer .atlas-idle{animation:none!important;opacity:1}.reduce-motion .custom-trainer .atlas-walk{display:none!important}@media(prefers-reduced-motion:reduce){.custom-trainer .atlas-idle{animation:none!important;opacity:1}.custom-trainer .atlas-walk{display:none!important}}
 .trainer-preview-stage>.detailed-trainer-art{width:200px;height:210px}@media(max-width:650px){.trainer-preview-stage>.detailed-trainer-art{width:120px;height:130px}}
+
+/* Individual Kanto images share the atlas portrait sizing in every placement. */
+img.npc-portrait-file{display:block;object-fit:contain}
