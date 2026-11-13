@@ -1,18 +1,18 @@
-import {normalizeQuests,collectQuestReward} from './quests.js?v=20261113-art38';
-import {normalizeGuild,earnGuildPoints,collectGuildReward} from './guild.js?v=20261113-art38';
-import {normalizeArena,collectArenaReward} from './arena.js?v=20261113-art38';
-import {eventWeight,eventVisitors,eventStepBonus,WORLD_PERIOD} from './world-events.js?v=20261113-art38';
-import {normalizeHunts,activeHunt,targetHuntOdds,discoverHuntClue,recordHuntCapture,collectHuntReward} from './hunting.js?v=20261113-art38';
-import {normalizeResearch,observeResearch,collectResearchReward} from './journal.js?v=20261113-art38';
-import {masteryRank} from './mastery.js?v=20261113-art38';
-import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261113-art38';
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261113-art38';
-import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261113-art38';
-import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261113-art38';
-import {defaultMoveIds,moveIds} from './rules.js?v=20261113-art38';
-import {zones,allTrainers,currentZone,zoneByName,discoverLocation,zoneSpecies,normalizeAreas,areaKey,locationAt} from './world.js?v=20261113-art38';
-import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261113-art38';
-export {roster,get,map,signs,clues} from './data.js?v=20261113-art38';
+import {normalizeQuests,collectQuestReward} from './quests.js?v=20261113-art39';
+import {normalizeGuild,earnGuildPoints,collectGuildReward} from './guild.js?v=20261113-art39';
+import {normalizeArena,collectArenaReward} from './arena.js?v=20261113-art39';
+import {eventWeight,eventVisitors,eventStepBonus,WORLD_PERIOD} from './world-events.js?v=20261113-art39';
+import {normalizeHunts,activeHunt,targetHuntOdds,discoverHuntClue,recordHuntCapture,collectHuntReward} from './hunting.js?v=20261113-art39';
+import {normalizeResearch,observeResearch,collectResearchReward} from './journal.js?v=20261113-art39';
+import {masteryRank} from './mastery.js?v=20261113-art39';
+import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261113-art39';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261113-art39';
+import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261113-art39';
+import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261113-art39';
+import {defaultMoveIds,moveIds} from './rules.js?v=20261113-art39';
+import {zones,allTrainers,currentZone,zoneByName,discoverLocation,zoneSpecies,normalizeAreas,areaKey,locationAt} from './world.js?v=20261113-art39';
+import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261113-art39';
+export {roster,get,map,signs,clues} from './data.js?v=20261113-art39';
 export const PARTY_LIMIT=6;
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
 export function createCreature(id,level=5,random=Math.random){const c={uid:globalThis.crypto.randomUUID(),species:id,level,variant:random()<.05?'Shiny':'Normal',nature:pick(['Calm','Bold','Timid','Hardy'],random),size:pick(['Small','Average','Large'],random),trait:pick(['Alert','Resilient','Keen-eyed'],random),mastery:0,xp:0,xpRules:'canonical-v1',friendship:expandedSpecies[id]?.friendship??50,ability:toID(expandedSpecies[id]?.abilities['0']),heldItem:null,gigantamax:false,dynamaxLevel:0,evs:{},ivs:{},ppRemaining:{},ppUps:{},knownTM:[],currentHP:null,status:'',gender:expandedSpecies[id]?.gender||((random()<(expandedSpecies[id]?.genderRatio?.F??.5))?'F':'M'),caughtAt:new Date().toISOString(),location:'Greenwood'};const options=abilityOptions(c),hidden=options.find(a=>a.slot==='H'),normal=options.filter(a=>a.slot!=='H');c.ability=(hidden&&random()<.05?hidden:normal[Math.min(normal.length-1,Math.floor(random()*normal.length))])?.id||validAbility(c);c.moves=defaultMoveIds(c);return c}
@@ -27,7 +27,7 @@ export function huntConditions(s){return [{label:'Eastern shore · x ≥ 5',met:
 export function huntOdds(s){return targetHuntOdds(s,'dratini')}
 export function claimHuntReward(s){if(!collectHuntReward(s))return 'No hunt reward ready.';s.coins+=300;award(s,100);return 'HUNT REWARD · +300 coins · +100 trainer XP'}
 
-export function encounterPool(s,tile){const visitors=eventVisitors(s),table=currentZone(s).species||zoneSpecies[s.region];return roster.filter(p=>explorationSpeciesIds.includes(p.id)&&p.id!=='dratini'&&(table||!['ralts','shinx','numel','snover'].includes(p.id))&&(!table||table.includes(p.id)||visitors.includes(p.id))).flatMap(p=>{let n=p.rarity==='Rare'?1:p.rarity==='Uncommon'?3:7;n+=p.weather===s.weather?4:0;n+=p.activity===s.time?3:0;n+=(tile==='F'&&p.habitat==='Forest')||(tile==='R'&&p.habitat==='Rocky clearing')?5:0;return Array(Math.round(n*2*eventWeight(s,p))).fill(p)})}
+export function encounterPool(s,tile){const visitors=eventVisitors(s),table=currentZone(s).species||zoneSpecies[s.region];return roster.filter(p=>explorationSpeciesIds.includes(p.id)&&p.id!=='dratini'&&(table||!['ralts','shinx','numel','snover','alakazam'].includes(p.id))&&(!table||table.includes(p.id)||visitors.includes(p.id))).flatMap(p=>{let n=p.rarity==='Rare'?1:p.rarity==='Uncommon'?3:7;n+=p.weather===s.weather?4:0;n+=p.activity===s.time?3:0;n+=(tile==='F'&&p.habitat==='Forest')||(tile==='R'&&p.habitat==='Rocky clearing')?5:0;return Array(Math.round(n*2*eventWeight(s,p))).fill(p)})}
 export function step(old,dx,dy,random=Math.random){const s=structuredClone(old),zone=currentZone(s),map=zone.map;if(!s.started)return {save:s,message:'Choose a partner first.'};const x=s.position.x+dx,y=s.position.y+dy;if(Math.abs(dx)+Math.abs(dy)!==1||x<0||y<0||x>=map[0].length||y>=map.length)return {save:s,message:'The trail ends here.'};if(['W','X'].includes(map[y][x]))return {save:s,message:map[y][x]==='X'?'A wall blocks the way. Find the entrance.':'Deep water. Follow the shore.'};s.followerPosition={...s.position};s.position={x,y};s.facing=dx<0?'left':dx>0?'right':dy<0?'up':'down';s.steps++;earnGuildPoints(s,1);award(s,3+eventStepBonus(s));updateAchievements(s);const discovery=discoverLocation(s);if(discovery)award(s,15);if(zone.center&&x===zone.center.x&&y===zone.center.y){healParty(s);return {save:s,message:'Welcome to the Pokémon Center! Your party’s HP, status and PP are fully restored.'}}if(zone.peaceful)return {save:s,message:discovery||'A quiet place to meet trainers. Walk to a trainer or doorway to interact.'};const huntClue=discoverHuntClue(s);if(huntClue){award(s,30);updateAchievements(s);return {save:s,message:(discovery?discovery+' · ':'')+huntClue}}if(discovery)return {save:s,message:discovery};if(zone.landmarks.some(t=>t.x===x&&t.y===y)||zone.trainers.some(t=>t.x===x&&t.y===y)||zone.gym&&x===zone.gym.x&&y===zone.gym.y||zone.exits.some(e=>e.x===x&&e.y===y))return {save:s,message:'Take a moment to look around. Choose an action below the map.'};let wild;const target=activeHunt(s);if(random()<(target?targetHuntOdds(s,target.id):0))wild=createCreature(target.id,zone.levels[0]+Math.floor(random()*(zone.levels[1]-zone.levels[0]+1)),random);else if(s.steps===2||s.steps===6||random()<((['P','B'].includes(map[y][x])?.05:map[y][x]==='F'?.22:.18)*(['cleansetag','pureincense'].includes(s.collection.find(c=>c.uid===s.party[0])?.heldItem)?2/3:1))){const p=pick(encounterPool(s,map[y][x]),random);wild=createCreature(p.id,zone.levels[0]+Math.floor(random()*(zone.levels[1]-zone.levels[0]+1)),random);if(s.steps===6)wild.variant='Shiny'}if(wild){wild.location=zone.areaName+' · '+zone.name;record(s,wild,false,{field:true});updateAchievements(s);return {save:s,wild,message:`A wild ${get(wild.species).name} appeared!`}}if(random()<.1){s.coins+=25;return {save:s,message:'Found a cache · +25 coins'}}return {save:s,message:'The grass rustles. You continue searching.'}}
 export function captureChance(hp,max,tool=0){return Math.min(.96,.25+(1-hp/max)*.65+[0,.18,.35][tool])}
 export function toolCount(s,i){return itemCount(s,['pokeball','greatball','ultraball'][i])}

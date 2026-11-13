@@ -558,5 +558,19 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "gengargmax",
+    "sheet": "assets/chibi-painted/gengargmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "alakazam",
+    "sheet": "assets/chibi-painted/alakazam.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

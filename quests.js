@@ -1,8 +1,8 @@
 // Permanent, retrospective goals. A future backend should validate and claim atomically.
-import {masteryRank} from './mastery.js?v=20261113-art38';
-import {normalizeResearch} from './journal.js?v=20261113-art38';
-import {huntCatalog,huntNotes,normalizeHunts} from './hunting.js?v=20261113-art38';
-import {normalizeGuild} from './guild.js?v=20261113-art38';
+import {masteryRank} from './mastery.js?v=20261113-art39';
+import {normalizeResearch} from './journal.js?v=20261113-art39';
+import {huntCatalog,huntNotes,normalizeHunts} from './hunting.js?v=20261113-art39';
+import {normalizeGuild} from './guild.js?v=20261113-art39';
 export const questCatalog=[
  {id:'first-steps',name:'A path of your own',category:'Getting started',metric:'steps',goal:10,description:'Walk 10 valid map steps.',hint:'Use the direction controls or WASD. Blocked water does not count.',destination:'Explore',coins:150,xp:50,items:[['pokeball',5,'Poké Balls']],requires:[]},
  {id:'curious',name:'A curious beginning',category:'Getting started',metric:'seen',goal:3,description:'Discover 3 different species.',hint:'Explore and encounter new species. Your existing discoveries count.',destination:'Explore',coins:150,xp:100,items:[],requires:[]},

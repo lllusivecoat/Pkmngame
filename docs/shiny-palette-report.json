@@ -306,11 +306,6 @@
       "visible": 133575
     },
     {
-      "id": "dragonitemega",
-      "changed": 63808,
-      "visible": 152910
-    },
-    {
       "id": "raichumegay",
       "changed": 62892,
       "visible": 89742
@@ -319,6 +314,21 @@
       "id": "pikachugmax",
       "changed": 45897,
       "visible": 91574
+    },
+    {
+      "id": "dragonitemega",
+      "changed": 63630,
+      "visible": 153566
+    },
+    {
+      "id": "gengargmax",
+      "changed": 131815,
+      "visible": 146607
+    },
+    {
+      "id": "alakazam",
+      "changed": 14452,
+      "visible": 96042
     }
   ],
   "assets": [
@@ -539,18 +549,6 @@
       "alphaPreserved": true
     },
     {
-      "source": "assets/chibi-painted/mega-dragonite.webp",
-      "shiny": "assets/chibi-painted/shiny/mega-dragonite.webp",
-      "dimensions": [
-        512,
-        512
-      ],
-      "sourceSHA256": "0629a4048c50fd98abadebf8e92427ebb33697ecc00b76021ef164c9f2eae4cc",
-      "shinySHA256": "ccf65a78c0632b8331b29eb6d32e32be41d1ba90600f28508a6bae7b8bf74e11",
-      "alphaSHA256": "a3365923166b53fea781e26ad30f8e7a2e773c23922d9b1ae71ab0ddcd7f9a47",
-      "alphaPreserved": true
-    },
-    {
       "source": "assets/chibi-painted/mega-raichu-y.webp",
       "shiny": "assets/chibi-painted/shiny/mega-raichu-y.webp",
       "dimensions": [
@@ -572,6 +570,42 @@
       "sourceSHA256": "aaad6606dadd03ad37371c1341a5a436d580c35993a6515961a2bc0d7f548ead",
       "shinySHA256": "77383e755d176da495898be4e855608045dc418c56f9b553b81840081917d22f",
       "alphaSHA256": "6ac7b741b2ae18d8509b5e6786a58a544df947aac4a5eccc5d48a42fd5862b2f",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/mega-dragonite.webp",
+      "shiny": "assets/chibi-painted/shiny/mega-dragonite.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3487d95b5c6c282b30f8192c60d98a158c641e7b2f09fb3724fa5a9ccf1b58cf",
+      "shinySHA256": "7edcccc808d2dc83aecc659451e8028b1ca3bbfb18449241a75cce6c08ed0a5b",
+      "alphaSHA256": "dfbc3d34cb3b5f7b4f528bbc43063db6083fe0b590c5320a7ee3a6c0ae290be2",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/gengargmax.webp",
+      "shiny": "assets/chibi-painted/shiny/gengargmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "eb6bf08a8fbd79017e9a4b2725e82915f7e954bc3af66a13335240e48473f6e4",
+      "shinySHA256": "9759806dfeb60999f8a617d6e7063195dd6de3535133d8f764c87e3d1e8a7b5d",
+      "alphaSHA256": "4d591db4f26b7ae09349e5b812528935033a2b0921f408d8d504b338afcaa220",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/alakazam.webp",
+      "shiny": "assets/chibi-painted/shiny/alakazam.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "56d143c17341901237ea101bafc56500fe01d5b4c73988a35dd948cb8ab2164b",
+      "shinySHA256": "1786cdfd601de67126c59cea829a520660c9ccb43356ed4b069b6e63ad1971ef",
+      "alphaSHA256": "42d22fd7c1fc899655eb1d4e2e75820e78c6bb073d194faba2a2b146495358fc",
       "alphaPreserved": true
     }
   ]

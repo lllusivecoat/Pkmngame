@@ -1,4 +1,4 @@
-import {huntEventMultiplier} from './world-events.js?v=20261113-art38';
+import {huntEventMultiplier} from './world-events.js?v=20261113-art39';
 // Dedicated hunting rolls are separate from ordinary terrain encounters.
 export const huntCatalog=[
  {id:'dratini',name:'Dratini',region:'Greenwood',weather:'Rain',time:'Dusk',minX:5,area:'Eastern shoreline · x ≥ 5',clues:[{x:3,y:3,text:'Dratini has been spotted along the eastern shoreline. Search east of column 5.'},{x:6,y:4,text:'Rain brings it out of hiding. Return when rain falls.'},{x:3,y:6,text:'It surfaces at dusk. Watch the water as daylight fades.'}]},

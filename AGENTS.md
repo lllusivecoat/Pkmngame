@@ -12,9 +12,11 @@
 
 - Shiny variants must be direct material-specific colour edits of the approved Normal chibi, preserving its exact pose, silhouette and alpha. Do not regenerate or redesign a Shiny sprite. Keep white teeth, eyes and prismatic crystals separate from metal recolouring.
 
-- The supplied Mega Raichu Y, Gigantamax Gengar and Gigantamax Pikachu images are references for painted chibi generation. Mega Raichu Y now has paired painted art. Gigantamax Pikachu now also has paired painted art. Keep Gigantamax Gengar clearly labelled reference artwork until a successful painted replacement exists. Shiny variants must recolour the matching Normal drawing.
+- The supplied Mega Raichu Y, Gigantamax Gengar and Gigantamax Pikachu images are references for painted chibi generation. Mega Raichu Y now has paired painted art. Gigantamax Pikachu now also has paired painted art. Gigantamax Gengar now also has paired painted art. All current species/forms must render their matching painted pair in chibi views. Shiny variants must recolour the matching Normal drawing.
 
 - Kanto Leaders uses two extra Greenwood exhibition maps, separate from each region’s five-area loop. Keep the courtyard entrance, hall exit and all 14 trainers reachable. Jump to map must include every destination, preserve saves and grant no free battle rewards or healing. Trainer wins use stable `kanto-*` IDs.
 - Kanto portraits are supplied in `assets/trainers-kanto/`. Use individual WebP images with PNG error fallbacks via `trainer-portraits.js`, keeping Brock and all original atlas indices intact. Canonical asset IDs and existing `kanto-*` aliases are supported. Keep saved trainer IDs stable; Lt. Surge remains `kanto-surge` with portrait `lt-surge`.
 
 - Pokémon presentation dimensions live in `pokemon-size-data.js` and `pokemon-sizing.js`. Refresh the former with `node scripts/build-pokemon-sizes.mjs` for new species/forms. Keep relative size bounded for mobile, matching between Normal/Shiny and separate from combat stats. Map trainer/leader name labels must not show exclamation marks.
+
+- Alakazam is directly catchable as a rare Observatory Woods encounter, with canonical stats/moves and paired painted artwork. Abra/Kadabra and the other pending draft species are not registered until their artwork is available. Preserve Alakazam captures and the stable `alakazam` ID.

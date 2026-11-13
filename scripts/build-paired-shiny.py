@@ -5,7 +5,7 @@ No generated redraws are used; existing poses and outlines remain intact.
 """
 from pathlib import Path
 import colorsys,json,hashlib
-from PIL import Image,ImageDraw
+from PIL import Image,ImageDraw,ImageFilter
 ROOT=Path(__file__).resolve().parents[1]
 entries=json.loads((ROOT/'docs/shiny-palette-sources.json').read_text())
 # Material mask separates Gigantamax Charizard's orange skin from its orange flames.
@@ -26,6 +26,14 @@ dragonite_orb_mask=Image.new('1',(512,512))
 ImageDraw.Draw(dragonite_orb_mask).polygon([(39,436),(44,417),(57,402),(77,396),(99,403),(113,416),(117,428),(104,434),(96,440),(93,451),(96,460),(105,468),(91,476),(72,479),(55,472),(43,458)],fill=1)
 pikachu_gmax_body_mask=Image.new('1',(512,512))
 ImageDraw.Draw(pikachu_gmax_body_mask).polygon([(147,257),(170,248),(200,241),(235,232),(268,218),(292,201),(318,197),(300,217),(276,250),(299,270),(329,291),(349,323),(369,359),(377,408),(369,447),(350,472),(340,478),(367,481),(369,487),(321,492),(281,492),(224,490),(185,489),(172,484),(178,476),(156,464),(139,449),(126,423),(124,398),(126,377),(121,389),(113,389),(110,379),(117,357),(126,339),(137,328),(133,311),(132,291)],fill=1)
+gengar_gmax_hands=Image.new('1',(512,512))
+for poly in [[(30,422),(40,360),(60,340),(80,329),(92,309),(108,300),(118,307),(115,327),(137,301),(149,300),(154,313),(146,330),(170,319),(178,325),(170,341),(150,355),(149,381),(144,424),(133,452),(110,470),(70,470),(46,462)],[(382,456),(401,427),(415,415),(420,403),(425,394),(433,390),(440,397),(435,414),(458,406),(467,411),(465,420),(481,417),(489,425),(481,436),(470,443),(468,451),(457,470),(431,470),(402,470)]]:ImageDraw.Draw(gengar_gmax_hands).polygon(poly,fill=1)
+gengar_gmax_mouth=Image.new('1',(512,512))
+ImageDraw.Draw(gengar_gmax_mouth).polygon([(110,338),(147,246),(190,217),(208,210),(250,219),(294,233),(330,254),(360,281),(379,335),(380,382),(365,424),(345,445),(310,458),(174,460),(121,452),(105,421)],fill=1)
+gengar_gmax_tongue=Image.new('1',(512,512))
+ImageDraw.Draw(gengar_gmax_tongue).polygon([(178,423),(225,361),(280,356),(331,362),(355,346),(380,308),(410,269),(437,247),(468,243),(490,260),(505,277),(503,312),(480,336),(456,362),(423,385),(391,405),(352,420),(313,424),(267,416),(227,423),(210,438)],fill=1)
+gengar_gmax_hands=gengar_gmax_hands.convert('L').point(lambda v:255 if v else 0).filter(ImageFilter.GaussianBlur(8))
+gengar_gmax_tongue=gengar_gmax_tongue.convert('L').point(lambda v:255 if v else 0).filter(ImageFilter.GaussianBlur(4))
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
@@ -135,6 +143,15 @@ def recolour(id,r,g,b,x,y):
  elif id=='dragonite':
   if 10<h<60 and s>.45:H,S,V=tint(110,.4,.95)
   elif 150<h<235 and s>.25:H,S,V=tint(295,.6)
+ elif id=='gengargmax':
+  point=(min(511,int(x*512)),min(511,int(y*512)))
+  hand=gengar_gmax_hands.getpixel(point)/255;tongue=gengar_gmax_tongue.getpixel(point)/255
+  if .42<x<.7 and .26<y<.41 and 0<h<90 and s>.3:H,S,V=tint(235,.5,.22)
+  elif y>.42 and s>.08 and (h>315 or h<25):H,S,V=tint(275+25*tongue,.2-.02*tongue,.32+.1*tongue)
+  elif 255<h<320 and s>.12:H,S,V=287+41*hand,s*.5*(1-hand)+.2*hand,min(1,v*(.72+.38*hand))
+ elif id=='alakazam':
+  # Preserve silver spoons, white moustache/claws and yellow skin; armour turns pink.
+  if 275<h<355 and s>.08:H,S,V=tint(325,min(.65,s*1.7),1.08)
  elif id=='pikachugmax':
   # Recolour only yellow skin; the glowing tail, lightning and storm clouds stay unchanged.
   if pikachu_gmax_body_mask.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and 35<h<70 and s>.25:H,S,V=tint(38,s,.99)
@@ -213,7 +230,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp'] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:

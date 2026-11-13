@@ -1,6 +1,6 @@
-import {expandedSpecies} from './engine-data.js?v=20261113-art38';
-import {officialSpecies} from './combat-data.js?v=20261113-art38';
-import {zones} from './world.js?v=20261113-art38';
+import {expandedSpecies} from './engine-data.js?v=20261113-art39';
+import {officialSpecies} from './combat-data.js?v=20261113-art39';
+import {zones} from './world.js?v=20261113-art39';
 // Static species data and encounter configuration. No network is required.
 export const roster = [
   ['bulbasaur',1,'Bulbasaur','Grass',45,49,49,45,'Common','A quiet woodland partner that thrives in the morning rain.','Forest','Morning','Rain','Overgrow'],
@@ -24,7 +24,7 @@ export const roster = [
 ].map(([id,number,name,type,hp,attack,defence,speed,rarity,description,habitat,activity,weather,passive])=>({id,number,name,type,hp,attack,defence,speed,rarity,description,habitat,activity,weather,passive,...officialSpecies[id].baseStats,types:officialSpecies[id].types,type:officialSpecies[id].types[0]}));
 export const starterRosterIds=roster.map(p=>p.id);
 for(const s of Object.values(expandedSpecies)){if(roster.some(p=>p.id===s.id))continue;const origin=roster.find(p=>p.id===s.origin);roster.push({...origin,id:s.id,number:s.number,name:s.name,type:s.types[0],types:s.types,...s.baseStats,rarity:s.evos.length?'Uncommon':'Rare',passive:s.abilities['0'],habitat:s.habitat||origin?.habitat,activity:s.activity||origin?.activity,weather:s.weather||origin?.weather,description:s.description||`The evolved form of ${s.prevo}. A companion shaped by your journey.`})}
-export const explorationSpeciesIds=[...starterRosterIds,'pichu','onix','raichualola','geodudealola','vulpixalola','growlithehisui','ralts','shinx','numel','snover'];
+export const explorationSpeciesIds=[...starterRosterIds,'pichu','onix','raichualola','geodudealola','vulpixalola','growlithehisui','ralts','shinx','numel','snover','alakazam'];
 export const get=id=>roster.find(p=>p.id===id);
 export const colors={Grass:'#a6d69d',Fire:'#e8ac84',Water:'#8dc5dd',Electric:'#e0cd88',Flying:'#bfc9d1',Bug:'#c1d18b',Normal:'#c6b8a9',Rock:'#c9b997',Ghost:'#c3a5db',Dragon:'#adacd9',Ground:'#d6b892',Poison:'#c7a1db',Psychic:'#efa6c4',Ice:'#a2dddd',Dark:'#b4a8c4',Steel:'#b7cad3',Fairy:'#f0b9dd',Fighting:'#dfaa90'};
 export const icons={Grass:'❧',Fire:'♨',Water:'≈',Electric:'ϟ',Flying:'⋎',Bug:'♧',Normal:'✧',Rock:'⬡',Ghost:'☽',Dragon:'♜',Ground:'◈',Poison:'◉',Psychic:'◎',Ice:'❄',Dark:'☾',Steel:'⬢',Fairy:'✦',Fighting:'✊'};
@@ -33,7 +33,7 @@ export const signs={'3,3':0,'6,4':1,'3,6':2};
 export const clues=['Dratini has been spotted along the eastern shoreline. Search east of column 5.','Rain brings it out of hiding. Return when rain falls.','It surfaces at dusk. Watch the water as daylight fades.'];
 export const weatherOptions=['Clear','Rain','Storm','Fog'];
 export const timeOptions=['Morning','Day','Dusk','Night'];
-export {worldEvents as events} from './world-events.js?v=20261113-art38';
+export {worldEvents as events} from './world-events.js?v=20261113-art39';
 export const tools=[{name:'Poké Ball',price:150,count:10,bonus:0},{name:'Great Ball',price:240,count:5,bonus:.18},{name:'Ultra Ball',price:300,count:3,bonus:.35}];
 export const achievementData=[['first-catch','First catch','Catch a Pokémon beyond your starter.'],['first-steps','Trailblazer','Explore 10 tiles.'],['research','Field researcher','See 8 different species.'],['hunter','Follow the signs','Discover all three Dratini clues.'],['collector','Collector 10','Own 10 individuals.'],['shiny','A different sparkle','Catch a Shiny Pokémon.'],['arena','Arena initiate','Win an AI arena match.'],['mastery','Old friends','Reach Mastery III.'],['dratini','Patient hunter','Catch Dratini.'],['battler','Finding your rhythm','Win 5 battles.']];
 export const masteryRewards=['Profile badge','Passive insight','Ability insight','Cosmetic aura','Companion title'];
