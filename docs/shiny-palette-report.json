@@ -307,13 +307,18 @@
     },
     {
       "id": "dragonitemega",
-      "changed": 64674,
-      "visible": 152518
+      "changed": 63808,
+      "visible": 152910
     },
     {
       "id": "raichumegay",
       "changed": 62892,
       "visible": 89742
+    },
+    {
+      "id": "pikachugmax",
+      "changed": 45897,
+      "visible": 91574
     }
   ],
   "assets": [
@@ -540,9 +545,9 @@
         512,
         512
       ],
-      "sourceSHA256": "985ef6d67d339179218ede1a4778c17d5bb5ec0a94f356d4bc06cc2e80475aa6",
-      "shinySHA256": "379c9f0342df0d447c20b287e1e07eb78c5820f4a71cdedc74c505fe66e21a20",
-      "alphaSHA256": "53201bd7d7f7ae7189925a7559b3bfa8887169c9c3286d5b0666bd318efd32eb",
+      "sourceSHA256": "0629a4048c50fd98abadebf8e92427ebb33697ecc00b76021ef164c9f2eae4cc",
+      "shinySHA256": "ccf65a78c0632b8331b29eb6d32e32be41d1ba90600f28508a6bae7b8bf74e11",
+      "alphaSHA256": "a3365923166b53fea781e26ad30f8e7a2e773c23922d9b1ae71ab0ddcd7f9a47",
       "alphaPreserved": true
     },
     {
@@ -555,6 +560,18 @@
       "sourceSHA256": "5b3e60d31ce4c2480aa0730be4cedb3c4c60546396ec3ea5b34d36beb1a4536d",
       "shinySHA256": "bae4ba7ab90345edfbc04a0b57c5dded90a42c3dcb2fa6c6b9874502686cf401",
       "alphaSHA256": "950247ffab1301c9938ed0cc3e9d073950e32dd24e9e0d91a3934b4344e6f658",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/pikachugmax.webp",
+      "shiny": "assets/chibi-painted/shiny/pikachugmax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "aaad6606dadd03ad37371c1341a5a436d580c35993a6515961a2bc0d7f548ead",
+      "shinySHA256": "77383e755d176da495898be4e855608045dc418c56f9b553b81840081917d22f",
+      "alphaSHA256": "6ac7b741b2ae18d8509b5e6786a58a544df947aac4a5eccc5d48a42fd5862b2f",
       "alphaPreserved": true
     }
   ]

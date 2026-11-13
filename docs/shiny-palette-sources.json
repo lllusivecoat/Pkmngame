@@ -551,5 +551,12 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "pikachugmax",
+    "sheet": "assets/chibi-painted/pikachugmax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

@@ -369,3 +369,9 @@ To give a trainer one of these portraits, set its `portrait` field in `world.js`
 ```
 
 Supported portrait IDs: `brock`, `misty`, `lt-surge`, `erika`, `koga`, `sabrina`, `blaine`, `giovanni`, `lorelei`, `bruno`, `agatha`, `lance`, `blue`, `red`. An omitted `portrait` field falls back to the trainer's `id`. Existing `kanto-*` aliases also work, including `kanto-surge`. Use an unused walkable coordinate when adding a new trainer. Call `bindTrainerPortrait` on inserted `img.npc-portrait-file` elements if rendering outside the app's existing render/bind flow.
+
+## v0.28.3 — slimmer Mega Dragonite and painted Gigantamax Pikachu
+
+Mega Dragonite’s approved painted design now has a slimmer tail section. Its Shiny is an exact palette edit of the revised Normal picture; the rainbow orb is kept separate from the blue tail. Gigantamax Pikachu now has full-body painted Normal and Shiny chibis, with orange-gold Shiny skin and unchanged glowing lightning/tail and storm clouds. Both variants use matching silhouettes in the gallery and motion-off battles, including actual Gigantamax transformation.
+
+**Still pending:** the image service rejected the painted Gigantamax Gengar retry and both grouped/individual attempts for the proposed next seven species: Abra, Kadabra, Alakazam, Staryu, Starmie, Magikarp and Gyarados. Their canonical stats, moves, abilities and evolution data are prepared in `docs/pending-kanto-species.json`; this is a draft, not registered in the game. They have not been added to encounters, teams, collection or gallery. No new species ships without paired painted Normal/Shiny artwork. Rebuild the draft with `node scripts/build-kanto-species.mjs --draft` after downloading the documented PokeAPI inputs. Existing playable roster and saved progress are preserved.

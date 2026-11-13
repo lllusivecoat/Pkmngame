@@ -1,0 +1,1045 @@
+{
+  "abra": {
+    "id": "abra",
+    "name": "Abra",
+    "number": 63,
+    "origin": "abra",
+    "catchRate": 200,
+    "growth": "medium-slow",
+    "friendship": 70,
+    "baseExperience": 62,
+    "evYield": {
+      "specialAttack": 1
+    },
+    "types": [
+      "Psychic"
+    ],
+    "baseStats": {
+      "hp": 25,
+      "attack": 20,
+      "defence": 15,
+      "specialAttack": 105,
+      "specialDefence": 55,
+      "speed": 90
+    },
+    "abilities": {
+      "0": "Synchronize",
+      "1": "Inner Focus",
+      "H": "Magic Guard"
+    },
+    "weight": 19.5,
+    "genderRatio": {
+      "M": 0.75,
+      "F": 0.25
+    },
+    "gender": "",
+    "prevo": "",
+    "evos": [
+      "kadabra"
+    ],
+    "learnset": [
+      {
+        "id": "teleport",
+        "number": 100,
+        "level": 1
+      }
+    ],
+    "tmMoves": [
+      "allyswitch",
+      "attract",
+      "bodyslam",
+      "calmmind",
+      "dazzlinggleam",
+      "drainpunch",
+      "encore",
+      "endure",
+      "energyball",
+      "facade",
+      "firepunch",
+      "fling",
+      "foulplay",
+      "grassknot",
+      "guardswap",
+      "icepunch",
+      "irontail",
+      "lightscreen",
+      "magicroom",
+      "megakick",
+      "megapunch",
+      "metronome",
+      "powerswap",
+      "protect",
+      "psychic",
+      "psychicterrain",
+      "psyshock",
+      "raindance",
+      "reflect",
+      "rest",
+      "round",
+      "safeguard",
+      "shadowball",
+      "skillswap",
+      "sleeptalk",
+      "snore",
+      "speedswap",
+      "substitute",
+      "sunnyday",
+      "swift",
+      "taunt",
+      "thief",
+      "thunderpunch",
+      "thunderwave",
+      "triattack",
+      "trick",
+      "trickroom",
+      "wonderroom",
+      "zenheadbutt"
+    ],
+    "version": "sword-shield",
+    "habitat": "Forest",
+    "activity": "Dusk",
+    "weather": "Fog",
+    "description": "A quiet psychic wanderer that rests beneath the woodland canopy."
+  },
+  "kadabra": {
+    "id": "kadabra",
+    "name": "Kadabra",
+    "number": 64,
+    "origin": "abra",
+    "catchRate": 100,
+    "growth": "medium-slow",
+    "friendship": 70,
+    "baseExperience": 140,
+    "evYield": {
+      "specialAttack": 2
+    },
+    "types": [
+      "Psychic"
+    ],
+    "baseStats": {
+      "hp": 40,
+      "attack": 35,
+      "defence": 30,
+      "specialAttack": 120,
+      "specialDefence": 70,
+      "speed": 105
+    },
+    "abilities": {
+      "0": "Synchronize",
+      "1": "Inner Focus",
+      "H": "Magic Guard"
+    },
+    "weight": 56.5,
+    "genderRatio": {
+      "M": 0.75,
+      "F": 0.25
+    },
+    "gender": "",
+    "prevo": "Abra",
+    "evos": [
+      "alakazam"
+    ],
+    "learnset": [
+      {
+        "id": "confusion",
+        "number": 93,
+        "level": 0
+      },
+      {
+        "id": "disable",
+        "number": 50,
+        "level": 1
+      },
+      {
+        "id": "confusion",
+        "number": 93,
+        "level": 1
+      },
+      {
+        "id": "teleport",
+        "number": 100,
+        "level": 1
+      },
+      {
+        "id": "kinesis",
+        "number": 134,
+        "level": 1
+      },
+      {
+        "id": "psybeam",
+        "number": 60,
+        "level": 5
+      },
+      {
+        "id": "reflect",
+        "number": 115,
+        "level": 10
+      },
+      {
+        "id": "allyswitch",
+        "number": 502,
+        "level": 15
+      },
+      {
+        "id": "psychocut",
+        "number": 427,
+        "level": 20
+      },
+      {
+        "id": "recover",
+        "number": 105,
+        "level": 25
+      },
+      {
+        "id": "psyshock",
+        "number": 473,
+        "level": 30
+      },
+      {
+        "id": "psychic",
+        "number": 94,
+        "level": 35
+      },
+      {
+        "id": "roleplay",
+        "number": 272,
+        "level": 40
+      },
+      {
+        "id": "futuresight",
+        "number": 248,
+        "level": 45
+      },
+      {
+        "id": "calmmind",
+        "number": 347,
+        "level": 50
+      }
+    ],
+    "tmMoves": [
+      "allyswitch",
+      "attract",
+      "bodyslam",
+      "calmmind",
+      "dazzlinggleam",
+      "drainpunch",
+      "encore",
+      "endure",
+      "energyball",
+      "facade",
+      "firepunch",
+      "fling",
+      "foulplay",
+      "futuresight",
+      "grassknot",
+      "guardswap",
+      "icepunch",
+      "irontail",
+      "lightscreen",
+      "magicroom",
+      "megakick",
+      "megapunch",
+      "metronome",
+      "powerswap",
+      "protect",
+      "psychic",
+      "psychicterrain",
+      "psychocut",
+      "psyshock",
+      "raindance",
+      "reflect",
+      "rest",
+      "round",
+      "safeguard",
+      "shadowball",
+      "skillswap",
+      "sleeptalk",
+      "snore",
+      "speedswap",
+      "substitute",
+      "sunnyday",
+      "swift",
+      "taunt",
+      "thief",
+      "thunderpunch",
+      "thunderwave",
+      "triattack",
+      "trick",
+      "trickroom",
+      "wonderroom",
+      "zenheadbutt"
+    ],
+    "version": "sword-shield",
+    "habitat": "Forest",
+    "activity": "Dusk",
+    "weather": "Fog",
+    "description": "A quiet psychic wanderer that rests beneath the woodland canopy.",
+    "evoLevel": 16
+  },
+  "alakazam": {
+    "id": "alakazam",
+    "name": "Alakazam",
+    "number": 65,
+    "origin": "abra",
+    "catchRate": 50,
+    "growth": "medium-slow",
+    "friendship": 70,
+    "baseExperience": 225,
+    "evYield": {
+      "specialAttack": 3
+    },
+    "types": [
+      "Psychic"
+    ],
+    "baseStats": {
+      "hp": 55,
+      "attack": 50,
+      "defence": 45,
+      "specialAttack": 135,
+      "specialDefence": 95,
+      "speed": 120
+    },
+    "abilities": {
+      "0": "Synchronize",
+      "1": "Inner Focus",
+      "H": "Magic Guard"
+    },
+    "weight": 48,
+    "genderRatio": {
+      "M": 0.75,
+      "F": 0.25
+    },
+    "gender": "",
+    "prevo": "Kadabra",
+    "evos": [],
+    "learnset": [
+      {
+        "id": "disable",
+        "number": 50,
+        "level": 1
+      },
+      {
+        "id": "confusion",
+        "number": 93,
+        "level": 1
+      },
+      {
+        "id": "teleport",
+        "number": 100,
+        "level": 1
+      },
+      {
+        "id": "kinesis",
+        "number": 134,
+        "level": 1
+      },
+      {
+        "id": "psybeam",
+        "number": 60,
+        "level": 5
+      },
+      {
+        "id": "reflect",
+        "number": 115,
+        "level": 10
+      },
+      {
+        "id": "allyswitch",
+        "number": 502,
+        "level": 15
+      },
+      {
+        "id": "psychocut",
+        "number": 427,
+        "level": 20
+      },
+      {
+        "id": "recover",
+        "number": 105,
+        "level": 25
+      },
+      {
+        "id": "psyshock",
+        "number": 473,
+        "level": 30
+      },
+      {
+        "id": "psychic",
+        "number": 94,
+        "level": 35
+      },
+      {
+        "id": "roleplay",
+        "number": 272,
+        "level": 40
+      },
+      {
+        "id": "futuresight",
+        "number": 248,
+        "level": 45
+      },
+      {
+        "id": "calmmind",
+        "number": 347,
+        "level": 50
+      }
+    ],
+    "tmMoves": [
+      "allyswitch",
+      "attract",
+      "bodyslam",
+      "calmmind",
+      "dazzlinggleam",
+      "drainpunch",
+      "encore",
+      "endure",
+      "energyball",
+      "facade",
+      "firepunch",
+      "fling",
+      "focusblast",
+      "foulplay",
+      "futuresight",
+      "gigaimpact",
+      "grassknot",
+      "guardswap",
+      "hyperbeam",
+      "icepunch",
+      "imprison",
+      "irontail",
+      "lightscreen",
+      "magicroom",
+      "megakick",
+      "megapunch",
+      "metronome",
+      "nastyplot",
+      "powerswap",
+      "protect",
+      "psychic",
+      "psychicterrain",
+      "psychocut",
+      "psyshock",
+      "raindance",
+      "reflect",
+      "rest",
+      "round",
+      "safeguard",
+      "shadowball",
+      "skillswap",
+      "sleeptalk",
+      "snore",
+      "speedswap",
+      "storedpower",
+      "substitute",
+      "sunnyday",
+      "swift",
+      "taunt",
+      "thief",
+      "thunderpunch",
+      "thunderwave",
+      "triattack",
+      "trick",
+      "trickroom",
+      "wonderroom",
+      "zenheadbutt"
+    ],
+    "version": "sword-shield",
+    "habitat": "Forest",
+    "activity": "Dusk",
+    "weather": "Fog",
+    "description": "A quiet psychic wanderer that rests beneath the woodland canopy.",
+    "evoType": "trade"
+  },
+  "staryu": {
+    "id": "staryu",
+    "name": "Staryu",
+    "number": 120,
+    "origin": "staryu",
+    "catchRate": 225,
+    "growth": "slow",
+    "friendship": 70,
+    "baseExperience": 68,
+    "evYield": {
+      "speed": 1
+    },
+    "types": [
+      "Water"
+    ],
+    "baseStats": {
+      "hp": 30,
+      "attack": 45,
+      "defence": 55,
+      "specialAttack": 70,
+      "specialDefence": 55,
+      "speed": 85
+    },
+    "abilities": {
+      "0": "Illuminate",
+      "1": "Natural Cure",
+      "H": "Analytic"
+    },
+    "weight": 34.5,
+    "genderRatio": {
+      "M": 0,
+      "F": 0
+    },
+    "gender": "N",
+    "prevo": "",
+    "evos": [
+      "starmie"
+    ],
+    "learnset": [
+      {
+        "id": "tackle",
+        "number": 33,
+        "level": 1
+      },
+      {
+        "id": "harden",
+        "number": 106,
+        "level": 1
+      },
+      {
+        "id": "watergun",
+        "number": 55,
+        "level": 4
+      },
+      {
+        "id": "confuseray",
+        "number": 109,
+        "level": 8
+      },
+      {
+        "id": "rapidspin",
+        "number": 229,
+        "level": 12
+      },
+      {
+        "id": "minimize",
+        "number": 107,
+        "level": 16
+      },
+      {
+        "id": "swift",
+        "number": 129,
+        "level": 20
+      },
+      {
+        "id": "psybeam",
+        "number": 60,
+        "level": 24
+      },
+      {
+        "id": "brine",
+        "number": 362,
+        "level": 28
+      },
+      {
+        "id": "lightscreen",
+        "number": 113,
+        "level": 32
+      },
+      {
+        "id": "powergem",
+        "number": 408,
+        "level": 36
+      },
+      {
+        "id": "psychic",
+        "number": 94,
+        "level": 40
+      },
+      {
+        "id": "surf",
+        "number": 57,
+        "level": 44
+      },
+      {
+        "id": "recover",
+        "number": 105,
+        "level": 48
+      },
+      {
+        "id": "cosmicpower",
+        "number": 322,
+        "level": 52
+      },
+      {
+        "id": "hydropump",
+        "number": 56,
+        "level": 56
+      }
+    ],
+    "tmMoves": [
+      "blizzard",
+      "brine",
+      "cosmicpower",
+      "dazzlinggleam",
+      "dive",
+      "endure",
+      "facade",
+      "flashcannon",
+      "gyroball",
+      "hail",
+      "hydropump",
+      "icebeam",
+      "icywind",
+      "lightscreen",
+      "powergem",
+      "protect",
+      "psychic",
+      "raindance",
+      "reflect",
+      "rest",
+      "round",
+      "scald",
+      "sleeptalk",
+      "snore",
+      "substitute",
+      "surf",
+      "swift",
+      "thunder",
+      "thunderbolt",
+      "thunderwave",
+      "triattack",
+      "waterfall",
+      "whirlpool"
+    ],
+    "version": "sword-shield",
+    "habitat": "Shoreline",
+    "activity": "Night",
+    "weather": "Clear",
+    "description": "Its central jewel glows softly along the sheltered shoreline."
+  },
+  "starmie": {
+    "id": "starmie",
+    "name": "Starmie",
+    "number": 121,
+    "origin": "staryu",
+    "catchRate": 60,
+    "growth": "slow",
+    "friendship": 70,
+    "baseExperience": 182,
+    "evYield": {
+      "speed": 2
+    },
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "baseStats": {
+      "hp": 60,
+      "attack": 75,
+      "defence": 85,
+      "specialAttack": 100,
+      "specialDefence": 85,
+      "speed": 115
+    },
+    "abilities": {
+      "0": "Illuminate",
+      "1": "Natural Cure",
+      "H": "Analytic"
+    },
+    "weight": 80,
+    "genderRatio": {
+      "M": 0,
+      "F": 0
+    },
+    "gender": "N",
+    "prevo": "Staryu",
+    "evos": [],
+    "learnset": [
+      {
+        "id": "tackle",
+        "number": 33,
+        "level": 1
+      },
+      {
+        "id": "watergun",
+        "number": 55,
+        "level": 1
+      },
+      {
+        "id": "hydropump",
+        "number": 56,
+        "level": 1
+      },
+      {
+        "id": "surf",
+        "number": 57,
+        "level": 1
+      },
+      {
+        "id": "psybeam",
+        "number": 60,
+        "level": 1
+      },
+      {
+        "id": "psychic",
+        "number": 94,
+        "level": 1
+      },
+      {
+        "id": "recover",
+        "number": 105,
+        "level": 1
+      },
+      {
+        "id": "harden",
+        "number": 106,
+        "level": 1
+      },
+      {
+        "id": "minimize",
+        "number": 107,
+        "level": 1
+      },
+      {
+        "id": "confuseray",
+        "number": 109,
+        "level": 1
+      },
+      {
+        "id": "lightscreen",
+        "number": 113,
+        "level": 1
+      },
+      {
+        "id": "swift",
+        "number": 129,
+        "level": 1
+      },
+      {
+        "id": "rapidspin",
+        "number": 229,
+        "level": 1
+      },
+      {
+        "id": "cosmicpower",
+        "number": 322,
+        "level": 1
+      },
+      {
+        "id": "brine",
+        "number": 362,
+        "level": 1
+      },
+      {
+        "id": "powergem",
+        "number": 408,
+        "level": 1
+      }
+    ],
+    "tmMoves": [
+      "agility",
+      "allyswitch",
+      "avalanche",
+      "blizzard",
+      "brine",
+      "cosmicpower",
+      "dazzlinggleam",
+      "dive",
+      "endure",
+      "facade",
+      "flashcannon",
+      "gigaimpact",
+      "grassknot",
+      "gyroball",
+      "hail",
+      "hydropump",
+      "hyperbeam",
+      "icebeam",
+      "icywind",
+      "lightscreen",
+      "powergem",
+      "protect",
+      "psychic",
+      "psychocut",
+      "psyshock",
+      "raindance",
+      "reflect",
+      "rest",
+      "round",
+      "scald",
+      "skillswap",
+      "sleeptalk",
+      "snore",
+      "substitute",
+      "surf",
+      "swift",
+      "thunder",
+      "thunderbolt",
+      "thunderwave",
+      "triattack",
+      "trick",
+      "trickroom",
+      "waterfall",
+      "whirlpool",
+      "wonderroom"
+    ],
+    "version": "sword-shield",
+    "habitat": "Shoreline",
+    "activity": "Night",
+    "weather": "Clear",
+    "description": "Its central jewel glows softly along the sheltered shoreline.",
+    "evoType": "useItem",
+    "evoItem": "Water Stone"
+  },
+  "magikarp": {
+    "id": "magikarp",
+    "name": "Magikarp",
+    "number": 129,
+    "origin": "magikarp",
+    "catchRate": 255,
+    "growth": "slow",
+    "friendship": 70,
+    "baseExperience": 40,
+    "evYield": {
+      "speed": 1
+    },
+    "types": [
+      "Water"
+    ],
+    "baseStats": {
+      "hp": 20,
+      "attack": 10,
+      "defence": 55,
+      "specialAttack": 15,
+      "specialDefence": 20,
+      "speed": 80
+    },
+    "abilities": {
+      "0": "Swift Swim",
+      "H": "Rattled"
+    },
+    "weight": 10,
+    "genderRatio": {
+      "M": 0.5,
+      "F": 0.5
+    },
+    "gender": "",
+    "prevo": "",
+    "evos": [
+      "gyarados"
+    ],
+    "learnset": [
+      {
+        "id": "splash",
+        "number": 150,
+        "level": 1
+      },
+      {
+        "id": "tackle",
+        "number": 33,
+        "level": 15
+      },
+      {
+        "id": "flail",
+        "number": 175,
+        "level": 25
+      }
+    ],
+    "tmMoves": [],
+    "version": "scarlet-violet",
+    "habitat": "Shoreline",
+    "activity": "Day",
+    "weather": "Rain",
+    "description": "A determined river traveller whose patient training reveals remarkable strength."
+  },
+  "gyarados": {
+    "id": "gyarados",
+    "name": "Gyarados",
+    "number": 130,
+    "origin": "magikarp",
+    "catchRate": 45,
+    "growth": "slow",
+    "friendship": 70,
+    "baseExperience": 189,
+    "evYield": {
+      "attack": 2
+    },
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "baseStats": {
+      "hp": 95,
+      "attack": 125,
+      "defence": 79,
+      "specialAttack": 60,
+      "specialDefence": 100,
+      "speed": 81
+    },
+    "abilities": {
+      "0": "Intimidate",
+      "H": "Moxie"
+    },
+    "weight": 235,
+    "genderRatio": {
+      "M": 0.5,
+      "F": 0.5
+    },
+    "gender": "",
+    "prevo": "Magikarp",
+    "evos": [],
+    "learnset": [
+      {
+        "id": "bite",
+        "number": 44,
+        "level": 0
+      },
+      {
+        "id": "tackle",
+        "number": 33,
+        "level": 1
+      },
+      {
+        "id": "leer",
+        "number": 43,
+        "level": 1
+      },
+      {
+        "id": "splash",
+        "number": 150,
+        "level": 1
+      },
+      {
+        "id": "flail",
+        "number": 175,
+        "level": 1
+      },
+      {
+        "id": "twister",
+        "number": 239,
+        "level": 1
+      },
+      {
+        "id": "whirlpool",
+        "number": 250,
+        "level": 4
+      },
+      {
+        "id": "icefang",
+        "number": 423,
+        "level": 8
+      },
+      {
+        "id": "brine",
+        "number": 362,
+        "level": 12
+      },
+      {
+        "id": "scaryface",
+        "number": 184,
+        "level": 16
+      },
+      {
+        "id": "waterfall",
+        "number": 127,
+        "level": 21
+      },
+      {
+        "id": "crunch",
+        "number": 242,
+        "level": 24
+      },
+      {
+        "id": "raindance",
+        "number": 240,
+        "level": 28
+      },
+      {
+        "id": "aquatail",
+        "number": 401,
+        "level": 32
+      },
+      {
+        "id": "dragondance",
+        "number": 349,
+        "level": 36
+      },
+      {
+        "id": "hydropump",
+        "number": 56,
+        "level": 40
+      },
+      {
+        "id": "hurricane",
+        "number": 542,
+        "level": 44
+      },
+      {
+        "id": "thrash",
+        "number": 37,
+        "level": 48
+      },
+      {
+        "id": "hyperbeam",
+        "number": 63,
+        "level": 52
+      }
+    ],
+    "tmMoves": [
+      "avalanche",
+      "blizzard",
+      "bodyslam",
+      "bulldoze",
+      "chillingwater",
+      "crunch",
+      "darkpulse",
+      "doubleedge",
+      "dragoncheer",
+      "dragondance",
+      "dragonpulse",
+      "dragontail",
+      "earthquake",
+      "endeavor",
+      "endure",
+      "facade",
+      "fireblast",
+      "flamethrower",
+      "gigaimpact",
+      "helpinghand",
+      "hurricane",
+      "hydropump",
+      "hyperbeam",
+      "icebeam",
+      "icefang",
+      "icywind",
+      "ironhead",
+      "lashout",
+      "muddywater",
+      "outrage",
+      "protect",
+      "raindance",
+      "rest",
+      "roar",
+      "sandstorm",
+      "scald",
+      "scaleshot",
+      "scaryface",
+      "sleeptalk",
+      "spite",
+      "stoneedge",
+      "substitute",
+      "sunnyday",
+      "surf",
+      "takedown",
+      "taunt",
+      "temperflare",
+      "terablast",
+      "thunder",
+      "thunderbolt",
+      "thunderwave",
+      "waterfall",
+      "waterpulse",
+      "whirlpool"
+    ],
+    "version": "scarlet-violet",
+    "habitat": "Shoreline",
+    "activity": "Day",
+    "weather": "Rain",
+    "description": "A determined river traveller whose patient training reveals remarkable strength.",
+    "evoLevel": 20
+  }
+}

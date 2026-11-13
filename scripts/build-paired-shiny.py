@@ -24,6 +24,8 @@ butterfree_hand_mask=Image.new('1',(200,200));_hands=ImageDraw.Draw(butterfree_h
 _hands.ellipse((65,121,84,143),fill=1);_hands.ellipse((88,121,108,144),fill=1)
 dragonite_orb_mask=Image.new('1',(512,512))
 ImageDraw.Draw(dragonite_orb_mask).polygon([(39,436),(44,417),(57,402),(77,396),(99,403),(113,416),(117,428),(104,434),(96,440),(93,451),(96,460),(105,468),(91,476),(72,479),(55,472),(43,458)],fill=1)
+pikachu_gmax_body_mask=Image.new('1',(512,512))
+ImageDraw.Draw(pikachu_gmax_body_mask).polygon([(147,257),(170,248),(200,241),(235,232),(268,218),(292,201),(318,197),(300,217),(276,250),(299,270),(329,291),(349,323),(369,359),(377,408),(369,447),(350,472),(340,478),(367,481),(369,487),(321,492),(281,492),(224,490),(185,489),(172,484),(178,476),(156,464),(139,449),(126,423),(124,398),(126,377),(121,389),(113,389),(110,379),(117,357),(126,339),(137,328),(133,311),(132,291)],fill=1)
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
@@ -133,6 +135,9 @@ def recolour(id,r,g,b,x,y):
  elif id=='dragonite':
   if 10<h<60 and s>.45:H,S,V=tint(110,.4,.95)
   elif 150<h<235 and s>.25:H,S,V=tint(295,.6)
+ elif id=='pikachugmax':
+  # Recolour only yellow skin; the glowing tail, lightning and storm clouds stay unchanged.
+  if pikachu_gmax_body_mask.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and 35<h<70 and s>.25:H,S,V=tint(38,s,.99)
  elif id=='raichumegay':
   # Cheeks and lightning appendages have separate canonical Shiny colours.
   cheek=((x*512-227)/15)**2+((y*512-243)/17)**2<1 or ((x*512-133)/6)**2+((y*512-263)/13)**2<1
@@ -208,7 +213,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp'] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:
