@@ -1,8 +1,8 @@
 # Kalos chibi portraits
 
-Chibi portraits of the Kalos Gym Leaders, Elite Four, Champion Diantha, and protagonists Calem and Serena. These files are 256×256 transparent portraits with matching `{id}_1024.png` hi-res sources. They are not wired into the game. They are intended to be added as portraits alongside `assets/trainers-classic.webp`.
+Chibi portraits of the Kalos Gym Leaders, Elite Four, Champion Diantha, and protagonists Calem and Serena. These files are 256×256 transparent portraits with matching `{id}_1024.png` hi-res sources. The game loads them alongside `assets/trainers-classic.webp`.
 
-That atlas is already a full 4×4 grid of 256×256 cells (1024×1024). `trainer-portraits.js` crops one cell per portrait. Because the grid has no empty cells, either extend the atlas or load these as individual images.
+`trainer-portraits.js` loads each portrait by id from this folder when it is shown: WebP first, then PNG. The classic 4×4 atlas stays as it is.
 
 ## Characters
 
