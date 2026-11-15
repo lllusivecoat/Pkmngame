@@ -572,5 +572,12 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "kadabra",
+    "sheet": "assets/chibi-painted/kadabra.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

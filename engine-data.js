@@ -1,9 +1,9 @@
-import {kantoSpecies} from './kanto-species.js?v=20261113-art39';
-import {habitatSpecies} from './habitat-species.js?v=20261113-art39';
-import {expandedSpecies as originalSpecies} from './species-data.js?v=20261113-art39';
-import {additionalSpecies} from './additional-species.js?v=20261113-art39';
+import {kantoSpecies} from './kanto-species.js?v=20261113-art40';
+import {habitatSpecies} from './habitat-species.js?v=20261113-art40';
+import {expandedSpecies as originalSpecies} from './species-data.js?v=20261113-art40';
+import {additionalSpecies} from './additional-species.js?v=20261113-art40';
 export const expandedSpecies={...originalSpecies,...additionalSpecies,...habitatSpecies,...kantoSpecies};
-export {battleForms} from './additional-species.js?v=20261113-art39';
-export {engineMoves} from './moves-data.js?v=20261113-art39';
-export {abilityCatalog} from './ability-data.js?v=20261113-art39';
-export {itemCatalog} from './items-data.js?v=20261113-art39';
+export {battleForms} from './additional-species.js?v=20261113-art40';
+export {engineMoves} from './moves-data.js?v=20261113-art40';
+export {abilityCatalog} from './ability-data.js?v=20261113-art40';
+export {itemCatalog} from './items-data.js?v=20261113-art40';

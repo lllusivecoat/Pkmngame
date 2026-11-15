@@ -329,6 +329,11 @@
       "id": "alakazam",
       "changed": 14452,
       "visible": 96042
+    },
+    {
+      "id": "kadabra",
+      "changed": 67988,
+      "visible": 96170
     }
   ],
   "assets": [
@@ -606,6 +611,18 @@
       "sourceSHA256": "56d143c17341901237ea101bafc56500fe01d5b4c73988a35dd948cb8ab2164b",
       "shinySHA256": "1786cdfd601de67126c59cea829a520660c9ccb43356ed4b069b6e63ad1971ef",
       "alphaSHA256": "42d22fd7c1fc899655eb1d4e2e75820e78c6bb073d194faba2a2b146495358fc",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/kadabra.webp",
+      "shiny": "assets/chibi-painted/shiny/kadabra.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "991d6fb9afbc3b9207d4e2315c11b25bd7f4b12296d29415e151fcc91c9c84c6",
+      "shinySHA256": "889563ec52756128e8f4806b0d23cfd473288d3cebad59302f9f4fea158dc194",
+      "alphaSHA256": "d2cafc61e3b7ddf0222623e1a5fd09339ed3ba8f5038e152a51f8d409ce72cf4",
       "alphaPreserved": true
     }
   ]
