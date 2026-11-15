@@ -1,0 +1,114 @@
+/* Touch layout for phones and short landscape screens. Loaded last. */
+
+html{touch-action:manipulation;-webkit-text-size-adjust:100%}
+body{min-height:100dvh;overscroll-behavior-y:none}
+#app{min-height:100dvh;-webkit-tap-highlight-color:transparent;--touch-nav:0px}
+#app :is(button,a,.map-world,.dpad,.sidebar,.tile-hit,img){-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#app :is(input,textarea,select,p,.field-log,.battle-history){-webkit-user-select:text;user-select:text}
+#notice.show{pointer-events:none}
+
+@media (hover:none){
+  #app :is(.primary,.secondary,.danger,button.card,.sidebar nav button,.inventory-tabs button,.theme-picker button,.trap-option,.party-chip,.dpad button,.gallery-pagination button):active:not(:disabled){transform:translateY(1px) scale(.98);filter:brightness(.96)}
+}
+
+@media (max-width:900px),(max-height:520px){
+  #app{--touch-nav:calc(72px + env(safe-area-inset-bottom))}
+  :root[data-theme] #app .sidebar{position:fixed!important;inset:auto 0 0 0!important;top:auto!important;width:100%!important;height:auto!important;z-index:6;display:block;overflow:visible;margin:0;padding:4px max(4px,env(safe-area-inset-right)) calc(4px + env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));border-right:0;border-top:1px solid var(--line-color,#4d6650);background:var(--surface,#15262bf5)}
+  :root[data-theme] #app .sidebar :is(.brand,.nav-label,.single-player,.account,.settings-link){display:none!important}
+  :root[data-theme] #app .sidebar nav{display:grid!important;grid-template-columns:repeat(9,minmax(0,1fr))!important;gap:2px!important;margin:0!important;overflow:visible}
+  :root[data-theme] #app .sidebar nav button{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:1px!important;min-width:0!important;width:auto;min-height:52px!important;height:auto;padding:4px 2px!important;font-size:11px!important;border-radius:8px;border-bottom-width:1px}
+  :root[data-theme] #app .sidebar nav button.active::after{display:none!important}
+  :root[data-theme] #app .sidebar nav button .nav-emblem{width:22px;height:22px;flex:none}
+  :root[data-theme] #app .sidebar nav button .trainer-icon{width:20px;height:20px}
+  :root[data-theme] #app .sidebar nav .nav-caption{display:block!important;width:100%;font-size:11px!important;line-height:1.1!important;letter-spacing:0!important;height:auto;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+  #app .workspace{margin-left:0}
+  #app main{padding:18px 14px calc(20px + var(--touch-nav))}
+  #app .workspace>header{height:auto;min-height:52px;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top));padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+  :root[data-theme] #app .theme-picker button,:root[data-theme] #app .resource-bar>button{min-width:44px!important;min-height:44px!important}
+  #app .resource-bar{min-height:44px}
+  #notice.show{top:calc(8px + env(safe-area-inset-top));bottom:auto;max-width:min(92vw,440px)}
+  #app .overlay{padding:max(8px,env(safe-area-inset-top)) 8px max(8px,env(safe-area-inset-bottom));align-items:stretch}
+  #app .modal{max-height:calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:auto;-webkit-overflow-scrolling:touch}
+  :root[data-theme] #app :is(input,select,textarea){font-size:16px;min-height:48px}
+  #app .map-stage{position:relative}
+  :root[data-theme] #app .map-stage .controls{position:fixed!important;left:auto!important;right:max(8px,env(safe-area-inset-right))!important;bottom:calc(var(--touch-nav) + 8px)!important;z-index:7;width:max-content;max-width:calc(100vw - 16px);margin:0;pointer-events:none}
+  #app .map-stage .controls small{display:none}
+  :root[data-theme] #app .dpad{pointer-events:auto;display:grid;grid-template-columns:repeat(3,52px)!important;gap:6px;padding:6px;width:max-content}
+  :root[data-theme] #app .dpad button{box-sizing:border-box;min-width:52px!important;width:52px!important;min-height:52px!important;height:52px!important;font-size:22px;padding:0!important}
+  body:has(.overlay) #app .map-stage .controls{display:none}
+  #app .world-route-strip{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;min-width:0}
+  #app .zone-stop{padding:8px 6px;min-width:0;overflow:hidden}
+  #app .zone-stop strong{display:block;font-size:12px;overflow-wrap:anywhere}
+  #app .zone-stop small,#app .zone-stop span{font-size:11px!important;line-height:1.3}
+  #app .zone-stop span{display:none}
+  #app .map-jump-toolbar{margin-bottom:12px}
+  #app .legend{font-size:12px!important;line-height:1.45}
+  #app .inventory-tabs{flex-wrap:wrap;overflow:visible}
+  :root[data-theme] #app .inventory-tabs button{min-height:44px!important;font-size:13px}
+  #app .item-card-actions button{min-height:44px;font-size:13px}
+  #app .gallery-pagination button{min-height:44px;padding:8px 12px}
+  #app .portrait-gallery{display:flex;flex-direction:column}
+  #app .portrait-gallery .gallery-filters{order:1}
+  #app .portrait-gallery-grid{order:2}
+  #app .portrait-gallery>p{order:3}
+  #app .portrait-gallery .gallery-pagination{order:4}
+  #app .portrait-gallery-grid,#app .artwork-gallery .gallery-grid,#app .leader-gallery-grid{grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+  #app .artwork-gallery .gallery-entry .sprite,#app .portrait-gallery-art .npc-portrait{max-width:100%;height:auto}
+  #app .party-chip{min-height:52px}
+  #app .starter{padding:14px 12px}
+  #app .starter h2{font-size:26px}
+  #app .starter .cards{gap:8px}
+  #app .starter .card{padding:8px 10px}
+  #app .starter .art{height:74px}
+  #app .starter .primary{min-height:44px!important;font-size:14px!important}
+  #app .encounter-heading h2{font-size:22px}
+  #app .battle-context{display:none}
+  #app .scenic-battle.battle-stage{min-height:150px;aspect-ratio:1.85}
+  #app .battle-command-deck{position:sticky;bottom:0;z-index:3;background:var(--surface);padding-top:8px}
+  #app .battle-move-menu .ability-button{min-height:64px}
+  #app .battle-move-menu .ability-button small,#app .move-matchup,#app .battle-menu-title small{font-size:12px!important;line-height:1.35!important}
+  #app .battle-utilities{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  #app .battle-utilities .swap-select,#app .battle-utilities .initiative,#app .battle-utilities .battle-gimmick{grid-column:1/-1}
+  #app .battle-utilities :is(button,.swap-select,select){min-height:48px}
+  #app .swap-select select{max-width:none;min-height:44px;font-size:16px}
+  #app .capture-panel{padding:14px}
+  #app .trap-option{min-height:52px}
+  #app .trap-option>strong,#app .trap-option>small{font-size:12px!important}
+}
+
+@media (max-width:699px){
+  #app{--touch-nav:calc(120px + env(safe-area-inset-bottom))}
+  :root[data-theme] #app .sidebar nav{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:3px!important}
+  :root[data-theme] #app .sidebar nav button{min-height:54px!important}
+}
+
+@media (max-height:520px){
+  :root[data-theme] #app .encounter-layout{grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:8px;align-items:start}
+  :root[data-theme] #app .scenic-battle.battle-stage{min-height:0!important;height:96px;aspect-ratio:auto}
+  :root[data-theme] #app .encounter-heading{gap:4px;margin-bottom:4px}
+  :root[data-theme] #app main{display:flex;flex-direction:column}
+  :root[data-theme] #app main>.eyebrow,:root[data-theme] #app main>.intro{display:none}
+  :root[data-theme] #app main>h1{order:-3;font-size:22px;margin:0 0 6px}
+  :root[data-theme] #app main>.explore{order:-2}
+  :root[data-theme] #app .map-jump-toolbar,:root[data-theme] #app .world-route-strip{order:2}
+  :root[data-theme] #app .workspace>header{min-height:0;padding-top:4px;padding-bottom:4px}
+  :root[data-theme] #app .breadcrumbs{display:none!important}
+  :root[data-theme] #app .explore>.panel{padding-top:8px;padding-bottom:8px}
+  :root[data-theme] #app .map-world{width:min(100%,168px)}
+  :root[data-theme] #app .explore>.panel>.spread,:root[data-theme] #app .explore .legend{display:none}
+  :root[data-theme] #app .encounter-heading .eyebrow{display:none}
+  :root[data-theme] #app .encounter-heading h2{font-size:18px}
+  :root[data-theme] #app .battle-trainer-intro{display:none}
+  :root[data-theme] #app .battle-move-menu .ability-button{min-height:48px!important;padding:6px!important}
+  :root[data-theme] #app .battle-player-band .combat-hud{min-height:0;padding:8px}
+  #app .capture-panel{padding:8px}
+  #app .chance-ring{width:72px;height:72px}
+  #app .chance-ring strong{font-size:20px}
+  #app .hero{min-height:0;height:auto}
+  #app .starter .art{height:64px}
+  #app .starter h2{font-size:22px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #app :is(button,.primary,.secondary,.dpad button,.party-chip){transition:none}
+}

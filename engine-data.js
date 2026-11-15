@@ -1,9 +1,9 @@
-import {kantoSpecies} from './kanto-species.js?v=20261115-chibi41';
-import {habitatSpecies} from './habitat-species.js?v=20261115-chibi41';
-import {expandedSpecies as originalSpecies} from './species-data.js?v=20261115-chibi41';
-import {additionalSpecies} from './additional-species.js?v=20261115-chibi41';
+import {kantoSpecies} from './kanto-species.js?v=20261115-touch42';
+import {habitatSpecies} from './habitat-species.js?v=20261115-touch42';
+import {expandedSpecies as originalSpecies} from './species-data.js?v=20261115-touch42';
+import {additionalSpecies} from './additional-species.js?v=20261115-touch42';
 export const expandedSpecies={...originalSpecies,...additionalSpecies,...habitatSpecies,...kantoSpecies};
-export {battleForms} from './additional-species.js?v=20261115-chibi41';
-export {engineMoves} from './moves-data.js?v=20261115-chibi41';
-export {abilityCatalog} from './ability-data.js?v=20261115-chibi41';
-export {itemCatalog} from './items-data.js?v=20261115-chibi41';
+export {battleForms} from './additional-species.js?v=20261115-touch42';
+export {engineMoves} from './moves-data.js?v=20261115-touch42';
+export {abilityCatalog} from './ability-data.js?v=20261115-touch42';
+export {itemCatalog} from './items-data.js?v=20261115-touch42';
