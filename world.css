@@ -41,3 +41,6 @@
 .world-follower .follower-art{scale:var(--pokemon-scale,1);transform-origin:center bottom}
 .leader-gallery .secondary{margin-top:16px}
 .portrait-gallery{margin-top:18px}.portrait-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:14px}.portrait-gallery-grid article{text-align:center;min-width:0;background:var(--surface-soft);border:1px solid var(--line-color);border-radius:12px;padding:12px 8px}.portrait-gallery-art{height:156px;display:grid;place-items:center}.portrait-gallery-art .npc-portrait{width:132px;height:148px}.portrait-gallery-grid small{display:block;line-height:1.45;overflow-wrap:anywhere}
+
+.form-art-comparison.chibi-only-preview{grid-template-columns:minmax(0,1fr)}
+.art-chibi>.sprite,.world-follower .follower-art>.sprite{image-rendering:auto!important}
