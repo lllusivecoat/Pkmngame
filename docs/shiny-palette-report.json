@@ -344,6 +344,11 @@
       "id": "tentacruel",
       "changed": 72377,
       "visible": 86066
+    },
+    {
+      "id": "cloyster",
+      "changed": 62266,
+      "visible": 98885
     }
   ],
   "assets": [
@@ -657,6 +662,18 @@
       "sourceSHA256": "32cfb4f5dc4a4c637b391ef15a88021c0cab1acb22b79269768571a995e4ae38",
       "shinySHA256": "cfd89fcb0297ce7f514cd4267b4d112013381c4eedff8fbf60c7b651d51f2eaf",
       "alphaSHA256": "f685f0a0201c1450733ecbc8239538980d1de0c763f2a873bf797447f3b9c936",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/cloyster.webp",
+      "shiny": "assets/chibi-painted/shiny/cloyster.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "ce68e66af0bb791e0a3eab8933eebd01870c1cc95724bbfca84c56dc73c9da7d",
+      "shinySHA256": "3c040426aa06d6ff3c4f932b5011081896b6018f01dbaa2434b847f183c3f82f",
+      "alphaSHA256": "aef87484a9503731637bb56defa264382ef05e997501cdfcd6d0f853ba89c97a",
       "alphaPreserved": true
     }
   ]

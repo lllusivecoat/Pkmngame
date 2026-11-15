@@ -36,6 +36,8 @@ gengar_gmax_hands=gengar_gmax_hands.convert('L').point(lambda v:255 if v else 0)
 gengar_gmax_tongue=gengar_gmax_tongue.convert('L').point(lambda v:255 if v else 0).filter(ImageFilter.GaussianBlur(4))
 venomoth_body_mask=Image.new('1',(512,512))
 ImageDraw.Draw(venomoth_body_mask).polygon([(201,326),(208,325),(225,329),(240,325),(245,315),(264,316),(274,329),(281,349),(283,370),(278,391),(264,407),(242,414),(220,409),(201,395),(194,375),(193,350)],fill=1)
+cloyster_face=Image.new('1',(512,512))
+ImageDraw.Draw(cloyster_face).polygon([(184,201),(220,185),(263,192),(290,214),(307,268),(295,320),(253,343),(211,335),(180,308),(167,260)],fill=1)
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
@@ -151,6 +153,8 @@ def recolour(id,r,g,b,x,y):
   if .42<x<.7 and .26<y<.41 and 0<h<90 and s>.3:H,S,V=tint(235,.5,.22)
   elif y>.42 and s>.08 and (h>315 or h<25):H,S,V=tint(275+25*tongue,.2-.02*tongue,.32+.1*tongue)
   elif 255<h<320 and s>.12:H,S,V=287+41*hand,s*.5*(1-hand)+.2*hand,min(1,v*(.72+.38*hand))
+ elif id=='cloyster':
+  if not cloyster_face.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and 245<h<330 and s>.03:H,S,V=tint(211,min(.68,s*1.45),1.02)
  elif id=='tentacruel':
   if (h>325 or h<20) and s>.02 and y<.48:H,S,V=tint(145,s*.9,.98)
   elif 175<h<245 and s>.03:H,S,V=tint(232,min(.65,s*.7))
@@ -243,7 +247,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp'] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp','cloyster.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:

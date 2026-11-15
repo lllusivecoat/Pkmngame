@@ -405,3 +405,6 @@ Two new directly catchable species expand the roster to 79 permanent Pokémon an
 Both have full-body transparent painted chibis as the sole gameplay style. Shiny Venomoth has blue wings/head and retains its gray abdomen; Shiny Tentacruel has green gems, periwinkle skin and cream tentacles. Each Shiny is a direct material-specific recolour of its Normal artwork, preserving exact alpha and pose. Official reference assets remain archival only. Regenerate species snapshots with `node scripts/build-kanto-species.mjs` (defaults to registered species) and dimensions with `node scripts/build-pokemon-sizes.mjs`.
 
 This release preserves the newer mobile-touch layout merged on main, including thumb-friendly navigation, direction controls, battle commands and notices. Abra, Staryu, Starmie, Magikarp, Gyarados, Rapidash and Machamp generation attempts were rejected in this round and those species remain unregistered.
+
+### Painted roster update — Cloyster
+Cloyster is directly catchable at Frostfall / Mirrorfrost Lake, favouring Snow and Night. Both Normal and canonical blue Shiny use the same painted chibi drawing and identical transparency. Canonical stats, abilities and moves come from `kanto-species.js`; encounters live in `world.js`. Existing saves are retained.
