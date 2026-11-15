@@ -1,0 +1,83 @@
+{
+  "pinsir": {
+    "number": 127,
+    "region": "Greenwood",
+    "area": "fernwood",
+    "habitat": "Forest",
+    "activity": "Day",
+    "weather": "Clear",
+    "description": "Its strong horns part fallen timber beneath the woodland canopy."
+  },
+  "tauros": {
+    "number": 128,
+    "region": "Thunder Ridge",
+    "area": "meadow",
+    "habitat": "Grass",
+    "activity": "Day",
+    "weather": "Clear",
+    "description": "This powerful grazer patrols the wide ridge meadows."
+  },
+  "skarmory": {
+    "number": 227,
+    "region": "Thunder Ridge",
+    "area": "summit",
+    "habitat": "Rocky clearing",
+    "activity": "Day",
+    "weather": "Storm",
+    "description": "Its steel wings carry it above the exposed mountain trails."
+  },
+  "torkoal": {
+    "number": 324,
+    "region": "Ashlands",
+    "area": "caldera",
+    "habitat": "Rocky clearing",
+    "activity": "Day",
+    "weather": "Clear",
+    "description": "A trail of white smoke reveals it among the warm caldera stones."
+  },
+  "absol": {
+    "number": 359,
+    "region": "Frostfall",
+    "area": "sanctuary",
+    "habitat": "Rocky clearing",
+    "activity": "Dusk",
+    "weather": "Fog",
+    "description": "A quiet silhouette appears among the old sanctuary stones as mist gathers."
+  },
+  "seviper": {
+    "number": 336,
+    "region": "Ashlands",
+    "area": "ruins",
+    "habitat": "Ruins",
+    "activity": "Night",
+    "weather": "Fog",
+    "description": "Its patterned coils slide quietly through the smoky ruins."
+  },
+  "shuckle": {
+    "number": 213,
+    "region": "Ashlands",
+    "area": "springs",
+    "habitat": "Rocky clearing",
+    "activity": "Morning",
+    "weather": "Clear",
+    "description": "Its bright shell peeks out beside the warm mineral pools."
+  },
+  "relicanth": {
+    "number": 369,
+    "region": "Frostfall",
+    "area": "lake",
+    "habitat": "Shoreline",
+    "activity": "Night",
+    "weather": "Rain",
+    "description": "An ancient fish sometimes surfaces by the quiet lake banks."
+  },
+  "chatot": {
+    "number": 441,
+    "region": "Greenwood",
+    "area": "brook",
+    "habitat": "Forest",
+    "activity": "Morning",
+    "weather": "Clear",
+    "description": "Its bright calls echo between the trees beside Willow Brook."
+  }
+}

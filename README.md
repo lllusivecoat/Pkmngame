@@ -408,3 +408,21 @@ This release preserves the newer mobile-touch layout merged on main, including t
 
 ### Painted roster update — Cloyster
 Cloyster is directly catchable at Frostfall / Mirrorfrost Lake, favouring Snow and Night. Both Normal and canonical blue Shiny use the same painted chibi drawing and identical transparency. Canonical stats, abilities and moves come from `kanto-species.js`; encounters live in `world.js`. Existing saves are retained.
+
+### Nine-species painted wildlife expansion
+
+Every addition ships painted Normal art and a direct canonical Shiny recolour, canonical stats/moves/abilities, captures, Bestiary records, party/follower support and saved progression.
+
+| Pokémon | Region | Area |
+|---|---|---|
+| Pinsir | Greenwood | fernwood |
+| Tauros | Thunder Ridge | meadow |
+| Skarmory | Thunder Ridge | summit |
+| Torkoal | Ashlands | caldera |
+| Absol | Frostfall | sanctuary |
+| Seviper | Ashlands | ruins |
+| Shuckle | Ashlands | springs |
+| Relicanth | Frostfall | lake |
+| Chatot | Greenwood | brook |
+
+Species snapshots: `wildlife-species.js`. Habitat configuration: `docs/wildlife-habitats.json`. Rebuild metadata with `node scripts/build-wildlife-species.mjs` after caching the documented PokeAPI JSON. Encounters remain in `world.js`; the shared artwork registry covers gallery, collection, battles and followers. Shiny material rules and alpha receipts use the existing palette pipeline.

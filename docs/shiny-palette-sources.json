@@ -600,5 +600,68 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "pinsir",
+    "sheet": "assets/chibi-painted/pinsir.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "tauros",
+    "sheet": "assets/chibi-painted/tauros.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "skarmory",
+    "sheet": "assets/chibi-painted/skarmory.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "torkoal",
+    "sheet": "assets/chibi-painted/torkoal.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "absol",
+    "sheet": "assets/chibi-painted/absol.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "seviper",
+    "sheet": "assets/chibi-painted/seviper.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "shuckle",
+    "sheet": "assets/chibi-painted/shuckle.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "relicanth",
+    "sheet": "assets/chibi-painted/relicanth.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "chatot",
+    "sheet": "assets/chibi-painted/chatot.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

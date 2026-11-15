@@ -349,6 +349,51 @@
       "id": "cloyster",
       "changed": 62266,
       "visible": 98885
+    },
+    {
+      "id": "pinsir",
+      "changed": 63458,
+      "visible": 78652
+    },
+    {
+      "id": "tauros",
+      "changed": 60569,
+      "visible": 87481
+    },
+    {
+      "id": "skarmory",
+      "changed": 55312,
+      "visible": 70689
+    },
+    {
+      "id": "torkoal",
+      "changed": 45433,
+      "visible": 85246
+    },
+    {
+      "id": "absol",
+      "changed": 24099,
+      "visible": 77796
+    },
+    {
+      "id": "shuckle",
+      "changed": 14790,
+      "visible": 62012
+    },
+    {
+      "id": "relicanth",
+      "changed": 24052,
+      "visible": 61719
+    },
+    {
+      "id": "chatot",
+      "changed": 31771,
+      "visible": 67541
+    },
+    {
+      "id": "seviper",
+      "changed": 35648,
+      "visible": 80839
     }
   ],
   "assets": [
@@ -674,6 +719,114 @@
       "sourceSHA256": "ce68e66af0bb791e0a3eab8933eebd01870c1cc95724bbfca84c56dc73c9da7d",
       "shinySHA256": "3c040426aa06d6ff3c4f932b5011081896b6018f01dbaa2434b847f183c3f82f",
       "alphaSHA256": "aef87484a9503731637bb56defa264382ef05e997501cdfcd6d0f853ba89c97a",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/pinsir.webp",
+      "shiny": "assets/chibi-painted/shiny/pinsir.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "aa35a15d8f60acef77f1c962ec84d64d2144f3193f536d5832e7c02a4eb3ce0d",
+      "shinySHA256": "094f3f22bee9ebc2cbbdf8330e7cb11d11c94a47f6c322f5f33777b5a6c7f276",
+      "alphaSHA256": "1ead8b6d1ab7d89865c43cf072f166f8c66ae83b1cc62ecd9c0150dd81e6a64f",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/tauros.webp",
+      "shiny": "assets/chibi-painted/shiny/tauros.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3be1c6202c5b01fa97b78df9c03ba2e8982f86776887d895cc946f9532c05982",
+      "shinySHA256": "fe8c315a731eaceff000ee487e2fd759ff48ec468dfe1ba69d71da7574155dce",
+      "alphaSHA256": "9cf9863f81151fbac47ee8dbd19c4b9a5814d641175d82233a5b3653c48d6177",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/skarmory.webp",
+      "shiny": "assets/chibi-painted/shiny/skarmory.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "ff57a825b8daf102c981ee4ed2017bc3de98a7cf4f967a402e38fc00b343f1d6",
+      "shinySHA256": "6cdd119c0e8057dbe37c6cece9653dec9188041010c48c27cd16b157a494fecd",
+      "alphaSHA256": "9f2ea616a03a538575cb33671d2a61c9604b0e0e560a0a426c515b5f90569ba2",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/torkoal.webp",
+      "shiny": "assets/chibi-painted/shiny/torkoal.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "b0312dc3757a75165900385909644fef21f0d0bcc7a6b291c0e6975dcddb229a",
+      "shinySHA256": "45746a779fbac4a5fa5cd88875b729fce2e81162c1030eb69cc568c9eb15b056",
+      "alphaSHA256": "6522f15e76f2a0bf1e9900bcdea830506251dc3eb03ad3f63e48c80d93d860fd",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/absol.webp",
+      "shiny": "assets/chibi-painted/shiny/absol.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "4ed97d1b3de20359ea38f43a82700b64ef18ab79b729364089d25013934e3fb6",
+      "shinySHA256": "7eccc96d6d71b5115eeb498e250b768125c060982ba72f9b69f4915aad3a1b18",
+      "alphaSHA256": "260e295ba2b50650bd2bb6f166ee966f5a020d1055a8986e47dc878da02506e2",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/shuckle.webp",
+      "shiny": "assets/chibi-painted/shiny/shuckle.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "1eaafb1e424ef0c8dbb2e8216f9ee08f946831c665dfb4bd69eca2a2f32b6594",
+      "shinySHA256": "9f6822ab4a1b28b17350b633b24f989e12ea970c719d5e2216c99f7f8566394f",
+      "alphaSHA256": "e95f7d66c00127c9c61eb327a88b843ff7e1bf3d4d5639861b160e43f028552c",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/relicanth.webp",
+      "shiny": "assets/chibi-painted/shiny/relicanth.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3804b1feeda5953d41fcdcfc96982a59870cda57f61b1bf1b2b54a9c5865d0fe",
+      "shinySHA256": "4f5cf569f0fd957607141fe9891a26204578b53f6f17687b072a6130e52b41d0",
+      "alphaSHA256": "9e6d030df2e28aa9536ed82c164516a0076b4ec418e609b5cb0c4266658a825c",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/chatot.webp",
+      "shiny": "assets/chibi-painted/shiny/chatot.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "36b6ef2d690b0bed5cccd6fe95c7e269512f46c8ef59d2ef09f8d957c278adea",
+      "shinySHA256": "6f7d21c9d3de2982b66ba1f737afe4126dbd2945d6246a7b7accc810f3f2ae0b",
+      "alphaSHA256": "c718f7687c18f5a87e29e8b636ee93e72ea2ac263bcb79cc9fc1cab30ef9c8f6",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/seviper.webp",
+      "shiny": "assets/chibi-painted/shiny/seviper.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "b9c12fdd063ec99cac2141af12079c407597de01867233d8903c36440735af1e",
+      "shinySHA256": "605fbc0aee3c77a7186088710b6ac9471686e67adaf2ce598bec7707948d9767",
+      "alphaSHA256": "d1febd7748b207f26ba4fadd7cebed0f9e6ac54fa33b282f51d77da536835e57",
       "alphaPreserved": true
     }
   ]
