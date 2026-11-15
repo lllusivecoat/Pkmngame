@@ -389,3 +389,11 @@ Abra, Kadabra, Staryu, Starmie, Magikarp and Gyarados remain pending: their indi
 Kadabra is now catchable in Greenwood → Observatory Woods, with matching full-body painted Normal and Shiny chibis. Fog and Dusk improve its encounter weight. It uses canonical stats, abilities and moves; a Linking Cord evolves it into Alakazam while preserving its UID, variant, party slot and Mastery. The Shiny recolours the same drawing into paler yellow skin and warm brown armour; silver spoon, claws and red markings are preserved. The gallery now covers 77 permanent species and 19 battle forms (96 total).
 
 This retry round rejected Abra, Staryu, Starmie, Magikarp and Gyarados again. Those five remain unregistered pending paired artwork. The original planned-batch draft still includes both shipped Kadabra/Alakazam and the five pending species. Existing saves and previously approved artwork are preserved.
+
+## v0.29.2 — painted chibis as the only Pokémon artwork style
+
+Starter selection, dashboard, exploration followers, collection, Pokédex, encounters, battles, evolution previews and the developer Pokémon gallery now use painted chibis exclusively. Modern/HOME artwork selection and the show/hide-artwork setting have been removed. Normal and Shiny remain colour variants. The motion toggle still controls battle/capture effects and never changes the artwork style.
+
+Fresh and imported/legacy saves normalize the compatibility fields to `artStyle: home` and `artwork: true` while preserving collection individuals, party, progress and the explicit motion preference. `chibi-art.js` provides local painted-only paths; failed images cannot fall back to a game model or pixel sprite. The Pokémon gallery shows one painted preview in the selected palette; the evolution/form library compares Normal and Shiny painted previews. The canonical reference assets remain archived in the repository.
+
+This change is based on main after the newer regional trainer portraits, portrait manifest/gallery and Fern/Hugo class art were merged; those updates and all their assets are preserved.
