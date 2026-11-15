@@ -397,3 +397,11 @@ Starter selection, dashboard, exploration followers, collection, Pokédex, encou
 Fresh and imported/legacy saves normalize the compatibility fields to `artStyle: home` and `artwork: true` while preserving collection individuals, party, progress and the explicit motion preference. `chibi-art.js` provides local painted-only paths; failed images cannot fall back to a game model or pixel sprite. The Pokémon gallery shows one painted preview in the selected palette; the evolution/form library compares Normal and Shiny painted previews. The canonical reference assets remain archived in the repository.
 
 This change is based on main after the newer regional trainer portraits, portrait manifest/gallery and Fern/Hugo class art were merged; those updates and all their assets are preserved.
+
+## v0.30.0 — painted Venomoth and Tentacruel
+
+Two new directly catchable species expand the roster to 79 permanent Pokémon and 19 temporary battle forms (98 gallery entries). Venomoth appears in Greenwood → Fernwood Canopy, with Fog/Dusk favoured; Tentacruel appears in Greenwood → Moonlit Shore, with Rain/Night favoured. Both use canonical six stats, abilities, moves, TMs and capture metadata. Capture either variant, add it to a six-member party, train Mastery and retain progress after reload. Earlier stages Venonat/Tentacool are not yet registered; these evolved species are caught directly.
+
+Both have full-body transparent painted chibis as the sole gameplay style. Shiny Venomoth has blue wings/head and retains its gray abdomen; Shiny Tentacruel has green gems, periwinkle skin and cream tentacles. Each Shiny is a direct material-specific recolour of its Normal artwork, preserving exact alpha and pose. Official reference assets remain archival only. Regenerate species snapshots with `node scripts/build-kanto-species.mjs` (defaults to registered species) and dimensions with `node scripts/build-pokemon-sizes.mjs`.
+
+This release preserves the newer mobile-touch layout merged on main, including thumb-friendly navigation, direction controls, battle commands and notices. Abra, Staryu, Starmie, Magikarp, Gyarados, Rapidash and Machamp generation attempts were rejected in this round and those species remain unregistered.

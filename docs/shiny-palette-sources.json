@@ -579,5 +579,19 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "venomoth",
+    "sheet": "assets/chibi-painted/venomoth.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "tentacruel",
+    "sheet": "assets/chibi-painted/tentacruel.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

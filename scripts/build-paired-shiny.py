@@ -34,10 +34,12 @@ gengar_gmax_tongue=Image.new('1',(512,512))
 ImageDraw.Draw(gengar_gmax_tongue).polygon([(178,423),(225,361),(280,356),(331,362),(355,346),(380,308),(410,269),(437,247),(468,243),(490,260),(505,277),(503,312),(480,336),(456,362),(423,385),(391,405),(352,420),(313,424),(267,416),(227,423),(210,438)],fill=1)
 gengar_gmax_hands=gengar_gmax_hands.convert('L').point(lambda v:255 if v else 0).filter(ImageFilter.GaussianBlur(8))
 gengar_gmax_tongue=gengar_gmax_tongue.convert('L').point(lambda v:255 if v else 0).filter(ImageFilter.GaussianBlur(4))
+venomoth_body_mask=Image.new('1',(512,512))
+ImageDraw.Draw(venomoth_body_mask).polygon([(201,326),(208,325),(225,329),(240,325),(245,315),(264,316),(274,329),(281,349),(283,370),(278,391),(264,407),(242,414),(220,409),(201,395),(194,375),(193,350)],fill=1)
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
- if v<.13 or (s<.09 and v>.94 and id!='espeon'):return r,g,b
+ if v<.13 or (s<.09 and v>.94 and id not in ['espeon','venomoth','tentacruel']):return r,g,b
  H,S,V=h,s,v
  def tint(hue,sat=None,gain=1):return hue,s if sat is None else sat,min(1,v*gain)
  blue=175<h<250 and s>.16;red=(h<25 or h>335) and s>.32;purple=245<h<315 and s>.15;warm=10<h<65 and s>.25
@@ -149,6 +151,14 @@ def recolour(id,r,g,b,x,y):
   if .42<x<.7 and .26<y<.41 and 0<h<90 and s>.3:H,S,V=tint(235,.5,.22)
   elif y>.42 and s>.08 and (h>315 or h<25):H,S,V=tint(275+25*tongue,.2-.02*tongue,.32+.1*tongue)
   elif 255<h<320 and s>.12:H,S,V=287+41*hand,s*.5*(1-hand)+.2*hand,min(1,v*(.72+.38*hand))
+ elif id=='tentacruel':
+  if (h>325 or h<20) and s>.02 and y<.48:H,S,V=tint(145,s*.9,.98)
+  elif 175<h<245 and s>.03:H,S,V=tint(232,min(.65,s*.7))
+  elif y>.45 and (s<.3 or 10<h<60) and v>.25 and s>.025:H,S,V=tint(44,min(.55,max(.1,s*1.6)),1.12)
+ elif id=='venomoth':
+  # Preserve the gray furry abdomen, ivory fangs and eye whites; wings/head turn blue.
+  body=venomoth_body_mask.getpixel((min(511,int(x*512)),min(511,int(y*512))))
+  if not body and 240<h<335 and s>.015:H,S,V=tint(205,min(.7,s*2.2),1.02)
  elif id=='kadabra':
   if y>.3 and (h>260 or h<30) and .08<s<.55 and v<.85:H,S,V=tint(27,min(.55,s*1.7),.92)
   elif 35<h<75 and s>.25:H,S,V=tint(54,s*.65,1.02)
@@ -233,7 +243,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp'] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:

@@ -334,6 +334,16 @@
       "id": "kadabra",
       "changed": 67988,
       "visible": 96170
+    },
+    {
+      "id": "venomoth",
+      "changed": 66058,
+      "visible": 80481
+    },
+    {
+      "id": "tentacruel",
+      "changed": 72377,
+      "visible": 86066
     }
   ],
   "assets": [
@@ -623,6 +633,30 @@
       "sourceSHA256": "991d6fb9afbc3b9207d4e2315c11b25bd7f4b12296d29415e151fcc91c9c84c6",
       "shinySHA256": "889563ec52756128e8f4806b0d23cfd473288d3cebad59302f9f4fea158dc194",
       "alphaSHA256": "d2cafc61e3b7ddf0222623e1a5fd09339ed3ba8f5038e152a51f8d409ce72cf4",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/venomoth.webp",
+      "shiny": "assets/chibi-painted/shiny/venomoth.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "30323367dfd6ec35d36fa9c0ee49140b4123202b7a6abda5f1a2a4a9cf65beb5",
+      "shinySHA256": "0b807afd27352215096c3538fd948001b2b102ee5c16d938a5250e251fd59559",
+      "alphaSHA256": "5656552fcad1cebe8b25a958a18f7d39f2e4ead307c21ad27021a16fc1de4a97",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/tentacruel.webp",
+      "shiny": "assets/chibi-painted/shiny/tentacruel.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "32cfb4f5dc4a4c637b391ef15a88021c0cab1acb22b79269768571a995e4ae38",
+      "shinySHA256": "cfd89fcb0297ce7f514cd4267b4d112013381c4eedff8fbf60c7b651d51f2eaf",
+      "alphaSHA256": "f685f0a0201c1450733ecbc8239538980d1de0c763f2a873bf797447f3b9c936",
       "alphaPreserved": true
     }
   ]
