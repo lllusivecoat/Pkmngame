@@ -19,7 +19,8 @@ const trainerGroups=[
  [['ruby','Ruby','Ember Ranger',3,2,['vulpix','growlithe'],12,'Keep a cool head, even when the battle heats up.'],['ashby','Ashby','Ruin Explorer',8,6,['gastly','charmander'],14,'There’s always another story beneath the ash.']],
  [['skye','Skye','Snow Guide',3,2,['eevee','pidgey'],15,'The snow is quiet. Our battle won’t be!'],['marin','Marin','Lake Keeper',8,5,['psyduck','lapras'],17,'Take a breath. Find your rhythm. Then make your move.']]
 ];
-for(const [i,z]of zones.entries()){z.trainers=trainerGroups[i].map(([id,name,title,x,y,team,level,dialogue])=>({id,name,title,x,y,team,level,dialogue,sprite:'assets/trainers/'+id+'.svg',portrait:id}));z.gym.sprite='assets/trainers/'+['fern','iris','ruby','marin'][i]+'.svg';z.gym.portrait=['rowan','lyra','flint','sera'][i]}
+const classPortraits={'Bug Catcher':'class_bug_catcher',Hiker:'class_hiker'};
+for(const [i,z]of zones.entries()){z.trainers=trainerGroups[i].map(([id,name,title,x,y,team,level,dialogue])=>({id,name,title,x,y,team,level,dialogue,sprite:'assets/trainers/'+id+'.svg',portrait:classPortraits[title]||id}));z.gym.sprite='assets/trainers/'+['fern','iris','ruby','marin'][i]+'.svg';z.gym.portrait=['rowan','lyra','flint','sera'][i]}
 zones[1].trainers.push({id:'brock',name:'Brock',title:'Visiting Gym Leader',x:6,y:8,team:['geodude','onix','golem'],level:12,dialogue:'My rock-hard determination is evident in every Pokémon I train. Show me your teamwork!',portrait:'brock',sprite:'assets/trainers/hugo.svg',challenge:{name:'Brock’s Rock Gym',badge:'Boulder Badge'}});
 export const trainerAt=s=>currentZone(s).trainers.find(t=>t.x===s.position.x&&t.y===s.position.y);
 for(let i=0;i<zones.length;i++){
