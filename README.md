@@ -427,3 +427,21 @@ Every addition ships painted Normal art and a direct canonical Shiny recolour, c
 | Heracross | Greenwood | fernwood |
 
 Species snapshots: `wildlife-species.js`. Habitat configuration: `docs/wildlife-habitats.json`. Rebuild metadata with `node scripts/build-wildlife-species.mjs` after caching the documented PokeAPI JSON. Encounters remain in `world.js`; the shared artwork registry covers gallery, collection, battles and followers. Shiny material rules and alpha receipts use the existing palette pipeline.
+
+### Standard evolution lineages
+
+Five complete families are playable with painted Normal/Shiny pairs at every stage:
+
+| Base form location | Evolution line |
+|---|---|
+| Thunder Ridge / Stormbridge Pass | Beldum → Metang (20) → Metagross (45) |
+| Ashlands / Obsidian Quarry | Trapinch → Vibrava (35) → Flygon (45) |
+| Ashlands / Ashen Ruins | Deino → Zweilous (50) → Hydreigon (64) |
+| Greenwood / Willow Brook | Goomy → Sliggoo (40) → Goodra (50, world Rain or Storm) |
+| Greenwood / Moonlit Shore | Dreepy → Drakloak (50) → Dragapult (60) |
+
+Only base forms enter encounter tables; train and evolve individuals to obtain later stages. Evolution retains UID, Shiny palette, Mastery, party order and held equipment. Goodra uses world weather, not battle-created rain. Everstone remains supported. These are the requested standard lines; Hisuian branches are not registered.
+
+The Larvitar, Bagon, Gible, Frigibax and Jangmo-o families remain unregistered because their painted artwork sets are incomplete following generation rejections. All 30 requested canonical records are prepared in `docs/pending-lineage-species.json`. Active families are listed in `docs/active-lineages.json`; their data lives in `lineage-species.js`, with habitat plans in `docs/lineage-habitats.json`.
+
+Rebuild with `node scripts/build-lineage-species.mjs`; it refuses to register a stage without both painted palettes. The builder reads cached PokeAPI `pokemon/{number}` and `pokemon-species/{number}` JSON from `/tmp/dragon-lines47/`. Use `--draft` to inspect the complete requested data without activating unfinished artwork. Shiny rules live in `scripts/lineage_palette_rules.py`, integrated into the existing paired-palette builder; positions and alpha are unchanged.

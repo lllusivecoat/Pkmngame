@@ -1,0 +1,12 @@
+{
+"beldum":{"region":"Thunder Ridge","area":"bridge","habitat":"Rocky clearing","activity":"Night","weather":"Storm","description":"Charged stones draw this steel-bodied family to the mountain pass."},
+"trapinch":{"region":"Ashlands","area":"quarry","habitat":"Rocky clearing","activity":"Day","weather":"Clear","description":"Shifting sand and warm quarry stones shelter this patient desert family."},
+"larvitar":{"region":"Thunder Ridge","area":"crags","habitat":"Rocky clearing","activity":"Day","weather":"Clear","description":"Small burrows beneath the crags reveal a family that grows strong on mountain minerals."},
+"bagon":{"region":"Thunder Ridge","area":"summit","habitat":"Rocky clearing","activity":"Morning","weather":"Clear","description":"A determined mountain family dreams of soaring above the exposed summit."},
+"gible":{"region":"Ashlands","area":"caldera","habitat":"Rocky clearing","activity":"Dusk","weather":"Clear","description":"Warm stone hollows shelter a swift family of land-dwelling dragons."},
+"deino":{"region":"Ashlands","area":"ruins","habitat":"Ruins","activity":"Night","weather":"Fog","description":"Distant calls echo from the shadowy stone passages of the old ruins."},
+"goomy":{"region":"Greenwood","area":"brook","habitat":"Shoreline","activity":"Day","weather":"Rain","description":"This gentle family follows damp woodland trails beside the brook."},
+"dreepy":{"region":"Greenwood","area":"shore","habitat":"Shoreline","activity":"Night","weather":"Fog","description":"Faint ghostly shapes gather over the moonlit water after dusk."},
+"frigibax":{"region":"Frostfall","area":"sanctuary","habitat":"Rocky clearing","activity":"Morning","weather":"Fog","description":"Cold sanctuary stones shelter a resilient family of ice-clad dragons."},
+"jangmoo":{"region":"Thunder Ridge","area":"summit","habitat":"Rocky clearing","activity":"Day","weather":"Storm","description":"The ringing of protective scales carries across the high mountain trail."}
+}

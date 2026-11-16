@@ -1,0 +1,51 @@
+{
+  "requestedFamilies": [
+    "beldum",
+    "trapinch",
+    "larvitar",
+    "bagon",
+    "gible",
+    "deino",
+    "goomy",
+    "dreepy",
+    "frigibax",
+    "jangmoo"
+  ],
+  "activeFamilies": [
+    "beldum",
+    "trapinch",
+    "deino",
+    "goomy",
+    "dreepy"
+  ],
+  "pendingFamilies": {
+    "larvitar": [
+      "larvitar",
+      "pupitar",
+      "tyranitar"
+    ],
+    "bagon": [
+      "bagon",
+      "shelgon",
+      "salamence"
+    ],
+    "gible": [
+      "gible",
+      "gabite",
+      "garchomp"
+    ],
+    "frigibax": [
+      "frigibax",
+      "arctibax",
+      "baxcalibur"
+    ],
+    "jangmoo": [
+      "hakamoo"
+    ]
+  },
+  "reason": "Incomplete painted Normal/Shiny sets after image generation rejections. Unfinished families are not playable.",
+  "draftNormalArtwork": {
+    "jangmoo": "docs/draft-art/jangmoo.webp",
+    "kommoo": "docs/draft-art/kommoo.webp"
+  }
+}

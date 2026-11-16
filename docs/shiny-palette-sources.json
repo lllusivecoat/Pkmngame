@@ -670,5 +670,110 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "beldum",
+    "sheet": "assets/chibi-painted/beldum.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "metang",
+    "sheet": "assets/chibi-painted/metang.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "metagross",
+    "sheet": "assets/chibi-painted/metagross.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "dreepy",
+    "sheet": "assets/chibi-painted/dreepy.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "drakloak",
+    "sheet": "assets/chibi-painted/drakloak.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "dragapult",
+    "sheet": "assets/chibi-painted/dragapult.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "goomy",
+    "sheet": "assets/chibi-painted/goomy.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "sliggoo",
+    "sheet": "assets/chibi-painted/sliggoo.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "goodra",
+    "sheet": "assets/chibi-painted/goodra.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "trapinch",
+    "sheet": "assets/chibi-painted/trapinch.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "vibrava",
+    "sheet": "assets/chibi-painted/vibrava.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "flygon",
+    "sheet": "assets/chibi-painted/flygon.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "deino",
+    "sheet": "assets/chibi-painted/deino.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "zweilous",
+    "sheet": "assets/chibi-painted/zweilous.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "hydreigon",
+    "sheet": "assets/chibi-painted/hydreigon.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

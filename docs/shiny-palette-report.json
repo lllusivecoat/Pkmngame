@@ -399,6 +399,81 @@
       "id": "seviper",
       "changed": 36138,
       "visible": 80839
+    },
+    {
+      "id": "beldum",
+      "changed": 100357,
+      "visible": 117683
+    },
+    {
+      "id": "metang",
+      "changed": 110064,
+      "visible": 119459
+    },
+    {
+      "id": "metagross",
+      "changed": 77321,
+      "visible": 85640
+    },
+    {
+      "id": "dreepy",
+      "changed": 38590,
+      "visible": 124826
+    },
+    {
+      "id": "drakloak",
+      "changed": 53623,
+      "visible": 141534
+    },
+    {
+      "id": "dragapult",
+      "changed": 54570,
+      "visible": 136819
+    },
+    {
+      "id": "goomy",
+      "changed": 112482,
+      "visible": 128831
+    },
+    {
+      "id": "sliggoo",
+      "changed": 53996,
+      "visible": 65786
+    },
+    {
+      "id": "goodra",
+      "changed": 78277,
+      "visible": 92129
+    },
+    {
+      "id": "trapinch",
+      "changed": 121868,
+      "visible": 125592
+    },
+    {
+      "id": "vibrava",
+      "changed": 32557,
+      "visible": 83001
+    },
+    {
+      "id": "flygon",
+      "changed": 77657,
+      "visible": 88206
+    },
+    {
+      "id": "deino",
+      "changed": 27115,
+      "visible": 83195
+    },
+    {
+      "id": "zweilous",
+      "changed": 30340,
+      "visible": 124196
+    },
+    {
+      "id": "hydreigon",
+      "changed": 48561,
+      "visible": 101043
     }
   ],
   "assets": [
@@ -844,6 +919,186 @@
       "sourceSHA256": "b9c12fdd063ec99cac2141af12079c407597de01867233d8903c36440735af1e",
       "shinySHA256": "01417b2c387ff9c11510369fafb08d912cab8f4083552fbc104595b53178273d",
       "alphaSHA256": "d1febd7748b207f26ba4fadd7cebed0f9e6ac54fa33b282f51d77da536835e57",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/beldum.webp",
+      "shiny": "assets/chibi-painted/shiny/beldum.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "95e2401a78c476d64a9119648d9374e39a5d1eb87d24f74562682f5cc325496d",
+      "shinySHA256": "8c4b2be72d8ab4b70ca8e397bb398594b606034cfe88f5d6cd8ad6d428f1225e",
+      "alphaSHA256": "fbbf5745de30cdf3b6b398a124345fd38b7eea1f9eb2d261b8c58998a7b3c160",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/metang.webp",
+      "shiny": "assets/chibi-painted/shiny/metang.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "e63715f24e3542fecc8972943ecf6080be9f7c0aeb486f7dd9d7c914beada2e4",
+      "shinySHA256": "1c764628a14867cbd3420d6ce7e9426d02a1ecfb89c517ee322404fcbcbce897",
+      "alphaSHA256": "67da7ab7bd399087c8107747c8cd00e0543c4c5c832b009c1b71945879ee67e6",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/metagross.webp",
+      "shiny": "assets/chibi-painted/shiny/metagross.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3d47117c10128817e57b3b2232bd5a29967ee5370ca3fbf2e7df65501612d851",
+      "shinySHA256": "d607e97e016e322eeee6a35ff3a83e3e1b8bbfb517b100f16879f4bb7b980d35",
+      "alphaSHA256": "42439f6ce5e284ab45719bcf837a3920b64ecaa271ed84a69922ba9f5b5e1385",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/dreepy.webp",
+      "shiny": "assets/chibi-painted/shiny/dreepy.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "46569934740edb4d7e85d58eb8ee13174ee7bae7b2007a7b487f5c3a0c515b71",
+      "shinySHA256": "9113ea4ea7536aa20a03eec67f9e2627e9c4945cac4624145e92339dcf31defe",
+      "alphaSHA256": "233b0b3f2019375f0312c83776b9a1aee78677ce284b963e72b2dadb4b7983be",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/drakloak.webp",
+      "shiny": "assets/chibi-painted/shiny/drakloak.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "488054c1bb4d307782ec1255173ae58d3223b6bef4010a3ddc1691a0eac0eb3c",
+      "shinySHA256": "e656135a002a9285af6d501b366f4ec3bac7c8883d4564b0cc9b263b0358bfe7",
+      "alphaSHA256": "20ffcd128a98b171434897edc9d9bd15298fba799b73914f57a030cd94d48844",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/dragapult.webp",
+      "shiny": "assets/chibi-painted/shiny/dragapult.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "a01fc689cd2d28b4d01b950ebc0bc2cf991ece7184731f9fbeb985ce79dc2b12",
+      "shinySHA256": "c3fec1b017cf06a937580431fb13fa479599a725e83a22067fddc4282f0f556b",
+      "alphaSHA256": "b4c2da9d7d2f39f6c7c8604ec72f973763d413a8854aeb70d5b9378ede181726",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/goomy.webp",
+      "shiny": "assets/chibi-painted/shiny/goomy.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "b9a3ff83463357eb2d64e599a9cdee10f3c25459788ef054c7b14ee8372a236f",
+      "shinySHA256": "42e00a59a89a37c85a9c139115bae4c1b682e89c3f9e0cee5a4c213e9ee1d788",
+      "alphaSHA256": "4539d436d83325ca6851dc460f34caa468885393c809c1830358c92d6e65e78d",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/sliggoo.webp",
+      "shiny": "assets/chibi-painted/shiny/sliggoo.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "2f8e0b2bb5900d802d3fbc5d852169a454846518b19f7dcc9d869c24283b1103",
+      "shinySHA256": "d7ee66cf65f1283f4bb7848f48cc230bbceee0fe2e4c156e824b1f5b3bd2e917",
+      "alphaSHA256": "85ffb5623708aab35412f22b7c052da37a368010a8577c5ae638bfe27ba86e14",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/goodra.webp",
+      "shiny": "assets/chibi-painted/shiny/goodra.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "cc16f8309a2ba427b5fad80dbccb065f36a8179d82779ee241f27258a338b8be",
+      "shinySHA256": "c750dceb730d1f5bc5eceacf9b22b3e14c3d5c6b3a874612f464787af8dbec0c",
+      "alphaSHA256": "18b8e41503cd4fec8961ab5dfb97f79d4146fd0fae69c29003c056e553014905",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/trapinch.webp",
+      "shiny": "assets/chibi-painted/shiny/trapinch.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "34b4ef1d667a656a0109d7039dfe357564b54ae5e0ab360730944066b9c499a3",
+      "shinySHA256": "ad19627c81143bac8fc2291dfa2f625a44b0aed205585a4d2127f78f76a92957",
+      "alphaSHA256": "1b5c6c1cbe2ecce8accc98384d7f21b23c4273fd863ffd157338d8d56cde9ab3",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/vibrava.webp",
+      "shiny": "assets/chibi-painted/shiny/vibrava.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "dad8e2c747e3082562b8051ee52bdd0d68b4247b35bb0ea97d72cf3039349b74",
+      "shinySHA256": "0ccc21c10d99dc36eaadf85601d587399608e02c06e370876f36b98e24193e5d",
+      "alphaSHA256": "1f63673d1f870681d3880b03b25c4e1a02f00878f57e0e3cc5788aee4ca88c14",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/flygon.webp",
+      "shiny": "assets/chibi-painted/shiny/flygon.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3b60e3510682c447d661aae7e0048ceeee4460f69b501a47a2455fa3d96db893",
+      "shinySHA256": "be5841ca666ddd02898e477ccf5784fa1aa972d594a559dbbf44fbf3ccf8a98a",
+      "alphaSHA256": "35404a8cac619f859bfb3eec6f3e3c94a34a748be4e8440b4cdb0e9b7838b62c",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/deino.webp",
+      "shiny": "assets/chibi-painted/shiny/deino.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "45368c9abf2a8a7966af378bc3f7a2fb2bac9fda6983e0eaa0d495d930e4a93e",
+      "shinySHA256": "ed59ce7835e16524426a5e024c4f57160124b9a8c106a485e61e93f5930effd8",
+      "alphaSHA256": "e232003c2a42af84c3b309995993a24b83b7296a1e305e9e1f58e610d67038ea",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/zweilous.webp",
+      "shiny": "assets/chibi-painted/shiny/zweilous.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "e01bd5a90d64affb9f131c7418e94b373d335397c4fcfbd2a43a8c8294660659",
+      "shinySHA256": "c739135c1cabe5a273cc6d6cef9d6736d121f0e741708e39b209b408f93db4e0",
+      "alphaSHA256": "289ad956187ea6200696367f3da39672562609b63e821ce6dd197cd0f4b8b2fd",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/hydreigon.webp",
+      "shiny": "assets/chibi-painted/shiny/hydreigon.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "b8156c73c26271d07c1827aa90c751bd5f8476d76b6c2854d8082dce6bbb2a82",
+      "shinySHA256": "f8177bf83edb83408d79e4e83ad15774261266ea1203c4ecc63e35c58ed67b96",
+      "alphaSHA256": "53560fec0258d2d37422d9d0b93462421040c6ad516d44f7494571d2027e5a7e",
       "alphaPreserved": true
     }
   ]
