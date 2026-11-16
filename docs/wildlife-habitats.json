@@ -79,5 +79,14 @@
     "activity": "Morning",
     "weather": "Clear",
     "description": "Its bright calls echo between the trees beside Willow Brook."
+  },
+  "heracross": {
+    "number": 214,
+    "region": "Greenwood",
+    "area": "fernwood",
+    "habitat": "Forest",
+    "activity": "Morning",
+    "weather": "Rain",
+    "description": "It searches tree trunks for sweet sap along the forest trails."
   }
 }

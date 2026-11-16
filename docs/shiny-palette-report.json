@@ -391,8 +391,13 @@
       "visible": 67541
     },
     {
+      "id": "heracross",
+      "changed": 46247,
+      "visible": 58204
+    },
+    {
       "id": "seviper",
-      "changed": 35648,
+      "changed": 36138,
       "visible": 80839
     }
   ],
@@ -818,6 +823,18 @@
       "alphaPreserved": true
     },
     {
+      "source": "assets/chibi-painted/heracross.webp",
+      "shiny": "assets/chibi-painted/shiny/heracross.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "281770942170f7bbaa4ed42e617ce5cc71363046a4fa616cf1e57c82dd23b739",
+      "shinySHA256": "a57a4a7a7e2cac73fd57dcf3d4a75560cf342e3a082551b42eaff74dd8e0c2fd",
+      "alphaSHA256": "7ea2d20a84f7134aae03988710bf88fc59b34ea077508b271108990559331688",
+      "alphaPreserved": true
+    },
+    {
       "source": "assets/chibi-painted/seviper.webp",
       "shiny": "assets/chibi-painted/shiny/seviper.webp",
       "dimensions": [
@@ -825,7 +842,7 @@
         512
       ],
       "sourceSHA256": "b9c12fdd063ec99cac2141af12079c407597de01867233d8903c36440735af1e",
-      "shinySHA256": "605fbc0aee3c77a7186088710b6ac9471686e67adaf2ce598bec7707948d9767",
+      "shinySHA256": "01417b2c387ff9c11510369fafb08d912cab8f4083552fbc104595b53178273d",
       "alphaSHA256": "d1febd7748b207f26ba4fadd7cebed0f9e6ac54fa33b282f51d77da536835e57",
       "alphaPreserved": true
     }

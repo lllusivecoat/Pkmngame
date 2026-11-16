@@ -44,6 +44,8 @@ pinsir_ivory=Image.new('1',(512,512))
 for box in [(106,224,143,253),(77,243,107,275),(136,245,163,278),(365,245,388,274),(381,222,416,252),(411,246,439,277),(119,420,154,450),(155,425,189,459),(296,416,330,441),(330,418,367,447),(251,256,320,338)]:ImageDraw.Draw(pinsir_ivory).ellipse(box,fill=1)
 chatot_beak=Image.new('1',(512,512))
 ImageDraw.Draw(chatot_beak).polygon([(128,232),(130,211),(139,188),(157,171),(181,170),(198,181),(202,204),(202,225),(179,223),(161,230),(141,243)],fill=1)
+seviper_eye=Image.new('1',(512,512))
+ImageDraw.Draw(seviper_eye).polygon([(166,179),(177,155),(200,148),(198,171),(180,180)],fill=1)
 def recolour(id,r,g,b,x,y):
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
  # Preserve near-black ink, whites and all alpha exactly. Individual rules can whiten coloured material.
@@ -159,6 +161,8 @@ def recolour(id,r,g,b,x,y):
   if .42<x<.7 and .26<y<.41 and 0<h<90 and s>.3:H,S,V=tint(235,.5,.22)
   elif y>.42 and s>.08 and (h>315 or h<25):H,S,V=tint(275+25*tongue,.2-.02*tongue,.32+.1*tongue)
   elif 255<h<320 and s>.12:H,S,V=287+41*hand,s*.5*(1-hand)+.2*hand,min(1,v*(.72+.38*hand))
+ elif id=='heracross':
+  if 190<h<270 and s>.075:H,S,V=tint(310,min(.8,s*1.05))
  elif id=='chatot':
   if (h>320 or h<25) and s>.04 and (y>.82 or chatot_beak.getpixel((min(511,int(x*512)),min(511,int(y*512))))):H,S,V=tint(48,min(.85,s))
   elif 180<h<245 and s>.3 and y>.5:H,S,V=tint(340,s*.72)
@@ -182,7 +186,8 @@ def recolour(id,r,g,b,x,y):
   if 190<h<285 and s>.15:H,S,V=tint(350,min(.8,s*1.1))
   elif red and y<.5:H,S,V=tint(165,s)
  elif id=='seviper':
-  if 35<h<75 and s>.35:H,S,V=tint(119,s)
+  if seviper_eye.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and s>.1 and v>.25:H,S,V=tint(195,s*.6,1.1)
+  elif 35<h<75 and s>.35:H,S,V=tint(119,s)
   elif 245<h<325 and s>.2:H,S,V=tint(320,s)
   elif red and ((x<.33 and .34<y<.6) or (x>.6 and y<.4)):H,S,V=tint(220,s)
  elif id=='shuckle':
@@ -283,7 +288,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp','cloyster.webp','pinsir.webp','tauros.webp','skarmory.webp','torkoal.webp','absol.webp','seviper.webp','shuckle.webp','relicanth.webp','chatot.webp'] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp','cloyster.webp','pinsir.webp','tauros.webp','skarmory.webp','torkoal.webp','absol.webp','seviper.webp','shuckle.webp','relicanth.webp','chatot.webp','heracross.webp'] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:

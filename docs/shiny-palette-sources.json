@@ -663,5 +663,12 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "heracross",
+    "sheet": "assets/chibi-painted/heracross.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]
