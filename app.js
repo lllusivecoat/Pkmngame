@@ -1,47 +1,48 @@
-import {GYM_SAVE_KEY,freshGym,loadGym,saveGym,gymRank,buyGymPokemon,buyDecoration,placeDecoration,acceptChallenger,startDefense,settleDefense,gymThemes} from './gym-mode.js?v=20261117-gym1';
-import {gymView,gymShopView,decorShopView} from './gym-ui.js?v=20261117-gym1';
-import {artworkPending,pendingChibiIds} from './artwork-status.js?v=20261117-gym1';
-import {pokemonDisplaySize} from './pokemon-sizing.js?v=20261117-gym1';
-import {questsView,questPreview,questStates,questSummary,pinQuest} from './quests.js?v=20261117-gym1';
-import {guildView,normalizeGuild,guildLevel,contributeGuild,selectExpedition} from './guild.js?v=20261117-gym1';
-import {arenaView,arenaRank} from './arena.js?v=20261117-gym1';
-import {worldEventPanel,eventCountdown,currentEvent} from './world-events.js?v=20261117-gym1';
-import {huntingPanel,setHuntTarget} from './hunting.js?v=20261117-gym1';
-import {expandedSpecies} from './engine-data.js?v=20261117-gym1';
-import {researchScore,researchReady,researchPanel,journalSummary,normalizeResearch} from './journal.js?v=20261117-gym1';
-import {masteryPanel,masteryProgress,bondStyle,chooseBondStyle,companionTitle} from './mastery.js?v=20261117-gym1';
-import {appStatus,installApp,applyAppUpdate,installPanel} from './pwa.js?v=20261117-gym1';
-import {artworkEntries,galleryEntries,chibiLabel,resetItemsAndGold} from './developer-tools.js?v=20261117-gym1';
-import {chibiSprite,chibiSources} from './chibi-art.js?v=20261117-gym1';
-import {battleForms,formsFor,displayCreature,supportsGmax} from './forms.js?v=20261117-gym1';
-import {trainerPortrait,bindTrainerPortrait} from './trainer-portraits.js?v=20261117-gym1';
-import {portraitManifest,portraitSets} from './portrait-manifest.js?v=20261117-gym1';
-import {trainerOptions,normalizeTrainer,trainerName,presetTrainer} from './trainer-customization.js?v=20261117-gym1';
-import {trainerEditor} from './trainer-editor.js?v=20261117-gym1';
-import {inventoryView,abilityGuide} from './inventory-ui.js?v=20261117-gym1';
-import {itemCatalog,abilityCatalog,ensureInventory,itemCount,addItem,buyItem,equipItem,currentHP,remainingPP,ppMaximum,itemContext,grantTestSupplies} from './items.js?v=20261117-gym1';
-import {abilityOptions,validAbility,evolutionOptions,levelXP} from './progression.js?v=20261117-gym1';
-import {fullCaptureChance,legacyBalls} from './capture.js?v=20261117-gym1';
-import {statsFor,STAT_KEYS,STAT_LABELS,speciesRules,movesFor,learnedMoves,changeMove,battleStat,STRUGGLE,deferredMoves,typeMultiplier} from './rules.js?v=20261117-gym1';
-import {zones,allTrainers,mapDestinations,jumpToMap,currentZone,locationAt,travel,areaGuide,areaKey} from './world.js?v=20261117-gym1';
-import {buttonIcon,regionElement} from './button-art.js?v=20261117-gym1';
-import {initTheme,themeChoices} from './theme.js?v=20261117-gym1';
-import {mapView,ballIcon,playerArt} from './visuals.js?v=20261117-gym1';
-import {bindSprite,turnMotion} from './artwork.js?v=20261117-gym1';
-import {roster,get,map,signs,clues,colors,icons,events,weatherOptions,timeOptions,tools,achievementData} from './data.js?v=20261117-gym1';
-import {fresh,claimAdventureQuest,claimGuildReward,claimArenaReward,claimJournalReward,claimHuntReward,PARTY_LIMIT,setLead,chooseStarter,step,huntOdds,huntConditions,load,persist,tick,toggleParty,toolCount,captureChance,claimQuest,masteryLevel,listings,buyListing,useInventoryItem,evolveCompanion,visitCenter,inspectWorldSite} from './core.js?v=20261117-gym1';
-import {beginBattle,beginGymBattle,beginTrainerBattle,battleAction,maxHP,usableMoves,combatState,battleMoves} from './battle.js?v=20261117-gym1';
+import {GYM_SAVE_KEY,freshGym,loadGym,saveGym,gymRank,buyGymPokemon,buyDecoration,placeDecoration,acceptChallenger,startDefense,settleDefense,gymThemes,chooseGymType,gymDefenders,matchesGymType,acceptLeagueTrainer} from './gym-mode.js?v=20261117-gym2';
+import {gymView,gymShopView,decorShopView,trainerDirectoryView} from './gym-ui.js?v=20261117-gym2';
+import {artworkPending,pendingChibiIds} from './artwork-status.js?v=20261117-gym2';
+import {pokemonDisplaySize} from './pokemon-sizing.js?v=20261117-gym2';
+import {questsView,questPreview,questStates,questSummary,pinQuest} from './quests.js?v=20261117-gym2';
+import {guildView,normalizeGuild,guildLevel,contributeGuild,selectExpedition} from './guild.js?v=20261117-gym2';
+import {arenaView,arenaRank} from './arena.js?v=20261117-gym2';
+import {worldEventPanel,eventCountdown,currentEvent} from './world-events.js?v=20261117-gym2';
+import {huntingPanel,setHuntTarget} from './hunting.js?v=20261117-gym2';
+import {expandedSpecies} from './engine-data.js?v=20261117-gym2';
+import {researchScore,researchReady,researchPanel,journalSummary,normalizeResearch} from './journal.js?v=20261117-gym2';
+import {masteryPanel,masteryProgress,bondStyle,chooseBondStyle,companionTitle} from './mastery.js?v=20261117-gym2';
+import {appStatus,installApp,applyAppUpdate,installPanel} from './pwa.js?v=20261117-gym2';
+import {artworkEntries,galleryEntries,chibiLabel,resetItemsAndGold} from './developer-tools.js?v=20261117-gym2';
+import {chibiSprite,chibiSources} from './chibi-art.js?v=20261117-gym2';
+import {battleForms,formsFor,displayCreature,supportsGmax} from './forms.js?v=20261117-gym2';
+import {trainerPortrait,bindTrainerPortrait} from './trainer-portraits.js?v=20261117-gym2';
+import {portraitManifest,portraitSets} from './portrait-manifest.js?v=20261117-gym2';
+import {trainerOptions,normalizeTrainer,trainerName,presetTrainer} from './trainer-customization.js?v=20261117-gym2';
+import {trainerEditor} from './trainer-editor.js?v=20261117-gym2';
+import {inventoryView,abilityGuide} from './inventory-ui.js?v=20261117-gym2';
+import {itemCatalog,abilityCatalog,ensureInventory,itemCount,addItem,buyItem,equipItem,currentHP,remainingPP,ppMaximum,itemContext,grantTestSupplies} from './items.js?v=20261117-gym2';
+import {abilityOptions,validAbility,evolutionOptions,levelXP} from './progression.js?v=20261117-gym2';
+import {fullCaptureChance,legacyBalls} from './capture.js?v=20261117-gym2';
+import {statsFor,STAT_KEYS,STAT_LABELS,speciesRules,movesFor,learnedMoves,changeMove,battleStat,STRUGGLE,deferredMoves,typeMultiplier} from './rules.js?v=20261117-gym2';
+import {zones,allTrainers,mapDestinations,jumpToMap,currentZone,locationAt,travel,areaGuide,areaKey} from './world.js?v=20261117-gym2';
+import {buttonIcon,regionElement} from './button-art.js?v=20261117-gym2';
+import {initTheme,themeChoices} from './theme.js?v=20261117-gym2';
+import {mapView,ballIcon,playerArt} from './visuals.js?v=20261117-gym2';
+import {bindSprite,turnMotion} from './artwork.js?v=20261117-gym2';
+import {roster,get,map,signs,clues,colors,icons,events,weatherOptions,timeOptions,tools,achievementData} from './data.js?v=20261117-gym2';
+import {fresh,claimAdventureQuest,claimGuildReward,claimArenaReward,claimJournalReward,claimHuntReward,PARTY_LIMIT,setLead,chooseStarter,step,huntOdds,huntConditions,load,persist,tick,toggleParty,toolCount,captureChance,claimQuest,masteryLevel,listings,buyListing,useInventoryItem,evolveCompanion,visitCenter,inspectWorldSite} from './core.js?v=20261117-gym2';
+import {beginBattle,beginGymBattle,beginTrainerBattle,battleAction,maxHP,usableMoves,combatState,battleMoves} from './battle.js?v=20261117-gym2';
 const gymMode=!!globalThis.location&&new URLSearchParams(globalThis.location.search||'').get('mode')!=='adventure';
 const browserStorage={getItem:key=>localStorage.getItem(gymMode&&key==='greenwood.save.v2'?GYM_SAVE_KEY:key),setItem:(key,value)=>localStorage.setItem(gymMode&&key==='greenwood.save.v2'?GYM_SAVE_KEY:key,value)};
 const appearance=initTheme({storage:browserStorage,onChange:syncThemeControls});
 let save=gymMode?loadGym(localStorage):load(browserStorage),page='Home',battle=gymMode?save.gym.session?.battle||null:null,selected=null,dexEntry=null,filter={search:'',type:'',variant:'',rarity:'',size:'',sort:''},tool=0,noticeTimer,busy=false,arenaTab='',questFilter='all',region='Greenwood',lastFocus=null,result=null,positionFrom=null;
+const directoryState={search:'',region:'',category:'',page:0},gymShopState={search:'',allTypes:false};let gymTypeDraft='';
 let gymDecorating=false,gymDecorSelection='fern',gymArrivalTimer;
 const inventoryState={search:'',category:'All',page:0,target:'',slot:0,stat:'hp',abilitySearch:'',abilityPage:0};const galleryState={search:'',kind:'all',variant:'Normal',page:0,pageSize:'all'};const portraitGalleryState={search:'',set:'classes',page:0};let portraitReturn='Settings';let formFilter='all';let mapJumpOpen=false;let trainerDraft=null;let appUpdating=false;let bagOpen=false,bagItem='potion',bagTarget='',bagSlot=0;const activeBall=()=>typeof tool==='number'?legacyBalls[tool]:tool;
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const party=()=>save.party.map(id=>save.collection.find(c=>c.uid===id)).filter(Boolean);
-const nav=gymMode?['Home','Pokémon shop','Creatures','Decor shop','Pokédex','Bag','Profile']:['Home','Explore','Creatures','Pokédex','Bag','Market','Guild','Arena','Profile'];
-const symbols=gymMode?['home','market','creatures','guild','pokedex','bag','profile']:['home','explore','creatures','pokedex','bag','market','guild','arena','profile'];
+const party=()=>save.party.map(id=>save.collection.find(c=>c.uid===id)).filter(c=>c&&(!battle?.defense||battle.health[c.uid]!==undefined));
+const nav=gymMode?['Home','Pokémon shop','Creatures','Trainers','Decor shop','Pokédex','Bag','Profile']:['Home','Explore','Creatures','Pokédex','Bag','Market','Guild','Arena','Profile'];
+const symbols=gymMode?['home','market','creatures','arena','guild','pokedex','bag','profile']:['home','explore','creatures','pokedex','bag','market','guild','arena','profile'];
 function themePicker(){return `<div class="theme-picker" role="group" aria-label="Appearance">${themeChoices.map(t=>`<button type="button" data-theme-pref="${t.value}" aria-label="${t.label}" title="${t.label}" aria-pressed="${appearance.preference===t.value}"><span aria-hidden="true">${t.icon}</span><span class="theme-label">${t.label==='Follow device'?'Device':t.label}</span></button>`).join('')}</div>`}
 function syncThemeControls(){document.querySelectorAll('[data-theme-pref]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themePref===appearance.preference)));const select=document.querySelector('#theme-preference');if(select)select.value=appearance.preference}
 function toast(t){if(!t)return;$('#notice').textContent=t;$('#notice').className='show';clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('#notice').className='',5000)}
@@ -90,13 +91,13 @@ if(page==='Portrait gallery')content=header('Trainer portraits.','Individual chi
 if(page==='Home'&&!gymMode)content+=leaderGallery();
 if(page==='Pokédex')content+=`<section class="panel"><h2>Complete artwork gallery</h2><p>Browse every species and battle form, including the original 151. Missing chibi artwork is clearly marked as pending.</p><button class="secondary" id="open-art-gallery">Browse all ${artworkEntries.length} artworks</button></section>`+formLibrary();
 if(gymMode){
- if(page==='Home')content=gymView(save,{art,card,decorating:gymDecorating,selectedDecor:gymDecorSelection})+'<button class="secondary" id="open-app-install">Install Greenwood app ↗</button>';
- if(page==='Pokémon shop')content=gymShopView(save,art);
- if(page==='Decor shop')content=decorShopView(save);
+ if(page==='Home')content=gymView(save,{art,card,decorating:gymDecorating,selectedDecor:gymDecorSelection,typeDraft:gymTypeDraft})+'<button class="secondary" id="open-app-install">Install Greenwood app ↗</button>';
+ if(page==='Pokémon shop')content=gymShopView(save,art,gymShopState);
+ if(page==='Decor shop')content=decorShopView(save);if(page==='Trainers')content=trainerDirectoryView(save,directoryState);
  if(page==='Profile')content=header('Your Gym Leader story.',esc(save.name)+' · '+gymRank(save),'GREENWOOD LEAGUE · PERSONAL GYM')+`<section class="panel profile-card"><div class="profile-avatar">${playerArt('down',false,save.trainer)}</div><div><h2>${esc(save.name)}</h2><p>${esc(save.gym.name)} · ${gymRank(save)}</p><p>${save.gym.wins} successful defences · ${save.gym.reputation} reputation · ${save.collection.length} partners</p><button class="secondary" data-open-trainer="profile">Customise Gym Leader</button></div></section><section class="panel"><h2>A career to grow into</h2><p>Build your reputation as a Gym Leader. Elite Four and Champion qualifications are planned for a future update.</p><p>Puzzles, hired trainers and visits from other players are future systems. Current challengers are NPCs.</p></section>`;
  if(page==='Settings')content+=`<section class="panel gym-mode-switch"><h2>Game modes & saves</h2><p>Your Gym career and adventure collection have separate saves. Reset and import affect only the current mode.</p><a href="?mode=adventure">Open previous adventure mode →</a></section>`;
 }else if(page==='Settings')content+=`<section class="panel gym-mode-switch"><h2>Start your Gym career</h2><p>Your adventure save stays here. Gym mode uses a separate save.</p><a href="?mode=gym">Open Gym Leader mode →</a></section>`;
-$('#app').innerHTML=`<aside class="sidebar"><a class="brand" href="#">❧ GREENWOOD<small>${gymMode?'YOUR GYM. YOUR LEGACY.':'A JOURNEY WORTH TAKING'}</small></a><div class="nav-label">${gymMode?'GYM LEADER CAREER':'YOUR ADVENTURE'}</div><nav>${nav.map((n,i)=>`<button data-page="${n}" class="${page===n?'active':''}"><span class="nav-emblem">${buttonIcon(symbols[i])}</span><span class="nav-caption">${gymMode?({'Home':'My Gym','Pokémon shop':'Shop','Creatures':'Team','Decor shop':'Decor','Pokédex':'Pokédex'}[n]||n):n}</span></button>`).join('')}</nav><div class="single-player"><span class="live-dot"></span> SINGLE-PLAYER PROTOTYPE</div><button class="settings-link" data-page="Settings">${buttonIcon('settings')}<span>Settings</span></button><div class="account"><span>${esc(Array.from(save.name)[0])}</span><div>${esc(save.name)}<small>Level ${save.level} · local save</small></div></div></aside><div class="workspace"><header><span class="breadcrumbs">${gymMode?'Gym career':'Adventure'} / <b>${page}</b></span><div class="theme-toolbar">${themePicker()}</div><div class="resource-bar"><small class="current-region">${save.region}</small> <strong>◈ ${save.coins.toLocaleString()}</strong><button data-page="Settings" aria-label="Settings">${buttonIcon('settings')}</button></div></header><main>${content}<footer>GREENWOOD <span>Fan prototype · v0.37.0 · Progress saved on this device</span></footer></main></div>${!save.started&&!gymMode?starterView():''}${selected?detailView():''}${dexEntry?dexView():''}${battle?battleView():''}${result?resultView():''}${battle&&bagOpen?battleBagView():''}${trainerDraft?trainerEditor(trainerDraft):''}${mapJumpOpen?mapJumpView():''}`;
+$('#app').innerHTML=`<aside class="sidebar"><a class="brand" href="#">❧ GREENWOOD<small>${gymMode?'YOUR GYM. YOUR LEGACY.':'A JOURNEY WORTH TAKING'}</small></a><div class="nav-label">${gymMode?'GYM LEADER CAREER':'YOUR ADVENTURE'}</div><nav>${nav.map((n,i)=>`<button data-page="${n}" class="${page===n?'active':''}"><span class="nav-emblem">${buttonIcon(symbols[i])}</span><span class="nav-caption">${gymMode?({'Home':'My Gym','Pokémon shop':'Shop','Creatures':'Team','Decor shop':'Decor','Pokédex':'Pokédex'}[n]||n):n}</span></button>`).join('')}</nav><div class="single-player"><span class="live-dot"></span> SINGLE-PLAYER PROTOTYPE</div><button class="settings-link" data-page="Settings">${buttonIcon('settings')}<span>Settings</span></button><div class="account"><span>${esc(Array.from(save.name)[0])}</span><div>${esc(save.name)}<small>Level ${save.level} · local save</small></div></div></aside><div class="workspace"><header><span class="breadcrumbs">${gymMode?'Gym career':'Adventure'} / <b>${page}</b></span><div class="theme-toolbar">${themePicker()}</div><div class="resource-bar"><small class="current-region">${save.region}</small> <strong>◈ ${save.coins.toLocaleString()}</strong><button data-page="Settings" aria-label="Settings">${buttonIcon('settings')}</button></div></header><main>${content}<footer>GREENWOOD <span>Fan prototype · v0.38.0 · Progress saved on this device</span></footer></main></div>${!save.started&&!gymMode?starterView():''}${selected?detailView():''}${dexEntry?dexView():''}${battle?battleView():''}${result?resultView():''}${battle&&bagOpen?battleBagView():''}${trainerDraft?trainerEditor(trainerDraft):''}${mapJumpOpen?mapJumpView():''}`;
 positionFrom=null;bind();document.body.classList?.toggle('reduce-motion',!motionEnabled());const overlay=[...document.querySelectorAll('.overlay')].at(-1)||$('.overlay');if(overlay){document.body.style.overflow='hidden';overlay.querySelector('button')?.focus({preventScroll:true})}else document.body.style.overflow='';
 }
 function starterView(){return `<div class="overlay"><section class="modal starter" role="dialog" aria-modal="true" aria-labelledby="starter-title"><div class="starter-theme">${themePicker()}</div><div class="eyebrow">EVERY JOURNEY STARTS WITH A PARTNER</div><h2 id="starter-title">Welcome to Greenwood.</h2><p>Choose your first partner. Head into the wild. Find your own story.</p><div class="cards">${roster.slice(0,3).map(s=>`<button class="card" data-starter="${s.id}">${art({species:s.id,variant:'Normal'})}<h3>${s.name}</h3><p>${s.type} · ${s.passive}</p><span class="primary">Choose ${s.name} →</span></button>`).join('')}</div><small>No account. No rush. Your adventure saves automatically.</small></section></div>`}
@@ -122,6 +123,14 @@ function resultView(){const c=result.creature,s=get(c.species);return `<div clas
 
 function bind(){
 if(gymMode){
+ if($('#gym-type'))$('#gym-type').onchange=e=>{gymTypeDraft=e.target.value};
+ if($('#gym-type-form'))$('#gym-type-form').onsubmit=e=>{e.preventDefault();const type=$('#gym-type').value;commit(chooseGymType(save,type));};
+ if($('#gym-focus-type'))$('#gym-focus-type').onclick=()=>{$('.gym-specialisation').open=true;$('#gym-type').focus()};
+ if($('#gym-shop-search'))$('#gym-shop-search').oninput=e=>{const pos=e.target.selectionStart;gymShopState.search=e.target.value;render();$('#gym-shop-search').focus();$('#gym-shop-search').setSelectionRange(pos,pos)};
+ if($('#gym-shop-all'))$('#gym-shop-all').onchange=e=>{gymShopState.allTypes=e.target.checked;render()};
+ for(const[key,id]of [['search','directory-search'],['region','directory-region'],['category','directory-category']])if($('#'+id))$('#'+id)[key==='search'?'oninput':'onchange']=e=>{const pos=e.target.selectionStart;directoryState[key]=e.target.value;directoryState.page=0;render();$('#'+id)?.focus();if(key==='search')$('#'+id).setSelectionRange(pos,pos)};
+ document.querySelectorAll('[data-directory-page]').forEach(b=>b.onclick=()=>{directoryState.page=Number(b.dataset.directoryPage);render();window.scrollTo(0,0)});
+ document.querySelectorAll('[data-league-battle]').forEach(b=>b.onclick=()=>{const message=acceptLeagueTrainer(save,b.dataset.leagueBattle);if(save.gym.session?.challenger.id===b.dataset.leagueBattle){battle=startDefense(save);page='Home'}commit(message)});
  document.querySelectorAll('[data-gym-buy]').forEach(b=>b.onclick=()=>commit(buyGymPokemon(save,b.dataset.gymBuy)));
  document.querySelectorAll('[data-gym-decor-buy]').forEach(b=>b.onclick=()=>commit(buyDecoration(save,b.dataset.gymDecorBuy)));
  if($('#gym-decorate'))$('#gym-decorate').onclick=()=>{gymDecorating=!gymDecorating;render()};
