@@ -432,8 +432,8 @@
     },
     {
       "id": "goomy",
-      "changed": 112482,
-      "visible": 128831
+      "changed": 98408,
+      "visible": 126747
     },
     {
       "id": "sliggoo",
@@ -447,8 +447,8 @@
     },
     {
       "id": "trapinch",
-      "changed": 121868,
-      "visible": 125592
+      "changed": 138798,
+      "visible": 175786
     },
     {
       "id": "vibrava",
@@ -502,8 +502,8 @@
     },
     {
       "id": "bagon",
-      "changed": 44658,
-      "visible": 89753
+      "changed": 38001,
+      "visible": 122812
     },
     {
       "id": "hakamoo",
@@ -544,6 +544,11 @@
       "id": "garchomp",
       "changed": 87389,
       "visible": 120933
+    },
+    {
+      "id": "salamencemega",
+      "changed": 134491,
+      "visible": 145204
     }
   ],
   "assets": [
@@ -1070,9 +1075,9 @@
         512,
         512
       ],
-      "sourceSHA256": "b9a3ff83463357eb2d64e599a9cdee10f3c25459788ef054c7b14ee8372a236f",
-      "shinySHA256": "42e00a59a89a37c85a9c139115bae4c1b682e89c3f9e0cee5a4c213e9ee1d788",
-      "alphaSHA256": "4539d436d83325ca6851dc460f34caa468885393c809c1830358c92d6e65e78d",
+      "sourceSHA256": "4301bde19fd5fab38cad4691a6d8c0aebb73e0b4f0102e5ad3bcd16232a1bbb9",
+      "shinySHA256": "4cd64c05d65ef4753ba867f490189c026f5358896d3d87f17cf927421f20b8bf",
+      "alphaSHA256": "6c2871c5c7e7a94cd423dbfe7e0cfa6f2284c0fec37e0f62c4c081233d50da30",
       "alphaPreserved": true
     },
     {
@@ -1106,9 +1111,9 @@
         512,
         512
       ],
-      "sourceSHA256": "34b4ef1d667a656a0109d7039dfe357564b54ae5e0ab360730944066b9c499a3",
-      "shinySHA256": "ad19627c81143bac8fc2291dfa2f625a44b0aed205585a4d2127f78f76a92957",
-      "alphaSHA256": "1b5c6c1cbe2ecce8accc98384d7f21b23c4273fd863ffd157338d8d56cde9ab3",
+      "sourceSHA256": "f472a000a5d2c999462100e65ad65a87efc05ad9fa4257b2b6feaf49873edef4",
+      "shinySHA256": "1703ce3ba333694de1bcad237db440bd1209668c198b136ecaa0e5029e1316a0",
+      "alphaSHA256": "de1952c79b2b24de42fa2a633f28a13da20cacbe3941299fef4513e9a0183858",
       "alphaPreserved": true
     },
     {
@@ -1238,9 +1243,9 @@
         512,
         512
       ],
-      "sourceSHA256": "74e229d50987c7a82eb26a83c9844092ff70492194fe1dc38a77b8c4f7f4c340",
-      "shinySHA256": "8c09feb24877e3d0279d065ba9df6f599c6d6dedb2dfd770f9464ad643d162b0",
-      "alphaSHA256": "a9b094a2ccfab0c113af791685aca904e2af7d5ee6bf41b3563c42368dd042f0",
+      "sourceSHA256": "0d9efaec85fbd42a3df777b9feb05fd86cc0a04c4e9232e4c095a36bd608ee4c",
+      "shinySHA256": "1845852ee9e7bbc2141c29dfb3c5ae1c12db8326fb92db8cd5ce4b047f65f766",
+      "alphaSHA256": "4916889c3429934613a7585c02a162e932596820241a1147d67df89b6e244d64",
       "alphaPreserved": true
     },
     {
@@ -1337,6 +1342,18 @@
       "sourceSHA256": "da66a5af734284691e2f7d8efa19f06930d6a481a75f8fe4cec95436dc4433ef",
       "shinySHA256": "9b3e80bd8e9bc5c7a47ca7855b5fd1bf7a2eab9ab6122e2fa5ee308b83d86fde",
       "alphaSHA256": "e104fd8fd72772b8b819ca77193df5f6e82b002beb57a08500542f0c952afd89",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/salamencemega.webp",
+      "shiny": "assets/chibi-painted/shiny/salamencemega.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "d1250ee36e3de7cbf78bf91fe8359a25ab7d3ad42daa9ac67b1f777dc65cceba",
+      "shinySHA256": "d6c7094a52b52487ced506a0141a75dc44682ea39a2410c61eed3e7fb8f4e5e8",
+      "alphaSHA256": "0b273cba34027ba6285c8ec39a086372bd033508d41253cbead96c24fd81bd69",
       "alphaPreserved": true
     }
   ]

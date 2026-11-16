@@ -8,6 +8,7 @@ import colorsys,json,hashlib
 from PIL import Image,ImageDraw,ImageFilter
 from lineage_palette_rules import LINEAGE_IDS,recolour_lineage
 from chibi53_palette_rules import IDS as CHIBI53_IDS,recolour_chibi53
+from chibi54_palette_rules import IDS as CHIBI54_IDS,recolour_chibi54
 ROOT=Path(__file__).resolve().parents[1]
 entries=json.loads((ROOT/'docs/shiny-palette-sources.json').read_text())
 # Material mask separates Gigantamax Charizard's orange skin from its orange flames.
@@ -51,6 +52,7 @@ ImageDraw.Draw(seviper_eye).polygon([(166,179),(177,155),(200,148),(198,171),(18
 relicanth_eye=Image.new('1',(512,512))
 ImageDraw.Draw(relicanth_eye).ellipse((124,224,177,282),fill=1)
 def recolour(id,r,g,b,x,y):
+ if id in CHIBI54_IDS:return recolour_chibi54(id,r,g,b,x,y)
  if id in CHIBI53_IDS:return recolour_chibi53(id,r,g,b,x,y)
  if id in LINEAGE_IDS:return recolour_lineage(id,r,g,b,x,y)
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
@@ -294,7 +296,7 @@ for e in entries:
  report.append({'id':e['id'],'changed':changed,'visible':visible})
 registry={};asset_report=[]
 for source,out in outputs.items():
- src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp','cloyster.webp','pinsir.webp','tauros.webp','skarmory.webp','torkoal.webp','absol.webp','seviper.webp','shuckle.webp','relicanth.webp','chatot.webp','heracross.webp',*[id+'.webp' for id in LINEAGE_IDS],*[id+'.webp' for id in CHIBI53_IDS]] else {'quality':90}))
+ src=Path(source);dest=ROOT/('assets/chibi-painted/shiny/'+src.name if 'chibi-painted' in source else 'assets/'+src.stem+'-shiny.webp');dest.parent.mkdir(parents=True,exist_ok=True);out.save(dest,'WEBP',method=6,**({'lossless':True} if src.name in ['mega-dragonite.webp','mega-raichu-y.webp','pikachugmax.webp','gengargmax.webp','alakazam.webp','kadabra.webp','venomoth.webp','tentacruel.webp','cloyster.webp','pinsir.webp','tauros.webp','skarmory.webp','torkoal.webp','absol.webp','seviper.webp','shuckle.webp','relicanth.webp','chatot.webp','heracross.webp',*[id+'.webp' for id in LINEAGE_IDS],*[id+'.webp' for id in CHIBI53_IDS],*[id+'.webp' for id in CHIBI54_IDS]] else {'quality':90}))
  assert Image.open(dest).getchannel('A').tobytes()==images[source].getchannel('A').tobytes()
  asset_report.append({'source':source,'shiny':str(dest.relative_to(ROOT)),'dimensions':list(out.size),'sourceSHA256':hashlib.sha256((ROOT/source).read_bytes()).hexdigest(),'shinySHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'alphaSHA256':hashlib.sha256(out.getchannel('A').tobytes()).hexdigest(),'alphaPreserved':True})
  for e in entries:

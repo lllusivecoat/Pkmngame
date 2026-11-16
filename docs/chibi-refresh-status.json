@@ -10,13 +10,13 @@
     "tentacruel"
   ],
   "redrawn": [
-    "tentacruel"
-  ],
-  "unchangedAfterRejectedRedraw": [
+    "tentacruel",
     "goomy",
     "bagon",
+    "trapinch"
+  ],
+  "unchangedAfterRejectedRedraw": [
     "pupitar",
-    "trapinch",
     "cloyster",
     "venomoth",
     "alakazam"
@@ -26,13 +26,13 @@
   ],
   "activeRelatedMegas": [
     "tyranitarmega",
-    "baxcaliburmega"
+    "baxcaliburmega",
+    "salamencemega"
   ],
   "pendingRelatedMegas": [
     "alakazammega",
     "garchompmega",
     "metagrossmega",
-    "salamencemega",
     "garchompmegaz"
   ]
 }

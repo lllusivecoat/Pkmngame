@@ -917,5 +917,16 @@
     "columns": 1,
     "rows": 1,
     "form": "baxcaliburmega"
+  },
+  {
+    "id": "salamencemega",
+    "name": "Salamence-Mega",
+    "species": "salamence",
+    "kind": "mega",
+    "form": "salamencemega",
+    "sheet": "assets/chibi-painted/salamencemega.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]
