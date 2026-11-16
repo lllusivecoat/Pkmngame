@@ -476,3 +476,22 @@ Missing paintings use explicitly labelled Normal/Shiny placeholders in encounter
 New families and standalone species have 61 authored encounter sites across the existing region areas. Later stages are obtained through evolution; previously catchable evolved species remain catchable. Fossil species have rare prototype encounters in Obsidian Quarry. Articuno, Zapdos, Moltres, Mewtwo and Mew only enter their specific encounter tables when weather and activity time both match. No new species is automatically marked discovered or granted to the player.
 
 Data: `kanto151-data.js`. Readable encounter sites: `docs/kanto151-habitats.json`. Batch status: `docs/kanto151-status.json`. Build with `node scripts/build-kanto151.mjs --fetch` to cache canonical PokeAPI/api-data references, then `node scripts/build-pokemon-sizes.mjs`. Later rebuilds can omit `--fetch`; the cache defaults to the system temporary directory’s `kanto151` folder and can be overridden with `KANTO151_CACHE`. Runtime and normal builds use the checked-in snapshot and make no API requests.
+
+## Gym Leader mode (v0.37.0)
+
+The default game is now a personal Gym career. Start with 1,200 coins, purchase two entry-level Pokémon or one premium partner, then press **Accept challenger** on your map. The NPC walks through the entrance; **Begin defence** starts a manual battle using the existing simulator. Defeat the complete team for the advertised prize and 20 Gym reputation. Defeat, withdrawal and recovery cost no money. Each defence settles once; battle state is persisted so reloading resumes it. Gym Pokémon cannot be captured from challengers. Normal variants are sold in the first shop; existing chibis and pending-art labels remain unchanged.
+
+Reputation unlocks new stock, stronger and larger NPC teams, and Local → Recognised (60) → Established (180) Gym status. Stock does not rotate in this first version. Pokémon used in battle still gain XP and Mastery. Six active party slots and the existing collection, moves, held items, evolution and trainer appearance editor are reused.
+
+**Decorate Gym** places owned decorations on the nine-by-nine personal map. Two ferns are included. Buy more in the decoration shop, select a decoration and tap a tile, or select Remove to return it to storage. The entrance, central aisle, leader platform and battle court are protected. Choose Woodland, Coastal or Midnight flooring and rename the Gym. Decorations are cosmetic.
+
+- `gym-mode.js`: charter, shop/economy, challenger queue, defence settlement, decoration placement and save adapter.
+- `gym-ui.js`, `gym.css`: responsive Gym dashboard, map, stock and decoration screens.
+- `battle.js`: defence entry point and outcome; ordinary adventure/arena battles retain their existing rules.
+- `app.js`: mode routing and shared battle/collection UI.
+- `tests/gym-mode.test.mjs`: real wins/losses, exact payouts, session reload, separate saves, economy and decoration rules.
+- `scripts/gym-browser-smoke.mjs`: real starting purchases, NPC arrival, battle reload, victory, next purchase, withdrawal, decorations and desktop/mobile navigation.
+
+Gym progression uses **`greenwood.gym.v1`** in localStorage. The old **`greenwood.save.v2`** adventure save is not migrated, overwritten or reset by Gym mode. Open **Settings → Open previous adventure mode**, or use `?mode=adventure`, to continue it. `?mode=gym` explicitly opens Gym mode. Export/import/reset affect the current mode only; imports reject a save from the other mode. Colour theme remains a shared appearance preference. The existing app installation works with Gym mode as the default launch.
+
+Future systems (not yet playable): puzzles, placed/hired trainers, visiting player challenges, automated Gym defence strategies, server saves/economy, Elite Four qualification and Champion battles. Domain actions and Gym storage are isolated so a server can replace the adapter later. Current NPC challengers, funds and reputation are local prototype progression.
