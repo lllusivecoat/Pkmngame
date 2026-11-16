@@ -430,7 +430,7 @@ Species snapshots: `wildlife-species.js`. Habitat configuration: `docs/wildlife-
 
 ### Standard evolution lineages
 
-All ten requested standard families (30 stages) are playable. Twenty-three stages have finished painted Normal/Shiny pairs. Seven stages use explicit “Chibi art pending” / “Shiny art pending” placeholders while their paintings are prepared; a Shiny placeholder is not finished species artwork.
+All ten requested standard families (30 stages) are playable. Twenty-six stages have finished painted Normal/Shiny pairs. Four stages use explicit “Chibi art pending” / “Shiny art pending” placeholders while their paintings are prepared; a Shiny placeholder is not finished species artwork.
 
 | Base form location | Evolution line |
 |---|---|
@@ -447,7 +447,7 @@ All ten requested standard families (30 stages) are playable. Twenty-three stage
 
 Only base forms enter encounter tables; train and evolve individuals to obtain later stages. Evolution retains UID, Shiny status, Mastery, party order and held equipment. Goodra uses world weather, not battle-created rain. Everstone remains supported. Hisuian branches are not registered.
 
-New finished pairs: Gible, Gabite, Jangmo-o, Kommo-o, Arctibax, Bagon, Hakamo-o and Baxcalibur. Pending paintings: Larvitar, Pupitar, Tyranitar, Shelgon, Salamence, Garchomp and Frigibax. `artwork-status.js` is the explicit pending-art allowlist used in gallery, cards, battles and followers; all other additions still require paired painted files. Remove an ID from that set only after registering its finished Normal/Shiny pair in `chibi-sources.js`. This changes rendering, never saved creatures. Canonical reference archives remain separate from gameplay artwork.
+New finished pairs: Gible, Gabite, Jangmo-o, Kommo-o, Arctibax, Bagon, Hakamo-o, Baxcalibur, Pupitar, Salamence and Frigibax. Pending paintings: Larvitar, Tyranitar, Shelgon and Garchomp. `artwork-status.js` is the explicit pending-art allowlist used in gallery, cards, battles and followers; all other additions still require paired painted files. Remove an ID from that set only after registering its finished Normal/Shiny pair in `chibi-sources.js`. This changes rendering, never saved creatures. Canonical reference archives remain separate from gameplay artwork.
 
 Active families are in `docs/active-lineages.json`, canonical records in `lineage-species.js`, habitat plans in `docs/lineage-habitats.json`, and art progress in `docs/lineage-status.json`. Rebuild with `node scripts/build-lineage-species.mjs`; stages without paired files must be explicitly declared pending. The builder reads cached PokeAPI `pokemon/{number}` and `pokemon-species/{number}` JSON from `/tmp/dragon-lines47/`. Shiny material rules live in `scripts/lineage_palette_rules.py`, integrated into the paired-palette builder; positions and alpha are unchanged.
 

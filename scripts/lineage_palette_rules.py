@@ -1,7 +1,7 @@
 """Material-specific canonical Shiny recolours; never redraw or move source pixels."""
 import colorsys
 from PIL import Image,ImageDraw
-LINEAGE_IDS={'hakamoo','baxcalibur','bagon','gible','gabite','jangmoo','kommoo','arctibax','beldum','metang','metagross','trapinch','vibrava','flygon','deino','zweilous','hydreigon','goomy','sliggoo','goodra','dreepy','drakloak','dragapult'}
+LINEAGE_IDS={'frigibax','salamence','pupitar','hakamoo','baxcalibur','bagon','gible','gabite','jangmoo','kommoo','arctibax','beldum','metang','metagross','trapinch','vibrava','flygon','deino','zweilous','hydreigon','goomy','sliggoo','goodra','dreepy','drakloak','dragapult'}
 def mask(polygons):
  im=Image.new('1',(512,512));d=ImageDraw.Draw(im)
  for p in polygons:d.polygon(p,fill=1)
@@ -21,7 +21,17 @@ def recolour_lineage(id,r,g,b,x,y):
  if v<.12 or(s<.025 and v>.985):return r,g,b
  H,S,V=h,s,v;px=(min(511,int(x*512)),min(511,int(y*512)))
  def tint(hue,sat=None,gain=1):return hue,s if sat is None else sat,min(1,v*gain)
- if id=='hakamoo':
+ if id=='frigibax':
+  if 30<h<75 and s>.1 and (x<.3 or x>.68):H,S,V=tint(335,min(.36,s*.3))
+  elif 220<h<310 and .025<s<.3:H,S,V=tint(180,.12,1.01)
+  elif 195<h<250 and s>.3 and x>.6 and y<.45:H,S,V=tint(190,s*.9)
+ elif id=='salamence':
+  if 60<int(x*512)<124 and 213<int(y*512)<274 and (h>315 or h<25):return r,g,b
+  if 175<h<250 and s>.12:H,S,V=tint(112,min(.8,s*.95),1.02)
+  elif (h>315 or h<25) and s>.12:H,S,V=tint(20,s*.96,1.03)
+ elif id=='pupitar':
+  if 185<h<275 and s>.06:H,S,V=tint(270,min(.65,max(.16,s*1.6)),.98)
+ elif id=='hakamoo':
   if 236<int(x*512)<286 and 155<int(y*512)<213:return r,g,b
   if 30<h<75 and s>.08:H,S,V=tint(325,s*.9)
   elif s<.3 and v>.25 and (y<.5 or x<.62 and y<.80):H,S,V=tint(60,.68)

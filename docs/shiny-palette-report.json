@@ -514,6 +514,21 @@
       "id": "baxcalibur",
       "changed": 53492,
       "visible": 121296
+    },
+    {
+      "id": "pupitar",
+      "changed": 105031,
+      "visible": 128174
+    },
+    {
+      "id": "salamence",
+      "changed": 117777,
+      "visible": 133310
+    },
+    {
+      "id": "frigibax",
+      "changed": 96918,
+      "visible": 137871
     }
   ],
   "assets": [
@@ -1235,6 +1250,42 @@
       "sourceSHA256": "abb1d906b72ea13a37fd4841625942ff152b7e91a6ade4a5b099b6fde858cdb9",
       "shinySHA256": "699c536985a656ba81d83694058dedec84ed3ee09d885275ff966ef3a1405bb3",
       "alphaSHA256": "78e5ccbcb268b6a45c5e87398ab37565ea9f227040ce66ee77fae2fa1c081434",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/pupitar.webp",
+      "shiny": "assets/chibi-painted/shiny/pupitar.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "1a5ef0619f716c54c97780318b80c3fe8f72f0badddd24ec2f974aab5777224a",
+      "shinySHA256": "eb5d027d0799753f76fd9fc61aaf7326fced0f5fc31556c2b4951f74add07dc7",
+      "alphaSHA256": "cb0fad613d91ec4fe4e10a0af67c5fc1f6ec5780c9c81a2474fb291849cc9b38",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/salamence.webp",
+      "shiny": "assets/chibi-painted/shiny/salamence.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "1c6ac312e23503983023f8b90e650f8e9d386a93d043218a8616c2fdc5eed321",
+      "shinySHA256": "a9b4c340fadca3a89ff415d969dd095cf7597c89ab8382fb06389f1c703d25b7",
+      "alphaSHA256": "a0515a18a40025670ba60f73c88a8d7f891f9bc18b597a5327422ce349befc0b",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/frigibax.webp",
+      "shiny": "assets/chibi-painted/shiny/frigibax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "5563a33851812800ff644d6c5846d46b3cdf52643bf375d52acdba055fb334a5",
+      "shinySHA256": "66c2cdff51a6463608a6875a7f1f4286f309f596842ee5197264a20357b3e65f",
+      "alphaSHA256": "f21730b4f178e139f86356a91e62a0ad2cb8fe588a703f290b7a4c4a3e8b88a1",
       "alphaPreserved": true
     }
   ]

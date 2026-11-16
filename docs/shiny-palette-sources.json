@@ -855,5 +855,35 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "pupitar",
+    "name": "Pupitar",
+    "species": "pupitar",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/pupitar.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "salamence",
+    "name": "Salamence",
+    "species": "salamence",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/salamence.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "frigibax",
+    "name": "Frigibax",
+    "species": "frigibax",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/frigibax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]
