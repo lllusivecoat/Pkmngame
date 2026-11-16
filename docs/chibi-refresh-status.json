@@ -1,0 +1,38 @@
+{
+  "requestedRedraws": [
+    "goomy",
+    "bagon",
+    "pupitar",
+    "trapinch",
+    "cloyster",
+    "venomoth",
+    "alakazam",
+    "tentacruel"
+  ],
+  "redrawn": [
+    "tentacruel"
+  ],
+  "unchangedAfterRejectedRedraw": [
+    "goomy",
+    "bagon",
+    "pupitar",
+    "trapinch",
+    "cloyster",
+    "venomoth",
+    "alakazam"
+  ],
+  "newFinishedSpecies": [
+    "garchomp"
+  ],
+  "activeRelatedMegas": [
+    "tyranitarmega",
+    "baxcaliburmega"
+  ],
+  "pendingRelatedMegas": [
+    "alakazammega",
+    "garchompmega",
+    "metagrossmega",
+    "salamencemega",
+    "garchompmegaz"
+  ]
+}

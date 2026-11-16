@@ -430,7 +430,7 @@ Species snapshots: `wildlife-species.js`. Habitat configuration: `docs/wildlife-
 
 ### Standard evolution lineages
 
-All ten requested standard families (30 stages) are playable. Twenty-six stages have finished painted Normal/Shiny pairs. Four stages use explicit “Chibi art pending” / “Shiny art pending” placeholders while their paintings are prepared; a Shiny placeholder is not finished species artwork.
+All ten requested standard families (30 stages) are playable. Twenty-seven stages have finished painted Normal/Shiny pairs. Three stages use explicit “Chibi art pending” / “Shiny art pending” placeholders while their paintings are prepared; a Shiny placeholder is not finished species artwork.
 
 | Base form location | Evolution line |
 |---|---|
@@ -447,10 +447,20 @@ All ten requested standard families (30 stages) are playable. Twenty-six stages 
 
 Only base forms enter encounter tables; train and evolve individuals to obtain later stages. Evolution retains UID, Shiny status, Mastery, party order and held equipment. Goodra uses world weather, not battle-created rain. Everstone remains supported. Hisuian branches are not registered.
 
-New finished pairs: Gible, Gabite, Jangmo-o, Kommo-o, Arctibax, Bagon, Hakamo-o, Baxcalibur, Pupitar, Salamence and Frigibax. Pending paintings: Larvitar, Tyranitar, Shelgon and Garchomp. `artwork-status.js` is the explicit pending-art allowlist used in gallery, cards, battles and followers; all other additions still require paired painted files. Remove an ID from that set only after registering its finished Normal/Shiny pair in `chibi-sources.js`. This changes rendering, never saved creatures. Canonical reference archives remain separate from gameplay artwork.
+New finished pairs: Gible, Gabite, Jangmo-o, Kommo-o, Arctibax, Bagon, Hakamo-o, Baxcalibur, Pupitar, Salamence, Frigibax and Garchomp. Pending paintings: Larvitar, Tyranitar and Shelgon. `artwork-status.js` is the explicit pending-art allowlist used in gallery, cards, battles and followers; all other additions still require paired painted files. Remove an ID from that set only after registering its finished Normal/Shiny pair in `chibi-sources.js`. This changes rendering, never saved creatures. Canonical reference archives remain separate from gameplay artwork.
 
 Active families are in `docs/active-lineages.json`, canonical records in `lineage-species.js`, habitat plans in `docs/lineage-habitats.json`, and art progress in `docs/lineage-status.json`. Rebuild with `node scripts/build-lineage-species.mjs`; stages without paired files must be explicitly declared pending. The builder reads cached PokeAPI `pokemon/{number}` and `pokemon-species/{number}` JSON from `/tmp/dragon-lines47/`. Shiny material rules live in `scripts/lineage_palette_rules.py`, integrated into the paired-palette builder; positions and alpha are unchanged.
 
 Relicanth’s painted pair has a narrow, closed slit for its front eye. Its flat red body spot is a species marking; it remains separate from the eye, whose RGB is preserved between palettes.
 
 Goodra uses a conservative chibi revision of its original standing design, preserving its face and full body. Flygon has more compact painted chibi proportions. Both Shiny versions are material-specific recolours of their matching Normal drawing.
+
+### Compact chibi refresh and related Mega forms
+
+Tentacruel has a larger bell and shorter tentacles. Garchomp now has finished paired painted art. Redraw attempts for Goomy, Bagon, Pupitar, Trapinch, Cloyster, Venomoth and Alakazam were rejected by the image service, so those drawings are unchanged; progress is recorded in `docs/chibi-refresh-status.json`.
+
+Mega Tyranitar and Mega Baxcalibur are playable temporary transformations. Equip Tyranitarite or Baxcalibrite from Market (or developer test supplies), choose Modern battle rules and select Mega Evolution during a move. Species, UID, party position, Shiny status and Mastery remain unchanged after battle. Both forms have canonical stats, types, abilities, dimensions and matching painted Normal/Shiny art. Mega Baxcalibur's canonical Shiny is subtle: it retains the blue hide and red claws, rather than taking the base form's teal/pink palette.
+
+Mega Alakazam, Mega Metagross, Mega Salamence, Mega Garchomp and Mega Garchomp Z remain inactive while their paired artwork is pending. Unregistered Mega forms cannot silently transform and display their base-species image. The item catalogue labels their stones accordingly.
+
+`mega-expansion.js` contains active forms; `docs/active-megas.json` is the activation list. `docs/mega-expansion-plan.json` prepares all seven canonical records. Rebuild with `node scripts/build-mega-expansion.mjs` and then `node scripts/build-pokemon-sizes.mjs`. The builder requires paired paintings before activation, reads bundled PokeAPI identifiers from `docs/mega-reference-index.json` and the pinned simulator, and needs no live API calls. New material-specific Shiny rules live in `scripts/chibi53_palette_rules.py`.

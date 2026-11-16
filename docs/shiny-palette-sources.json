@@ -885,5 +885,37 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "garchomp",
+    "name": "Garchomp",
+    "species": "garchomp",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/garchomp.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "tyranitarmega",
+    "name": "Tyranitar-Mega",
+    "species": "tyranitar",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/tyranitarmega.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1,
+    "form": "tyranitarmega"
+  },
+  {
+    "id": "baxcaliburmega",
+    "name": "Baxcalibur-Mega",
+    "species": "baxcalibur",
+    "kind": "mega",
+    "sheet": "assets/chibi-painted/baxcaliburmega.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1,
+    "form": "baxcaliburmega"
   }
 ]

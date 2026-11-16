@@ -342,8 +342,8 @@
     },
     {
       "id": "tentacruel",
-      "changed": 72377,
-      "visible": 86066
+      "changed": 120307,
+      "visible": 141384
     },
     {
       "id": "cloyster",
@@ -529,6 +529,21 @@
       "id": "frigibax",
       "changed": 96918,
       "visible": 137871
+    },
+    {
+      "id": "tyranitarmega",
+      "changed": 84081,
+      "visible": 100453
+    },
+    {
+      "id": "baxcaliburmega",
+      "changed": 42314,
+      "visible": 129553
+    },
+    {
+      "id": "garchomp",
+      "changed": 87389,
+      "visible": 120933
     }
   ],
   "assets": [
@@ -839,9 +854,9 @@
         512,
         512
       ],
-      "sourceSHA256": "32cfb4f5dc4a4c637b391ef15a88021c0cab1acb22b79269768571a995e4ae38",
-      "shinySHA256": "cfd89fcb0297ce7f514cd4267b4d112013381c4eedff8fbf60c7b651d51f2eaf",
-      "alphaSHA256": "f685f0a0201c1450733ecbc8239538980d1de0c763f2a873bf797447f3b9c936",
+      "sourceSHA256": "24d85bbf153e3be9380fe652617280af1cd8fc3832bf3b2ec192b6bc1d3cca41",
+      "shinySHA256": "f36bed2bfa55b46008699ed2c24b465ebc6d248c1de58a54187267196f975e09",
+      "alphaSHA256": "30b63c1f1125c317374bbb528e6ae5a8362903981ac6025544b699dae52ad5cf",
       "alphaPreserved": true
     },
     {
@@ -1286,6 +1301,42 @@
       "sourceSHA256": "5563a33851812800ff644d6c5846d46b3cdf52643bf375d52acdba055fb334a5",
       "shinySHA256": "66c2cdff51a6463608a6875a7f1f4286f309f596842ee5197264a20357b3e65f",
       "alphaSHA256": "f21730b4f178e139f86356a91e62a0ad2cb8fe588a703f290b7a4c4a3e8b88a1",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/tyranitarmega.webp",
+      "shiny": "assets/chibi-painted/shiny/tyranitarmega.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "87e78f1ae46a1cf5fbdb5a63a5d5f0e37d9c84f06cd13ff7c55d0c1a735663b4",
+      "shinySHA256": "1403e05daca0dba1f3a3ac037e4f2cec409b1fce658d1c1e167582d97ead0faa",
+      "alphaSHA256": "2df46f422d591101598bf9d15b43a6a586a8f13fe85958ba438fdcc74f1856ec",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/baxcaliburmega.webp",
+      "shiny": "assets/chibi-painted/shiny/baxcaliburmega.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "3ec51c607af22a01062c803ab45b3f4dfb444c8ab9291c7a05c983a15b56bb37",
+      "shinySHA256": "ea4bd82f4ba28ffa5b96941d3122b4900257ce37e51ea1724197bcf6cc7780b2",
+      "alphaSHA256": "b661712ba55440f35fcd340a31215a173928475252115e5259ff5c4532528b6f",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/garchomp.webp",
+      "shiny": "assets/chibi-painted/shiny/garchomp.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "da66a5af734284691e2f7d8efa19f06930d6a481a75f8fe4cec95436dc4433ef",
+      "shinySHA256": "9b3e80bd8e9bc5c7a47ca7855b5fd1bf7a2eab9ab6122e2fa5ee308b83d86fde",
+      "alphaSHA256": "e104fd8fd72772b8b819ca77193df5f6e82b002beb57a08500542f0c952afd89",
       "alphaPreserved": true
     }
   ]

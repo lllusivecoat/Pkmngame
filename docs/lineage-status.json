@@ -24,7 +24,7 @@
     "jangmoo"
   ],
   "gameplayPendingFamilies": {},
-  "paintedArtworkReady": 26,
+  "paintedArtworkReady": 27,
   "paintedArtworkTotal": 30,
   "pendingArtFamilies": {
     "larvitar": [
@@ -33,10 +33,7 @@
     ],
     "bagon": [
       "shelgon"
-    ],
-    "gible": [
-      "garchomp"
     ]
   },
-  "reason": "All ten standard lines are playable. Four stages have explicitly labelled temporary Normal/Shiny artwork; finished pairs replace these without altering saved individuals."
+  "reason": "All ten standard lines are playable. Three stages have explicitly labelled temporary Normal/Shiny artwork; finished pairs replace these without altering saved individuals."
 }
