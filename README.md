@@ -430,18 +430,25 @@ Species snapshots: `wildlife-species.js`. Habitat configuration: `docs/wildlife-
 
 ### Standard evolution lineages
 
-Five complete families are playable with painted Normal/Shiny pairs at every stage:
+All ten requested standard families (30 stages) are playable. Twenty stages have finished painted Normal/Shiny pairs. Ten stages use explicit “Chibi art pending” / “Shiny art pending” placeholders while their paintings are prepared; a Shiny placeholder is not finished species artwork.
 
 | Base form location | Evolution line |
 |---|---|
 | Thunder Ridge / Stormbridge Pass | Beldum → Metang (20) → Metagross (45) |
 | Ashlands / Obsidian Quarry | Trapinch → Vibrava (35) → Flygon (45) |
+| Thunder Ridge / Echo Crags | Larvitar → Pupitar (30) → Tyranitar (55) |
+| Thunder Ridge / Thunderhead Summit | Bagon → Shelgon (30) → Salamence (50) |
+| Ashlands / Cinder Caldera | Gible → Gabite (24) → Garchomp (48) |
 | Ashlands / Ashen Ruins | Deino → Zweilous (50) → Hydreigon (64) |
 | Greenwood / Willow Brook | Goomy → Sliggoo (40) → Goodra (50, world Rain or Storm) |
 | Greenwood / Moonlit Shore | Dreepy → Drakloak (50) → Dragapult (60) |
+| Frostfall / Glacier Sanctuary | Frigibax → Arctibax (35) → Baxcalibur (54) |
+| Thunder Ridge / Thunderhead Summit | Jangmo-o → Hakamo-o (35) → Kommo-o (45) |
 
-Only base forms enter encounter tables; train and evolve individuals to obtain later stages. Evolution retains UID, Shiny palette, Mastery, party order and held equipment. Goodra uses world weather, not battle-created rain. Everstone remains supported. These are the requested standard lines; Hisuian branches are not registered.
+Only base forms enter encounter tables; train and evolve individuals to obtain later stages. Evolution retains UID, Shiny status, Mastery, party order and held equipment. Goodra uses world weather, not battle-created rain. Everstone remains supported. Hisuian branches are not registered.
 
-The Larvitar, Bagon, Gible, Frigibax and Jangmo-o families remain unregistered because their painted artwork sets are incomplete following generation rejections. All 30 requested canonical records are prepared in `docs/pending-lineage-species.json`. Active families are listed in `docs/active-lineages.json`; their data lives in `lineage-species.js`, with habitat plans in `docs/lineage-habitats.json`.
+New finished pairs: Gible, Gabite, Jangmo-o, Kommo-o and Arctibax. Pending paintings: Larvitar, Pupitar, Tyranitar, Bagon, Shelgon, Salamence, Garchomp, Frigibax, Baxcalibur and Hakamo-o. `artwork-status.js` is the explicit pending-art allowlist used in gallery, cards, battles and followers; all other additions still require paired painted files. Remove an ID from that set only after registering its finished Normal/Shiny pair in `chibi-sources.js`. This changes rendering, never saved creatures. Canonical reference archives remain separate from gameplay artwork.
 
-Rebuild with `node scripts/build-lineage-species.mjs`; it refuses to register a stage without both painted palettes. The builder reads cached PokeAPI `pokemon/{number}` and `pokemon-species/{number}` JSON from `/tmp/dragon-lines47/`. Use `--draft` to inspect the complete requested data without activating unfinished artwork. Shiny rules live in `scripts/lineage_palette_rules.py`, integrated into the existing paired-palette builder; positions and alpha are unchanged.
+Active families are in `docs/active-lineages.json`, canonical records in `lineage-species.js`, habitat plans in `docs/lineage-habitats.json`, and art progress in `docs/lineage-status.json`. Rebuild with `node scripts/build-lineage-species.mjs`; stages without paired files must be explicitly declared pending. The builder reads cached PokeAPI `pokemon/{number}` and `pokemon-species/{number}` JSON from `/tmp/dragon-lines47/`. Shiny material rules live in `scripts/lineage_palette_rules.py`, integrated into the paired-palette builder; positions and alpha are unchanged.
+
+Relicanth’s painted pair has a narrow, closed slit for its front eye. Its flat red body spot is a species marking; it remains separate from the eye, whose RGB is preserved between palettes.

@@ -1,7 +1,7 @@
-import {supportsGmax} from './forms.js?v=20261116-roster47';
-import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261116-roster47';
-import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261116-roster47';
-import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261116-roster47';
+import {supportsGmax} from './forms.js?v=20261116-roster48';
+import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261116-roster48';
+import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261116-roster48';
+import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261116-roster48';
 export {itemCatalog,abilityCatalog};
 export const ITEM_CATEGORIES=['All','Balls','Medicine','Battle items','Berries','Held items','TMs','Evolution'];
 const aliases={pokeball:'traps',potion:'potions'};

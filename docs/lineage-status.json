@@ -14,11 +14,19 @@
   "activeFamilies": [
     "beldum",
     "trapinch",
+    "larvitar",
+    "bagon",
+    "gible",
     "deino",
     "goomy",
-    "dreepy"
+    "dreepy",
+    "frigibax",
+    "jangmoo"
   ],
-  "pendingFamilies": {
+  "gameplayPendingFamilies": {},
+  "paintedArtworkReady": 20,
+  "paintedArtworkTotal": 30,
+  "pendingArtFamilies": {
     "larvitar": [
       "larvitar",
       "pupitar",
@@ -30,22 +38,15 @@
       "salamence"
     ],
     "gible": [
-      "gible",
-      "gabite",
       "garchomp"
     ],
     "frigibax": [
       "frigibax",
-      "arctibax",
       "baxcalibur"
     ],
     "jangmoo": [
       "hakamoo"
     ]
   },
-  "reason": "Incomplete painted Normal/Shiny sets after image generation rejections. Unfinished families are not playable.",
-  "draftNormalArtwork": {
-    "jangmoo": "docs/draft-art/jangmoo.webp",
-    "kommoo": "docs/draft-art/kommoo.webp"
-  }
+  "reason": "All ten standard lines are playable. Ten stages have explicitly labelled temporary Normal/Shiny artwork; finished pairs replace these without altering saved individuals."
 }

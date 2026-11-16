@@ -775,5 +775,55 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "gible",
+    "name": "Gible",
+    "species": "gible",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/gible.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "gabite",
+    "name": "Gabite",
+    "species": "gabite",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/gabite.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "jangmoo",
+    "name": "Jangmo-o",
+    "species": "jangmoo",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/jangmoo.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "kommoo",
+    "name": "Kommo-o",
+    "species": "kommoo",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/kommoo.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "arctibax",
+    "name": "Arctibax",
+    "species": "arctibax",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/arctibax.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

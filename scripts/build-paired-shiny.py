@@ -47,6 +47,8 @@ chatot_beak=Image.new('1',(512,512))
 ImageDraw.Draw(chatot_beak).polygon([(128,232),(130,211),(139,188),(157,171),(181,170),(198,181),(202,204),(202,225),(179,223),(161,230),(141,243)],fill=1)
 seviper_eye=Image.new('1',(512,512))
 ImageDraw.Draw(seviper_eye).polygon([(166,179),(177,155),(200,148),(198,171),(180,180)],fill=1)
+relicanth_eye=Image.new('1',(512,512))
+ImageDraw.Draw(relicanth_eye).ellipse((124,224,177,282),fill=1)
 def recolour(id,r,g,b,x,y):
  if id in LINEAGE_IDS:return recolour_lineage(id,r,g,b,x,y)
  h,s,v=colorsys.rgb_to_hsv(r/255,g/255,b/255);h*=360
@@ -195,7 +197,7 @@ def recolour(id,r,g,b,x,y):
  elif id=='shuckle':
   if (h>345 or h<9) and s>.35 and y>.4:H,S,V=tint(220,s)
  elif id=='relicanth':
-  if (h<22 or h>330) and .04<s<.32 and v>.18:H,S,V=tint(177,max(.4,min(.7,s*2.2)),1.18)
+  if not relicanth_eye.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and (h<22 or h>330) and .04<s<.32 and v>.18:H,S,V=tint(177,max(.4,min(.7,s*2.2)),1.18)
  elif id=='cloyster':
   if not cloyster_face.getpixel((min(511,int(x*512)),min(511,int(y*512)))) and 245<h<330 and s>.03:H,S,V=tint(211,min(.68,s*1.45),1.02)
  elif id=='tentacruel':

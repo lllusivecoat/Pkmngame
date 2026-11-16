@@ -382,8 +382,8 @@
     },
     {
       "id": "relicanth",
-      "changed": 24052,
-      "visible": 61719
+      "changed": 20989,
+      "visible": 57820
     },
     {
       "id": "chatot",
@@ -474,6 +474,31 @@
       "id": "hydreigon",
       "changed": 48561,
       "visible": 101043
+    },
+    {
+      "id": "gible",
+      "changed": 104531,
+      "visible": 136246
+    },
+    {
+      "id": "gabite",
+      "changed": 87243,
+      "visible": 116523
+    },
+    {
+      "id": "jangmoo",
+      "changed": 70769,
+      "visible": 110944
+    },
+    {
+      "id": "kommoo",
+      "changed": 98860,
+      "visible": 135299
+    },
+    {
+      "id": "arctibax",
+      "changed": 66292,
+      "visible": 107658
     }
   ],
   "assets": [
@@ -880,9 +905,9 @@
         512,
         512
       ],
-      "sourceSHA256": "3804b1feeda5953d41fcdcfc96982a59870cda57f61b1bf1b2b54a9c5865d0fe",
-      "shinySHA256": "4f5cf569f0fd957607141fe9891a26204578b53f6f17687b072a6130e52b41d0",
-      "alphaSHA256": "9e6d030df2e28aa9536ed82c164516a0076b4ec418e609b5cb0c4266658a825c",
+      "sourceSHA256": "4e2bbbf1e08a4aaf341e04f29cdd433c49481762df4769aec9852ff685ab9087",
+      "shinySHA256": "bae733afc35bcba6a36cc167285714a44c61ae0bf1d9363a0cae32164c21359f",
+      "alphaSHA256": "3486a4163a1b5bf0f3f3b981ce69b56b4a276c6f3e1a18c01bc6d572f59890f2",
       "alphaPreserved": true
     },
     {
@@ -1099,6 +1124,66 @@
       "sourceSHA256": "b8156c73c26271d07c1827aa90c751bd5f8476d76b6c2854d8082dce6bbb2a82",
       "shinySHA256": "f8177bf83edb83408d79e4e83ad15774261266ea1203c4ecc63e35c58ed67b96",
       "alphaSHA256": "53560fec0258d2d37422d9d0b93462421040c6ad516d44f7494571d2027e5a7e",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/gible.webp",
+      "shiny": "assets/chibi-painted/shiny/gible.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "d0fb9c440a56e49f34d52b8601a5397d63e3ed82b1dadf3cd3e7f05903b606c8",
+      "shinySHA256": "73a1e115bc9d82dda72b1c6654ac1f17813aef4e4de52eb481cbd0150e75fcba",
+      "alphaSHA256": "2073fde9283e4381a253dc3406611ff44bb1f00720bb6ffd652aca3015601606",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/gabite.webp",
+      "shiny": "assets/chibi-painted/shiny/gabite.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "4335af06449230bfd0b22bbc6365f830d7137e25e831d0baa16a40f886f80ebd",
+      "shinySHA256": "f9a588ff3c88b7ebac8b7038da08f692e298e28fe5326b052168c7af41543584",
+      "alphaSHA256": "f97ee8416b1f0c5e6dd7028a993c50db8ff698c175c80cbde914ee271ca21051",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/jangmoo.webp",
+      "shiny": "assets/chibi-painted/shiny/jangmoo.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "0cd62679917ecdce6e7df131db788b9fd9d91d5d027bba88d5ff23b5b3cd6980",
+      "shinySHA256": "e7338a69c9fe0428aeb637016e3a0b2f44e768db42e84699032408a035343b8f",
+      "alphaSHA256": "6aee6812b9c5274ea77b306d235984a33a1db4f75836e72881dfc3d00331f5b5",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/kommoo.webp",
+      "shiny": "assets/chibi-painted/shiny/kommoo.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "98d9a6d1e49b372b45265b63adb3b74cb0cc6bfb28a612f52fdcde0570ffe008",
+      "shinySHA256": "7f62388d81b15e6e1057f6d26c5e72480e7e28507db55b0fbfd29c6b9bcaaf37",
+      "alphaSHA256": "0c110ade0f931704e48facfb1c8c1b17133e7ae238ba3548078749afd28448c8",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/arctibax.webp",
+      "shiny": "assets/chibi-painted/shiny/arctibax.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "530a96c34f4fe138b21db801b92467189021a0e0b77a1483b4c2761f85e3ccdd",
+      "shinySHA256": "fae8581c5a7f6e746207acfd41cbaef365de1e6c3356e6cd027d11b8c4f5f0e0",
+      "alphaSHA256": "b8639cefc928315c21212bfa6bd0b3725ebdae0063432e09a0bffac7af98c2dc",
       "alphaPreserved": true
     }
   ]
