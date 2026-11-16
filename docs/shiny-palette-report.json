@@ -442,8 +442,8 @@
     },
     {
       "id": "goodra",
-      "changed": 105541,
-      "visible": 126330
+      "changed": 100576,
+      "visible": 118246
     },
     {
       "id": "trapinch",
@@ -457,8 +457,8 @@
     },
     {
       "id": "flygon",
-      "changed": 77657,
-      "visible": 88206
+      "changed": 88038,
+      "visible": 97340
     },
     {
       "id": "deino",
@@ -499,6 +499,21 @@
       "id": "arctibax",
       "changed": 66292,
       "visible": 107658
+    },
+    {
+      "id": "bagon",
+      "changed": 44658,
+      "visible": 89753
+    },
+    {
+      "id": "hakamoo",
+      "changed": 68900,
+      "visible": 91687
+    },
+    {
+      "id": "baxcalibur",
+      "changed": 53492,
+      "visible": 121296
     }
   ],
   "assets": [
@@ -1049,9 +1064,9 @@
         512,
         512
       ],
-      "sourceSHA256": "f92d5a853b89a71f78dbfa43658220c6efcd02e629347dde5216d2ad34f7a4ab",
-      "shinySHA256": "00c963ebbff2982585f35a7203421533bbcc0d55fadd4480ad7394f4e6cc8a9e",
-      "alphaSHA256": "607b6b297f2c865eec9148ea2235b3459238b2bf255b094c202a3defad25da7e",
+      "sourceSHA256": "bc2bce8aa78eb644af66794c45c8867720d18279c8c34cf8768ab1b71a007fcf",
+      "shinySHA256": "35bbdf32b49108aab5e56ecfab60ccdc7c7a75be87cefaf56a373f875db59feb",
+      "alphaSHA256": "1fc8051db0fff1a859ef865183a47dfc8eb8666c277d64f96fec2b5ac980296d",
       "alphaPreserved": true
     },
     {
@@ -1085,9 +1100,9 @@
         512,
         512
       ],
-      "sourceSHA256": "3b60e3510682c447d661aae7e0048ceeee4460f69b501a47a2455fa3d96db893",
-      "shinySHA256": "be5841ca666ddd02898e477ccf5784fa1aa972d594a559dbbf44fbf3ccf8a98a",
-      "alphaSHA256": "35404a8cac619f859bfb3eec6f3e3c94a34a748be4e8440b4cdb0e9b7838b62c",
+      "sourceSHA256": "00706d5dd7e6bda297d5ba518f45d72d63ce3f586df3ac7938ca184ebc2567f4",
+      "shinySHA256": "42fa04cdaa866fa78f5f1fd425f1aeb5ebbab9fd83a575e7547be60a874d091b",
+      "alphaSHA256": "702fcb90385e1bff7ccf2be5574e7d0a72bdf3d68d06a463c07d621e7730da60",
       "alphaPreserved": true
     },
     {
@@ -1184,6 +1199,42 @@
       "sourceSHA256": "530a96c34f4fe138b21db801b92467189021a0e0b77a1483b4c2761f85e3ccdd",
       "shinySHA256": "fae8581c5a7f6e746207acfd41cbaef365de1e6c3356e6cd027d11b8c4f5f0e0",
       "alphaSHA256": "b8639cefc928315c21212bfa6bd0b3725ebdae0063432e09a0bffac7af98c2dc",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/bagon.webp",
+      "shiny": "assets/chibi-painted/shiny/bagon.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "74e229d50987c7a82eb26a83c9844092ff70492194fe1dc38a77b8c4f7f4c340",
+      "shinySHA256": "8c09feb24877e3d0279d065ba9df6f599c6d6dedb2dfd770f9464ad643d162b0",
+      "alphaSHA256": "a9b094a2ccfab0c113af791685aca904e2af7d5ee6bf41b3563c42368dd042f0",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/hakamoo.webp",
+      "shiny": "assets/chibi-painted/shiny/hakamoo.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "89e496889d0e1780f848a82d163ea6dd00682a6b605b2fb4b0abbbf00002ed8d",
+      "shinySHA256": "c4f122c18dafb5bbdda6bfd75108b1f3db7867278acc7dd4cda5b5d5f74fa3bd",
+      "alphaSHA256": "efa85604373b526609ce02ae18e296edd4518f63aef12b114fe5e472d03f42fa",
+      "alphaPreserved": true
+    },
+    {
+      "source": "assets/chibi-painted/baxcalibur.webp",
+      "shiny": "assets/chibi-painted/shiny/baxcalibur.webp",
+      "dimensions": [
+        512,
+        512
+      ],
+      "sourceSHA256": "abb1d906b72ea13a37fd4841625942ff152b7e91a6ade4a5b099b6fde858cdb9",
+      "shinySHA256": "699c536985a656ba81d83694058dedec84ed3ee09d885275ff966ef3a1405bb3",
+      "alphaSHA256": "78e5ccbcb268b6a45c5e87398ab37565ea9f227040ce66ee77fae2fa1c081434",
       "alphaPreserved": true
     }
   ]

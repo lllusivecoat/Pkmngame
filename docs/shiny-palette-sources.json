@@ -825,5 +825,35 @@
     "index": 0,
     "columns": 1,
     "rows": 1
+  },
+  {
+    "id": "bagon",
+    "name": "Bagon",
+    "species": "bagon",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/bagon.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "hakamoo",
+    "name": "Hakamo-o",
+    "species": "hakamoo",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/hakamoo.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
+  },
+  {
+    "id": "baxcalibur",
+    "name": "Baxcalibur",
+    "species": "baxcalibur",
+    "kind": "species",
+    "sheet": "assets/chibi-painted/baxcalibur.webp",
+    "index": 0,
+    "columns": 1,
+    "rows": 1
   }
 ]

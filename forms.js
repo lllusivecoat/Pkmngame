@@ -1,4 +1,4 @@
-import {battleForms,expandedSpecies} from './engine-data.js?v=20261116-chibi49';
+import {battleForms,expandedSpecies} from './engine-data.js?v=20261116-chibi50';
 export {battleForms};
 export const formsFor=species=>Object.values(battleForms).filter(f=>f.base===species);
 export const activeForm=(b,c)=>battleForms[b?.states?.[c.uid]?.form]||null;
