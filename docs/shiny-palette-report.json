@@ -347,8 +347,8 @@
     },
     {
       "id": "cloyster",
-      "changed": 62266,
-      "visible": 98885
+      "changed": 83918,
+      "visible": 157867
     },
     {
       "id": "pinsir",
@@ -871,9 +871,9 @@
         512,
         512
       ],
-      "sourceSHA256": "ce68e66af0bb791e0a3eab8933eebd01870c1cc95724bbfca84c56dc73c9da7d",
-      "shinySHA256": "3c040426aa06d6ff3c4f932b5011081896b6018f01dbaa2434b847f183c3f82f",
-      "alphaSHA256": "aef87484a9503731637bb56defa264382ef05e997501cdfcd6d0f853ba89c97a",
+      "sourceSHA256": "e94223a5eedc66ca1b134626c749d91694450f925f2e89de1b15ae680f6336fd",
+      "shinySHA256": "0b97bb505db62f0e531e0c701f4fd3adb3d03a176e9f9fa40d3204a13c2f191c",
+      "alphaSHA256": "8d8a55c14919bba4a09528abc2db2621f29c19f68347a6e8419d1b40adf7a150",
       "alphaPreserved": true
     },
     {
