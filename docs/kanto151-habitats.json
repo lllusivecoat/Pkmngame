@@ -1,0 +1,490 @@
+{
+  "weedle": {
+    "region": "Greenwood",
+    "area": "fernwood",
+    "weather": "Rain",
+    "activity": "Morning",
+    "habitat": "Forest",
+    "legendary": false
+  },
+  "rattata": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "spearow": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "ekans": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "sandshrew": {
+    "region": "Thunder Ridge",
+    "area": "crags",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "nidoranf": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "nidoranm": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "clefairy": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "jigglypuff": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "zubat": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "paras": {
+    "region": "Greenwood",
+    "area": "fernwood",
+    "weather": "Rain",
+    "activity": "Morning",
+    "habitat": "Forest",
+    "legendary": false
+  },
+  "venonat": {
+    "region": "Greenwood",
+    "area": "fernwood",
+    "weather": "Rain",
+    "activity": "Morning",
+    "habitat": "Forest",
+    "legendary": false
+  },
+  "diglett": {
+    "region": "Thunder Ridge",
+    "area": "crags",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "meowth": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "mankey": {
+    "region": "Thunder Ridge",
+    "area": "bridge",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "poliwag": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "abra": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Dusk",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "machop": {
+    "region": "Thunder Ridge",
+    "area": "bridge",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "bellsprout": {
+    "region": "Greenwood",
+    "area": "fernwood",
+    "weather": "Rain",
+    "activity": "Morning",
+    "habitat": "Forest",
+    "legendary": false
+  },
+  "tentacool": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "ponyta": {
+    "region": "Ashlands",
+    "area": "springs",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "slowpoke": {
+    "region": "Greenwood",
+    "area": "shore",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "magnemite": {
+    "region": "Thunder Ridge",
+    "area": "meadow",
+    "weather": "Storm",
+    "activity": "Dusk",
+    "habitat": "Grass",
+    "legendary": false
+  },
+  "farfetchd": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "doduo": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "seel": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "grimer": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "shellder": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "drowzee": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Dusk",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "krabby": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "voltorb": {
+    "region": "Thunder Ridge",
+    "area": "meadow",
+    "weather": "Storm",
+    "activity": "Dusk",
+    "habitat": "Grass",
+    "legendary": false
+  },
+  "exeggcute": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Dusk",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "cubone": {
+    "region": "Thunder Ridge",
+    "area": "crags",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "hitmonlee": {
+    "region": "Thunder Ridge",
+    "area": "bridge",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "hitmonchan": {
+    "region": "Thunder Ridge",
+    "area": "bridge",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "lickitung": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "koffing": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "rhyhorn": {
+    "region": "Thunder Ridge",
+    "area": "crags",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "chansey": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "tangela": {
+    "region": "Greenwood",
+    "area": "fernwood",
+    "weather": "Rain",
+    "activity": "Morning",
+    "habitat": "Forest",
+    "legendary": false
+  },
+  "kangaskhan": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "horsea": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "goldeen": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "staryu": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "mrmime": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Dusk",
+    "habitat": "Ruins",
+    "legendary": false
+  },
+  "scyther": {
+    "region": "Greenwood",
+    "area": "fernwood",
+    "weather": "Rain",
+    "activity": "Morning",
+    "habitat": "Forest",
+    "legendary": false
+  },
+  "jynx": {
+    "region": "Frostfall",
+    "area": "glade",
+    "weather": "Fog",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "electabuzz": {
+    "region": "Thunder Ridge",
+    "area": "meadow",
+    "weather": "Storm",
+    "activity": "Dusk",
+    "habitat": "Grass",
+    "legendary": false
+  },
+  "magmar": {
+    "region": "Ashlands",
+    "area": "springs",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "magikarp": {
+    "region": "Greenwood",
+    "area": "shore",
+    "weather": "Rain",
+    "activity": "Day",
+    "habitat": "Shoreline",
+    "legendary": false
+  },
+  "ditto": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "porygon": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "omanyte": {
+    "region": "Ashlands",
+    "area": "quarry",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "kabuto": {
+    "region": "Ashlands",
+    "area": "quarry",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "aerodactyl": {
+    "region": "Ashlands",
+    "area": "quarry",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Rocky clearing",
+    "legendary": false
+  },
+  "snorlax": {
+    "region": "Greenwood",
+    "area": "brook",
+    "weather": "Clear",
+    "activity": "Morning",
+    "habitat": "Path",
+    "legendary": false
+  },
+  "articuno": {
+    "region": "Frostfall",
+    "area": "sanctuary",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": true
+  },
+  "zapdos": {
+    "region": "Thunder Ridge",
+    "area": "summit",
+    "weather": "Storm",
+    "activity": "Dusk",
+    "habitat": "Ruins",
+    "legendary": true
+  },
+  "moltres": {
+    "region": "Ashlands",
+    "area": "caldera",
+    "weather": "Clear",
+    "activity": "Day",
+    "habitat": "Ruins",
+    "legendary": true
+  },
+  "mewtwo": {
+    "region": "Ashlands",
+    "area": "ruins",
+    "weather": "Fog",
+    "activity": "Night",
+    "habitat": "Ruins",
+    "legendary": true
+  },
+  "mew": {
+    "region": "Greenwood",
+    "area": "ruins",
+    "weather": "Rain",
+    "activity": "Dusk",
+    "habitat": "Ruins",
+    "legendary": true
+  }
+}

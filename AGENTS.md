@@ -26,3 +26,5 @@
 - Venomoth is directly catchable in Greenwood/Fernwood Canopy (Fog/Dusk favoured); Tentacruel in Greenwood/Moonlit Shore (Rain/Night favoured). Both require matching painted Normal/Shiny art. Preserve their canonical stats and stable IDs, and keep the newer mobile touch controls from main.
 
 - User approved adding the remaining Larvitar, Bagon, Gible, Frigibax and Jangmo-o lines before all artwork is ready. The explicit IDs in `artwork-status.js` may use clearly labelled temporary Normal/Shiny illustrations in every view. They must never be labelled painted chibis or silently fall back to models/pixel art. All other species/forms still require painted pairs. Remove a pending ID only when its matching Normal/Shiny pair is bundled; replacing art must preserve saved individuals.
+
+- User explicitly approved registering all original National #001–151 species with labelled placeholders where no chibi pair exists. `kanto151-data.js` holds the canonical additions and encounter sites. Preserve existing artwork and saved individuals; `artwork-status.js` marks missing pairs until both painted registry entries are supplied. Do not label placeholders as finished art.
