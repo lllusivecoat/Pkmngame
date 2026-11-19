@@ -518,3 +518,26 @@ Eight projects each have three visible stages: training wing, recovery wing and 
 - Existing decorations keep their local 9×9 coordinates, now displayed inside the central part of the 15×15 town. Fixed roads, the Gym and building plots are protected. Accepting a challenger blocks construction until that challenge finishes.
 - `tests/town.test.mjs`: old-save migration, exact construction spending, locks/caps, all visual stages, retained party/decor and reload.
 - The browser flow constructs every project, upgrades a wing to level three, verifies reload, and checks the whole map and smaller character at desktop/mobile sizes.
+
+## Connected personal maps & wild reserve (v0.40.0)
+
+Your town now has a walkable Gym door and an internal battle hall. The hall's west door leads to a separate **Breeding grounds** garden (walkable preview; no pairing, eggs or breeding yet). Its east door leads to a separate **Wild reserve**. Walk with arrows/WASD, the touch direction pad, or by tapping an adjacent tile. Door tiles transition automatically; a nearby doorway also supplies an interaction button. Walls, buildings and water block movement. The town and its construction projects remain on the same exterior map.
+
+Accepting an NPC or exhibition brings the leader to the battle hall, where the visitor enters and challenges happen. A visiting challenge must be finished or declined before leaving the hall. Existing Gym type restrictions still apply to these battles. Town, hall, breeding garden and reserve each save the current location/position. Old careers start at the town's Gym entrance and retain their collection, construction and decorations; old in-progress defences resume inside the hall.
+
+In the wild reserve:
+
+1. Buy an unlocked Pokémon for the reserve using the existing stock prices. It enters **holding**, rather than the collection.
+2. Release that individual into a visible habitat position (12 residents/holding places combined).
+3. Walk near it and select it, or walk into it, to begin a real wild encounter. Nearby residents can also approach during movement.
+4. Weaken it and use a Poké Ball. Capturing removes exactly that individual from the habitat and adds it to collection/available party slots, updating the Pokédex. Its UID, variant, trait, nature, size, level and Mastery remain its own.
+
+The reserve supplies ten Poké Balls once; additional packs cost 150 coins for ten. All species types can live/catch here, while only matching types defend your Gym. New purchases are Normal variants. A benched owned Pokémon can instead be moved into the reserve after explicit confirmation. It leaves collection until caught again; training and Shiny appearance are retained, and held items return to the bag to prevent duplication. Active party members cannot be released. Fleeing or knocking out a reserve resident leaves it available for later capture. Reserve encounters do not create knockout/capture coin payouts; capture tools are consumed normally. Team recovery is free. Active reserve battles persist through reload and block conflicting actions.
+
+Implementation:
+- `gym-world-data.js`: map graph, collision geometry, spawn points and world normalization.
+- `gym-world.js`: walking, portals, reserve stock/holding/population, release/encounter/capture lifecycle and supplies.
+- `gym-world-art.js`, `gym-world-view.js`: small moving leader, original hall/garden/reserve scenery, touch controls and management panel.
+- `gym.world` inside the unchanged `greenwood.gym.v1` storage key: location, position, facing, steps and reserve holding/population/active battle. The separate adventure save remains untouched.
+- `tests/gym-world.test.mjs`: full map connectivity, collision, hall-only challenges, one-time supplies, actual capture/reload, identity, knockout/flee retention, capacity, item/coin deduplication and migration.
+- The browser flow now walks through every doorway, weakens and captures a released Pokémon after reloading mid-encounter, buys supplies and checks keyboard movement, alongside the existing desktop/mobile/town/defence flows.
