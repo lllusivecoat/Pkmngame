@@ -541,3 +541,9 @@ Implementation:
 - `gym.world` inside the unchanged `greenwood.gym.v1` storage key: location, position, facing, steps and reserve holding/population/active battle. The separate adventure save remains untouched.
 - `tests/gym-world.test.mjs`: full map connectivity, collision, hall-only challenges, one-time supplies, actual capture/reload, identity, knockout/flee retention, capacity, item/coin deduplication and migration.
 - The browser flow now walks through every doorway, weakens and captures a released Pokémon after reloading mid-encounter, buys supplies and checks keyboard movement, alongside the existing desktop/mobile/town/defence flows.
+
+## Trainer walking motion (v0.40.1)
+
+Personal-map movement now interpolates between tiles and plays the existing direction-specific idle/walk atlas frames, including custom male/female colours. Gait timing continues across rapid key presses and stops at idle after the step. Walls and portal transitions do not trigger a false walking cycle. Arriving challenger portraits use a subtle step/sway while moving into the hall. Their persisted arrival start time prevents walking or UI redraws from restarting the approach.
+
+**Settings → Enable trainer walking animations** is independent of battle/capture motion (`mapMotion` versus `motion`). Device reduced-motion preferences override both. `world-motion.js` manages presentation-only movement snapshots and animations; no player animation timers are saved. `tests/world-motion.test.mjs` checks interpolation, idle cleanup, blocked/portal/reduced-motion behaviour, continuous gait and arrival timing. The browser flow checks actual walk-frame playback, independent preferences and reduced motion alongside the existing four-map/capture flow.

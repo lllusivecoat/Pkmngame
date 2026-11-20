@@ -1,9 +1,9 @@
-import {gymPlayerView} from './gym-world-art.js?v=20261120-interiors1';
-import {gymWalkable} from './gym-world-data.js?v=20261120-interiors1';
-import {townProjects,normalizeTown,townSummary,townProjectState} from './town.js?v=20261120-interiors1';
-import {decorations} from './gym-mode.js?v=20261120-interiors1';
-import {playerArt} from './visuals.js?v=20261120-interiors1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261120-interiors1';
+import {gymPlayerView} from './gym-world-art.js?v=20261120-walking1';
+import {gymWalkable} from './gym-world-data.js?v=20261120-walking1';
+import {townProjects,normalizeTown,townSummary,townProjectState} from './town.js?v=20261120-walking1';
+import {decorations} from './gym-mode.js?v=20261120-walking1';
+import {playerArt} from './visuals.js?v=20261120-walking1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261120-walking1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tree=(x,y,size=1)=>`<g transform="translate(${x} ${y}) scale(${size})"><ellipse cy="19" rx="24" ry="10" fill="#264d3830"/><path d="M-5-9h10v30H-5Z" fill="#775b45"/><path d="M-31 1-19-18h-7L0-57 27-18h-8L32 1Z" fill="#366c4b" stroke="#2b5740" stroke-width="3"/><path d="m-17-22 17-25 17 25" fill="#5d955c"/></g>`;
 const flower=(x,y,color)=>`<g transform="translate(${x} ${y})"><path d="M0 5v12m0-4 6-5" stroke="#43804b" stroke-width="3"/><circle r="6" fill="${color}"/><circle r="2" fill="#ffe69d"/></g>`;
