@@ -575,3 +575,6 @@ The shop now uses a cohesive painted interior (`assets/shop-interior.webp`) rath
 
 ### Rich Gym interior (0.44.0)
 The Gym now has painted stained-glass architecture, carved stone edges, warm wall lights, refined limestone/parquet floors and woven carpet materials. `gym-interior-art.js` composes the transparent architecture around the editable floor rather than baking over the player's saved design. Materials are tinted while retaining their shading and texture; emblem, carpet shapes, colours and movable furniture remain live. The designer's **Ornate walls & lantern lighting** toggle can hide the new architecture. Small shop/Gym interiors show the complete room; the larger town retains its following camera. New artwork lives in `assets/gym-architecture.webp` and `assets/gym-materials.webp`.
+
+### Clean Gym entrances and marked court (0.44.1)
+Standalone entrance arches and Gym benches are removed, including from existing saved layouts. Other furnishings and custom colours remain unchanged; entrances still work. The centre now uses a marked battle court with an outer boundary, halfway line, Poké Ball-style centre circle and opposing starting circles. The custom Gym crest sits on the north approach and remains linked to the exterior badge.
