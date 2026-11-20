@@ -1,11 +1,11 @@
-import {normalizeGymWorld} from './gym-world-data.js?v=20261120-design1';
+import {normalizeGymWorld} from './gym-world-data.js?v=20261120-townshop1';
 // Fixed plots keep a developing town on one reachable map, without replacing Gym saves.
 export const townProjects=[
  {id:'training',name:'Training wing',kind:'Gym extension',x:2,y:3,cost:600,reputation:20,description:'Attach a training hall to the west side of your Gym.'},
  {id:'recovery',name:'Recovery wing',kind:'Gym extension',x:12,y:3,cost:800,reputation:40,description:'Attach a bright recovery annex to the east side of your Gym. Recovery remains free.'},
  {id:'trophy',name:'Trophy gallery',kind:'Gym extension',x:7,y:0,cost:1200,reputation:80,description:'Raise a gallery behind your Gym to celebrate your team.'},
  {id:'garden',name:'Town garden',kind:'Town upgrade',x:2,y:7,cost:300,reputation:0,description:'Turn the western clearing into a flower garden with benches.'},
- {id:'market',name:'Market square',kind:'Town upgrade',x:12,y:7,cost:450,reputation:20,description:'Build colourful stalls for the town square. The Pokémon shop remains available from navigation.'},
+ {id:'market',name:'Market square',kind:'Town upgrade',x:12,y:7,cost:450,reputation:20,description:'Build colourful stalls for the town square. Visit Greenwood Goods on the western avenue for items, Pokémon and decorations.'},
  {id:'homes',name:'Residential lane',kind:'Town upgrade',x:2,y:11,cost:900,reputation:60,description:'Welcome residents with cottages along the southern road.'},
  {id:'fountain',name:'Fountain plaza',kind:'Town upgrade',x:7,y:11,cost:600,reputation:40,description:'Give your town a gathering place on the main avenue.'},
  {id:'harbour',name:'Riverside promenade',kind:'Town upgrade',x:12,y:11,cost:1000,reputation:80,description:'Build a boardwalk and pavilion beside the river.'}

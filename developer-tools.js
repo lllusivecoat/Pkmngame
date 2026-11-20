@@ -1,10 +1,13 @@
-import {artworkPending} from './artwork-status.js?v=20261120-design1';
-import {selectedArtwork} from './selected-artwork.js?v=20261120-design1';
-import {roster} from './data.js?v=20261120-design1';
-import {battleForms} from './forms.js?v=20261120-design1';
-import {syncLegacy} from './items.js?v=20261120-design1';
-import {chibiAtlas,shinyChibiAtlas} from './chibi-sources.js?v=20261120-design1';
+import {artworkPending} from './artwork-status.js?v=20261120-townshop1';
+import {selectedArtwork} from './selected-artwork.js?v=20261120-townshop1';
+import {roster} from './data.js?v=20261120-townshop1';
+import {battleForms} from './forms.js?v=20261120-townshop1';
+import {syncLegacy} from './items.js?v=20261120-townshop1';
+import {chibiAtlas,shinyChibiAtlas} from './chibi-sources.js?v=20261120-townshop1';
 export const artworkEntries=[...roster.map(s=>({id:s.id,name:s.name,number:s.number,species:s.id,kind:'species'})),...Object.values(battleForms).map(f=>({id:f.id,name:f.name,number:f.number,species:f.base,form:f.id,kind:f.kind}))];
 export function galleryEntries({search='',kind='all'}={}){const words=search.trim().toLowerCase().replace(/-/g,' ').split(/\s+/).filter(Boolean),number=search.trim().match(/^#?0*(\d{1,5})$/);const entries=artworkEntries.filter(e=>(kind==='all'||kind==='kanto'&&e.kind==='species'&&e.number>=1&&e.number<=151||e.kind===kind)&&(number?e.number===Number(number[1]):words.every(w=>e.name.toLowerCase().replace(/-/g,' ').includes(w))));return kind==='kanto'?entries.sort((a,b)=>a.number-b.number):entries}
 export function chibiLabel(entry,variant='Normal'){if(artworkPending(entry.form||entry.id))return variant==='Shiny'?'Shiny chibi art pending':'Chibi art pending';if(selectedArtwork[entry.form||entry.id])return 'Selected reference artwork';return variant==='Normal'&&(chibiAtlas[entry.id]||roster.slice(0,18).some(p=>p.id===entry.id))||variant==='Shiny'&&(shinyChibiAtlas[entry.id]||roster.slice(0,18).some(p=>p.id===entry.id))?'Painted chibi':'Pixel chibi · official game sprite'}
 export function resetItemsAndGold(s){s.coins=0;s.bag={};s.inventoryVersion=1;syncLegacy(s);for(const c of s.collection)c.heldItem=null;return 'Items and gold reset: 0 coins, empty bag, no held items. Pokémon and journey progress preserved.'}
+
+export function changeTestResource(s,resource,action,amount){const target=resource==='coins'?s:resource==='reputation'?s.gym:null;if(!target||!['add','set','reset'].includes(action))return 'Choose a valid test resource and action.';const value=action==='reset'?0:Number(amount);if(action!=='reset'&&(amount===''||amount==null||!Number.isSafeInteger(value)||value<0||value>10000000))return 'Enter a whole number from 0 to 10,000,000.';const key=resource==='coins'?'coins':'reputation';target[key]=action==='add'?Math.min(10000000,(target[key]||0)+value):value;return `${resource==='coins'?'Coins':'Gym reputation'} ${action==='reset'?'reset to':'updated to'} ${target[key].toLocaleString()}.`}
+export function testResourceControls(s){return `<div class="developer-resource-controls">${[['coins','Coins',s.coins,1000],...(s.gym?[['reputation','Gym reputation',s.gym.reputation,50]]:[])].map(([id,label,current,amount])=>`<form data-test-resource="${id}" class="developer-resource-card"><h3>${label}</h3><p>Current: <strong>${current.toLocaleString()}</strong></p><label>Amount<input type="number" name="amount" min="0" max="10000000" step="1" value="${amount}" required aria-label="${label} test amount"></label><div class="actions"><button type="submit" class="secondary" data-resource-action="add">Add amount</button><button type="submit" class="secondary" data-resource-action="set">Set exact amount</button><button type="submit" class="secondary" data-resource-action="reset" formnovalidate>Reset to 0</button></div></form>`).join('')}</div><p class="hint">Testing controls save immediately. Resetting coins or reputation here keeps your items, Pokémon, Gym design and match record.</p>`}

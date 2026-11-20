@@ -1,6 +1,6 @@
 // Uploaded portraits drive directory coverage; teams use the playable roster.
-import {portraitManifest} from './portrait-manifest.js?v=20261120-design1';
-import {expandedSpecies} from './engine-data.js?v=20261120-design1';
+import {portraitManifest} from './portrait-manifest.js?v=20261120-townshop1';
+import {expandedSpecies} from './engine-data.js?v=20261120-townshop1';
 const specialties={};
 for(const[type,names]of Object.entries({Rock:'brock roxanne roark grant gordie olivia e4_brannock',Water:'misty crasher-wake wallace marlon cress siebold lana nessa kofu sera',Electric:'lt-surge wattson volkner elesa clemont sophocles iono lyra',Grass:'erika gardenia cilan ramos mallow galar-milo brassius rowan',Poison:'koga roxie e4_morwenna',Psychic:'sabrina will tate liza lucian caitlin olympia tulip gl_orrin',Fire:'blaine flannery sinnoh-flint chili malva kiawe kabu flint',Ground:'giovanni bertha clay hapu rika gl_tamsin',Ice:'lorelei pryce glacia candice brycen wulfric melony grusha e4_isolde',Fighting:'bruno chuck brawly maylene marshal korrina hala bea',Ghost:'agatha morty phoebe fantina shauntal acerola allister ryme gl_corwin',Dragon:'lance clair drake drayden unova-iris drasna raihan hassel gl_kaelan',Normal:'whitney norman cheren lenora ilima larry',Bug:'bugsy aaron burgh viola katy',Steel:'jasmine byron steven wikstrom molayne poppy',Dark:'karen sidney grimsley nanu piers',Flying:'falkner winona skyla kahili e4_tobiah',Fairy:'valerie mina opal'}))for(const id of names.split(' '))specialties[id]=type;
 const legendary=new Set(['articuno','zapdos','moltres','mewtwo','mew']);
