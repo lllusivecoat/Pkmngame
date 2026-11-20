@@ -1,10 +1,10 @@
-import {terrainPatterns} from './terrain-art.js?v=20261120-depth1';
-import {gymPlayerView} from './gym-world-art.js?v=20261120-depth1';
-import {gymWalkable} from './gym-world-data.js?v=20261120-depth1';
-import {townProjects,normalizeTown,townSummary,townProjectState} from './town.js?v=20261120-depth1';
-import {decorations} from './gym-mode.js?v=20261120-depth1';
-import {TOWN_SIZE,TOWN_OFFSET,townTerrain,townTrees,townCottages,visibleTownTiles,townDistrict} from './town-map-data.js?v=20261120-depth1';
-import {environmentObject,environmentSprite} from './environment-art.js?v=20261120-depth1';
+import {terrainPatterns} from './terrain-art.js?v=20261120-scroll1';
+import {gymPlayerView} from './gym-world-art.js?v=20261120-scroll1';
+import {gymWalkable} from './gym-world-data.js?v=20261120-scroll1';
+import {townProjects,normalizeTown,townSummary,townProjectState} from './town.js?v=20261120-scroll1';
+import {decorations} from './gym-mode.js?v=20261120-scroll1';
+import {TOWN_SIZE,TOWN_OFFSET,townTerrain,townTrees,townCottages,visibleTownTiles,townDistrict} from './town-map-data.js?v=20261120-scroll1';
+import {environmentObject,environmentSprite} from './environment-art.js?v=20261120-scroll1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const TILE=48,WORLD=TOWN_SIZE*TILE;
 function ground(){const paths={path:'',water:'',bridge:''};for(let y=0;y<TOWN_SIZE;y++)for(let x=0;x<TOWN_SIZE;x++){const kind=townTerrain(x,y);if(paths[kind]!==undefined)paths[kind]+=`M${x*TILE} ${y*TILE}h48v48h-48Z`}return `<svg class="town-scenery tiled-ground" viewBox="0 0 ${WORLD} ${WORLD}" aria-hidden="true"><defs>${terrainPatterns('town')}</defs><rect width="${WORLD}" height="${WORLD}" fill="url(#town-grass)"/><path d="${paths.path}" fill="url(#town-stone)" stroke="#aeab7880" stroke-width="2"/><path d="${paths.water}" fill="url(#town-water)" stroke="#a9b784" stroke-width="5"/><path d="${paths.bridge}" fill="url(#town-wood)" stroke="#8c6845" stroke-width="3"/><path class="town-water-glint" d="${Array.from({length:12},(_,i)=>{const y=100+i*145,x=(31+Math.sin(y/192)*1.4)*48;return `M${x-20} ${y}h35m12 10h20`}).join('')}" stroke="#c1e7dd80" stroke-width="2" stroke-dasharray="9 5" fill="none"/></svg>`}

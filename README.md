@@ -554,3 +554,6 @@ The authored town is now 39×39 tiles, viewed through an 11×9 follow camera (9�
 
 ### Shared painted world materials (0.41.1)
 All personal maps now share painted terrain textures (`terrain-art.js`, `assets/terrain-environment.webp`) and the same scenery family. `personal-scenery.js` authors the Gym's timber/stone hall, garden nursery and reserve with illustrated furnishings in `assets/interior-environment.webp`. Gameplay geometry and saves are unchanged. Scenery depth uses the object's actual ground base, keeping the player visible when standing in front of a building while retaining occlusion behind it.
+
+### Battle view stability (0.41.2)
+`battle-viewport.js` retains the battle dialog's scroll position and control focus across turn redraws, including the animation-completion redraw. New encounters and result dialogs still open normally. `scripts/battle-scroll-smoke.mjs` covers desktop/mobile with battle animations enabled and disabled.

@@ -31,6 +31,7 @@ jobs:
         run: |
           node scripts/browser-smoke.mjs
           node scripts/gym-browser-smoke.mjs
+          node scripts/battle-scroll-smoke.mjs
       - name: Save browser failure screenshots
         if: failure()
         uses: actions/upload-artifact@v4
