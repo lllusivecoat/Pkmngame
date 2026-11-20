@@ -1,12 +1,13 @@
-import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261120-scroll1';
-import {normalizeReserve} from './gym-world.js?v=20261120-scroll1';
-import {normalizeTown} from './town.js?v=20261120-scroll1';
-import {expandedSpecies} from './engine-data.js?v=20261120-scroll1';
-import {trainerDirectory} from './trainer-directory.js?v=20261120-scroll1';
+import {normalizeGymDesign} from './gym-design.js?v=20261120-design1';
+import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261120-design1';
+import {normalizeReserve} from './gym-world.js?v=20261120-design1';
+import {normalizeTown} from './town.js?v=20261120-design1';
+import {expandedSpecies} from './engine-data.js?v=20261120-design1';
+import {trainerDirectory} from './trainer-directory.js?v=20261120-design1';
 // Gym management domain. Storage is independent of the legacy adventure save.
-import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261120-scroll1';
-import {healParty} from './items.js?v=20261120-scroll1';
-import {beginDefenseBattle} from './battle.js?v=20261120-scroll1';
+import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261120-design1';
+import {healParty} from './items.js?v=20261120-design1';
+import {beginDefenseBattle} from './battle.js?v=20261120-design1';
 export const GYM_SAVE_KEY='greenwood.gym.v1';
 const previousStock=[
  ['bulbasaur',550,8,0],['charmander',550,8,0],['squirtle',550,8,0],['pikachu',1000,10,0],['eevee',1100,10,0],['geodude',450,8,0],['oddish',450,8,0],['pidgey',400,8,0],
@@ -30,8 +31,8 @@ const profiles=[
  {name:'Flint',portrait:'flint',title:'Veteran challenger',team:['geodude','machop','onix'],style:'A durable physical team.'},
  {name:'Skye',portrait:'skye',title:'Travelling rival',team:['pikachu','eevee','pidgeotto'],style:'A versatile mixed team.'}
 ];
-export function freshGym(){const s=fresh();s.started=true;s.mapMotion=true;s.level=1;s.xp=0;s.coins=1200;s.bag={};s.traps=0;s.betterTraps=[0,0];s.potions=0;s.log=['Your Gym charter is ready. Buy your first Pokémon.'];s.gym={version:4,world:normalizeGymWorld(),town:normalizeTown(),type:null,leagueWins:[],name:'Greenwood Gym',theme:'woodland',reputation:0,wins:0,losses:0,visits:0,decor:[],ownedDecor:Object.fromEntries(decorations.map(d=>[d.id,d.id==='fern'?2:0])),history:[],session:null};return s}
-export function loadGym(storage){try{const raw=JSON.parse(storage.getItem(GYM_SAVE_KEY));if(!raw?.gym)return freshGym();const s=migrate(raw),g=raw.gym;const int=(n,max=1e7)=>Number.isFinite(n)?Math.min(max,Math.max(0,Math.floor(n))):0;s.gym={...g,version:4,world:normalizeGymWorld(g.world,g.town),town:normalizeTown(g.town),type:gymTypes.includes(g.type)?g.type:null,leagueWins:Array.isArray(g.leagueWins)?[...new Set(g.leagueWins.filter(id=>trainerDirectory.some(t=>t.id===id)))]:[],name:String(g.name||'Greenwood Gym').slice(0,40),theme:gymThemes.some(([id])=>id===g.theme)?g.theme:'woodland',reputation:int(g.reputation),wins:int(g.wins),losses:int(g.losses),visits:int(g.visits),ownedDecor:Object.fromEntries(decorations.map(d=>[d.id,int(g.ownedDecor?.[d.id],99)])),decor:[],history:Array.isArray(g.history)?g.history.slice(0,12):[],session:g.session?.challenger&&['arriving','ready','battle'].includes(g.session.status)?g.session:null};for(const d of Array.isArray(g.decor)?g.decor:[])if(canPlace(s,d.x,d.y)&&decorations.some(a=>a.id===d.id)&&s.gym.decor.filter(a=>a.id===d.id).length<(s.gym.ownedDecor[d.id]||0))s.gym.decor.push({id:d.id,x:d.x,y:d.y});s.started=true;s.mapMotion=s.mapMotion!==false;if(s.gym.session?.status==='arriving'&&!Number.isFinite(s.gym.session.arrivalStartedAt))s.gym.session.arrivalStartedAt=Date.now();normalizeReserve(s);if(s.gym.session&&!g.world)enterBattleHall(s);return s}catch{return freshGym()}}
+export function freshGym(){const s=fresh();s.started=true;s.mapMotion=true;s.level=1;s.xp=0;s.coins=1200;s.bag={};s.traps=0;s.betterTraps=[0,0];s.potions=0;s.log=['Your Gym charter is ready. Buy your first Pokémon.'];s.gym={design:normalizeGymDesign(),version:4,world:normalizeGymWorld(),town:normalizeTown(),type:null,leagueWins:[],name:'Greenwood Gym',theme:'woodland',reputation:0,wins:0,losses:0,visits:0,decor:[],ownedDecor:Object.fromEntries(decorations.map(d=>[d.id,d.id==='fern'?2:0])),history:[],session:null};return s}
+export function loadGym(storage){try{const raw=JSON.parse(storage.getItem(GYM_SAVE_KEY));if(!raw?.gym)return freshGym();const s=migrate(raw),g=raw.gym;const int=(n,max=1e7)=>Number.isFinite(n)?Math.min(max,Math.max(0,Math.floor(n))):0;s.gym={...g,design:normalizeGymDesign(g.design),version:4,world:normalizeGymWorld(g.world,g.town,g.design),town:normalizeTown(g.town),type:gymTypes.includes(g.type)?g.type:null,leagueWins:Array.isArray(g.leagueWins)?[...new Set(g.leagueWins.filter(id=>trainerDirectory.some(t=>t.id===id)))]:[],name:String(g.name||'Greenwood Gym').slice(0,40),theme:gymThemes.some(([id])=>id===g.theme)?g.theme:'woodland',reputation:int(g.reputation),wins:int(g.wins),losses:int(g.losses),visits:int(g.visits),ownedDecor:Object.fromEntries(decorations.map(d=>[d.id,int(g.ownedDecor?.[d.id],99)])),decor:[],history:Array.isArray(g.history)?g.history.slice(0,12):[],session:g.session?.challenger&&['arriving','ready','battle'].includes(g.session.status)?g.session:null};for(const d of Array.isArray(g.decor)?g.decor:[])if(canPlace(s,d.x,d.y)&&decorations.some(a=>a.id===d.id)&&s.gym.decor.filter(a=>a.id===d.id).length<(s.gym.ownedDecor[d.id]||0))s.gym.decor.push({id:d.id,x:d.x,y:d.y});s.started=true;s.mapMotion=s.mapMotion!==false;if(s.gym.session?.status==='arriving'&&!Number.isFinite(s.gym.session.arrivalStartedAt))s.gym.session.arrivalStartedAt=Date.now();normalizeReserve(s);if(s.gym.session&&!g.world)enterBattleHall(s);return s}catch{return freshGym()}}
 export function saveGym(storage,s){storage.setItem(GYM_SAVE_KEY,JSON.stringify(s))}
 export function gymRank(s){return s.gym.reputation>=180?'Established Gym':s.gym.reputation>=60?'Recognised Gym':'Local Gym'}
 export function buyGymPokemon(s,id){if(s.gym.session)return 'Finish the current challenge first.';const item=gymStock.find(p=>p.species===id);if(!item||s.gym.reputation<item.reputation)return 'This Pokémon is not unlocked yet.';if(s.coins<item.price)return 'Not enough coins.';const c=createCreature(id,item.level);c.variant='Normal';c.location='Gym Pokémon shop';const balance=s.coins-item.price;catchCreature(s,c);s.coins=balance;healParty(s);return 'New partner purchased. Open Team to manage your party.'}

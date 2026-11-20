@@ -40,3 +40,5 @@
 - Walking motion uses the existing customised directional atlas and `world-motion.js`; preserve the trainer design and colours. `mapMotion` is independent of battle/capture `motion`, with device reduced-motion taking priority. Keep character motion transient, and use the saved challenger arrival timestamp so map redraws cannot restart an approach.
 
 Current user direction supersedes the old one-screen town requirement: town is 39×39 with a follow camera. Legacy town coordinates offset by +12 exactly once (world.version=2); local decoration coordinates remain saved unchanged and render at +15. Preserve fixed authored terrain and project locations.
+
+- Gym design is stored in `gym.design`, validated by `gym-design.js`. Preserve the shared interior/exterior emblem and all custom colours/materials/furnishings across imports and upgrades. Furniture placement must protect doors, the central aisle and court; hall collision must use the saved design. Cosmetic changes are free, blocked during challenges, and must not change party eligibility, career currency/reputation, trainer appearance or battle stats.

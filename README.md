@@ -557,3 +557,8 @@ All personal maps now share painted terrain textures (`terrain-art.js`, `assets/
 
 ### Battle view stability (0.41.2)
 `battle-viewport.js` retains the battle dialog's scroll position and control focus across turn redraws, including the animation-completion redraw. New encounters and result dialogs still open normally. `scripts/battle-scroll-smoke.mjs` covers desktop/mobile with battle animations enabled and disabled.
+
+### Gym designer (0.42.0)
+Open **My Gym → Design Gym** from town or inside the hall. Emblem, emblem colour, main/border floor materials and colours, walls, runner, battle carpet shape/colour, trim and door arches save automatically. The exterior entrance badge and interior emblem use the same design; the Gym name is editable here too. Five presets provide starting palettes without resetting furnishings. Inside the hall, **Arrange on map** shows a full-room overview: choose an illustrated furnishing, tap a side tile to place/replace it, or choose Remove. Doors, the central aisle and court remain protected. Clear/restore controls affect furnishings only. Cosmetics are free and never affect combat or Gym type eligibility.
+
+`gym-design.js` owns validated design defaults, presets, furniture placement and protected routes. `gym-design-ui.js` renders the controls; `environment-art.js` overlays the entrance badge onto the painted building; `personal-scenery.js` applies materials and colours to the interior. `gym.design` is part of the existing `greenwood.gym.v1` save and old careers receive safe defaults without changing their collection, money or town. Furniture collision follows saved placements. Future assets can extend the furniture catalogue without changing the save adapter.

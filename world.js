@@ -1,6 +1,6 @@
-import {kanto151EncounterSites} from './kanto151-data.js?v=20261120-scroll1';
-import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261120-scroll1';
-import {areaDesigns} from './area-designs.js?v=20261120-scroll1';
+import {kanto151EncounterSites} from './kanto151-data.js?v=20261120-design1';
+import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261120-design1';
+import {areaDesigns} from './area-designs.js?v=20261120-design1';
 // Separate, connected areas. Only the active map is rendered.
 const greenwood=['FFFFGGGGGG','FGGGWWGFPP','FGPPWWGFPG','GGPPGBGPPP','FGPPGWRRPG','FGGPGWRRPG','FGGPGBGRPG','FFFGGWFPPR','FGGPPPPPGG','FFGGGFFFFF'];
 const ridge=['RRRRGGRRRR','RRGGPPPPPP','RRGPPWRGPG','RGPPGWRGPG','RGPPRBRGPG','RGGPGWRGPG','RGGPGGRGPG','RGGPPPPPPG','PPPPGRRGGG','RRRGGGGRRR'];
