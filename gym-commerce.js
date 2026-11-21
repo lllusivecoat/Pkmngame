@@ -1,7 +1,7 @@
-import {expandedSpecies} from './engine-data.js?v=20261122-economy1';
-import {createCreature,catchCreature} from './core.js?v=20261122-economy1';
-import {buyItem,itemCatalog} from './items.js?v=20261122-economy1';
-import {gymClock} from './gym-clock.js?v=20261122-economy1';
+import {expandedSpecies} from './engine-data.js?v=20261122-ballmotion1';
+import {createCreature,catchCreature} from './core.js?v=20261122-ballmotion1';
+import {buyItem,itemCatalog} from './items.js?v=20261122-ballmotion1';
+import {gymClock} from './gym-clock.js?v=20261122-ballmotion1';
 const babies=new Set('pichu cleffa igglybuff togepi tyrogue smoochum elekid magby azurill wynaut budew chingling bonsly mimejr happiny munchlax riolu mantyke toxel'.split(' '));
 const excluded=new Set('articuno zapdos moltres mewtwo mew lugia hooh celebi regirock regice registeel latias latios kyogre groudon rayquaza jirachi deoxys dialga palkia giratina darkrai arceus'.split(' '));
 const idOf=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
