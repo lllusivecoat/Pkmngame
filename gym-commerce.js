@@ -1,7 +1,7 @@
-import {expandedSpecies} from './engine-data.js?v=20261122-ballmotion1';
-import {createCreature,catchCreature} from './core.js?v=20261122-ballmotion1';
-import {buyItem,itemCatalog} from './items.js?v=20261122-ballmotion1';
-import {gymClock} from './gym-clock.js?v=20261122-ballmotion1';
+import {expandedSpecies} from './engine-data.js?v=20261122-reserves2';
+import {createCreature,catchCreature} from './core.js?v=20261122-reserves2';
+import {buyItem,itemCatalog} from './items.js?v=20261122-reserves2';
+import {gymClock} from './gym-clock.js?v=20261122-reserves2';
 const babies=new Set('pichu cleffa igglybuff togepi tyrogue smoochum elekid magby azurill wynaut budew chingling bonsly mimejr happiny munchlax riolu mantyke toxel'.split(' '));
 const excluded=new Set('articuno zapdos moltres mewtwo mew lugia hooh celebi regirock regice registeel latias latios kyogre groudon rayquaza jirachi deoxys dialga palkia giratina darkrai arceus'.split(' '));
 const idOf=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -19,5 +19,38 @@ export function starterChoices(s){if(!s.gym.type)return [];const preferred='bulb
 export function claimGymStarter(s,id){if(s.gym.starterClaimed||s.collection.length)return 'Your starting partner has already joined you.';if(!starterChoices(s).includes(id))return 'Choose a starting Pokémon matching your Gym type.';const c=createCreature(id,8);c.variant='Normal';c.location='Gym charter · starting partner';const coins=s.coins;catchCreature(s,c);s.coins=coins;s.gym.starterClaimed=true;return `${expandedSpecies[id].name} is your starting partner. Your charter funds are untouched.`}
 function hash(text){let n=2166136261;for(const c of text)n=Math.imul(n^c.charCodeAt(0),16777619);return n>>>0}
 function rng(seed){return ()=>{seed+=0x6D2B79F5;let t=seed;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296}}
-export function ensureMarketStock(s,now=Date.now()){const hour=gymClock(s,now).hourKey,level=normalizeFacilities(s.gym.facilities).market,key=`${hour}:${level}`,old=s.gym.marketStock;if(old?.key===key&&Array.isArray(old.offers)&&old.offers.length)return old;const tier=marketTiers[level],pool=Object.keys(expandedSpecies).filter(id=>!excluded.has(id)&&evolutionStage(id)<=tier.stage&&(expandedSpecies[id].evoLevel||1)<=tier.max&&Object.values(expandedSpecies[id].baseStats).reduce((a,b)=>a+b,0)<=tier.bst),offers=[];for(const section of ['party','reserve']){const random=rng(hash(`${s.gym.clock.seed}:${key}:${section}`)),matching=pool.filter(id=>expandedSpecies[id].types.includes(s.gym.type));for(let i=0;i<12;i++){const candidates=i<4&&matching.length?matching:pool,id=candidates[Math.floor(random()*candidates.length)],species=expandedSpecies[id],levelNow=Math.max(species.evoLevel||1,tier.min+Math.floor(random()*(tier.max-tier.min+1))),c=createCreature(id,levelNow,random),uid=`market-${s.gym.clock.seed}-${hour}-${level}-${section}-${i}`;c.uid=uid;c.variant=random()<.015?'Shiny':'Normal';for(const stat of ['hp','attack','defence','specialAttack','specialDefence','speed'])c.ivs[stat]=Math.floor(random()*32);c.caughtAt=new Date(s.gym.clock.startedAt+hour*300000).toISOString();c.location='Pokémon Market';const bst=Object.values(species.baseStats).reduce((a,b)=>a+b,0),price=Math.max(150,Math.round(bst*(levelNow*.10+level*.45)*(section==='reserve'?.65:1)/50)*50);offers.push({id:uid,section,creature:c,price,stage:evolutionStage(id)})}}s.gym.marketStock={key,hour,level,offers,sold:old?.key===key&&Array.isArray(old.sold)?old.sold.filter(id=>offers.some(o=>o.id===id)):[]};return s.gym.marketStock}
-export function buyMarketOffer(s,id,now=Date.now()){if(s.gym.world.location!=='market')return 'Visit the Pokémon Market first.';if(s.gym.session||s.gym.world.reserve.activeUid)return 'Finish the current challenge or encounter first.';if(!s.gym.starterClaimed&&!s.collection.length)return 'Choose your starting partner first.';const stock=ensureMarketStock(s,now),offer=stock.offers.find(o=>o.id===id);if(!offer)return 'Stock has refreshed. Choose a current offer.';if(stock.sold.includes(id)||s.collection.some(c=>c.uid===id))return 'This individual has already been purchased.';if(s.coins<offer.price)return 'Not enough coins.';if(offer.section==='party'&&s.party.length>=6)return 'Your party is full. Remove a partner before buying.';const reserve=s.gym.world.reserve;if(offer.section==='reserve'&&reserve.population.length+reserve.holding.length>=12)return 'Your wild reserve has room for 12 Pokémon.';const c=structuredClone(offer.creature),balance=s.coins-offer.price;if(offer.section==='party'){catchCreature(s,c);s.coins=balance}else{s.coins=balance;reserve.population.push({creature:c,position:null,hidden:true})}stock.sold.push(id);return offer.section==='party'?`${expandedSpecies[c.species].name} joined your party.`:`${expandedSpecies[c.species].name} was released into your wild reserve. Walk there to encounter it.`}
+// Only species with a further permanent evolution are eligible, irrespective of Gym type.
+export const marketSpeciesEligible=id=>!!expandedSpecies[id]?.evos?.length&&evolutionStage(id)<=2;
+export function ensureMarketStock(s,now=Date.now()){
+ const hour=gymClock(s,now).hourKey,level=normalizeFacilities(s.gym.facilities).market,key=`v2:${hour}:${level}`,old=s.gym.marketStock;
+ if(old?.key===key&&Array.isArray(old.offers)&&old.offers.length)return old;
+ const tier=marketTiers[level],pool=Object.keys(expandedSpecies).filter(id=>marketSpeciesEligible(id)&&evolutionStage(id)<=tier.stage&&(expandedSpecies[id].evoLevel||1)<=tier.max&&Object.values(expandedSpecies[id].baseStats).reduce((a,b)=>a+b,0)<=tier.bst),offers=[];
+ for(const section of ['party','reserve']){
+  const random=rng(hash(`${s.gym.clock.seed}:${key}:${section}`));
+  const candidates=section==='reserve'?pool.filter(id=>!s.gym.world.reserve.speciesUnlocks.some(u=>u.species===id)):pool;
+  const remaining=[...candidates];
+  for(let i=0;i<12&&remaining.length;i++){
+   const index=Math.floor(random()*remaining.length),id=remaining[index],species=expandedSpecies[id];if(section==='reserve')remaining.splice(index,1);
+   const levelNow=Math.max(species.evoLevel||1,tier.min+Math.floor(random()*(tier.max-tier.min+1))),uid=`market-v2-${s.gym.clock.seed}-${hour}-${level}-${section}-${i}`;
+   const bst=Object.values(species.baseStats).reduce((a,b)=>a+b,0),price=Math.max(150,Math.round(bst*(levelNow*.10+level*.45)*(section==='reserve'?.65:1)/50)*50);
+   if(section==='reserve'){offers.push({id:uid,section,species:id,minLevel:Math.max(species.evoLevel||1,tier.min),maxLevel:tier.max,price,stage:evolutionStage(id)});continue}
+   const c=createCreature(id,levelNow,random);c.uid=uid;c.variant=random()<.015?'Shiny':'Normal';for(const stat of ['hp','attack','defence','specialAttack','specialDefence','speed'])c.ivs[stat]=Math.floor(random()*32);c.caughtAt=new Date(s.gym.clock.startedAt+hour*300000).toISOString();c.location='Pokémon Market';offers.push({id:uid,section,creature:c,price,stage:evolutionStage(id)});
+  }
+ }
+ s.gym.marketStock={key,hour,level,offers,sold:old?.key===key&&Array.isArray(old.sold)?old.sold.filter(id=>offers.some(o=>o.id===id)):[]};return s.gym.marketStock;
+}
+export function buyMarketOffer(s,id,now=Date.now()){
+ if(s.gym.world.location!=='market')return 'Visit the Pokémon Market first.';
+ if(s.gym.session||s.gym.world.reserve.activeUid)return 'Finish the current challenge or encounter first.';
+ if(!s.gym.starterClaimed&&!s.collection.length)return 'Choose your starting partner first.';
+ const stock=ensureMarketStock(s,now),offer=stock.offers.find(o=>o.id===id);if(!offer)return 'Stock has refreshed. Choose a current offer.';
+ if(stock.sold.includes(id)||s.collection.some(c=>c.uid===id))return 'This offer has already been purchased.';
+ const reserve=s.gym.world.reserve;
+ if(offer.section==='reserve'&&reserve.speciesUnlocks.some(u=>u.species===offer.species))return 'This species is already established in your reserve.';
+ if(s.coins<offer.price)return 'Not enough coins.';
+ if(offer.section==='party'&&s.party.length>=6)return 'Your party is full. Remove a partner before buying.';
+ const balance=s.coins-offer.price;
+ if(offer.section==='party'){const c=structuredClone(offer.creature);catchCreature(s,c);s.coins=balance;stock.sold.push(id);return `${expandedSpecies[c.species].name} joined your party.`}
+ s.coins=balance;reserve.speciesUnlocks.push({species:offer.species,minLevel:offer.minLevel,maxLevel:offer.maxLevel});stock.sold.push(id);
+ return `${expandedSpecies[offer.species].name} is established in your wild reserve. Each encounter finds a new individual.`;
+}
