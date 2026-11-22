@@ -617,3 +617,6 @@ Capture uses three conditional shake checks whose combined rate equals the displ
 
 
 From 0.52.0 the user replaces defeat-driven Shiny odds with mastery. Use the highest mastery rank among currently owned individuals of the same species, including benched partners; do not stack copies or require the lead slot. Rank I/II/III/IV/V gives 1×/2×/4×/6×/8× the 1/4,096 wild base. No owned specimen gives the base chance. Evolution naturally moves that individual’s mastery to its new species; existing mastery/UIDs are preserved. `speciesDefeats` remains historical data only and has no effect on odds. Market offers stay at 1/4,096. Reserve, field journal and mastery panels explain the new source.
+
+
+From 0.53.0: Market/Shop upgrade copy briefly previews only the next level’s actual unlocks. Market introductions are one sentence describing the destination: directly into the party, or available to encounter/catch in the wild reserve. Preserve all purchase mechanics, stock rules, prices and saved progress.
