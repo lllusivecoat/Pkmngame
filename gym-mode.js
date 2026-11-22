@@ -1,15 +1,16 @@
-import {newGymClock,normalizeGymClock} from './gym-clock.js?v=20261122-reserves2';
-import {normalizeFacilities} from './gym-commerce.js?v=20261122-reserves2';
-import {normalizeGymDesign} from './gym-design.js?v=20261122-reserves2';
-import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261122-reserves2';
-import {normalizeReserve} from './gym-world.js?v=20261122-reserves2';
-import {normalizeTown} from './town.js?v=20261122-reserves2';
-import {expandedSpecies} from './engine-data.js?v=20261122-reserves2';
-import {trainerDirectory} from './trainer-directory.js?v=20261122-reserves2';
+import {startBattleSummary} from './battle-summary.js?v=20261122-welcome1';
+import {newGymClock,normalizeGymClock} from './gym-clock.js?v=20261122-welcome1';
+import {normalizeFacilities} from './gym-commerce.js?v=20261122-welcome1';
+import {normalizeGymDesign} from './gym-design.js?v=20261122-welcome1';
+import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261122-welcome1';
+import {normalizeReserve} from './gym-world.js?v=20261122-welcome1';
+import {normalizeTown} from './town.js?v=20261122-welcome1';
+import {expandedSpecies} from './engine-data.js?v=20261122-welcome1';
+import {trainerDirectory} from './trainer-directory.js?v=20261122-welcome1';
 // Gym management domain. Storage is independent of the legacy adventure save.
-import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261122-reserves2';
-import {healParty,addItem} from './items.js?v=20261122-reserves2';
-import {beginDefenseBattle} from './battle.js?v=20261122-reserves2';
+import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261122-welcome1';
+import {healParty,addItem} from './items.js?v=20261122-welcome1';
+import {beginDefenseBattle} from './battle.js?v=20261122-welcome1';
 export const GYM_SAVE_KEY='greenwood.gym.v1';
 const previousStock=[
  ['bulbasaur',550,8,0],['charmander',550,8,0],['squirtle',550,8,0],['pikachu',1000,10,0],['eevee',1100,10,0],['geodude',450,8,0],['oddish',450,8,0],['pidgey',400,8,0],
@@ -46,5 +47,5 @@ export function canPlace(s,x,y){return Number.isInteger(x)&&Number.isInteger(y)&
 export function placeDecoration(s,id,x,y){if(s.gym.session)return 'Finish the current challenge before decorating.';if(id==='remove'){s.gym.decor=s.gym.decor.filter(d=>d.x!==x||d.y!==y);return 'Decoration returned to storage.'}if(!canPlace(s,x,y))return 'Keep the entrance, battle court and centre aisle clear.';const available=(s.gym.ownedDecor[id]||0)-s.gym.decor.filter(d=>d.id===id).length;if(available<=0)return 'Buy another copy first.';s.gym.decor.push({id,x,y});return 'Decoration placed.'}
 export function nextChallenger(s){const g=s.gym,eligible=challengerUnlocks.filter(u=>g.reputation>=u.reputation).length,profile=profiles[g.visits%eligible],tier=Math.min(20,Math.floor(g.reputation/40)),level=Math.min(65,5+tier*3),limit=g.reputation<40?1:g.reputation<120?2:g.reputation<300?3:g.reputation<600?4:g.reputation<1000?5:6,count=Math.min(limit,profile.team.length);return {...profile,id:'visitor-'+g.visits,team:profile.team.slice(0,count),level,reward:260+tier*100+count*40,reputation:20,difficulty:tier===0?'Rookie':tier<3?'Skilled':tier<10?'Veteran':'Elite'}}
 export function acceptChallenger(s){if(s.gym.world.reserve.activeUid)return 'Finish the reserve encounter first.';if(s.gym.session)return 'A challenger is already visiting.';if(!s.gym.type)return 'Choose your Gym specialisation first.';if(!gymDefenders(s).length)return 'Buy a Pokémon matching your Gym type and add it to your team first.';s.gym.session={challenger:nextChallenger(s),status:'arriving',arrivalStartedAt:Date.now(),coinsBefore:s.coins,battle:null};enterBattleHall(s);return 'A challenger is entering your Gym battle hall.'}
-export function startDefense(s){const session=s.gym.session;if(!session||session.status!=='ready'||s.gym.world.location!=='hall'||!gymDefenders(s).length)return null;healParty(s);session.status='battle';session.battle=beginDefenseBattle({...s,party:gymDefenders(s).map(c=>c.uid)},session.challenger);session.battle.defenseType=s.gym.type;return session.battle}
+export function startDefense(s){const session=s.gym.session;if(!session||session.status!=='ready'||s.gym.world.location!=='hall'||!gymDefenders(s).length)return null;healParty(s);session.status='battle';session.battle=beginDefenseBattle({...s,party:gymDefenders(s).map(c=>c.uid)},session.challenger);session.battle.rewardStart=startBattleSummary(s);session.battle.defenseType=s.gym.type;return session.battle}
 export function settleDefense(s,outcome){const session=s.gym.session;if(!session||!['win','loss','withdraw'].includes(outcome))return null;const c=session.challenger,win=outcome==='win';s.coins=session.coinsBefore+(win?c.reward:0);if(c.exhibition){if(win&&!s.gym.leagueWins.includes(c.id))s.gym.leagueWins.push(c.id)}else{if(win){s.gym.wins++;s.gym.reputation+=c.reputation}else s.gym.losses++;s.gym.visits++;}s.gym.history.unshift({id:c.id,name:c.name,exhibition:!!c.exhibition,outcome,reward:win?c.reward:0,at:new Date().toISOString()});s.gym.history=s.gym.history.slice(0,12);s.gym.session=null;healParty(s);return {title:win?(c.exhibition?'Exhibition victory.':'Your Gym stands strong.'):outcome==='withdraw'?'Challenge withdrawn.':'A lesson for the next challenger.',message:win?`+${c.reward} coins${c.exhibition?' · Exhibition recorded. No promotion awarded.':' · +'+c.reputation+' Gym reputation.'} Your team is fully recovered.`:'No prize money lost. Your team is fully recovered and ready to try again.'}}

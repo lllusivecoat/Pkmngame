@@ -1,8 +1,8 @@
-import {starterChoices,facilityUpgrade,normalizeFacilities,marketTiers,ensureMarketStock} from './gym-commerce.js?v=20261122-reserves2';
-import {gymClock} from './gym-clock.js?v=20261122-reserves2';
-import {expandedSpecies} from './engine-data.js?v=20261122-reserves2';
-import {statsFor,STAT_KEYS,STAT_LABELS} from './rules.js?v=20261122-reserves2';
-import {abilityCatalog} from './items.js?v=20261122-reserves2';
+import {starterChoices,facilityUpgrade,normalizeFacilities,marketTiers,ensureMarketStock} from './gym-commerce.js?v=20261122-welcome1';
+import {gymClock} from './gym-clock.js?v=20261122-welcome1';
+import {expandedSpecies} from './engine-data.js?v=20261122-welcome1';
+import {statsFor,STAT_KEYS,STAT_LABELS} from './rules.js?v=20261122-welcome1';
+import {abilityCatalog} from './items.js?v=20261122-welcome1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function starterChoiceView(s,art){if(!s.gym.type||s.gym.starterClaimed||s.collection.length)return '';return `<section class="panel gym-starter-choice"><div class="eyebrow">YOUR FIRST PARTNER · FREE CHARTER CHOICE</div><h2>Choose your ${s.gym.type} partner</h2><p>One starting partner joins free at level 8. Keep your 2,000 coins for supplies and Market purchases. Your 10 Poké Balls are already in the bag.</p><div class="gym-starting-options">${starterChoices(s).map(id=>`<button class="secondary" data-gym-starter="${id}">${art({species:id,variant:'Normal'})}<strong>${expandedSpecies[id].name}</strong><small>${expandedSpecies[id].types.join(' / ')}</small><span>Choose partner →</span></button>`).join('')}</div></section>`}
 export function ballHints(count){return `<div class="concealed-team" aria-label="${count} unrevealed Pokémon">${Array.from({length:count},()=>'<span class="concealed-ball" aria-hidden="true"><i></i></span>').join('')}<small>${count} Poké Ball${count===1?'':'s'} · team concealed</small></div>`}
