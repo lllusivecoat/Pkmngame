@@ -1,5 +1,6 @@
 // Individual portraits loaded by id. WebP is preferred and PNG is the fallback.
-// Atlas names stay on assets/trainers-classic.webp, including Brock. Collisions use a set prefix.
+// Atlas names stay on assets/trainers-classic.webp. Brock uses his painted file.
+// Collisions use a set prefix. sourceSet points an alias at another set's file.
 export const portraitSets=[
  {"id":"classes","label":"Trainer classes","dir":"assets/trainers-classes"},
  {"id":"original","label":"Original classes","dir":"assets/trainers-original"},
@@ -28,7 +29,7 @@ export const portraitSets=[
  {"id":"special","label":"Special characters","dir":"assets/trainers-special"}
 ];
 const portraitDirs=Object.fromEntries(portraitSets.map(set=>[set.id,set.dir]));
-export function portraitPath(entry){return portraitDirs[entry.set]+'/'+(entry.sourceId||entry.id)}
+export function portraitPath(entry){return portraitDirs[entry.sourceSet||entry.set]+'/'+(entry.sourceId||entry.id)}
 export const portraitManifest=[
  {"id":"class_bug_catcher","name":"Bug Catcher","role":"Trainer class","set":"classes","note":"Used by Fern"},
  {"id":"class_youngster","name":"Youngster","role":"Trainer class","set":"classes"},
@@ -64,6 +65,7 @@ export const portraitManifest=[
  {"id":"e4_morwenna","name":"Morwenna","role":"Elite Four · Poison/Dark","set":"elite"},
  {"id":"e4_tobiah","name":"Tobiah","role":"Elite Four · Flying","set":"elite"},
  {"id":"champ_rosalind","name":"Rosalind","role":"Champion","set":"elite"},
+ {"id":"brock","name":"Brock","role":"Gym Leader","set":"kanto"},
  {"id":"misty","name":"Misty","role":"Gym Leader","set":"kanto"},
  {"id":"lt-surge","name":"Lt. Surge","role":"Gym Leader","set":"kanto"},
  {"id":"erika","name":"Erika","role":"Gym Leader","set":"kanto"},
@@ -255,6 +257,8 @@ export const portraitManifest=[
  {"id":"faba","name":"Faba","role":"Admin","set":"aether-foundation"},
  {"id":"aether-employee_m","name":"Aether Employee","role":"Staff · male","set":"aether-foundation","sourceId":"employee_m"},
  {"id":"aether-employee_f","name":"Aether Employee","role":"Staff · female","set":"aether-foundation","sourceId":"employee_f"},
+ {"id":"yell-piers","name":"Piers","role":"Boss","set":"team-yell","sourceId":"piers","sourceSet":"galar","note":"Team Yell portrait. The Galar Gym Leader id stays piers."},
+ {"id":"yell-marnie","name":"Marnie","role":"Admin","set":"team-yell","sourceId":"marnie","sourceSet":"galar","note":"Team Yell portrait. The Galar rival id stays marnie."},
  {"id":"yell-grunt_m","name":"Yell Grunt","role":"Grunt · male","set":"team-yell","sourceId":"grunt_m"},
  {"id":"yell-grunt_f","name":"Yell Grunt","role":"Grunt · female","set":"team-yell","sourceId":"grunt_f"},
  {"id":"rose","name":"Rose","role":"Boss","set":"macro-cosmos"},

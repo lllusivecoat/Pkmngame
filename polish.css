@@ -34,3 +34,6 @@
 .reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation:none!important;transition:none!important;will-change:auto!important}
 .reduce-motion .damage-number{display:none}
 @media(prefers-reduced-motion:reduce){.art.has-sprite>.sprite,.battle-creature,.battle-creature>.art,.capture-orb{animation:none!important;will-change:auto!important}}
+.app-update-banner{position:fixed;z-index:30;top:max(8px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(560px,calc(100% - 16px));display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:14px;background:#14352f;color:#f3fff8;border:1px solid #6dceb0;box-shadow:0 10px 30px #0008}
+.app-update-banner p{margin:0;color:#e7fff6;font-size:13px;line-height:1.4}
+.app-update-banner button{flex:none;min-height:44px}
