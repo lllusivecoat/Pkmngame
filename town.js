@@ -1,4 +1,4 @@
-import {normalizeGymWorld} from './gym-world-data.js?v=20261122-marketcopy1';
+import {normalizeGymWorld} from './gym-world-data.js?v=20261122-nursery1';
 // Fixed plots keep a developing town on one reachable map, without replacing Gym saves.
 export const townProjects=[
  {id:'training',name:'Training wing',kind:'Gym extension',x:2,y:3,cost:600,reputation:20,description:'Attach a training hall to the west side of your Gym.'},
