@@ -17,8 +17,8 @@ test('fresh careers get 2000 coins and 10 balls once; existing balances are neve
 
 test('all types can be purchased, fully evolved species excluded, unlocks cannot be sold twice even after refresh',()=>{
  const s=ready();visitPokemonMarket(s);s.gym.facilities.market=5;const stock=ensureMarketStock(s),off=stock.offers.find(o=>o.section==='party'&&!expandedSpecies[o.creature.species].types.includes('Grass'));assert.ok(off);assert.match(buyMarketOffer(s,off.id),/joined/);
- for(const id of ['raichu','venusaur','butterfree','lapras','dragonite','mewtwo'])assert.equal(marketSpeciesEligible(id),false,id);
- for(const id of ['pikachu','ivysaur','metapod','dratini'])assert.equal(marketSpeciesEligible(id),true,id);
+ for(const id of ['raichu','venusaur','butterfree','dragonite','mewtwo'])assert.equal(marketSpeciesEligible(id),false,id);
+ for(const id of ['pikachu','ivysaur','metapod','dratini','lapras','miltank'])assert.equal(marketSpeciesEligible(id),true,id);
  const offer=stock.offers.find(o=>o.section==='reserve');buyMarketOffer(s,offer.id);const coins=s.coins;buyMarketOffer(s,offer.id);assert.equal(s.coins,coins);
  assert.equal(stock.offers.filter(o=>o.section==='reserve'&&o.species===offer.species).length,1);
  const db=store();saveGym(db,s);const reload=loadGym(db);for(let h=1;h<15;h++)assert.ok(ensureMarketStock(reload,s.gym.clock.startedAt+h*GAME_HOUR_MS).offers.every(o=>o.section!=='reserve'||o.species!==offer.species));

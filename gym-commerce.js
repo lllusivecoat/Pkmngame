@@ -1,7 +1,8 @@
-import {expandedSpecies} from './engine-data.js?v=20261122-asterra1';
-import {createCreature,catchCreature} from './core.js?v=20261122-asterra1';
-import {buyItem,itemCatalog} from './items.js?v=20261122-asterra1';
-import {gymClock} from './gym-clock.js?v=20261122-asterra1';
+import {isLegendarySpecies,MARKET_SHINY_CHANCE} from './pokemon-individuals.js?v=20261122-johto1';
+import {expandedSpecies} from './engine-data.js?v=20261122-johto1';
+import {createCreature,catchCreature} from './core.js?v=20261122-johto1';
+import {buyItem,itemCatalog} from './items.js?v=20261122-johto1';
+import {gymClock} from './gym-clock.js?v=20261122-johto1';
 const babies=new Set('pichu cleffa igglybuff togepi tyrogue smoochum elekid magby azurill wynaut budew chingling bonsly mimejr happiny munchlax riolu mantyke toxel'.split(' '));
 const excluded=new Set('articuno zapdos moltres mewtwo mew lugia hooh celebi regirock regice registeel latias latios kyogre groudon rayquaza jirachi deoxys dialga palkia giratina darkrai arceus'.split(' '));
 const idOf=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -20,9 +21,9 @@ export function claimGymStarter(s,id){if(s.gym.starterClaimed||s.collection.leng
 function hash(text){let n=2166136261;for(const c of text)n=Math.imul(n^c.charCodeAt(0),16777619);return n>>>0}
 function rng(seed){return ()=>{seed+=0x6D2B79F5;let t=seed;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296}}
 // Only species with a further permanent evolution are eligible, irrespective of Gym type.
-export const marketSpeciesEligible=id=>!!expandedSpecies[id]?.evos?.length&&evolutionStage(id)<=2;
+export const marketSpeciesEligible=id=>!!expandedSpecies[id]&&!isLegendarySpecies(id)&&evolutionStage(id)<=2&&(!!expandedSpecies[id].evos?.length||!expandedSpecies[id].prevo);
 export function ensureMarketStock(s,now=Date.now()){
- const hour=gymClock(s,now).hourKey,level=normalizeFacilities(s.gym.facilities).market,key=`v2:${hour}:${level}`,old=s.gym.marketStock;
+ const hour=gymClock(s,now).hourKey,level=normalizeFacilities(s.gym.facilities).market,key=`v3:${hour}:${level}`,old=s.gym.marketStock;
  if(old?.key===key&&Array.isArray(old.offers)&&old.offers.length)return old;
  const tier=marketTiers[level],pool=Object.keys(expandedSpecies).filter(id=>marketSpeciesEligible(id)&&evolutionStage(id)<=tier.stage&&(expandedSpecies[id].evoLevel||1)<=tier.max&&Object.values(expandedSpecies[id].baseStats).reduce((a,b)=>a+b,0)<=tier.bst),offers=[];
  for(const section of ['party','reserve']){
@@ -31,10 +32,10 @@ export function ensureMarketStock(s,now=Date.now()){
   const remaining=[...candidates];
   for(let i=0;i<12&&remaining.length;i++){
    const index=Math.floor(random()*remaining.length),id=remaining[index],species=expandedSpecies[id];if(section==='reserve')remaining.splice(index,1);
-   const levelNow=Math.max(species.evoLevel||1,tier.min+Math.floor(random()*(tier.max-tier.min+1))),uid=`market-v2-${s.gym.clock.seed}-${hour}-${level}-${section}-${i}`;
+   const levelNow=Math.max(species.evoLevel||1,tier.min+Math.floor(random()*(tier.max-tier.min+1))),uid=`market-v3-${s.gym.clock.seed}-${hour}-${level}-${section}-${i}`;
    const bst=Object.values(species.baseStats).reduce((a,b)=>a+b,0),price=Math.max(150,Math.round(bst*(levelNow*.10+level*.45)*(section==='reserve'?.65:1)/50)*50);
    if(section==='reserve'){offers.push({id:uid,section,species:id,minLevel:Math.max(species.evoLevel||1,tier.min),maxLevel:tier.max,price,stage:evolutionStage(id)});continue}
-   const c=createCreature(id,levelNow,random);c.uid=uid;c.variant=random()<.015?'Shiny':'Normal';for(const stat of ['hp','attack','defence','specialAttack','specialDefence','speed'])c.ivs[stat]=Math.floor(random()*32);c.caughtAt=new Date(s.gym.clock.startedAt+hour*300000).toISOString();c.location='Pokémon Market';offers.push({id:uid,section,creature:c,price,stage:evolutionStage(id)});
+   const c=createCreature(id,levelNow,random);c.uid=uid;c.variant=random()<MARKET_SHINY_CHANCE?'Shiny':'Normal';for(const stat of ['hp','attack','defence','specialAttack','specialDefence','speed'])c.ivs[stat]=Math.floor(random()*32);c.caughtAt=new Date(s.gym.clock.startedAt+hour*300000).toISOString();c.location='Pokémon Market';offers.push({id:uid,section,creature:c,price,stage:evolutionStage(id)});
   }
  }
  s.gym.marketStock={key,hour,level,offers,sold:old?.key===key&&Array.isArray(old.sold)?old.sold.filter(id=>offers.some(o=>o.id===id)):[]};return s.gym.marketStock;

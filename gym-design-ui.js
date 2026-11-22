@@ -1,5 +1,5 @@
-import {gymEmblems,hallFurniture,normalizeGymDesign,designPresets,emblemMark} from './gym-design.js?v=20261122-asterra1';
-import {environmentSprite} from './environment-art.js?v=20261122-asterra1';
+import {gymEmblems,hallFurniture,normalizeGymDesign,designPresets,emblemMark} from './gym-design.js?v=20261122-johto1';
+import {environmentSprite} from './environment-art.js?v=20261122-johto1';
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels={floorColor:'Floor colour',borderColor:'Border colour',wallColor:'Wall colour',carpetColor:'Runner colour',courtColor:'Battle carpet colour',trimColor:'Trim colour',emblemColor:'Emblem colour'};
 const options=(items,selected)=>items.map(([id,label])=>`<option value="${id}" ${id===selected?'selected':''}>${label}</option>`).join('');

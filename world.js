@@ -1,6 +1,7 @@
-import {kanto151EncounterSites} from './kanto151-data.js?v=20261122-asterra1';
-import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261122-asterra1';
-import {areaDesigns} from './area-designs.js?v=20261122-asterra1';
+import {johto251EncounterSites} from './johto251-data.js?v=20261122-johto1';
+import {kanto151EncounterSites} from './kanto151-data.js?v=20261122-johto1';
+import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261122-johto1';
+import {areaDesigns} from './area-designs.js?v=20261122-johto1';
 // Separate, connected areas. Only the active map is rendered.
 const greenwood=['FFFFGGGGGG','FGGGWWGFPP','FGPPWWGFPG','GGPPGBGPPP','FGPPGWRRPG','FGGPGWRRPG','FGGPGBGRPG','FFFGGWFPPR','FGGPPPPPGG','FFGGGFFFFF'];
 const ridge=['RRRRGGRRRR','RRGGPPPPPP','RRGPPWRGPG','RGPPGWRGPG','RGPPRBRGPG','RGGPGWRGPG','RGGPGGRGPG','RGGPPPPPPG','PPPPGRRGGG','RRRGGGGRRR'];
@@ -36,7 +37,7 @@ const areaDefinitions=[
  [['hub','Emberfall Settlement','Rest at the Pokémon Center before Flint’s Fire Gym.',null],['caldera','Cinder Caldera','Numel grazes between warm volcanic stones.',['numel','charmander','growlithe','geodude','torkoal','gible']],['springs','Ember Springs','Mineral pools interrupt the warm, grassy trails.',['numel','vulpix','growlithehisui','phanpy','shuckle']],['quarry','Obsidian Quarry','A rough rock trail climbs through old workings.',['numel','geodude','onix','growlithe','trapinch']],['ruins','Ashen Ruins','Smoky paths lead past forgotten stone walls.',['numel','gastly','vulpix','charmander','seviper','deino']]],
  [['hub','Snowbell Village','Sera’s Water Gym and the regional Pokémon Center welcome travellers.',null],['pines','Frostpine Forest','Snover hides among the snow-laden pines.',['snover','vulpixalola','eevee','pidgey']],['lake','Mirrorfrost Lake','Walk the frozen banks; keep clear of the deep water.',['snover','psyduck','squirtle','lapras','cloyster','relicanth']],['glade','Aurora Glade','A quiet clearing catches the changing northern sky.',['snover','vulpixalola','ralts','eevee']],['sanctuary','Glacier Sanctuary','The far trail winds through ancient snow-covered stones.',['snover','lapras','murkrow','raichualola','absol','frigibax']]]
 ];
-for(const [id,site]of Object.entries(kanto151EncounterSites)){const region=zones.findIndex(z=>z.name===site.region),area=areaDefinitions[region]?.find(a=>a[0]===site.area);if(!area)throw Error('Unknown Kanto encounter site '+id);area[3]??=[];if(!area[3].includes(id))area[3].push(id)}
+for(const [id,site]of Object.entries({...kanto151EncounterSites,...johto251EncounterSites})){const region=zones.findIndex(z=>z.name===site.region),area=areaDefinitions[region]?.find(a=>a[0]===site.area);if(!area)throw Error('Unknown Kanto encounter site '+id);area[3]??=[];if(!area[3].includes(id))area[3].push(id)}
 for(const [index,z]of zones.entries()){
  z.areas=areaDefinitions[index].map(([id,name,description,species],i)=>({id,name,description,species,...areaDesigns[z.name+'/'+id],map:i===0?z.map:areaDesigns[z.name+'/'+id].map,center:i===0?z.center:null,gym:i===0?z.gym:null,trainers:i===0?z.trainers:[],landmarks:i===0?z.landmarks:[{x:5,y:6,name:name+' viewpoint'}],exits:i===0?[...z.exits]:[]}));
  for(const a of z.areas)a.landmarks.push(...a.points);

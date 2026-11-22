@@ -1,4 +1,4 @@
-import {gymWorldMaps} from './gym-world-data.js?v=20261122-asterra1';
-import {townDistrict} from './town-map-data.js?v=20261122-asterra1';
+import {gymWorldMaps} from './gym-world-data.js?v=20261122-johto1';
+import {townDistrict} from './town-map-data.js?v=20261122-johto1';
 export function cameraBounds(size,position,columns=11,rows=9){const cols=Math.min(columns,size),height=Math.min(rows,size);return {x:Math.max(0,Math.min(size-cols,position.x+.5-cols/2)),y:Math.max(0,Math.min(size-height,position.y+.5-height/2)),columns:cols,rows:height}}
 export function cameraView(s,scene){const w=s.gym.world,map=gymWorldMaps[w.location],district=w.location==='town'?townDistrict(w.position.x,w.position.y):map.name;return `<div class="world-viewport" data-camera-location="${w.location}" data-world-size="${map.size}" style="--world-size:${map.size};--focus-x:${w.position.x+.5};--focus-y:${w.position.y+.5}"><div class="world-camera-scene">${scene}</div><div class="camera-caption"><span>${district}</span><small>Walk to explore · ${w.position.x+1}, ${w.position.y+1}</small></div></div>`}
