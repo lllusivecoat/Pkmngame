@@ -1,11 +1,11 @@
-import {normalizeGymDesign} from './gym-design.js?v=20261122-welcome1';
-import {TOWN_SIZE,TOWN_OFFSET,townBaseWalkable} from './town-map-data.js?v=20261122-welcome1';
+import {normalizeGymDesign} from './gym-design.js?v=20261122-gymbound1';
+import {TOWN_SIZE,TOWN_OFFSET,townBaseWalkable} from './town-map-data.js?v=20261122-gymbound1';
 // Connected personal maps; independent of the adventure-region map graph.
 const border=(size,x,y)=>x===0||y===0||x===size-1||y===size-1;
 export const gymWorldMaps={
- town:{name:'Your town',size:TOWN_SIZE,spawn:{x:19,y:18},portals:[{x:19,y:17,to:'hall',arrival:{x:7,y:12},label:'Enter Gym'},{x:10,y:17,to:'shop',arrival:{x:5,y:9},label:'Enter town shop'},{x:24,y:20,to:'market',arrival:{x:5,y:9},label:'Enter Pokémon Market'}]},
+ town:{name:'Bellwick',size:TOWN_SIZE,spawn:{x:19,y:18},portals:[{x:19,y:17,to:'hall',arrival:{x:7,y:12},label:'Enter Gym'},{x:10,y:17,to:'shop',arrival:{x:5,y:9},label:'Enter town shop'},{x:24,y:20,to:'market',arrival:{x:5,y:9},label:'Enter Pokémon Market'}]},
  market:{name:'Pokémon Market',size:11,spawn:{x:5,y:9},portals:[{x:5,y:10,to:'town',arrival:{x:24,y:21},label:'Leave Market'}]},
- shop:{name:'Greenwood Goods · town shop',size:11,spawn:{x:5,y:9},portals:[{x:5,y:10,to:'town',arrival:{x:10,y:18},label:'Leave shop'}]},
+ shop:{name:'Bellwick Goods · town shop',size:11,spawn:{x:5,y:9},portals:[{x:5,y:10,to:'town',arrival:{x:10,y:18},label:'Leave shop'}]},
  hall:{name:'Gym battle hall',size:15,spawn:{x:7,y:4},portals:[{x:7,y:13,to:'town',arrival:{x:19,y:18},label:'Town entrance'},{x:1,y:7,to:'breeding',arrival:{x:9,y:5},label:'Breeding grounds'},{x:13,y:7,to:'reserve',arrival:{x:1,y:7},label:'Wild reserve'}]},
  breeding:{name:'Breeding grounds',size:11,spawn:{x:9,y:5},portals:[{x:10,y:5,to:'hall',arrival:{x:2,y:7},label:'Return to Gym'}]},
  reserve:{name:'Wild reserve',size:15,spawn:{x:1,y:7},portals:[{x:0,y:7,to:'hall',arrival:{x:12,y:7},label:'Return to Gym'}]}
