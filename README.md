@@ -1,3 +1,19 @@
+## v0.55.0 · Timed nursery, outdoor cameras and Generation 5–6
+
+All personal outdoor maps (Bellwick, reserve and breeding garden) share visible day/dusk/night lighting. Legacy outdoor adventure maps also reflect their current time; indoor maps stay lit. Each personal outdoor map has Close / Wide / Widest camera controls, saved separately, with responsive follow-camera framing and complete scenery at wider distances.
+
+Egg hatching now uses **real time**, replacing walking. Each breeder manages one pair and holds at most ten Eggs, including hatched Pokémon awaiting collection. No Egg needs a party slot. Production checks once per real minute using Generation 8 compatibility chances; hatch time is the canonical species hatch-cycle count × 30 real seconds. Deadlines persist offline. Pokémon wait at the nursery until collected, and a full incubator pauses production. Collection is idempotent and pays no coins. Generation 8 inheritance is unchanged.
+
+Hire up to five breeders at Mara’s nursery. Additional breeder fees are 2,000 / 4,000 / 8,000 / 16,000 coins, once each. Every worker has independent parents, production clock and ten-Egg incubator; parents cannot be assigned twice or used in battle while deposited. Settings can advance nursery time ten minutes or hatch incubating Eggs for testing. Legacy step-based Eggs retain their identities and convert remaining steps proportionally into real-time incubation; an old ten-carried-plus-one-waiting layout receives a second worker to preserve all eleven embryos.
+
+Town construction, upgrade plots and their controls are removed. Old construction save data is kept inert for compatibility; career funds, collection, Gym design and facility levels are preserved. Shop and Market upgrades remain functional. Market listings scale by level: party **5/6/7/8/10**, reserve **3/4/5/6/7**. The fifteen-real-minute refresh remains independent of world time.
+
+A single stat-display mode cycles all six values together across the Pokémon details and every party Market listing: Stat → EV → IV. Clicking or pressing Enter on any tile switches every displayed tile; automatic cycling runs every four seconds unless reduced motion is enabled.
+
+`unovakalos721-data.js` adds 221 previously missing Generation 5–6 species: all National #001–721 are now present, with 738 permanent registered entries plus 22 temporary battle forms. Canonical stats, genders, abilities, learnsets, breeding metadata, evolution links and authored encounter sites are bundled locally. Missing approved painted Normal/Shiny art remains explicitly labelled pending; existing artwork is preserved. Gallery filters include Unova and Kalos.
+
+Tests: `npm test`, `npm run stage`, and the complete browser smoke suite. `tests/timed-nursery-market-world.test.mjs` covers offline timers, capacity, duplicate prevention, multi-worker hiring, migration, listing counts, shared stat modes and the 721-species registry. `scripts/nursery-browser-smoke.mjs` verifies the full nursery/UI/zoom/Market flow on desktop and mobile. Hosting stays free on GitHub Pages; both existing save keys remain unchanged.
+
 ## v0.54.0 · Time, nursery and expanded roster
 
 Gym careers now have a visible day/night cycle tied to the saved clock (one game hour per five real minutes). Daytime and nighttime friendship/held-item evolution requirements use that clock, and authored reserve schedules affect when nocturnal/diurnal species can appear. Night is 20:00–05:59; dusk still counts as daytime for these evolutions. Settings has a world-hour testing control. Market stock has its own saved anchor and refreshes every **15 real minutes**, unaffected by the world-hour control.
