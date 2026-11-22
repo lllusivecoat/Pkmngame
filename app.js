@@ -88,7 +88,7 @@ function action(a){if(!battle||busy)return;if(a.type==='move')a.gimmick=$('#batt
  if((save.hunts?.caught?.length||0)>oldHunts){r.event+=' · HUNT COMPLETE';if(finished)finished.message+=' · Hunt complete! Claim your trail reward in Explore.'}
  const guildGain=(save.guild?.points||0)-oldGuildPoints;if(guildGain>0){r.event+=' · +'+guildGain+' expedition points';if(finished)finished.message+=' · +'+guildGain+' expedition points for your guild.'}
  if(save.level>oldLevel)r.event+=' · TRAINER LEVEL UP '+save.level;
- const visualBattle=r.battle||r.finalBattle;if(a.type==='catch'&&r.battle)battlePresenter.revealEnemy();
+ const visualBattle=r.battle||r.finalBattle;
  const showOutcome=()=>{if(motionEnabled()&&visualBattle?.effects?.length){battle=visualBattle;busy=true;commit(r.event);setTimeout(()=>{battle=r.battle;if(battle)battle.effects=[];result=finished;busy=false;render()},900)}
  else{battle=r.battle;if(battle)battle.effects=[];result=finished;commit(r.event)}};
  if(a.type==='catch'&&r.capture){busy=true;document.querySelectorAll('.battle button,.battle select').forEach(b=>b.disabled=true);focusCaptureField(document);if(gymMode&&before.reserve)save.gym.world.reserve.battle=r.battle;try{persist(browserStorage,save)}catch{}const duration=playCaptureThrow(document,{enabled:motionEnabled(),capture:r.capture,ballMarkup:ballIcon(a.ball==='greatball'?1:a.ball==='pokeball'?0:2)});setTimeout(()=>{busy=false;showOutcome()},duration)}else showOutcome();
