@@ -1,6 +1,6 @@
 import http from 'node:http';import path from 'node:path';import {readFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';import {mkdir} from 'node:fs/promises';
-const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'/tmp/gym-browser/node_modules/playwright-core/index.mjs');
+const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright-core');
 await mkdir('.browser-artifacts',{recursive:true});
 const server=http.createServer(async(req,res)=>{try{const p=new URL(req.url,'http://localhost').pathname,file=path.join(process.cwd(),'.site',p==='/'?'index.html':p),mime={'.js':'text/javascript','.css':'text/css','.html':'text/html','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml'};const body=await readFile(file);res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream'}).end(body)}catch{res.writeHead(404).end()}});await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({executablePath:(await import('node:fs')).existsSync('/usr/bin/chromium')?'/usr/bin/chromium':'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
