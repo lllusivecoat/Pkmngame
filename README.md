@@ -606,3 +606,6 @@ From 0.48.0: Fresh Gym careers open a welcome page, choose a saved Gym type, the
 
 
 From 0.49.0 the game is Gymbound and its personal town is Bellwick. Brand, manifest/installed app name, welcome, town shop and default Gym follow those names. Preserve all existing `greenwood.*` storage keys, service-worker protocols/cache namespaces, adventure region keys, PWA id/scope and the Pkmngame URL for compatibility. Migrate only the exact old default Gym name, preserving custom names and all progression. Challenger invitations use one spaced portrait/identity/concealed-ball row; no explanatory paragraphs appear below Accept challenger.
+
+
+From 0.50.0: Gymbound’s overarching region is Asterra, containing Bellwick. `world-identity.js` holds display names; keep the separate legacy adventure region keys and all save/storage identities unchanged. `ball-icons.js` is the shared centred SVG for concealed team hints and battle/capture throws; `assets/ui/pokeball.svg` is its matching button decoration. Preserve concealed rosters, animation timing, capture math and the compact invitation layout.

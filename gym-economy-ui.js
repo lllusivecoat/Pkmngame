@@ -1,11 +1,12 @@
-import {starterChoices,facilityUpgrade,normalizeFacilities,marketTiers,ensureMarketStock} from './gym-commerce.js?v=20261122-gymbound1';
-import {gymClock} from './gym-clock.js?v=20261122-gymbound1';
-import {expandedSpecies} from './engine-data.js?v=20261122-gymbound1';
-import {statsFor,STAT_KEYS,STAT_LABELS} from './rules.js?v=20261122-gymbound1';
-import {abilityCatalog} from './items.js?v=20261122-gymbound1';
+import {ballIcon} from './ball-icons.js?v=20261122-asterra1';
+import {starterChoices,facilityUpgrade,normalizeFacilities,marketTiers,ensureMarketStock} from './gym-commerce.js?v=20261122-asterra1';
+import {gymClock} from './gym-clock.js?v=20261122-asterra1';
+import {expandedSpecies} from './engine-data.js?v=20261122-asterra1';
+import {statsFor,STAT_KEYS,STAT_LABELS} from './rules.js?v=20261122-asterra1';
+import {abilityCatalog} from './items.js?v=20261122-asterra1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function starterChoiceView(s,art){if(!s.gym.type||s.gym.starterClaimed||s.collection.length)return '';return `<section class="panel gym-starter-choice"><div class="eyebrow">YOUR FIRST PARTNER · FREE CHARTER CHOICE</div><h2>Choose your ${s.gym.type} partner</h2><p>One starting partner joins free at level 8. Keep your 2,000 coins for supplies and Market purchases. Your 10 Poké Balls are already in the bag.</p><div class="gym-starting-options">${starterChoices(s).map(id=>`<button class="secondary" data-gym-starter="${id}">${art({species:id,variant:'Normal'})}<strong>${expandedSpecies[id].name}</strong><small>${expandedSpecies[id].types.join(' / ')}</small><span>Choose partner →</span></button>`).join('')}</div></section>`}
-export function ballHints(count,{compact=false}={}){return `<div class="concealed-team" aria-label="${count} unrevealed Pokémon">${Array.from({length:count},()=>'<span class="concealed-ball" aria-hidden="true"><i></i></span>').join('')}<small>${count} Poké Ball${count===1?'':'s'}${compact?'<br>':' · '}team concealed</small></div>`}
+export function ballHints(count,{compact=false}={}){return `<div class="concealed-team" aria-label="${count} unrevealed Pokémon">${Array.from({length:count},()=>'<span class="concealed-ball" aria-hidden="true">'+ballIcon()+'</span>').join('')}<small>${count} Poké Ball${count===1?'':'s'}${compact?'<br>':' · '}team concealed</small></div>`}
 export function facilityPanel(s,id){const u=facilityUpgrade(s,id),name=id==='shop'?'Item shop':'Pokémon Market',tier=marketTiers[normalizeFacilities(s.gym.facilities).market];return `<section class="facility-upgrade panel"><div><div class="eyebrow">${name.toUpperCase()} · LEVEL ${u.level} / 5</div><h3>${u.maxed?'Fully developed':`Upgrade ${name}`}</h3><p>${id==='shop'?'Higher levels unlock stronger medicine, capture tools, berries, held items, evolution supplies and TMs.':`Current stock: stages 1–${tier.stage}, levels ${tier.min}–${tier.max}. Fully evolved and single-stage Pokémon are never sold.`}</p></div><button class="secondary" data-facility-upgrade="${id}" ${u.maxed||s.gym.session||!s.collection.length||s.coins<u.cost||s.gym.reputation<u.reputation?'disabled':''}>${u.maxed?'Maximum level':`Upgrade · ◈ ${u.cost.toLocaleString()}`}</button>${!u.maxed?`<small>Requires ${u.reputation} reputation · current ${s.gym.reputation}</small>`:''}</section>`}
 export function marketCatalogue(s,art,state,section='party'){
  const stock=ensureMarketStock(s),clock=gymClock(s),reserve=s.gym.world.reserve;

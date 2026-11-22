@@ -1,15 +1,15 @@
-import {characterSize,shopkeepers} from './world-characters.js?v=20261122-gymbound1';
-import {canTalkToShopkeeper} from './gym-world.js?v=20261122-gymbound1';
-import {hallPlacementAllowed} from './gym-design.js?v=20261122-gymbound1';
-import {cameraView} from './world-camera.js?v=20261122-gymbound1';
-import {personalGround,personalObjects} from './personal-scenery.js?v=20261122-gymbound1';
-import {gymWorldMaps,gymWalkable,gymPortalNear} from './gym-world-data.js?v=20261122-gymbound1';
-import {townMapView} from './town-view.js?v=20261122-gymbound1';
-import {gymPlayerView} from './gym-world-art.js?v=20261122-gymbound1';
-import {gymStock} from './gym-mode.js?v=20261122-gymbound1';
-import {get} from './data.js?v=20261122-gymbound1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261122-gymbound1';
-import {itemCount} from './items.js?v=20261122-gymbound1';
+import {characterSize,shopkeepers} from './world-characters.js?v=20261122-asterra1';
+import {canTalkToShopkeeper} from './gym-world.js?v=20261122-asterra1';
+import {hallPlacementAllowed} from './gym-design.js?v=20261122-asterra1';
+import {cameraView} from './world-camera.js?v=20261122-asterra1';
+import {personalGround,personalObjects} from './personal-scenery.js?v=20261122-asterra1';
+import {gymWorldMaps,gymWalkable,gymPortalNear} from './gym-world-data.js?v=20261122-asterra1';
+import {townMapView} from './town-view.js?v=20261122-asterra1';
+import {gymPlayerView} from './gym-world-art.js?v=20261122-asterra1';
+import {gymStock} from './gym-mode.js?v=20261122-asterra1';
+import {get} from './data.js?v=20261122-asterra1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261122-asterra1';
+import {itemCount} from './items.js?v=20261122-asterra1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function gymWorldMapView(s,{decorating=false,selectedProject='',art,arranging=false}={}){const w=s.gym.world,map=gymWorldMaps[w.location];if(w.location==='town')return cameraView(s,townMapView(s,{decorating,selectedProject}));const keeper=shopkeepers[w.location],population=[],visitor=w.location==='hall'?s.gym.session:null;return cameraView(s,`<div class="gym-map gym-world-map world-${w.location}" data-world-location="${w.location}" style="--world-size:${map.size}" aria-label="${map.name} walkable map">${personalGround(w.location,s.gym.design)}${Array.from({length:map.size**2},(_,i)=>{const x=i%map.size,y=Math.floor(i/map.size);return `<button class="gym-tile gym-walk-tile" data-gym-world-tile="${x},${y}" aria-label="Walk to column ${x+1}, row ${y+1}" ${arranging&&w.location==='hall'?`data-hall-place="${x},${y}" ${hallPlacementAllowed(x,y)?'':'disabled'}`:gymWalkable(w.location,x,y,s.gym.town,s.gym.design)?'':'disabled'}></button>`}).join('')}${personalObjects(w.location,s.gym.design)}${gymPlayerView(s)}${['shop','market'].includes(w.location)?`<button type="button" id="shopkeeper" class="shopkeeper-token" aria-label="Talk to ${keeper.name}, ${keeper.role}" style="--character-width:${characterSize.width*100/map.size}%;--character-height:${characterSize.height*100/map.size}%" ${canTalkToShopkeeper(s)?'':'disabled'}>${trainerPortrait(keeper.portrait)}<span>${keeper.name} · ${keeper.role}</span></button><div class="keeper-counter-front" aria-hidden="true"></div>`:''}${map.portals.map(p=>`<span class="world-door-label" style="--door-x:${(p.x+.5)/map.size*100}%;--door-y:${(p.y+.5)/map.size*100}%">${p.label}</span>`).join('')}${visitor?`<div style="--character-width:${characterSize.width*100/map.size}%;--character-height:${characterSize.height*100/map.size}%" class="gym-visitor hall-visitor ${visitor.status==='arriving'?'is-arriving':''}">${trainerPortrait(visitor.challenger.portrait)}<span>${esc(visitor.challenger.name)}</span></div>`:''}${population.map(p=>{const near=Math.abs(p.position.x-w.position.x)+Math.abs(p.position.y-w.position.y)<=2;return `<button class="reserve-roamer" data-reserve-encounter="${p.creature.uid}" style="--roamer-x:${(p.position.x+.5)/map.size*100}%;--roamer-y:${(p.position.y+.8)/map.size*100}%" aria-label="Encounter ${get(p.creature.species).name}" ${near?'':'disabled'}>${art(p.creature)}<small>${get(p.creature.species).name}</small></button>`}).join('')}</div>`).replace('class="world-viewport"',`class="world-viewport ${arranging&&w.location==='hall'?'gym-design-overview':''}"`)}
 export function gymWalkingControls(s){const w=s.gym.world,map=gymWorldMaps[w.location],portal=gymPortalNear(s);return `<div class="gym-walking-controls"><div><strong>${map.name}</strong><small>Position ${w.position.x+1}, ${w.position.y+1} · Arrows / WASD or tap an adjacent tile</small>${portal?`<button class="secondary" id="gym-use-door">${portal.label} →</button>`:''}</div><div class="gym-walk-pad" aria-label="Movement controls"><button data-gym-walk="0,-1" aria-label="Walk up">↑</button><button data-gym-walk="-1,0" aria-label="Walk left">←</button><button data-gym-walk="0,1" aria-label="Walk down">↓</button><button data-gym-walk="1,0" aria-label="Walk right">→</button></div></div>${w.location==='hall'?'<button class="secondary" id="gym-free-care">Recover team · free</button>':''}${w.location==='breeding'?'<section class="panel"><h3>Breeding grounds · future system</h3><p>You can explore this connected garden now. Pairing, eggs and breeding are not available yet. The east gate returns to the Gym hall.</p></section>':''}`}

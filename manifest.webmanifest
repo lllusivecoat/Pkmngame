@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Gymbound \u2014 Pok\u00e9mon Gym Leader",
   "short_name": "Gymbound",
-  "description": "Build your Gym, welcome challengers and grow your team in Bellwick.",
+  "description": "Build your Gym, welcome challengers and grow your team in Bellwick, in the Asterra region.",
   "start_url": "./?source=app",
   "scope": "./",
   "display": "standalone",

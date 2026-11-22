@@ -94,3 +94,5 @@
 .reduce-motion .primary::after{display:none}
 /* The collapsed sidebar uses the top-bar settings control. */
 @media(max-width:800px){:root[data-theme] #app .sidebar .settings-link{display:none}}
+/* Match the team hints and capture throws rather than approximating the ball with gradients. */
+:root[data-theme] #app .primary::before{border:0;border-radius:0;background:url('assets/ui/pokeball.svg') center/contain no-repeat;box-shadow:none}
