@@ -109,6 +109,20 @@ body{min-height:100dvh;overscroll-behavior-y:none}
   #app .starter h2{font-size:22px}
 }
 
+@media (max-width:900px),(max-height:520px){
+  #app .directory-filters{display:grid;grid-template-columns:1fr;gap:10px}
+  #app .directory-filters label{min-width:0;flex:none}
+  #app .directory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #app .directory-card{min-width:0;overflow:hidden}
+  #app .directory-card h2,#app .directory-card .eyebrow{overflow-wrap:anywhere}
+  #app .directory-card>.primary{min-height:44px;height:auto;white-space:normal;line-height:1.25;font-size:13px}
+  #app .directory-pagination{flex-wrap:wrap;gap:8px}
+  #app .directory-pagination button{min-height:44px;min-width:44px}
+  #app .app-update-banner{width:calc(100% - 16px);align-items:stretch;flex-direction:column}
+  #app .portrait-gallery .gallery-filters{display:grid;grid-template-columns:1fr;gap:10px}
+  #app .portrait-gallery .gallery-filters label{min-width:0}
+}
+
 @media (prefers-reduced-motion:reduce){
   #app :is(button,.primary,.secondary,.dpad button,.party-chip){transition:none}
 }
