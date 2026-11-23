@@ -1,4 +1,4 @@
-import {pokemonSizes} from './pokemon-size-data.js?v=20261123-rk1';
+import {pokemonSizes} from './pokemon-size-data.js?v=20261124-johtoart1';
 const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
 // Compress metre differences for readable chibi scenes. Length is not literal standing height.
 // Weight contributes a little bulk, so squat species such as Donphan do not read as tiny.

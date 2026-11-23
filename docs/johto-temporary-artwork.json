@@ -1,0 +1,2218 @@
+{
+  "archive": "https://www.pokeos.com/archive/assets/home",
+  "count": 85,
+  "rk9Count": 69,
+  "rk1Count": 16,
+  "entries": [
+    {
+      "id": "chikorita",
+      "name": "Chikorita",
+      "number": 152,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/152.png",
+          "sha256": "524a9844686475588d33d63b865c55035c60e455fc042b49ecdb45e1e8751821",
+          "pokeosAssetId": 155522,
+          "file": "assets/temporary-pokemon/normal/chikorita.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/chikorita.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/152.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/152.png",
+          "file": "assets/temporary-pokemon/shiny/chikorita.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 13371,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "bayleef",
+      "name": "Bayleef",
+      "number": 153,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/153.png",
+          "sha256": "7ad290fdc05c777758a4a6b0ea0080b10920b0e709cdc5e0206434f1db63bf8f",
+          "pokeosAssetId": 155523,
+          "file": "assets/temporary-pokemon/normal/bayleef.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/bayleef.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/153.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/153.png",
+          "file": "assets/temporary-pokemon/shiny/bayleef.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 14764,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "meganium",
+      "name": "Meganium",
+      "number": 154,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/154.png",
+          "sha256": "d879adda67a40f15dd0cddc359332a8b70047628d3f65174f0c33206f8183275",
+          "pokeosAssetId": 155524,
+          "file": "assets/temporary-pokemon/normal/meganium.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/meganium.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/154.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/154.png",
+          "file": "assets/temporary-pokemon/shiny/meganium.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 16899,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "cyndaquil",
+      "name": "Cyndaquil",
+      "number": 155,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/155.png",
+          "sha256": "1a26ad9e67c60aeef8ebcdcc8c89b01c9fa04e4d641e18040ade988c4a4452a7",
+          "pokeosAssetId": 155525,
+          "file": "assets/temporary-pokemon/normal/cyndaquil.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/cyndaquil.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/155.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/155.png",
+          "file": "assets/temporary-pokemon/shiny/cyndaquil.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 14919,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "quilava",
+      "name": "Quilava",
+      "number": 156,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/156.png",
+          "sha256": "3a897580a32aa2367b15ad1f2350499f723f14692c896632ad9a828de7cd335e",
+          "pokeosAssetId": 155526,
+          "file": "assets/temporary-pokemon/normal/quilava.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/quilava.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/156.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/156.png",
+          "file": "assets/temporary-pokemon/shiny/quilava.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 21436,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "typhlosion",
+      "name": "Typhlosion",
+      "number": 157,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/157.png",
+          "sha256": "ae3b37755b0632aeb9763c9f3940fbe5a923a38d493fc8a2b7f6c20e9dbbb016",
+          "pokeosAssetId": 155527,
+          "file": "assets/temporary-pokemon/normal/typhlosion.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/typhlosion.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/157.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/157.png",
+          "file": "assets/temporary-pokemon/shiny/typhlosion.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 19398,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "totodile",
+      "name": "Totodile",
+      "number": 158,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/158.png",
+          "sha256": "1ed481aef5ea4cadeb00d530046a4a302f56c52ef6976dd31725d39a325cf8dd",
+          "pokeosAssetId": 155529,
+          "file": "assets/temporary-pokemon/normal/totodile.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/totodile.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/158.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/158.png",
+          "file": "assets/temporary-pokemon/shiny/totodile.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 23874,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "croconaw",
+      "name": "Croconaw",
+      "number": 159,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/159.png",
+          "sha256": "60e5b93d967793773ad0c45e4f00bc256c38252783bb56f2170ce5e1ee67c6ea",
+          "pokeosAssetId": 155530,
+          "file": "assets/temporary-pokemon/normal/croconaw.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/croconaw.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/159.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/159.png",
+          "file": "assets/temporary-pokemon/shiny/croconaw.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 18699,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "feraligatr",
+      "name": "Feraligatr",
+      "number": 160,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/160.png",
+          "sha256": "88fd56441a0c4dc7ceb89758a177f359e58dd84de97905edd4fc9b9ee16f4992",
+          "pokeosAssetId": 155531,
+          "file": "assets/temporary-pokemon/normal/feraligatr.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/feraligatr.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/160.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/160.png",
+          "file": "assets/temporary-pokemon/shiny/feraligatr.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 23372,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "sentret",
+      "name": "Sentret",
+      "number": 161,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/161.png",
+          "sha256": "883e1810fbb26f439541a301f97c0afe80828af3e2bb6cc217ef355e3a1344ed",
+          "pokeosAssetId": 155532,
+          "file": "assets/temporary-pokemon/normal/sentret.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/sentret.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/161.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/161.png",
+          "file": "assets/temporary-pokemon/shiny/sentret.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 26046,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "furret",
+      "name": "Furret",
+      "number": 162,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/162.png",
+          "sha256": "5958c696b23118f7b71fe96cc34061a6c7ff4361d97ee28e7b719638805e59b8",
+          "pokeosAssetId": 155533,
+          "file": "assets/temporary-pokemon/normal/furret.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/furret.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/162.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/162.png",
+          "file": "assets/temporary-pokemon/shiny/furret.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 24065,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "hoothoot",
+      "name": "Hoothoot",
+      "number": 163,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/163.png",
+          "sha256": "7ae39876907846c3933397898f771944dca99ce365f437c62095c9cc13a41179",
+          "pokeosAssetId": 155534,
+          "file": "assets/temporary-pokemon/normal/hoothoot.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/hoothoot.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/163.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/163.png",
+          "file": "assets/temporary-pokemon/shiny/hoothoot.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 33688,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "noctowl",
+      "name": "Noctowl",
+      "number": 164,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/164.png",
+          "sha256": "8e5d17e39d459d80c5d4dc6b5b7b6ad9badbc6ccc03c6dbfd202999c4a6a76bb",
+          "pokeosAssetId": 155535,
+          "file": "assets/temporary-pokemon/normal/noctowl.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/noctowl.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/164.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/164.png",
+          "file": "assets/temporary-pokemon/shiny/noctowl.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 14223,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "ledyba",
+      "name": "Ledyba",
+      "number": 165,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/165.png",
+          "sha256": "45ca6a05081077a980930872bd2aacccc96c326482fc542a0688d166becb47ca",
+          "pokeosAssetId": 92258,
+          "file": "assets/temporary-pokemon/normal/ledyba.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/ledyba.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/165.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/165.png",
+          "file": "assets/temporary-pokemon/shiny/ledyba.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 23089,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "ledian",
+      "name": "Ledian",
+      "number": 166,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/166.png",
+          "sha256": "b4033b57a9f5d2f1ff5ee7e66de8692f9ffb207a966fc6f7291e30965c6a5c4f",
+          "pokeosAssetId": 92157,
+          "file": "assets/temporary-pokemon/normal/ledian.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/ledian.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/166.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/166.png",
+          "file": "assets/temporary-pokemon/shiny/ledian.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 22444,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "spinarak",
+      "name": "Spinarak",
+      "number": 167,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/167.png",
+          "sha256": "76d8d04b22ee8571394c680cfe200bd1d4c27ba612cffc9ab1d83d34a2aeb05b",
+          "pokeosAssetId": 155536,
+          "file": "assets/temporary-pokemon/normal/spinarak.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/spinarak.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/167.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/167.png",
+          "file": "assets/temporary-pokemon/shiny/spinarak.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 17856,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "ariados",
+      "name": "Ariados",
+      "number": 168,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/168.png",
+          "sha256": "7c769a5d4cca8eb4e16d81af94429aeeffbfa337571c68dfa1c9c7691f4bcfc0",
+          "pokeosAssetId": 155537,
+          "file": "assets/temporary-pokemon/normal/ariados.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/ariados.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/168.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/168.png",
+          "file": "assets/temporary-pokemon/shiny/ariados.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 33908,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "crobat",
+      "name": "Crobat",
+      "number": 169,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/169.png",
+          "sha256": "2942daf062e8039c5a117a6a675703f77f4e3860901cd92dd9641e5860d52e2e",
+          "pokeosAssetId": 92079,
+          "file": "assets/temporary-pokemon/normal/crobat.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/crobat.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/169.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/169.png",
+          "file": "assets/temporary-pokemon/shiny/crobat.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 31061,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "chinchou",
+      "name": "Chinchou",
+      "number": 170,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/170.png",
+          "sha256": "4233f7501616bbe8707af32abb24c29b0c066a07029e35ddb9f0703da40ca096",
+          "pokeosAssetId": 155538,
+          "file": "assets/temporary-pokemon/normal/chinchou.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/chinchou.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/170.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/170.png",
+          "file": "assets/temporary-pokemon/shiny/chinchou.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 17937,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "lanturn",
+      "name": "Lanturn",
+      "number": 171,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/171.png",
+          "sha256": "2cc3b0dc88c99ab5681ab34418e109c113d814eb2020a56f4c8dcf3b4fa8bf6e",
+          "pokeosAssetId": 155539,
+          "file": "assets/temporary-pokemon/normal/lanturn.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/lanturn.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/171.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/171.png",
+          "file": "assets/temporary-pokemon/shiny/lanturn.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 18615,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "cleffa",
+      "name": "Cleffa",
+      "number": 173,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/173.png",
+          "sha256": "5ff56dd5f9ac8562f86086ed346ed1589970461c6915055772e67ab927d60a41",
+          "pokeosAssetId": 155541,
+          "file": "assets/temporary-pokemon/normal/cleffa.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/cleffa.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/173.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/173.png",
+          "file": "assets/temporary-pokemon/shiny/cleffa.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 21803,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "igglybuff",
+      "name": "Igglybuff",
+      "number": 174,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/174.png",
+          "sha256": "aa0be55d0a55fb65ef94137ce319fb9feac668d1dd075371c9c14ca04cf1d39e",
+          "pokeosAssetId": 155542,
+          "file": "assets/temporary-pokemon/normal/igglybuff.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/igglybuff.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/174.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/174.png",
+          "file": "assets/temporary-pokemon/shiny/igglybuff.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 22437,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "togepi",
+      "name": "Togepi",
+      "number": 175,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/175.png",
+          "sha256": "e30da6b56c8ba03fa2b94ef496daf007b9def9722db14d69af4b71caa67e1df8",
+          "pokeosAssetId": 105552,
+          "file": "assets/temporary-pokemon/normal/togepi.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/togepi.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/175.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/175.png",
+          "file": "assets/temporary-pokemon/shiny/togepi.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 21571,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "togetic",
+      "name": "Togetic",
+      "number": 176,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/176.png",
+          "sha256": "58d5d9e8336631c914b737e524e4340f70d9eb230b7b714ab00644e8004827ef",
+          "pokeosAssetId": 92226,
+          "file": "assets/temporary-pokemon/normal/togetic.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/togetic.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/176.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/176.png",
+          "file": "assets/temporary-pokemon/shiny/togetic.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 24890,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "natu",
+      "name": "Natu",
+      "number": 177,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/177.png",
+          "sha256": "606e00513c0ca30adc267b33fd0db519633e9a2064444117d0504b91559df394",
+          "pokeosAssetId": 92155,
+          "file": "assets/temporary-pokemon/normal/natu.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/natu.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/177.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/177.png",
+          "file": "assets/temporary-pokemon/shiny/natu.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 23530,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "xatu",
+      "name": "Xatu",
+      "number": 178,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/178.png",
+          "sha256": "ae200be9ac3ee8f7d03d2db7b1fdb464ea3c2615bfd40c3f9fe73667b4f941ad",
+          "pokeosAssetId": 105517,
+          "file": "assets/temporary-pokemon/normal/xatu.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/xatu.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/178.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/178.png",
+          "file": "assets/temporary-pokemon/shiny/xatu.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 18368,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "marill",
+      "name": "Marill",
+      "number": 183,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/183.png",
+          "sha256": "0275b73ade4c97208e88105489237145e35666513a3a13f67ddf6845b5ffdbd1",
+          "pokeosAssetId": 155547,
+          "file": "assets/temporary-pokemon/normal/marill.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/marill.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/183.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/183.png",
+          "file": "assets/temporary-pokemon/shiny/marill.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 22238,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "azumarill",
+      "name": "Azumarill",
+      "number": 184,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/184.png",
+          "sha256": "ada4d76f3c17a143740718549b2480d56fb125ab364020aaef8667e5087ff14f",
+          "pokeosAssetId": 155548,
+          "file": "assets/temporary-pokemon/normal/azumarill.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/azumarill.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/184.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/184.png",
+          "file": "assets/temporary-pokemon/shiny/azumarill.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 31676,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "sudowoodo",
+      "name": "Sudowoodo",
+      "number": 185,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/185.png",
+          "sha256": "3efc0aaa46c38ae7b5cfe8ec21f0b5f3ca88982421f65680f4183923853c6009",
+          "pokeosAssetId": 155549,
+          "file": "assets/temporary-pokemon/normal/sudowoodo.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/sudowoodo.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/185.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/185.png",
+          "file": "assets/temporary-pokemon/shiny/sudowoodo.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 32552,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "politoed",
+      "name": "Politoed",
+      "number": 186,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/186.png",
+          "sha256": "9a5e164163955f5cb90e2df30689df8d06f77f58e0edd9a369d6712a993f740f",
+          "pokeosAssetId": 155550,
+          "file": "assets/temporary-pokemon/normal/politoed.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/politoed.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/186.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/186.png",
+          "file": "assets/temporary-pokemon/shiny/politoed.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 24944,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "hoppip",
+      "name": "Hoppip",
+      "number": 187,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/187.png",
+          "sha256": "9c9e67e42fcf6d91a9baeb20cc386922941a63be0cc29646f78e2917380a909f",
+          "pokeosAssetId": 155551,
+          "file": "assets/temporary-pokemon/normal/hoppip.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/hoppip.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/187.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/187.png",
+          "file": "assets/temporary-pokemon/shiny/hoppip.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 31363,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "skiploom",
+      "name": "Skiploom",
+      "number": 188,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/188.png",
+          "sha256": "2de1a0d5782cdce1584fcf7594b92370a44d45401bb2023d65cebd69af4820f0",
+          "pokeosAssetId": 155552,
+          "file": "assets/temporary-pokemon/normal/skiploom.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/skiploom.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/188.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/188.png",
+          "file": "assets/temporary-pokemon/shiny/skiploom.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 16582,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "jumpluff",
+      "name": "Jumpluff",
+      "number": 189,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/189.png",
+          "sha256": "cf197f20eb80e637e7fcb12a168da89d75c59e272cad4b4279b4edf7c5dcf161",
+          "pokeosAssetId": 155553,
+          "file": "assets/temporary-pokemon/normal/jumpluff.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/jumpluff.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/189.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/189.png",
+          "file": "assets/temporary-pokemon/shiny/jumpluff.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 28533,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "aipom",
+      "name": "Aipom",
+      "number": 190,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/190.png",
+          "sha256": "1f589d443d7e8fb050fbab16f2dd3c73f7d916761bb53732ccb04683cf0ee0e9",
+          "pokeosAssetId": 155554,
+          "file": "assets/temporary-pokemon/normal/aipom.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/aipom.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/190.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/190.png",
+          "file": "assets/temporary-pokemon/shiny/aipom.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 29323,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "sunkern",
+      "name": "Sunkern",
+      "number": 191,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/191.png",
+          "sha256": "a073e2a74c23e747eb03d353df0e597c68fc360ec05f3f47d3fbad1a04f291be",
+          "pokeosAssetId": 155555,
+          "file": "assets/temporary-pokemon/normal/sunkern.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/sunkern.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/191.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/191.png",
+          "file": "assets/temporary-pokemon/shiny/sunkern.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 22391,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "sunflora",
+      "name": "Sunflora",
+      "number": 192,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/192.png",
+          "sha256": "4d7cef58e8e1327c0103da163fca48f90bd4ff6c68ea01fc976fde7c2d1c2e2d",
+          "pokeosAssetId": 155556,
+          "file": "assets/temporary-pokemon/normal/sunflora.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/sunflora.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/192.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/192.png",
+          "file": "assets/temporary-pokemon/shiny/sunflora.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 29538,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "yanma",
+      "name": "Yanma",
+      "number": 193,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/193.png",
+          "sha256": "bddee103ef78c900fa9bd0a81bd994ad00a44e1e9782ef1e6e0350acbadc3b77",
+          "pokeosAssetId": 155557,
+          "file": "assets/temporary-pokemon/normal/yanma.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/yanma.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/193.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/193.png",
+          "file": "assets/temporary-pokemon/shiny/yanma.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 29232,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "wooper",
+      "name": "Wooper",
+      "number": 194,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/194.png",
+          "sha256": "a49b287ea8616c83aef698c80b201cc67a25fa89cfb57023ae3aebdcfca78573",
+          "pokeosAssetId": 155558,
+          "file": "assets/temporary-pokemon/normal/wooper.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/wooper.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/194.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/194.png",
+          "file": "assets/temporary-pokemon/shiny/wooper.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 24670,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "quagsire",
+      "name": "Quagsire",
+      "number": 195,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/195.png",
+          "sha256": "dee23215dc3c469734c099e1ecc1c82ae5050f61ef015e34091e4d8067dc3f85",
+          "pokeosAssetId": 155560,
+          "file": "assets/temporary-pokemon/normal/quagsire.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/quagsire.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/195.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/195.png",
+          "file": "assets/temporary-pokemon/shiny/quagsire.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 20679,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "slowking",
+      "name": "Slowking",
+      "number": 199,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/199.png",
+          "sha256": "849b75a1d455d4b75d2d340db3514524c7359cc10b17a80290db462dc27c682e",
+          "pokeosAssetId": 155564,
+          "file": "assets/temporary-pokemon/normal/slowking.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/slowking.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/199.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/199.png",
+          "file": "assets/temporary-pokemon/shiny/slowking.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 12472,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "misdreavus",
+      "name": "Misdreavus",
+      "number": 200,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/200.png",
+          "sha256": "b84ab853f0edfe366587f371f75581cdde037d7f51c24ed398c424e948d3daba",
+          "pokeosAssetId": 155566,
+          "file": "assets/temporary-pokemon/normal/misdreavus.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/misdreavus.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/200.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/200.png",
+          "file": "assets/temporary-pokemon/shiny/misdreavus.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 27592,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "unown",
+      "name": "Unown",
+      "number": 201,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/201-a.png",
+          "sha256": "99b1ef756ab11c536fcb8335f25e66bcb80bcd67fb37449d6c41cca5152c19b0",
+          "pokeosAssetId": 90068,
+          "file": "assets/temporary-pokemon/normal/unown.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/unown.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/201.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/201.png",
+          "file": "assets/temporary-pokemon/shiny/unown.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 13877,
+          "inkCutoff": 43
+        }
+      }
+    },
+    {
+      "id": "wobbuffet",
+      "name": "Wobbuffet",
+      "number": 202,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/202.png",
+          "sha256": "7b59f9ca8edae6a43cc13ee8056c18843e490f8b880e3b8ae0f8ea966bb86549",
+          "pokeosAssetId": 105324,
+          "file": "assets/temporary-pokemon/normal/wobbuffet.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/wobbuffet.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/202.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/202.png",
+          "file": "assets/temporary-pokemon/shiny/wobbuffet.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 14028,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "girafarig",
+      "name": "Girafarig",
+      "number": 203,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/203.png",
+          "sha256": "e593c645bf98b7f6677d5006c7364adc42f54a8edb169859b506b5a6f1ecea27",
+          "pokeosAssetId": 155567,
+          "file": "assets/temporary-pokemon/normal/girafarig.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/girafarig.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/203.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/203.png",
+          "file": "assets/temporary-pokemon/shiny/girafarig.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 21335,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "pineco",
+      "name": "Pineco",
+      "number": 204,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/204.png",
+          "sha256": "f820c19f18b487dfd90726b8b4f097180f8d10ad9eb8fe888e97e6fd2109af68",
+          "pokeosAssetId": 155568,
+          "file": "assets/temporary-pokemon/normal/pineco.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/pineco.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/204.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/204.png",
+          "file": "assets/temporary-pokemon/shiny/pineco.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 27122,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "forretress",
+      "name": "Forretress",
+      "number": 205,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/205.png",
+          "sha256": "4d13d885f78c7f8c9beceadf24b7b072abfa45f67fab729f8c7b481687fbd94c",
+          "pokeosAssetId": 155569,
+          "file": "assets/temporary-pokemon/normal/forretress.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/forretress.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/205.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/205.png",
+          "file": "assets/temporary-pokemon/shiny/forretress.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 20300,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "dunsparce",
+      "name": "Dunsparce",
+      "number": 206,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/206.png",
+          "sha256": "1a75c113f1aac9ed91a411d3f3129ee2d0fc96ecc3e666f52467d34819c8801d",
+          "pokeosAssetId": 155570,
+          "file": "assets/temporary-pokemon/normal/dunsparce.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/dunsparce.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/206.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/206.png",
+          "file": "assets/temporary-pokemon/shiny/dunsparce.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 19232,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "gligar",
+      "name": "Gligar",
+      "number": 207,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/207.png",
+          "sha256": "4b52c88fe524fd6b67adb54147ef31a35c3d8717c895b0eba13a40d8b640616f",
+          "pokeosAssetId": 155571,
+          "file": "assets/temporary-pokemon/normal/gligar.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/gligar.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/207.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/207.png",
+          "file": "assets/temporary-pokemon/shiny/gligar.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 29890,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "snubbull",
+      "name": "Snubbull",
+      "number": 209,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/209.png",
+          "sha256": "bafe853fd4cd8375d81a4d95a3d57a633385f140ec09e62f1b77cec23196dae3",
+          "pokeosAssetId": 155573,
+          "file": "assets/temporary-pokemon/normal/snubbull.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/snubbull.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/209.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/209.png",
+          "file": "assets/temporary-pokemon/shiny/snubbull.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 25371,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "granbull",
+      "name": "Granbull",
+      "number": 210,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/210.png",
+          "sha256": "3603fcc45bef1f7dfea945dc2a01b19502bf35f004f63e9a9914cb06d4614449",
+          "pokeosAssetId": 155574,
+          "file": "assets/temporary-pokemon/normal/granbull.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/granbull.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/210.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/210.png",
+          "file": "assets/temporary-pokemon/shiny/granbull.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 19741,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "qwilfish",
+      "name": "Qwilfish",
+      "number": 211,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/211.png",
+          "sha256": "381852ca9e655fc13afe06eb788c286870b605b427567832a52b70e09959dd1d",
+          "pokeosAssetId": 155575,
+          "file": "assets/temporary-pokemon/normal/qwilfish.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/qwilfish.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/211.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/211.png",
+          "file": "assets/temporary-pokemon/shiny/qwilfish.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 21900,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "scizor",
+      "name": "Scizor",
+      "number": 212,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/212.png",
+          "sha256": "d9bec3c38f355b61389d4c60dde8f2705b47008d7a7b0708bc9b5d05299da996",
+          "pokeosAssetId": 155577,
+          "file": "assets/temporary-pokemon/normal/scizor.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/scizor.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/212.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/212.png",
+          "file": "assets/temporary-pokemon/shiny/scizor.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 25686,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "sneasel",
+      "name": "Sneasel",
+      "number": 215,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/215.png",
+          "sha256": "956faba7dcaefc5e2cf93d178d188094dcf879cc69a097d30c00d04126f7359a",
+          "pokeosAssetId": 155579,
+          "file": "assets/temporary-pokemon/normal/sneasel.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/sneasel.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/215.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/215.png",
+          "file": "assets/temporary-pokemon/shiny/sneasel.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 22753,
+          "inkCutoff": 43
+        }
+      }
+    },
+    {
+      "id": "teddiursa",
+      "name": "Teddiursa",
+      "number": 216,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/216.png",
+          "sha256": "ad80a62e0a5f0af64b0fd23bb32eee6e17a77006cb59ea9819f2d0ffb4ae3402",
+          "pokeosAssetId": 155581,
+          "file": "assets/temporary-pokemon/normal/teddiursa.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/teddiursa.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/216.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/216.png",
+          "file": "assets/temporary-pokemon/shiny/teddiursa.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 20195,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "ursaring",
+      "name": "Ursaring",
+      "number": 217,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/217.png",
+          "sha256": "8b5498cbb3182f10c19d1da3355d70ea7c19ef3f07ef02372bcb60a48a228d8d",
+          "pokeosAssetId": 155582,
+          "file": "assets/temporary-pokemon/normal/ursaring.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/ursaring.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/217.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/217.png",
+          "file": "assets/temporary-pokemon/shiny/ursaring.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 15658,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "slugma",
+      "name": "Slugma",
+      "number": 218,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/218.png",
+          "sha256": "b23bc2df32ec5c487060d3b275a13195fa58a1ae1ce2bb6b75d89df9ffb04b9c",
+          "pokeosAssetId": 155583,
+          "file": "assets/temporary-pokemon/normal/slugma.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/slugma.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/218.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/218.png",
+          "file": "assets/temporary-pokemon/shiny/slugma.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 26116,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "magcargo",
+      "name": "Magcargo",
+      "number": 219,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/219.png",
+          "sha256": "984a2020ee957c1d446ac13c61ccd9046c53290dd29336e4e48f98308decbb74",
+          "pokeosAssetId": 155584,
+          "file": "assets/temporary-pokemon/normal/magcargo.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/magcargo.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/219.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/219.png",
+          "file": "assets/temporary-pokemon/shiny/magcargo.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 17351,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "swinub",
+      "name": "Swinub",
+      "number": 220,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/220.png",
+          "sha256": "daf2cab25e44ed77a242d981265f3b808e6f9242643b81e16b5c7823937c210b",
+          "pokeosAssetId": 155585,
+          "file": "assets/temporary-pokemon/normal/swinub.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/swinub.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/220.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/220.png",
+          "file": "assets/temporary-pokemon/shiny/swinub.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 14226,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "piloswine",
+      "name": "Piloswine",
+      "number": 221,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/221.png",
+          "sha256": "4f06466d20a9273d9cec4cbdad657e7f0f8118126e331b37a540d239a3db483f",
+          "pokeosAssetId": 155586,
+          "file": "assets/temporary-pokemon/normal/piloswine.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/piloswine.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/221.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/221.png",
+          "file": "assets/temporary-pokemon/shiny/piloswine.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 21293,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "corsola",
+      "name": "Corsola",
+      "number": 222,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/222.png",
+          "sha256": "d0337bdb1f6a14d3c22be88f6e5565ccda43173df38ee6ff623513a0fda43924",
+          "pokeosAssetId": 90126,
+          "file": "assets/temporary-pokemon/normal/corsola.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/corsola.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/222.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/222.png",
+          "file": "assets/temporary-pokemon/shiny/corsola.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 30195,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "remoraid",
+      "name": "Remoraid",
+      "number": 223,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/223.png",
+          "sha256": "a381d0c7785415732ef90d52ccef16246007447012a3f9a1771ff0d53af7df95",
+          "pokeosAssetId": 90082,
+          "file": "assets/temporary-pokemon/normal/remoraid.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/remoraid.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/223.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/223.png",
+          "file": "assets/temporary-pokemon/shiny/remoraid.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 27412,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "octillery",
+      "name": "Octillery",
+      "number": 224,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/224.png",
+          "sha256": "8342a55569c86fceb69548d721fb6f9799593a34c488059e3d362d741419cb6d",
+          "pokeosAssetId": 92178,
+          "file": "assets/temporary-pokemon/normal/octillery.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/octillery.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/224.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/224.png",
+          "file": "assets/temporary-pokemon/shiny/octillery.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 25313,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "delibird",
+      "name": "Delibird",
+      "number": 225,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/225.png",
+          "sha256": "2d9627b0dec22e573cc2f45d6589ed6b0356c8d50ae7151453e25f8e6be81df0",
+          "pokeosAssetId": 155587,
+          "file": "assets/temporary-pokemon/normal/delibird.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/delibird.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/225.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/225.png",
+          "file": "assets/temporary-pokemon/shiny/delibird.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 20105,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "mantine",
+      "name": "Mantine",
+      "number": 226,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/226.png",
+          "sha256": "34a53099df56bd2d731f24bfcc4658ed713b9884fadbb8ca66d523f34b9c783f",
+          "pokeosAssetId": 105355,
+          "file": "assets/temporary-pokemon/normal/mantine.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/mantine.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/226.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/226.png",
+          "file": "assets/temporary-pokemon/shiny/mantine.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 16946,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "houndour",
+      "name": "Houndour",
+      "number": 228,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/228.png",
+          "sha256": "6d1bc235a43f03451c757739a3dce8e37321d8f6095656f493e438766dc8b53d",
+          "pokeosAssetId": 155589,
+          "file": "assets/temporary-pokemon/normal/houndour.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/houndour.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/228.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/228.png",
+          "file": "assets/temporary-pokemon/shiny/houndour.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 17288,
+          "inkCutoff": 43
+        }
+      }
+    },
+    {
+      "id": "houndoom",
+      "name": "Houndoom",
+      "number": 229,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/229.png",
+          "sha256": "25387bad6d4aa42c0a44668cdbb48c25da56452bfacfbe540429359f14e24025",
+          "pokeosAssetId": 155590,
+          "file": "assets/temporary-pokemon/normal/houndoom.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/houndoom.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/229.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/229.png",
+          "file": "assets/temporary-pokemon/shiny/houndoom.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 25557,
+          "inkCutoff": 43
+        }
+      }
+    },
+    {
+      "id": "kingdra",
+      "name": "Kingdra",
+      "number": 230,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/230.png",
+          "sha256": "b1c52a8ef19078c15480298844345011ece5766a1b7615d494200180fab11c4e",
+          "pokeosAssetId": 155591,
+          "file": "assets/temporary-pokemon/normal/kingdra.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/kingdra.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/230.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/230.png",
+          "file": "assets/temporary-pokemon/shiny/kingdra.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 18361,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "porygon2",
+      "name": "Porygon2",
+      "number": 233,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/233.png",
+          "sha256": "e4344a8060440abd016b71f1e105c3adc6c84cd9ef4525e9eee9b556b7402758",
+          "pokeosAssetId": 155594,
+          "file": "assets/temporary-pokemon/normal/porygon2.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/porygon2.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/233.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/233.png",
+          "file": "assets/temporary-pokemon/shiny/porygon2.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 18770,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "stantler",
+      "name": "Stantler",
+      "number": 234,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/234.png",
+          "sha256": "f768dcf3f8ae63b466189f5492e5ece8495be2c049d45c45442e61334d4609d8",
+          "pokeosAssetId": 155595,
+          "file": "assets/temporary-pokemon/normal/stantler.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/stantler.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/234.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/234.png",
+          "file": "assets/temporary-pokemon/shiny/stantler.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 19728,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "smeargle",
+      "name": "Smeargle",
+      "number": 235,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/235.png",
+          "sha256": "adf96d61828ec798b112737eec796a1df00be31f9e8542ab00ec7284853aa299",
+          "pokeosAssetId": 155596,
+          "file": "assets/temporary-pokemon/normal/smeargle.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/smeargle.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/235.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/235.png",
+          "file": "assets/temporary-pokemon/shiny/smeargle.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 17379,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "tyrogue",
+      "name": "Tyrogue",
+      "number": 236,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/236.png",
+          "sha256": "16e74682072b5f5b6fb2f044e189ced1aad7057e928c15b606d01245617a8659",
+          "pokeosAssetId": 155597,
+          "file": "assets/temporary-pokemon/normal/tyrogue.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/tyrogue.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/236.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/236.png",
+          "file": "assets/temporary-pokemon/shiny/tyrogue.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 10248,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "hitmontop",
+      "name": "Hitmontop",
+      "number": 237,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/237.png",
+          "sha256": "c970b7250777401c9160d6f7e8c97eeb9ee8f79866ce8f1dec1c81d22fbd1d6d",
+          "pokeosAssetId": 155598,
+          "file": "assets/temporary-pokemon/normal/hitmontop.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/hitmontop.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/237.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/237.png",
+          "file": "assets/temporary-pokemon/shiny/hitmontop.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 19346,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "smoochum",
+      "name": "Smoochum",
+      "number": 238,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/238.png",
+          "sha256": "7832fb34fa3c064cd0409ab0c663d1a2a94eb8f6a74807856bb3ff490f9c2fc6",
+          "pokeosAssetId": 105764,
+          "file": "assets/temporary-pokemon/normal/smoochum.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/smoochum.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/238.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/238.png",
+          "file": "assets/temporary-pokemon/shiny/smoochum.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 17564,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "elekid",
+      "name": "Elekid",
+      "number": 239,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/239.png",
+          "sha256": "a4f7bb3dd0d57d69418a44d87291823f9450af87042b8c3bb9dab9459ad7bc6a",
+          "pokeosAssetId": 155599,
+          "file": "assets/temporary-pokemon/normal/elekid.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/elekid.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/239.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/239.png",
+          "file": "assets/temporary-pokemon/shiny/elekid.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 26880,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "magby",
+      "name": "Magby",
+      "number": 240,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/240.png",
+          "sha256": "5082e4c4fe8f29fe6ae028f6ba209c1e43907cf93120197fcde7526726580441",
+          "pokeosAssetId": 155600,
+          "file": "assets/temporary-pokemon/normal/magby.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/magby.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/240.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/240.png",
+          "file": "assets/temporary-pokemon/shiny/magby.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 11852,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "miltank",
+      "name": "Miltank",
+      "number": 241,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/241.png",
+          "sha256": "a3efdbac1e0c7cbbdff76d50e2300f4a77b6041239ed33d59b02f784e7645f9b",
+          "pokeosAssetId": 91816,
+          "file": "assets/temporary-pokemon/normal/miltank.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/miltank.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/241.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/241.png",
+          "file": "assets/temporary-pokemon/shiny/miltank.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 28600,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "blissey",
+      "name": "Blissey",
+      "number": 242,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/242.png",
+          "sha256": "ab016705973cf64909bbfa51e739a15b0038a99619e7fe8823d2fcbf5cc7ba80",
+          "pokeosAssetId": 155601,
+          "file": "assets/temporary-pokemon/normal/blissey.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/blissey.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/242.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/242.png",
+          "file": "assets/temporary-pokemon/shiny/blissey.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 20254,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "raikou",
+      "name": "Raikou",
+      "number": 243,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/243.png",
+          "sha256": "ac95453b457af2db0646dd437b7c45fe6f9290e34d9b0ea4b3c2df181a0e28cd",
+          "pokeosAssetId": 155602,
+          "file": "assets/temporary-pokemon/normal/raikou.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/raikou.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/243.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/243.png",
+          "file": "assets/temporary-pokemon/shiny/raikou.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 24658,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "entei",
+      "name": "Entei",
+      "number": 244,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/244.png",
+          "sha256": "ca47c05b1aae748156e59ffe25c4756373d726c33888df411ff18cb13d3da820",
+          "pokeosAssetId": 155603,
+          "file": "assets/temporary-pokemon/normal/entei.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/entei.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/244.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/244.png",
+          "file": "assets/temporary-pokemon/shiny/entei.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 22717,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "suicune",
+      "name": "Suicune",
+      "number": 245,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/245.png",
+          "sha256": "d39a3cd3400b09546d868d7e8bc6d11d3de930d851ddaa7422245e707edaff72",
+          "pokeosAssetId": 155604,
+          "file": "assets/temporary-pokemon/normal/suicune.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/suicune.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/245.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/245.png",
+          "file": "assets/temporary-pokemon/shiny/suicune.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 30290,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "larvitar",
+      "name": "Larvitar",
+      "number": 246,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/246.png",
+          "sha256": "4c75535d5a3744c1e2354411e7f9c76391df86b59e9a2e2d86023ae9c7a6a383",
+          "pokeosAssetId": 155605,
+          "file": "assets/temporary-pokemon/normal/larvitar.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/larvitar.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/246.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/246.png",
+          "file": "assets/temporary-pokemon/shiny/larvitar.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 19228,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "tyranitar",
+      "name": "Tyranitar",
+      "number": 248,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/248.png",
+          "sha256": "83ddff7f797f27cb9458888b1d826048b41f4366aa26c073b937d840a655d48d",
+          "pokeosAssetId": 155607,
+          "file": "assets/temporary-pokemon/normal/tyranitar.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/tyranitar.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/248.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/248.png",
+          "file": "assets/temporary-pokemon/shiny/tyranitar.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 27797,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "lugia",
+      "name": "Lugia",
+      "number": 249,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/249.png",
+          "sha256": "cb2f40dee79d247490b5531fbef481d83a2087f3b000b9a7b7f2aff5c9c6f0bb",
+          "pokeosAssetId": 155608,
+          "file": "assets/temporary-pokemon/normal/lugia.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/lugia.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/249.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/249.png",
+          "file": "assets/temporary-pokemon/shiny/lugia.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 33191,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "hooh",
+      "name": "Ho-Oh",
+      "number": 250,
+      "artFamily": "RK9",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/250.png",
+          "sha256": "cf43bd1b1aed20cb084a536e842c89f1ab0f37be4b5ac3c9328b108e902fc255",
+          "pokeosAssetId": 155609,
+          "file": "assets/temporary-pokemon/normal/hooh.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK9",
+          "sourceDrawing": "assets/temporary-pokemon/normal/hooh.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/250.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/250.png",
+          "file": "assets/temporary-pokemon/shiny/hooh.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 30151,
+          "inkCutoff": 65
+        }
+      }
+    },
+    {
+      "id": "celebi",
+      "name": "Celebi",
+      "number": 251,
+      "artFamily": "RK1",
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "PokeOS outlined Final sprite (game label RK1)",
+          "source": "https://assets.pokeos.com/pokemon/home/251.png",
+          "sha256": "4962776123521219d60c768b319274ac3464a03ac3df3569c50cb9a604e6b42d",
+          "pokeosAssetId": 105347,
+          "file": "assets/temporary-pokemon/normal/celebi.svg"
+        },
+        "shiny": {
+          "provider": "Canonical Shiny palette edit of RK1",
+          "sourceDrawing": "assets/temporary-pokemon/normal/celebi.svg",
+          "canonicalNormal": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/251.png",
+          "canonicalShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/251.png",
+          "file": "assets/temporary-pokemon/shiny/celebi.svg",
+          "alphaPreserved": true,
+          "inkProtectedPixels": 33200,
+          "inkCutoff": 65
+        }
+      }
+    }
+  ]
+}

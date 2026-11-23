@@ -1,9 +1,9 @@
-import {unovakalos721EncounterSites} from './unovakalos721-data.js?v=20261123-rk1';
-import {hoennsinnoh493EncounterSites} from './hoennsinnoh493-data.js?v=20261123-rk1';
-import {johto251EncounterSites} from './johto251-data.js?v=20261123-rk1';
-import {kanto151EncounterSites} from './kanto151-data.js?v=20261123-rk1';
-import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261123-rk1';
-import {areaDesigns} from './area-designs.js?v=20261123-rk1';
+import {unovakalos721EncounterSites} from './unovakalos721-data.js?v=20261124-johtoart1';
+import {hoennsinnoh493EncounterSites} from './hoennsinnoh493-data.js?v=20261124-johtoart1';
+import {johto251EncounterSites} from './johto251-data.js?v=20261124-johtoart1';
+import {kanto151EncounterSites} from './kanto151-data.js?v=20261124-johtoart1';
+import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261124-johtoart1';
+import {areaDesigns} from './area-designs.js?v=20261124-johtoart1';
 // Separate, connected areas. Only the active map is rendered.
 const greenwood=['FFFFGGGGGG','FGGGWWGFPP','FGPPWWGFPG','GGPPGBGPPP','FGPPGWRRPG','FGGPGWRRPG','FGGPGBGRPG','FFFGGWFPPR','FGGPPPPPGG','FFGGGFFFFF'];
 const ridge=['RRRRGGRRRR','RRGGPPPPPP','RRGPPWRGPG','RGPPGWRGPG','RGPPRBRGPG','RGGPGWRGPG','RGGPGGRGPG','RGGPPPPPPG','PPPPGRRGGG','RRRGGGGRRR'];

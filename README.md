@@ -1,3 +1,7 @@
+Johto artwork — v0.60.0
+
+Gen 2 now has artwork for all 100 species: 15 existing painted chibis are preserved, and 85 temporary pairs use 69 RK9 and 16 outlined Final sprites (labelled RK1). Both generations share the RK9 + RK1 gallery and local assets folder. Shiny images recolour the same drawing; they do not redesign it. See docs/johto-temporary-artwork.json for sources. Rebuild with python3 scripts/build-johto-replacements.py (Pillow, NumPy and SciPy required).
+
 ## v0.59.0 — one RK9 / RK1 replacement gallery
 
 All103 temporary Kanto entries now use64 RK9 drawings and39 outlined Final sprites from PokeOS, labelled RK1 at the user’s request. Both are kept in the same gallery category, **RK9 + RK1 · temporary sprites**, and the existing `assets/temporary-pokemon/` folder. RK1 is an in-game classification, not an artist attribution. The smooth 3D HOME render fallbacks are no longer displayed for these entries.

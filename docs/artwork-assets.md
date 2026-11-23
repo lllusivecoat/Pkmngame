@@ -1,3 +1,7 @@
+Johto temporary artwork
+
+85 pending Johto species use locally embedded RK9/RK1 drawings with matching code-edited Shiny palettes. Existing 15 approved painted pairs remain untouched. The shared registry now contains 188 temporary species. Source audit: docs/johto-temporary-artwork.json. Generator: scripts/build-johto-replacements.py; shared colour mapping: scripts/rk_palette.py. HOME model images are colour references only and are never displayed.
+
 ## Current RK9 / RK1 replacement set (v0.59.0)
 
 64 Normal drawings retain their RK9 source/credit.39 gaps use the current `https://assets.pokeos.com/pokemon/home/{number}.png` outlined Final sprites, rather than `home/render/{number}.png` or a PokeAPI HOME model. The user calls this outlined set RK1; it is not an attribution to an artist named RK1. Both families share the same gallery category and folder.

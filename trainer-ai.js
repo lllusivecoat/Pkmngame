@@ -1,4 +1,4 @@
-import {Dex} from './vendor/simulator.js?v=20261123-rk1';
+import {Dex} from './vendor/simulator.js?v=20261124-johtoart1';
 const stat=(p,key)=>p.getStat(key,false,key!=='spe');
 export function expectedDamage(attacker,target,m){if(m.category==='Status')return 0;if(!Dex.getImmunity(m.type,target))return 0;if(m.damage==='level')return attacker.level;if(typeof m.damage==='number')return m.damage;const atk=stat(attacker,m.category==='Physical'?'atk':'spa'),def=stat(target,m.category==='Physical'?'def':'spd'),power=m.basePower|| (m.damage==='level'?attacker.level:60),effect=2**Dex.getEffectiveness(m.type,target);return ((2*attacker.level/5+2)*power*atk/Math.max(1,def)/50+2)*(attacker.hasType(m.type)?1.5:1)*effect*(m.accuracy===true?1:(m.accuracy||100)/100)}
 const threat=(p,target)=>Math.max(...target.getTypes().map(type=>expectedDamage(target,p,{type,category:stat(target,'atk')>=stat(target,'spa')?'Physical':'Special',basePower:80,accuracy:100})),1);
