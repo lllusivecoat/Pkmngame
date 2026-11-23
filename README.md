@@ -1,3 +1,13 @@
+## v0.58.0 — labelled Kanto temporary artwork
+
+The103 missing Generation1 paintings now display bundled full-body replacements:64 RK9 Normal images from PokeOS,39 canonical HOME Normal fallbacks, and103 canonical HOME Shiny images. The PokeOS RK9 archive has no Shiny set; Muk’s RK9 file was excluded because it has a rectangular semi-transparent background. Existing painted chibis are unchanged. Other generations’ pending art is unchanged.
+
+Each replacement has a visible Temporary art badge, source-specific tooltip/gallery label, and `data-art-status="temporary"`. Developer tools → Artwork gallery → Temporary replacements lists all103. They remain in `pendingChibiIds`; these images are never counted as completed painted artwork.
+
+`temporary-artwork.js` maps each individual Normal/Shiny source. Self-contained SVG wrappers under `assets/temporary-pokemon/{normal,shiny}/` embed transparent WebP images for offline use. `docs/kanto-temporary-artwork.json` records every original URL, source hash, provider and PokeOS asset ID. Regenerate with `python scripts/build-kanto-temporary.py` then `python scripts/build-kanto-rk9.py` (Pillow and network access required only for regeneration).
+
+To replace a species: add BOTH approved painted palettes to `chibi-sources.js`. Kanto pending status is derived from that pair’s absence, so the painted pair takes precedence on the next load and the entry leaves the Temporary gallery filter. No species ID, save, UID, stats or progression changes are needed. Keep source credits until unused temporary files are removed.
+
 ## v0.57.0 — town rendering and map NPC fixes
 
 Bellwick now flattens immutable scenery into a cached WebP and uses one coordinate-aware walking surface, while retaining live Gym/Shop/Market buildings, editable emblems/decorations and authored collisions. Walking updates the camera transform without invalidating inherited styles across the map. Rook uses the existing painted Hiker portrait. Guide, breeder, shopkeepers and challengers share the player’s tile-relative size, and disabled NPC buttons remain transparent.

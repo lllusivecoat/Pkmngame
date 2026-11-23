@@ -1,3 +1,9 @@
+## Labelled Kanto replacements (v0.58.0)
+
+Source archive: https://www.pokeos.com/archive/assets/home ; public index: https://api.pokeos.com/api/poke/game/assets?versionGroupCode=home . RK9 credited as the original sprite artist.64 usable Normal images are bundled from the archive’s `home/rk9/broadcast` set.38 missing species plus Muk (non-transparent RK9 background) use39 Normal HOME images. The archive lists no Shiny RK9 images, so all103 Shiny replacements use canonical HOME images from PokeAPI/sprites commit `c0542f7c51215d9672439012838c99f520596cbd`.
+
+Only transparent margins were trimmed, images resized and WebP encoded at quality92 inside self-contained SVG wrappers. Designs, colours and poses were not redrawn or recoloured. All206 source URLs, hashes and provenance are in `kanto-temporary-artwork.json`. These are temporary replacements, not painted chibi artwork; original approved paintings remain untouched. Both palettes work offline and carry source-specific gallery labels. The older documentation below records historical releases.
+
 # Bundled gallery artwork
 
 The gallery has 94 entries: 75 permanent species/evolutions and 19 temporary battle forms. It defaults to showing all entries and resets filters when reopened. Normal and Shiny variants each have two previews: standard artwork and the available painted/pixel chibi source.

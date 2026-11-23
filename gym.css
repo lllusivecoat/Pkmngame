@@ -81,3 +81,5 @@ body:not(.reduce-map-motion) .gym-visitor.hall-visitor.is-arriving{animation:gym
 .town-backdrop{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 :root[data-theme] #app .town-walk-surface{position:absolute;inset:0;display:block;width:100%;height:100%;min-width:0!important;min-height:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;transition:none!important;z-index:1;touch-action:manipulation}
 .town-decoration{position:absolute;z-index:2;pointer-events:none;display:grid;place-items:center}
+
+.art-status-label{position:absolute;bottom:1px;left:50%;transform:translateX(-50%);z-index:3;max-width:95%;white-space:nowrap;font:9px/1.4 system-ui!important;background:#29404a;color:#fff3cd!important;border:1px solid #d4b76b;border-radius:6px;padding:2px 5px;pointer-events:none}.art[data-art-status="temporary"]{padding-bottom:20px}.battle .art-status-label{font-size:8px!important}.garden-roamer .art-status-label{display:none}

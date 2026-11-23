@@ -1,0 +1,2277 @@
+{
+  "archive": "https://www.pokeos.com/archive/assets/home",
+  "index": "https://api.pokeos.com/api/poke/game/assets?versionGroupCode=home",
+  "homeSourceCommit": "c0542f7c51215d9672439012838c99f520596cbd",
+  "count": 103,
+  "rk9NormalCount": 64,
+  "homeNormalCount": 39,
+  "homeShinyCount": 103,
+  "entries": [
+    {
+      "id": "weedle",
+      "name": "Weedle",
+      "number": 13,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/13.png",
+          "sha256": "fc9004a147b2bc551eb5d5f0e00c6c61ca514b2f888e7a1ac4f434fb264127e4",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/weedle.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/13.png",
+          "sha256": "70a0b8aa810a7c4ea24f8ebd4f3ffc4026375167bc090e920ad260e0cac89af1",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/weedle.svg"
+        }
+      }
+    },
+    {
+      "id": "kakuna",
+      "name": "Kakuna",
+      "number": 14,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/14.png",
+          "sha256": "5e45bad27ff679793811e49b87ef7f6e1e518b78e99d90e769b4bb7fa19cd27f",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/kakuna.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/14.png",
+          "sha256": "6e0fab3b5442fb71bd849bea679ed55f4f27bb52783edd20292658ae6b6f79f3",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/kakuna.svg"
+        }
+      }
+    },
+    {
+      "id": "beedrill",
+      "name": "Beedrill",
+      "number": 15,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/15.png",
+          "sha256": "8cc81a239c0a9a1f0b62b655332f8d9bb57464fd57d2f404ceee1f5bc50d00c2",
+          "pokeosAssetId": 155396,
+          "file": "assets/temporary-pokemon/normal/beedrill.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/15.png",
+          "sha256": "84400abd741b11a3c99acfcd5bb004c28b017ebe2cb3743920ae5a19ac117003",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/beedrill.svg"
+        }
+      }
+    },
+    {
+      "id": "rattata",
+      "name": "Rattata",
+      "number": 19,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/19.png",
+          "sha256": "633afbbb01736c7eb6b7f63778335e6c53fc6d90b91f36f142bc813f2e797820",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/rattata.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/19.png",
+          "sha256": "ac2f94cf7f76a2f21443d9c7fb382b24782c552c7b832030b9ee5b3a9fe19ea7",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/rattata.svg"
+        }
+      }
+    },
+    {
+      "id": "raticate",
+      "name": "Raticate",
+      "number": 20,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/20.png",
+          "sha256": "c22ce5536e0f0f9143b3b6e5acad9f0e124d061c1e22dfea6bb5bb7074dfb104",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/raticate.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/20.png",
+          "sha256": "fe053418c70276dfce6c5572a9e281b31102308e2c8e99e77ffbb5b7ff3905a1",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/raticate.svg"
+        }
+      }
+    },
+    {
+      "id": "spearow",
+      "name": "Spearow",
+      "number": 21,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/21.png",
+          "sha256": "912e1658993ff5420c9fe16d6a5f759c9eb76ca71865c1e57b768a32d977d497",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/spearow.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/21.png",
+          "sha256": "0dc1e763d7aa950e22f6cdb359d35feb0777378da3d3cd71f9c5859da6060025",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/spearow.svg"
+        }
+      }
+    },
+    {
+      "id": "fearow",
+      "name": "Fearow",
+      "number": 22,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/22.png",
+          "sha256": "b25e9accc93cda14af921bdd713f0ccaeef8ccc1dd7188ce4f8d5b2f47bb8789",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/fearow.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/22.png",
+          "sha256": "ac9b050cdd12e037c92fbc645a18b9fc51540b4162303957e7471f074662784b",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/fearow.svg"
+        }
+      }
+    },
+    {
+      "id": "ekans",
+      "name": "Ekans",
+      "number": 23,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/23.png",
+          "sha256": "d8efe9fe69cd3a8a80f5ba2dcd44d13f2305d60bd67979d68fc7f1be9204d7ca",
+          "pokeosAssetId": 155398,
+          "file": "assets/temporary-pokemon/normal/ekans.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/23.png",
+          "sha256": "38bfbec0a78ff567243fe78974681fe2c83101d3167ba7af3976cf39524f3a88",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/ekans.svg"
+        }
+      }
+    },
+    {
+      "id": "arbok",
+      "name": "Arbok",
+      "number": 24,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/24.png",
+          "sha256": "90ba2c344492dc428d03fff74678165341d30c03c56f80d2043714b6e2b0a87b",
+          "pokeosAssetId": 155399,
+          "file": "assets/temporary-pokemon/normal/arbok.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/24.png",
+          "sha256": "9876b1873770fb25a9747d64334dc94ab3757b1c328ce3541419ccecfeedee8e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/arbok.svg"
+        }
+      }
+    },
+    {
+      "id": "sandshrew",
+      "name": "Sandshrew",
+      "number": 27,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/27.png",
+          "sha256": "2d8d84e7bbd20a7f12cc45ea227bb917da5f1b224a4a4065ef75dfc331f343a0",
+          "pokeosAssetId": 155403,
+          "file": "assets/temporary-pokemon/normal/sandshrew.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/27.png",
+          "sha256": "76c738e1d63faa15163779d20f94e55671ab11876f384a5d5ce1249119c17f10",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/sandshrew.svg"
+        }
+      }
+    },
+    {
+      "id": "sandslash",
+      "name": "Sandslash",
+      "number": 28,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/28.png",
+          "sha256": "fc834dc4612afbf2764694bc16fb436f17ef9f95148939af5c87c202d818f18e",
+          "pokeosAssetId": 155405,
+          "file": "assets/temporary-pokemon/normal/sandslash.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/28.png",
+          "sha256": "18d559b66cd7c32630fbe8be610041b4213d66d04ce2586529ff9bb09d663bdb",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/sandslash.svg"
+        }
+      }
+    },
+    {
+      "id": "nidoranf",
+      "name": "Nidoran-F",
+      "number": 29,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/29.png",
+          "sha256": "4f8e5f44cccad9164e1dcea538b0b949f9f29548a42123db0444b6f6a46b32e2",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/nidoranf.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/29.png",
+          "sha256": "eae8e11e9785c96f52567d1e83ade6fad91d21146287bf4a9d2f7102f921d412",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/nidoranf.svg"
+        }
+      }
+    },
+    {
+      "id": "nidorina",
+      "name": "Nidorina",
+      "number": 30,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/30.png",
+          "sha256": "fb6ebd83ac9dab6a7df43d22698283fd9b3ddebd0cd8a5eb53cc230687a4bf0f",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/nidorina.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/30.png",
+          "sha256": "84c121ee4c8e19d78a2eca88d65630b10e5ce3e7095e8330efb78bd4188c584f",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/nidorina.svg"
+        }
+      }
+    },
+    {
+      "id": "nidoqueen",
+      "name": "Nidoqueen",
+      "number": 31,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/31.png",
+          "sha256": "14f964f021a6eacea5936e1115965f7b2b66e0c788944ba316cbe995b1f35c47",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/nidoqueen.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/31.png",
+          "sha256": "5966beee036a4c8a89db540929112a40625c60d9e0693cc7c20f45d7b376404c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/nidoqueen.svg"
+        }
+      }
+    },
+    {
+      "id": "nidoranm",
+      "name": "Nidoran-M",
+      "number": 32,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/32.png",
+          "sha256": "4e9a6a9ad2f7acad94d2d3709d02b0543859444f5397946d7bfd92fd4b46fedb",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/nidoranm.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/32.png",
+          "sha256": "86952a9f13935918068fedab17a2970e107678d1497f6ed99fe8c3311737d386",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/nidoranm.svg"
+        }
+      }
+    },
+    {
+      "id": "nidorino",
+      "name": "Nidorino",
+      "number": 33,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/33.png",
+          "sha256": "d66314051e48e0234f5ffc2d334dae98a23f607fe97306950ef7b230171e971a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/nidorino.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/33.png",
+          "sha256": "9215cda89db793e4ccd738e3ddd4b5f1717fd294c0c5eddf0e8daf2f889e993b",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/nidorino.svg"
+        }
+      }
+    },
+    {
+      "id": "nidoking",
+      "name": "Nidoking",
+      "number": 34,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/34.png",
+          "sha256": "3a34c3c637abb8e80f9cd30ba9d723634962e66ddbe5dbb7983eecf0097cf138",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/nidoking.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/34.png",
+          "sha256": "004f926b842538c36427a22fc78fdc817c363d8b6a9bd218fba8b226a3995eba",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/nidoking.svg"
+        }
+      }
+    },
+    {
+      "id": "clefairy",
+      "name": "Clefairy",
+      "number": 35,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/35.png",
+          "sha256": "7c3248fe040195f076d989510b6787e3e70c4016f8f9881d50d44268c3cd45c3",
+          "pokeosAssetId": 155407,
+          "file": "assets/temporary-pokemon/normal/clefairy.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/35.png",
+          "sha256": "e70e238023b65b851a7526dc585d7ccc00bcaaf0d1a15923b2a14cda0ba07f14",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/clefairy.svg"
+        }
+      }
+    },
+    {
+      "id": "clefable",
+      "name": "Clefable",
+      "number": 36,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/36.png",
+          "sha256": "9970924b0c6393d8c1719f569ef984425cf98a78f8cecd14523d0a743aaa622d",
+          "pokeosAssetId": 155408,
+          "file": "assets/temporary-pokemon/normal/clefable.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/36.png",
+          "sha256": "665fe343d0f70668daaed61343965e59b0c0be6ac4a4a41fd30268713059c4d0",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/clefable.svg"
+        }
+      }
+    },
+    {
+      "id": "jigglypuff",
+      "name": "Jigglypuff",
+      "number": 39,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/39.png",
+          "sha256": "e0295405058fca2082e79af77abc29249c8bde8e050643c0e6aa2b429efb1b9a",
+          "pokeosAssetId": 155413,
+          "file": "assets/temporary-pokemon/normal/jigglypuff.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/39.png",
+          "sha256": "719486298417cb98b2cfbfcad76275d1f46cfa0dafbd1bddb5775a9c0574f4cc",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/jigglypuff.svg"
+        }
+      }
+    },
+    {
+      "id": "wigglytuff",
+      "name": "Wigglytuff",
+      "number": 40,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/40.png",
+          "sha256": "c91a0b3808dfd0321d6135b948b50ae743158169b0673b9604f224ef6fbff6b5",
+          "pokeosAssetId": 155414,
+          "file": "assets/temporary-pokemon/normal/wigglytuff.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/40.png",
+          "sha256": "d0c78fcbf9e8a37cb0418d439f9af4ab9ca7af88d9f419361b6601b6deb58d89",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/wigglytuff.svg"
+        }
+      }
+    },
+    {
+      "id": "zubat",
+      "name": "Zubat",
+      "number": 41,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/41.png",
+          "sha256": "954c4b2e30950706b3c2879003742d28723bcf54b1e13f4024e4f656d4e164d3",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/zubat.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/41.png",
+          "sha256": "1ad95e979bc12c4bc57e99bfca6600bb67df163d904d3a808e3405b1ff74ca10",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/zubat.svg"
+        }
+      }
+    },
+    {
+      "id": "golbat",
+      "name": "Golbat",
+      "number": 42,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/42.png",
+          "sha256": "d82c0991993ce21240487e0eb3cc1575665300d55a2f9c291040f75d6c87fc35",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/golbat.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/42.png",
+          "sha256": "dfa990f2f2155a03fc38c142d1b3cb4054ec077ed9291a586b528336414f3281",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/golbat.svg"
+        }
+      }
+    },
+    {
+      "id": "paras",
+      "name": "Paras",
+      "number": 46,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/46.png",
+          "sha256": "7e8b017b76d22e9cd4cf737ee61a20832c232e6bcb2d09df5b05545a31d94117",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/paras.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/46.png",
+          "sha256": "72fbae72c3e9b3d4cefd98621579c6978fed1d199e0eed902424890c8f5d9827",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/paras.svg"
+        }
+      }
+    },
+    {
+      "id": "parasect",
+      "name": "Parasect",
+      "number": 47,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/47.png",
+          "sha256": "59a923337d47d1e896cfd9972766372af464ca8c712785b5329194e884acf948",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/parasect.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/47.png",
+          "sha256": "3a332fb110ddf5d54ebb2a497d4fa2bccb2bb4f2bb865d790cc3297fe1bbaaac",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/parasect.svg"
+        }
+      }
+    },
+    {
+      "id": "venonat",
+      "name": "Venonat",
+      "number": 48,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/48.png",
+          "sha256": "00e8f943015715c1e05f1a26eef92f830baf12acc4b09637839d0961ba6c5b39",
+          "pokeosAssetId": 155418,
+          "file": "assets/temporary-pokemon/normal/venonat.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/48.png",
+          "sha256": "0b3f32627ce34fb627e141249a70d204ba13e5c50f22de0340038a85294de020",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/venonat.svg"
+        }
+      }
+    },
+    {
+      "id": "diglett",
+      "name": "Diglett",
+      "number": 50,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/50.png",
+          "sha256": "16d5a7ec168a93db02a4837fbf7d343032145f217d688fbae11ee2d4721642d2",
+          "pokeosAssetId": 155420,
+          "file": "assets/temporary-pokemon/normal/diglett.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/50.png",
+          "sha256": "46e148901d6faee6897064c35838722b45fc1747b0f2c7c96e57e96be987826d",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/diglett.svg"
+        }
+      }
+    },
+    {
+      "id": "dugtrio",
+      "name": "Dugtrio",
+      "number": 51,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/51.png",
+          "sha256": "d9602896d86c1c21f68dad2dbc0c63e0c276a61408deba23ef1be45fd861bf74",
+          "pokeosAssetId": 155422,
+          "file": "assets/temporary-pokemon/normal/dugtrio.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/51.png",
+          "sha256": "39dabe9e7f8b895daf213982788b164bc022a0d86f70a866e3c50d4db795a7f9",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/dugtrio.svg"
+        }
+      }
+    },
+    {
+      "id": "meowth",
+      "name": "Meowth",
+      "number": 52,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/52.png",
+          "sha256": "a386f6a1ba0cccc385418d696e60118c4e4a54b8e44b594e9fba14ec14bdd194",
+          "pokeosAssetId": 155424,
+          "file": "assets/temporary-pokemon/normal/meowth.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/52.png",
+          "sha256": "8a50bbecd78ae82febce1dc9db7f30f9b023799efaa7b6f0749e44526d33d225",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/meowth.svg"
+        }
+      }
+    },
+    {
+      "id": "persian",
+      "name": "Persian",
+      "number": 53,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/53.png",
+          "sha256": "7c33df4327fa38a89169b820ad4a3e7ab7e1457a70396de76a9c979e95656c4d",
+          "pokeosAssetId": 155427,
+          "file": "assets/temporary-pokemon/normal/persian.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/53.png",
+          "sha256": "e83bc3ff73155a90a4d67b782f0a157f3a10dcdd09b86294790de0fe53787192",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/persian.svg"
+        }
+      }
+    },
+    {
+      "id": "mankey",
+      "name": "Mankey",
+      "number": 56,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/56.png",
+          "sha256": "f4780bd44cf8dd533405dbb0185b56e3f44a8ccef8a9d5d8664f67e1a6dff4f4",
+          "pokeosAssetId": 155431,
+          "file": "assets/temporary-pokemon/normal/mankey.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/56.png",
+          "sha256": "ee57c24df3f0958318ff0700c926c78e4c9aa922ea412d7fb41b7639822d3187",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/mankey.svg"
+        }
+      }
+    },
+    {
+      "id": "primeape",
+      "name": "Primeape",
+      "number": 57,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/57.png",
+          "sha256": "5ef70b678135c8f87db06fe5d2aa002f3cc2f2336365c4fff5ab42416c1fee96",
+          "pokeosAssetId": 155432,
+          "file": "assets/temporary-pokemon/normal/primeape.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/57.png",
+          "sha256": "c7c8b9e67c4e17b9a4b51a8ff880c2b950791bbfa1216e69822cf12478026aae",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/primeape.svg"
+        }
+      }
+    },
+    {
+      "id": "poliwag",
+      "name": "Poliwag",
+      "number": 60,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/60.png",
+          "sha256": "a3777934ba7182de6a56a2fa2574ce3b87a0afb5b5e78ce87751d7177aab2563",
+          "pokeosAssetId": 155437,
+          "file": "assets/temporary-pokemon/normal/poliwag.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/60.png",
+          "sha256": "b3b42f16ca0e6392f554fd1da027902f78ad277e06c0c0cf9e4a3d7e6978a687",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/poliwag.svg"
+        }
+      }
+    },
+    {
+      "id": "poliwhirl",
+      "name": "Poliwhirl",
+      "number": 61,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/61.png",
+          "sha256": "b7528ce6b4e55e6ac6bcf9dcfc72f6413a3838cf0ba714f6124e1290226081f0",
+          "pokeosAssetId": 155438,
+          "file": "assets/temporary-pokemon/normal/poliwhirl.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/61.png",
+          "sha256": "9450df8794afde97c331dd2e601611bf2adc60d905a635fbe36a1d27dd286634",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/poliwhirl.svg"
+        }
+      }
+    },
+    {
+      "id": "poliwrath",
+      "name": "Poliwrath",
+      "number": 62,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/62.png",
+          "sha256": "2bf89fa23419007bb56188d65a33037b6a59e64d55cd8a8e76172a72c262168a",
+          "pokeosAssetId": 155439,
+          "file": "assets/temporary-pokemon/normal/poliwrath.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/62.png",
+          "sha256": "a7f5e1551668f77c29a276cb3ad62417cc3682528981e80ae70bd9197efec475",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/poliwrath.svg"
+        }
+      }
+    },
+    {
+      "id": "abra",
+      "name": "Abra",
+      "number": 63,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/63.png",
+          "sha256": "cee7e3dc3d7bd3f0c3a8245726b9da35b14231327650b3e1eb9c77441d1cebe8",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/abra.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/63.png",
+          "sha256": "061b71601850de377812518e5ac24133cc76ef3b5e0a7b1d6931a4270757aa96",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/abra.svg"
+        }
+      }
+    },
+    {
+      "id": "machop",
+      "name": "Machop",
+      "number": 66,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/66.png",
+          "sha256": "36ec58bdad40513ada2920b674aa30ba82f00bc150992cc5eadf8d29403e5a45",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/machop.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/66.png",
+          "sha256": "8d9af477aa08cf107da8ba0fdcfb0c4c748710cc5abfd6b0e0ff2838bce6efb2",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/machop.svg"
+        }
+      }
+    },
+    {
+      "id": "machoke",
+      "name": "Machoke",
+      "number": 67,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/67.png",
+          "sha256": "1f02156b2b361ebad917f83b79d0e8539cec12a64e41e3a160aa2d2d76c39e1f",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/machoke.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/67.png",
+          "sha256": "71e36c3c826d6b8fab463a0880dff8ff5fdd8314485ba4940d1f7086e3bcb4b6",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/machoke.svg"
+        }
+      }
+    },
+    {
+      "id": "machamp",
+      "name": "Machamp",
+      "number": 68,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/68.png",
+          "sha256": "a463e242f5c64ccd920125d99acd2a83e70138e4765387b23a4419448bdef0e1",
+          "pokeosAssetId": 155441,
+          "file": "assets/temporary-pokemon/normal/machamp.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/68.png",
+          "sha256": "aebfd242145baa834292b440908c80177a100ceffbfb71a78b311c9ca52e9cca",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/machamp.svg"
+        }
+      }
+    },
+    {
+      "id": "bellsprout",
+      "name": "Bellsprout",
+      "number": 69,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/69.png",
+          "sha256": "1e026b7722b55273129fb7ad2ac5c96b51d90765ba45eae4a355133b68ebddfd",
+          "pokeosAssetId": 155442,
+          "file": "assets/temporary-pokemon/normal/bellsprout.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/69.png",
+          "sha256": "041d2ebfa279c55a25bb0c70db95a73be1ea9e25af8e5878bd20e65040bfbf11",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/bellsprout.svg"
+        }
+      }
+    },
+    {
+      "id": "weepinbell",
+      "name": "Weepinbell",
+      "number": 70,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/70.png",
+          "sha256": "ee880f9be77f75ffc227da4d0ec850c032156fe7fdff71ad619887cec338b796",
+          "pokeosAssetId": 155443,
+          "file": "assets/temporary-pokemon/normal/weepinbell.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/70.png",
+          "sha256": "c11221499dfc3916adf689f78bdfb5992ce08f19294cf7c048354071b46c93c1",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/weepinbell.svg"
+        }
+      }
+    },
+    {
+      "id": "victreebel",
+      "name": "Victreebel",
+      "number": 71,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/71.png",
+          "sha256": "fd59e150912a28ae41e8007e317c588e06b8fc0f90a770de026842b53e5610d8",
+          "pokeosAssetId": 155444,
+          "file": "assets/temporary-pokemon/normal/victreebel.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/71.png",
+          "sha256": "de72b05c8578fa43229c2a341fd69d1adda6b811250d5424e89e618937594505",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/victreebel.svg"
+        }
+      }
+    },
+    {
+      "id": "tentacool",
+      "name": "Tentacool",
+      "number": 72,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/72.png",
+          "sha256": "915d64a60cb274f9286459152ac5c93f29645682a963573183091e2f235057aa",
+          "pokeosAssetId": 155445,
+          "file": "assets/temporary-pokemon/normal/tentacool.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/72.png",
+          "sha256": "72c4525b4cf47dd3e2609159f5d435d0fa5ec369ad2574616845a5bbd78d12cd",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/tentacool.svg"
+        }
+      }
+    },
+    {
+      "id": "ponyta",
+      "name": "Ponyta",
+      "number": 77,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/77.png",
+          "sha256": "efb440ad1f70df2de2ea626a45feb4052bb238d83654961e0e186e3bb5256f54",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/ponyta.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/77.png",
+          "sha256": "b5637b8904099dee91fde587cdc84cc793a9813f8c72f962a7fbed453aa1261a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/ponyta.svg"
+        }
+      }
+    },
+    {
+      "id": "rapidash",
+      "name": "Rapidash",
+      "number": 78,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/78.png",
+          "sha256": "da2cb16c7c90cb7fb68a903835a5ce0a93cf9f2c5916257ef2454ec137c2dea5",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/rapidash.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/78.png",
+          "sha256": "f5ffd91065c52c52b61af165eb5a13c270e444db3e29483a5f98693ac4336044",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/rapidash.svg"
+        }
+      }
+    },
+    {
+      "id": "slowpoke",
+      "name": "Slowpoke",
+      "number": 79,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/79.png",
+          "sha256": "84111ee707cee2ca091b4f6b52e3c783275ab0278819cb76b3315110648ab41e",
+          "pokeosAssetId": 155453,
+          "file": "assets/temporary-pokemon/normal/slowpoke.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/79.png",
+          "sha256": "4a5a488351fa10d3e8795b43967837072ac9c26f72eeb3d468fb7c3022f9cfdb",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/slowpoke.svg"
+        }
+      }
+    },
+    {
+      "id": "slowbro",
+      "name": "Slowbro",
+      "number": 80,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/80.png",
+          "sha256": "7a9c502d5f25c5125f5bdca010c54b81b8b885e528e054bb04ff393e3a6573ee",
+          "pokeosAssetId": 155455,
+          "file": "assets/temporary-pokemon/normal/slowbro.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/80.png",
+          "sha256": "5f5a5c15a8d79b0615d9da2c796fa9f748372b7a822610370a554b10c78722ed",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/slowbro.svg"
+        }
+      }
+    },
+    {
+      "id": "magnemite",
+      "name": "Magnemite",
+      "number": 81,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/81.png",
+          "sha256": "2afa4fee8c54bf8b95b9478759e4d1518225b0fb8b743118fb53b1e16aa3393c",
+          "pokeosAssetId": 155457,
+          "file": "assets/temporary-pokemon/normal/magnemite.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/81.png",
+          "sha256": "cb518ee969ea5123b6077fc89ce0ad6c6f63073eb55f80c01bf13818ff90e35a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/magnemite.svg"
+        }
+      }
+    },
+    {
+      "id": "magneton",
+      "name": "Magneton",
+      "number": 82,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/82.png",
+          "sha256": "27e6abd3db0f5a748e4c2717772afa4eff21017859756d44c14955bdac16f747",
+          "pokeosAssetId": 155458,
+          "file": "assets/temporary-pokemon/normal/magneton.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/82.png",
+          "sha256": "5bb9746d0eea73d2b624a42ddae63369f4a7e057f02c91c4e44a0ac7ca588f8c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/magneton.svg"
+        }
+      }
+    },
+    {
+      "id": "farfetchd",
+      "name": "Farfetch\u2019d",
+      "number": 83,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/83.png",
+          "sha256": "48a577615a90f8206ec6213de506fd79b8bac903480fed0cc4f3bd9fb35e6208",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/farfetchd.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/83.png",
+          "sha256": "b65cd15c212ffe745bf2bafe07d5d10023206ee41709320074c6300522fa3ca6",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/farfetchd.svg"
+        }
+      }
+    },
+    {
+      "id": "doduo",
+      "name": "Doduo",
+      "number": 84,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/84.png",
+          "sha256": "9d254353f63316e1116085630585b55731dcc19f4ff713ed56c9c4edba7cbb02",
+          "pokeosAssetId": 155459,
+          "file": "assets/temporary-pokemon/normal/doduo.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/84.png",
+          "sha256": "b3dc495bdabe8fd7358741ee530bce584658352f6fca19867073d965dd0dc1d0",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/doduo.svg"
+        }
+      }
+    },
+    {
+      "id": "dodrio",
+      "name": "Dodrio",
+      "number": 85,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/85.png",
+          "sha256": "988a95fc95018f0f964651dcd716e545d7a68cf1d66735f1bef76244075cc07b",
+          "pokeosAssetId": 155460,
+          "file": "assets/temporary-pokemon/normal/dodrio.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/85.png",
+          "sha256": "57d0f8f6cdca3a80d29e4a8ed5872e1b16a1af04c2b9e386d28a4a3921b8ca88",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/dodrio.svg"
+        }
+      }
+    },
+    {
+      "id": "seel",
+      "name": "Seel",
+      "number": 86,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/86.png",
+          "sha256": "7df822beccf06e24e7613bdb2f3bd50e291c5cac3a7816d1f9232552197325c5",
+          "pokeosAssetId": 155461,
+          "file": "assets/temporary-pokemon/normal/seel.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/86.png",
+          "sha256": "fae4fac6ab81d5542d8d8cd0884da75708d48f617064da7e24de98906fbd25e5",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/seel.svg"
+        }
+      }
+    },
+    {
+      "id": "dewgong",
+      "name": "Dewgong",
+      "number": 87,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/87.png",
+          "sha256": "f7f08fd4877c53267295daf766d147accfd37d37e9c7dca84c1d33696e75b4be",
+          "pokeosAssetId": 155462,
+          "file": "assets/temporary-pokemon/normal/dewgong.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/87.png",
+          "sha256": "0ba62084c188c3d0703de69a67ac99ddca10c09d9c186562be8ba945e021ff60",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/dewgong.svg"
+        }
+      }
+    },
+    {
+      "id": "grimer",
+      "name": "Grimer",
+      "number": 88,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/88.png",
+          "sha256": "379485259b911f8f965c17b2919a0e6c316fc5617a9d7c89e9e162184ba37113",
+          "pokeosAssetId": 155463,
+          "file": "assets/temporary-pokemon/normal/grimer.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/88.png",
+          "sha256": "371389ecc27fdfcf1bfed80d6ebbac454eecb186ef42d5d047655f1ef9ccd9e4",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/grimer.svg"
+        }
+      }
+    },
+    {
+      "id": "muk",
+      "name": "Muk",
+      "number": 89,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/89.png",
+          "sha256": "15fac973527bbffa98a16d6f0854e7e927026f29e3b5d9ea90daa99c44e8c7e1",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/muk.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/89.png",
+          "sha256": "78a43bf34852293db63bccad6de0d1369b01e0146ca8b41120b352b37ca90ec5",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/muk.svg"
+        }
+      }
+    },
+    {
+      "id": "shellder",
+      "name": "Shellder",
+      "number": 90,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/90.png",
+          "sha256": "25ce04955f90fd5e2f250a2d484a825fb1066772ea9f69818246cdd8fee96635",
+          "pokeosAssetId": 155467,
+          "file": "assets/temporary-pokemon/normal/shellder.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/90.png",
+          "sha256": "4f2ffa189ebbf32922de67db78f986a4a562c93ea826afd226e50c1a2c3bd9a4",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/shellder.svg"
+        }
+      }
+    },
+    {
+      "id": "drowzee",
+      "name": "Drowzee",
+      "number": 96,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/96.png",
+          "sha256": "03d6e96403b427d898aa08b26d90dd69ad7ee93a92ca0bc4e8d75630d81fc8b4",
+          "pokeosAssetId": 155472,
+          "file": "assets/temporary-pokemon/normal/drowzee.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/96.png",
+          "sha256": "0d4b6182fd1f3620d7c3ea6c4d05528aff15c3b73df69df8e0f8dd129dc766c6",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/drowzee.svg"
+        }
+      }
+    },
+    {
+      "id": "hypno",
+      "name": "Hypno",
+      "number": 97,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/97.png",
+          "sha256": "04f38499b4b45ff008104a370edb967307a88ce58252b5b68f493ae9c26d629e",
+          "pokeosAssetId": 155473,
+          "file": "assets/temporary-pokemon/normal/hypno.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/97.png",
+          "sha256": "8b413938dfb035af5da55d4482d53782a2b3f1d0be897f564d31e7f9acdfde7a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/hypno.svg"
+        }
+      }
+    },
+    {
+      "id": "krabby",
+      "name": "Krabby",
+      "number": 98,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/98.png",
+          "sha256": "bc1ef627b6831de1277cf5af706cdcee77000b5cbedf47d576bc45e9727ad17e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/krabby.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/98.png",
+          "sha256": "077b617e1fd96717cd8960d6f18f34ef4d4d1ff8dd6020350d94ea985f9ef033",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/krabby.svg"
+        }
+      }
+    },
+    {
+      "id": "kingler",
+      "name": "Kingler",
+      "number": 99,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/99.png",
+          "sha256": "a01b70b80c022008437a9d05b7c8915db22fc4119eb85d39e36276d441400fdf",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/kingler.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/99.png",
+          "sha256": "a76b8e7cd1eed927b79d4004a926821f1ac33f7b52c07cac132f148f162e366c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/kingler.svg"
+        }
+      }
+    },
+    {
+      "id": "voltorb",
+      "name": "Voltorb",
+      "number": 100,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/100.png",
+          "sha256": "4a44b2e67ca83ed5bd495ae213e4aebb407ca1534591f2dedbfe589327408bad",
+          "pokeosAssetId": 155474,
+          "file": "assets/temporary-pokemon/normal/voltorb.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/100.png",
+          "sha256": "1ee290d443585d2ddaf75da5548f75cd481d0e0307850a1682944bdcc00a193e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/voltorb.svg"
+        }
+      }
+    },
+    {
+      "id": "electrode",
+      "name": "Electrode",
+      "number": 101,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/101.png",
+          "sha256": "fc3ba25fe66d49dd5415aa8866d5b7649c23ebd64313c2127ca454d12ed0ddf7",
+          "pokeosAssetId": 155476,
+          "file": "assets/temporary-pokemon/normal/electrode.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/101.png",
+          "sha256": "783276b1887a586950c0f30e8b7b4ed74062cd64fa9d226adb31ea73369ed0a7",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/electrode.svg"
+        }
+      }
+    },
+    {
+      "id": "exeggcute",
+      "name": "Exeggcute",
+      "number": 102,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/102.png",
+          "sha256": "ba8af3eea0e22833f3781eca52bff666b841b1a36e08ab2dfdbee04e41f52a7d",
+          "pokeosAssetId": 155478,
+          "file": "assets/temporary-pokemon/normal/exeggcute.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/102.png",
+          "sha256": "ba9e0d437510890b658e5f8621dc8750a0daf9dbea8a4bba43e475b0fec7a063",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/exeggcute.svg"
+        }
+      }
+    },
+    {
+      "id": "exeggutor",
+      "name": "Exeggutor",
+      "number": 103,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/103.png",
+          "sha256": "51b1eedd7e2a7a3fe77ddc0cee5e241373a13bd59ece2529a365f730ff485d3f",
+          "pokeosAssetId": 155479,
+          "file": "assets/temporary-pokemon/normal/exeggutor.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/103.png",
+          "sha256": "0b4ab0d3621dbfbb8ff77dc672ec81124a00d66a65249f9681912555b27a738a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/exeggutor.svg"
+        }
+      }
+    },
+    {
+      "id": "cubone",
+      "name": "Cubone",
+      "number": 104,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/104.png",
+          "sha256": "f96411fafb80acdba748ca272a9456e7a2847813d5460076c24b65f2c1b4b9d9",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/cubone.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/104.png",
+          "sha256": "b0c00aaf862cf3f2747ef6f6a38edcd673f345cd389e1e8a80330e290d265aa9",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/cubone.svg"
+        }
+      }
+    },
+    {
+      "id": "marowak",
+      "name": "Marowak",
+      "number": 105,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/105.png",
+          "sha256": "71c1fcf3624b4568e30b36181e12b8dbc34ecab56043c971dd216c11c39bb94c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/marowak.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/105.png",
+          "sha256": "2665a519f059559fcff8fba67928fcedd940cd8de2271fd495d625c554a23771",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/marowak.svg"
+        }
+      }
+    },
+    {
+      "id": "hitmonlee",
+      "name": "Hitmonlee",
+      "number": 106,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/106.png",
+          "sha256": "bddb3b1ff9a3fc1ba7205722cbfe7bdaebc1a6326f045b5ce50179e2be9a466d",
+          "pokeosAssetId": 155481,
+          "file": "assets/temporary-pokemon/normal/hitmonlee.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/106.png",
+          "sha256": "31e16bdee46157e5a23e0c1ef6dd79a1e2d7c1ebfebc4fafb5cdefd3d5698a87",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/hitmonlee.svg"
+        }
+      }
+    },
+    {
+      "id": "hitmonchan",
+      "name": "Hitmonchan",
+      "number": 107,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/107.png",
+          "sha256": "ed0f0dcd604479b61200e6287d73f3d9d4466b7c316f5407050d8eb7a2f993fa",
+          "pokeosAssetId": 155482,
+          "file": "assets/temporary-pokemon/normal/hitmonchan.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/107.png",
+          "sha256": "7b108cc88130ff5f8ce057f0b1d81a7e901f99ba57c457e79bdfc0954879efa3",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/hitmonchan.svg"
+        }
+      }
+    },
+    {
+      "id": "lickitung",
+      "name": "Lickitung",
+      "number": 108,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/108.png",
+          "sha256": "033c6c83e9d6b5b3c0731557708f18ab581512f58460ac9716ba68c45434aa1e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/lickitung.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/108.png",
+          "sha256": "49ee8588713e37ed585c18935b8bba66af92cb6897b848e75c64b5bc63bb4a15",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/lickitung.svg"
+        }
+      }
+    },
+    {
+      "id": "koffing",
+      "name": "Koffing",
+      "number": 109,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/109.png",
+          "sha256": "64b9526f88769078c9024012d7aee9b41a691a1b907825c74444969ec03d67df",
+          "pokeosAssetId": 155483,
+          "file": "assets/temporary-pokemon/normal/koffing.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/109.png",
+          "sha256": "6b87ade0e31340ec5f44e41b88eec9bbb5143421a147638178c7b3ee2c4b9343",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/koffing.svg"
+        }
+      }
+    },
+    {
+      "id": "weezing",
+      "name": "Weezing",
+      "number": 110,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/110.png",
+          "sha256": "f3317ef5b3ac35858d2763fa294a09cc634d8f128db2cd495d979d02e41e81c3",
+          "pokeosAssetId": 155484,
+          "file": "assets/temporary-pokemon/normal/weezing.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/110.png",
+          "sha256": "3164c5486ff03103f26c53b983b2a0b1d74675e930f532b4e88a5587345e2d26",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/weezing.svg"
+        }
+      }
+    },
+    {
+      "id": "rhyhorn",
+      "name": "Rhyhorn",
+      "number": 111,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/111.png",
+          "sha256": "268b3cd6eb69a36a4f6ef0868f2dd259bf23316548e82499f0a864df0b7d45bc",
+          "pokeosAssetId": 155486,
+          "file": "assets/temporary-pokemon/normal/rhyhorn.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/111.png",
+          "sha256": "1326e7c45e1177bc5374fde3157c8553a9adab2dd7b6b10f61b4b32e8465ae9d",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/rhyhorn.svg"
+        }
+      }
+    },
+    {
+      "id": "rhydon",
+      "name": "Rhydon",
+      "number": 112,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/112.png",
+          "sha256": "6db6f875eadc766be8f29b7da626755fdd753a573a5ac5265bb34fd16d8f119f",
+          "pokeosAssetId": 155487,
+          "file": "assets/temporary-pokemon/normal/rhydon.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/112.png",
+          "sha256": "f98172f9429bbd58b72ff68a87c4d10c917cfd42b08a63cf1a2afa264f546421",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/rhydon.svg"
+        }
+      }
+    },
+    {
+      "id": "chansey",
+      "name": "Chansey",
+      "number": 113,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/113.png",
+          "sha256": "c3f28316b0943682b3239c741be2e67da0eedf523ece9bdcec535b8e7ccce43b",
+          "pokeosAssetId": 155488,
+          "file": "assets/temporary-pokemon/normal/chansey.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/113.png",
+          "sha256": "bbbdd00b7b4c0f7d04c8df83882c2a0163e22ea2bb05c012c562bf191db186c4",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/chansey.svg"
+        }
+      }
+    },
+    {
+      "id": "tangela",
+      "name": "Tangela",
+      "number": 114,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/114.png",
+          "sha256": "69379d9fddd1fb86bf5d7dbdd7e263863cdbb4191377cc838b3af290556e0fc9",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/tangela.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/114.png",
+          "sha256": "e4bdd6eb6ef8f45a58e90e52d0198cf65b9d039e7c4fc077b4653d5aa59e7f76",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/tangela.svg"
+        }
+      }
+    },
+    {
+      "id": "kangaskhan",
+      "name": "Kangaskhan",
+      "number": 115,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/115.png",
+          "sha256": "415ba1fdb4a9b1386567c23bd28e6728881644a0ad30f7f486a9a34d434ae7ab",
+          "pokeosAssetId": 155489,
+          "file": "assets/temporary-pokemon/normal/kangaskhan.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/115.png",
+          "sha256": "035187fbd63a0c8b1a75b7e326b89c7339cac6efbcfb93a54ee5f16dc4c89741",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/kangaskhan.svg"
+        }
+      }
+    },
+    {
+      "id": "horsea",
+      "name": "Horsea",
+      "number": 116,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/116.png",
+          "sha256": "2526acd7b23088bb9691cc0e1e3bfbf8b9a98866c3438f8ee00d4d6167edf69d",
+          "pokeosAssetId": 155490,
+          "file": "assets/temporary-pokemon/normal/horsea.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/116.png",
+          "sha256": "28a37947c96f1d8422a2d828adc111ddb2beb6b514469825c0aa45f2debd61fa",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/horsea.svg"
+        }
+      }
+    },
+    {
+      "id": "seadra",
+      "name": "Seadra",
+      "number": 117,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/117.png",
+          "sha256": "3db80bf34a74f5650d42f13b1e3990f322a02a14a1b5f6f4b39a2ef9b98fffd8",
+          "pokeosAssetId": 155491,
+          "file": "assets/temporary-pokemon/normal/seadra.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/117.png",
+          "sha256": "1488f97dff48e9fc23350e288abd8e5406909ae4bdadeb4b7d015a7da08400a5",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/seadra.svg"
+        }
+      }
+    },
+    {
+      "id": "goldeen",
+      "name": "Goldeen",
+      "number": 118,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/118.png",
+          "sha256": "e75d389e1d8bdd7ab220df7f12bc48e190d5b29321e78cd8abdae1cb224cef0a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/goldeen.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/118.png",
+          "sha256": "a17927641c32a07efcdde44106e805073dfafafdd1633489809815b6c9900b68",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/goldeen.svg"
+        }
+      }
+    },
+    {
+      "id": "seaking",
+      "name": "Seaking",
+      "number": 119,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/119.png",
+          "sha256": "6436759c3d0f4d78f92504fa0e2b280d7cb947947e5e8671a69c17dbeb9a60a6",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/seaking.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/119.png",
+          "sha256": "0339b0fb188a07334db1ee7df1d986e30d0c70a68f7bfe135be3de72637e46c5",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/seaking.svg"
+        }
+      }
+    },
+    {
+      "id": "staryu",
+      "name": "Staryu",
+      "number": 120,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/120.png",
+          "sha256": "cc7ce976970f7084a9680a3b30797f3d90c6ea9da6594e0df81af247df5cea32",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/staryu.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/120.png",
+          "sha256": "38857032d2047be819d64410da03ec1c66aa3628c7247194129c8de66b387d12",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/staryu.svg"
+        }
+      }
+    },
+    {
+      "id": "starmie",
+      "name": "Starmie",
+      "number": 121,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/121.png",
+          "sha256": "478c880574166d2d9894270f2bf4787e46617de14d935daa4fa5dc8029fe2d08",
+          "pokeosAssetId": 155492,
+          "file": "assets/temporary-pokemon/normal/starmie.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/121.png",
+          "sha256": "4862f499a1d9a8928a6df9a4fe22f279213139b2d173bd8e16b654ce90e3901c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/starmie.svg"
+        }
+      }
+    },
+    {
+      "id": "mrmime",
+      "name": "Mr. Mime",
+      "number": 122,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/122.png",
+          "sha256": "e8d2c1ed924b4249f6af1e10e3dc392cf2729366a0a58b1112bbc35ae088a89c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/mrmime.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/122.png",
+          "sha256": "9666b9476eadf0c60c29169c9bee0778d6eeb0b30d9a5c183482d0c8fdf74134",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/mrmime.svg"
+        }
+      }
+    },
+    {
+      "id": "scyther",
+      "name": "Scyther",
+      "number": 123,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/123.png",
+          "sha256": "811106c51efb7340eadd7557680236e7e4c0b07f12a282ef5fc7e8002376f08e",
+          "pokeosAssetId": 155493,
+          "file": "assets/temporary-pokemon/normal/scyther.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/123.png",
+          "sha256": "8ae59c63c4c35a30589c230d477a039a3d2e7c963c3d010830f89cdaefa34b01",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/scyther.svg"
+        }
+      }
+    },
+    {
+      "id": "jynx",
+      "name": "Jynx",
+      "number": 124,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/124.png",
+          "sha256": "8a97b0dfb4ad90c35dac13d76fccae83daec6cb385d9d6b630cf794d1f09c001",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/jynx.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/124.png",
+          "sha256": "589eba308dabc129d120b275fe43be0c837b73d32c19702b3f6ab7397e5c24bb",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/jynx.svg"
+        }
+      }
+    },
+    {
+      "id": "electabuzz",
+      "name": "Electabuzz",
+      "number": 125,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/125.png",
+          "sha256": "1fc1ff2f3e0e43285fb922fe7049391d6c95c351a8b728aa62de2e1a162dc2aa",
+          "pokeosAssetId": 155494,
+          "file": "assets/temporary-pokemon/normal/electabuzz.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/125.png",
+          "sha256": "5bd270d1c5410df4d1f9f2c1639512de9fed93a5182e0877e0264551767e50fb",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/electabuzz.svg"
+        }
+      }
+    },
+    {
+      "id": "magmar",
+      "name": "Magmar",
+      "number": 126,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/126.png",
+          "sha256": "6010f0e785190209a312833e8c6acff3a29ef44ea9f1cfbb894aff9385749224",
+          "pokeosAssetId": 155495,
+          "file": "assets/temporary-pokemon/normal/magmar.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/126.png",
+          "sha256": "4260b7486f14c0f80410b28f56ee88ba78df0f8f17aabf5891e492968869ec00",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/magmar.svg"
+        }
+      }
+    },
+    {
+      "id": "magikarp",
+      "name": "Magikarp",
+      "number": 129,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/129.png",
+          "sha256": "91a4732482ce4edf3d78ff4719661614d16458298f1fdec01a002d7eb8598bb1",
+          "pokeosAssetId": 155501,
+          "file": "assets/temporary-pokemon/normal/magikarp.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/129.png",
+          "sha256": "ad34e292ab035f06baeb2f04355dfc47fdef1c4a7a2090ba9d1daba16e04d38e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/magikarp.svg"
+        }
+      }
+    },
+    {
+      "id": "gyarados",
+      "name": "Gyarados",
+      "number": 130,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/130.png",
+          "sha256": "a9fd833a4005acbb7d7937623d3bfb0be38f716090b7cc2bdc845d4a5850806c",
+          "pokeosAssetId": 155502,
+          "file": "assets/temporary-pokemon/normal/gyarados.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/130.png",
+          "sha256": "c9eeb9bde288233ab9cf14741ba1670d43c045ec788e1486606426938edcde0f",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/gyarados.svg"
+        }
+      }
+    },
+    {
+      "id": "ditto",
+      "name": "Ditto",
+      "number": 132,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/132.png",
+          "sha256": "cf74187789f8a46d9b591a1450399e75939dd3da56d50dc7b5f5e3bbb311d2d8",
+          "pokeosAssetId": 155504,
+          "file": "assets/temporary-pokemon/normal/ditto.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/132.png",
+          "sha256": "5bf8dcb1257ddc917e343c557f413becc5fd3093dfee921bcdf1cabf9cd3b23b",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/ditto.svg"
+        }
+      }
+    },
+    {
+      "id": "porygon",
+      "name": "Porygon",
+      "number": 137,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/137.png",
+          "sha256": "6ab4013a2aa99850c7b21b10ebac3232926ceab3240e57919fc01bf1b70c2159",
+          "pokeosAssetId": 155509,
+          "file": "assets/temporary-pokemon/normal/porygon.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/137.png",
+          "sha256": "a0aaacbcef6b566c7005eb98af95323491d3951a6c4e57a5061ee595d7a6c6f3",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/porygon.svg"
+        }
+      }
+    },
+    {
+      "id": "omanyte",
+      "name": "Omanyte",
+      "number": 138,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/138.png",
+          "sha256": "5578c6c1ac75299efe287121099d88221df16c11c51e72bdc4ab520e1bc91a68",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/omanyte.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/138.png",
+          "sha256": "9287a0535a95169dfc983aff1997a2a3949c919fe58caa61b428eec2b44d6a26",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/omanyte.svg"
+        }
+      }
+    },
+    {
+      "id": "omastar",
+      "name": "Omastar",
+      "number": 139,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/139.png",
+          "sha256": "e7209085872533b9ee0b649be58485e05f5080895c530161dbf3edef96250341",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/omastar.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/139.png",
+          "sha256": "cbc92a5cce6fee2ac31fa1db7a076937c41c2b134100618a9eef6c9166f54b18",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/omastar.svg"
+        }
+      }
+    },
+    {
+      "id": "kabuto",
+      "name": "Kabuto",
+      "number": 140,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/140.png",
+          "sha256": "d7c894ed6d6e59b0e61a0811007a2fa6a96a5aa8038252d9046f24823d88590e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/kabuto.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/140.png",
+          "sha256": "0024c22a66cd6e7e2733fb9327fb8bc94e0634072f2bc382341af47b39a2beab",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/kabuto.svg"
+        }
+      }
+    },
+    {
+      "id": "kabutops",
+      "name": "Kabutops",
+      "number": 141,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/141.png",
+          "sha256": "8cf64695df934359879062138237d93abf41164d9f8da077f74b0f69b0b9cd5e",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/kabutops.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/141.png",
+          "sha256": "b541e0cd9bd03ad62ca6bceb6c067a4ac57c2736e412441364e9d0d198423b69",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/kabutops.svg"
+        }
+      }
+    },
+    {
+      "id": "aerodactyl",
+      "name": "Aerodactyl",
+      "number": 142,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/142.png",
+          "sha256": "45184c27edc61ef5d1651e63c50451962ba3a200cd2815d5aa6767373c947e08",
+          "pokeosAssetId": 155510,
+          "file": "assets/temporary-pokemon/normal/aerodactyl.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/142.png",
+          "sha256": "c5f9513a1fc15874626591391a97e2d51ed69f862fc854b094319d2231b953b7",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/aerodactyl.svg"
+        }
+      }
+    },
+    {
+      "id": "snorlax",
+      "name": "Snorlax",
+      "number": 143,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/143.png",
+          "sha256": "7dd73b033996a6f55294124c11e6627c1d9b1c1433f9a43fee2ead4418250e5a",
+          "pokeosAssetId": 155511,
+          "file": "assets/temporary-pokemon/normal/snorlax.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/143.png",
+          "sha256": "b7faa18a78cf551b95a7eadae63a03773011ffe75eb3def0a9030a7bd46fb6ee",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/snorlax.svg"
+        }
+      }
+    },
+    {
+      "id": "articuno",
+      "name": "Articuno",
+      "number": 144,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/144.png",
+          "sha256": "93ae88b077d58e106c7715d4df053747e69f220a9236d46935635f82e6be3b15",
+          "pokeosAssetId": 155512,
+          "file": "assets/temporary-pokemon/normal/articuno.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/144.png",
+          "sha256": "ac8180d879a5cb7ecc48699273ee59cac7c8969d87ec785bd50797eb0dbcad11",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/articuno.svg"
+        }
+      }
+    },
+    {
+      "id": "zapdos",
+      "name": "Zapdos",
+      "number": 145,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/145.png",
+          "sha256": "fd7cb8960635deafebe849dff3164e8f304da0df4ba1483cacbca795e1152cfd",
+          "pokeosAssetId": 155514,
+          "file": "assets/temporary-pokemon/normal/zapdos.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/145.png",
+          "sha256": "9c5ffd7d3fc4bdc3b7a28372fb68596618fe3a9e270ce4a2f3367002141bdaea",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/zapdos.svg"
+        }
+      }
+    },
+    {
+      "id": "moltres",
+      "name": "Moltres",
+      "number": 146,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/146.png",
+          "sha256": "cd1a2e1ae3b978809c87ac2472cb1964e55743e7582096d1d5f630ca0e136271",
+          "pokeosAssetId": 155516,
+          "file": "assets/temporary-pokemon/normal/moltres.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/146.png",
+          "sha256": "44b1e8db125c11997296b62ae370e80bde22b44e0dbea72e14c470e91292254a",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/moltres.svg"
+        }
+      }
+    },
+    {
+      "id": "mewtwo",
+      "name": "Mewtwo",
+      "number": 150,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "RK9 via PokeOS",
+          "source": "https://assets.pokeos.com/pokemon/home/rk9/broadcast/150.png",
+          "sha256": "52dc167f604bb4a2cf412c43bd30d3566f9eed60d45ca4b622528251355e4ac6",
+          "pokeosAssetId": 155521,
+          "file": "assets/temporary-pokemon/normal/mewtwo.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/150.png",
+          "sha256": "cd6f623651c914847244af565b552b848c8595f2dd3f09ba40f83296e23e0f94",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/mewtwo.svg"
+        }
+      }
+    },
+    {
+      "id": "mew",
+      "name": "Mew",
+      "number": 151,
+      "replacement": "painted-chibi-pending",
+      "palettes": {
+        "normal": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/151.png",
+          "sha256": "73429b41c859df02c2d8cf5313150e908b42e29fe327e0554aa3e190f85d3f8c",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/normal/mew.svg"
+        },
+        "shiny": {
+          "provider": "Pok\u00e9mon HOME via PokeAPI/sprites",
+          "source": "https://raw.githubusercontent.com/PokeAPI/sprites/c0542f7c51215d9672439012838c99f520596cbd/sprites/pokemon/other/home/shiny/151.png",
+          "sha256": "717bc67fec59a951f56439f05383f99d4043d437f834ac09f20a22247b0415bc",
+          "pokeosAssetId": null,
+          "file": "assets/temporary-pokemon/shiny/mew.svg"
+        }
+      }
+    }
+  ]
+}
