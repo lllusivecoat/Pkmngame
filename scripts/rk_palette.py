@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 from scipy.spatial import cKDTree
 def ink_cutoff(id):
- return 43 if id in ['unown','houndour','houndoom','sneasel'] else 65
+ return 43 if id in ['unown','houndour','houndoom','sneasel','darkrai'] else 65
 D65=np.array([.95047,1,1.08883]);M=np.array([[.4124564,.3575761,.1804375],[.2126729,.7151522,.0721750],[.0193339,.1191920,.9503041]])
 def lab(rgb):
  x=rgb/255.;x=np.where(x>.04045,((x+.055)/1.055)**2.4,x/12.92);x=x@M.T/D65;f=np.where(x>.008856,np.cbrt(x),7.787*x+16/116);return np.stack([116*f[:,1]-16,500*(f[:,0]-f[:,1]),200*(f[:,1]-f[:,2])],axis=1)
@@ -22,7 +22,7 @@ def recolor(base,id):
  out=rgb(mapped)
  # Explicit material corrections for stylised art whose warm fills overlap reference highlights.
  import colorsys
- if id in ['paras','marowak','clefable','chansey','grimer','muk','jumpluff','crobat','lugia','larvitar','lunatone']:
+ if id in ['paras','marowak','clefable','chansey','grimer','muk','jumpluff','crobat','lugia','larvitar','lunatone','riolu','lucario','drifloon','drapion','darkrai','munna','tepig']:
   for j,(r,g,b) in enumerate(flat):
    h,sat,val=colorsys.rgb_to_hsv(r/255,g/255,b/255);x=j%data.shape[1];y=j//data.shape[1]
    if ink[j] or alpha[j]==0:continue
@@ -36,6 +36,12 @@ def recolor(base,id):
    if id=='lugia' and .52<h<.78 and sat>.2:out[j]=np.array(colorsys.hsv_to_rgb(.96,max(.55,sat),val))*255
    if id=='larvitar' and (h>.88 or h<.04) and sat>.3:out[j]=np.array(colorsys.hsv_to_rgb(.88,sat*.75,min(1,val*1.1)))*255
    if id=='lunatone' and (h>.88 or h<.04) and sat>.3:out[j]=np.array(colorsys.hsv_to_rgb(.6,max(.55,sat),val))*255
+   if id in ['riolu','lucario'] and .51<h<.66 and sat>.2:out[j]=np.array(colorsys.hsv_to_rgb(.16,max(.48,sat),min(1,val*1.35)))*255
+   if id=='drifloon' and .7<h<.9 and sat>.1:out[j]=np.array(colorsys.hsv_to_rgb(.145,.58,min(1,val*1.5)))*255
+   if id=='drapion' and .75<h<1 and sat>.18:out[j]=np.array(colorsys.hsv_to_rgb(.96,sat*.75,val*.95))*255
+   if id=='darkrai' and sat<.25 and .16<val<.5:out[j]=np.array(colorsys.hsv_to_rgb(.74,.55,min(1,val*1.1)))*255
+   if id=='munna' and .85<h<1 and sat<.4 and val>.5:out[j]=np.array(colorsys.hsv_to_rgb(.15,.48,val*.98))*255
+   if id=='tepig' and .03<h<.14 and sat>.45:out[j]=np.array(colorsys.hsv_to_rgb(.145,.85,min(1,val*1.22)))*255
  out[ink|white|(alpha==0)]=flat[ink|white|(alpha==0)].astype(np.uint8);data[:,:,:3]=out.reshape(data.shape[:2]+(3,));return Image.fromarray(data),int(ink.sum())
 def decode(file):
  s=file.read_text();encoded=re.search('base64,([^\"]+)',s).group(1);im=Image.open(io.BytesIO(base64.b64decode(encoded))).convert('RGBA');return im

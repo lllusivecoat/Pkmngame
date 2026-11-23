@@ -1,6 +1,6 @@
-import {excursionMaps,isExcursion} from './excursions-data.js?v=20261124-hoennart1';
-import {normalizeGymDesign} from './gym-design.js?v=20261124-hoennart1';
-import {TOWN_SIZE,TOWN_OFFSET,townBaseWalkable} from './town-map-data.js?v=20261124-hoennart1';
+import {excursionMaps,isExcursion} from './excursions-data.js?v=20261124-sinnohunova1';
+import {normalizeGymDesign} from './gym-design.js?v=20261124-sinnohunova1';
+import {TOWN_SIZE,TOWN_OFFSET,townBaseWalkable} from './town-map-data.js?v=20261124-sinnohunova1';
 // Connected personal maps; independent of the adventure-region map graph.
 const border=(size,x,y)=>x===0||y===0||x===size-1||y===size-1;
 export const gymWorldMaps={...excursionMaps,

@@ -1,3 +1,7 @@
+Gen 4 + 5 artwork — v0.62.0
+
+All 107 Sinnoh and 156 Unova species now have artwork. Preserve 16 approved painted pairs; fill 247 pending pairs with 162 RK9 and 85 outlined Final (RK1) drawings. Matching Shiny versions recolour the same drawing, preserving transparency and outlines. The shared gallery now contains 553 temporary species across Gen 1–5. Four RK9 images depict a different form, so Shellos/Gastrodon use West Sea Final artwork and Deerling/Sawsbuck use Spring Final artwork. Source audit: docs/sinnoh-unova-temporary-artwork.json. Rebuild: python3 scripts/build-sinnoh-unova-replacements.py.
+
 Hoenn artwork — v0.61.0
 
 All 135 Gen 3 species now have artwork: 17 approved painted pairs remain and 118 pending pairs use 75 RK9 and 43 outlined Final drawings (RK1). Normal and Shiny retain identical silhouettes, transparency and outlines. All temporary species share the existing RK9 + RK1 gallery and assets folder. Source audit: docs/hoenn-temporary-artwork.json. Rebuild: python3 scripts/build-hoenn-replacements.py.

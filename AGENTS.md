@@ -99,3 +99,5 @@ From0.59.0 the user replaces HOME render fallbacks with PokeOS’s outlined Fina
 Johto artwork v0.60: preserve approved paintings; pending Gen2 uses RK9 then outlined Final (RK1), shared temporary folder/gallery. Shiny edits must retain source drawing/alpha/ink. HOME models are colour references only. See docs/johto-temporary-artwork.json.
 
 Hoenn artwork v0.61: preserve 17 existing painted pairs and all Gen1/2 assets; fill118 pending species with75 RK9 +43 outlined Final/RK1 pairs. Keep one gallery/folder and same-drawing Shiny recolours. Source audit: docs/hoenn-temporary-artwork.json.
+
+Gen4/5 artwork v0.62: preserve16 painted pairs and all Gen1–3 assets. Fill247 pending species with162 RK9 +85 outlined Final/RK1 matching Normal/Shiny pairs. Source audit includes four form mismatches using Final: West Sea Shellos/Gastrodon, Spring Deerling/Sawsbuck. Keep shared gallery/folder and same-drawing palette edits. No HOME render fallback.

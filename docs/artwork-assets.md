@@ -1,3 +1,7 @@
+Sinnoh / Unova temporary artwork
+
+Gen 4: 94 temporary pairs and 13 existing painted pairs. Gen 5: 153 temporary pairs and 3 existing painted pairs. Added 162 RK9 +85 RK1 pairs in the existing folder/gallery. Normal and Shiny share exact geometry, alpha and protected outlines. Four RK9 form mismatches use the matching outlined Final source; audit records explain each. Generator: scripts/build-sinnoh-unova-replacements.py. Audit: docs/sinnoh-unova-temporary-artwork.json. Earlier-generation artwork and save records are unchanged.
+
 Hoenn temporary artwork
 
 Gen 3 preserves 17 painted pairs and fills 118 pending pairs (75 RK9, 43 RK1). Registry total: 306 temporary species across Gen 1–3. Shiny variants are palette edits of the same drawings, using canonical colour references, never HOME render fallbacks. Source audit: docs/hoenn-temporary-artwork.json. Generator: scripts/build-hoenn-replacements.py.

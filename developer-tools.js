@@ -1,9 +1,9 @@
-import {artworkPending,temporaryArt} from './artwork-status.js?v=20261124-hoennart1';
-import {selectedArtwork} from './selected-artwork.js?v=20261124-hoennart1';
-import {roster} from './data.js?v=20261124-hoennart1';
-import {battleForms} from './forms.js?v=20261124-hoennart1';
-import {syncLegacy} from './items.js?v=20261124-hoennart1';
-import {chibiAtlas,shinyChibiAtlas} from './chibi-sources.js?v=20261124-hoennart1';
+import {artworkPending,temporaryArt} from './artwork-status.js?v=20261124-sinnohunova1';
+import {selectedArtwork} from './selected-artwork.js?v=20261124-sinnohunova1';
+import {roster} from './data.js?v=20261124-sinnohunova1';
+import {battleForms} from './forms.js?v=20261124-sinnohunova1';
+import {syncLegacy} from './items.js?v=20261124-sinnohunova1';
+import {chibiAtlas,shinyChibiAtlas} from './chibi-sources.js?v=20261124-sinnohunova1';
 export const artworkEntries=[...roster.map(s=>({id:s.id,name:s.name,number:s.number,species:s.id,kind:'species'})),...Object.values(battleForms).map(f=>({id:f.id,name:f.name,number:f.number,species:f.base,form:f.id,kind:f.kind}))];
 export function galleryEntries({search='',kind='all'}={}){const words=search.trim().toLowerCase().replace(/-/g,' ').split(/\s+/).filter(Boolean),number=search.trim().match(/^#?0*(\d{1,5})$/);const entries=artworkEntries.filter(e=>(kind==='all'||kind==='temporary'&&!!temporaryArt(e.form||e.id)||kind==='kanto'&&e.kind==='species'&&e.number>=1&&e.number<=151||kind==='johto'&&e.kind==='species'&&e.number>=152&&e.number<=251||kind==='hoenn'&&e.kind==='species'&&e.number>=252&&e.number<=386||kind==='sinnoh'&&e.kind==='species'&&e.number>=387&&e.number<=493||kind==='unova'&&e.kind==='species'&&e.number>=494&&e.number<=649||kind==='kalos'&&e.kind==='species'&&e.number>=650&&e.number<=721||e.kind===kind)&&(number?e.number===Number(number[1]):words.every(w=>e.name.toLowerCase().replace(/-/g,' ').includes(w))));return ['temporary','kanto','johto','hoenn','sinnoh','unova','kalos'].includes(kind)?entries.sort((a,b)=>a.number-b.number):entries}
 export function chibiLabel(entry,variant='Normal'){const temporary=temporaryArt({species:entry.species||entry.id,form:entry.form,variant});if(temporary)return temporary.label+(temporary.paletteEdit?' · Shiny palette edit':'')+' · temporary sprite · chibi art pending';if(artworkPending(entry.form||entry.id))return variant==='Shiny'?'Shiny chibi art pending':'Chibi art pending';if(selectedArtwork[entry.form||entry.id])return 'Selected reference artwork';return variant==='Normal'&&(chibiAtlas[entry.id]||roster.slice(0,18).some(p=>p.id===entry.id))||variant==='Shiny'&&(shinyChibiAtlas[entry.id]||roster.slice(0,18).some(p=>p.id===entry.id))?'Painted chibi':'Pixel chibi · official game sprite'}
