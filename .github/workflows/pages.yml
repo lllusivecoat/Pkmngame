@@ -39,6 +39,7 @@ jobs:
           node scripts/johto-hunting-smoke.mjs
           node scripts/nursery-browser-smoke.mjs
           node scripts/career-browser-smoke.mjs
+          node scripts/map-performance-smoke.mjs
       - name: Save browser failure screenshots
         if: failure()
         uses: actions/upload-artifact@v4

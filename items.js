@@ -1,8 +1,8 @@
-import {playerPeriod} from './world-time.js?v=20261123-career1';
-import {supportsGmax} from './forms.js?v=20261123-career1';
-import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261123-career1';
-import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261123-career1';
-import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261123-career1';
+import {playerPeriod} from './world-time.js?v=20261123-mapfix1';
+import {supportsGmax} from './forms.js?v=20261123-mapfix1';
+import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261123-mapfix1';
+import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261123-mapfix1';
+import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261123-mapfix1';
 export {itemCatalog,abilityCatalog};
 export const ITEM_CATEGORIES=['All','Balls','Medicine','Battle items','Berries','Held items','TMs','Evolution'];
 const aliases={pokeball:'traps',potion:'potions'};

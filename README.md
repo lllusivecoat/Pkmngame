@@ -1,3 +1,11 @@
+## v0.57.0 — town rendering and map NPC fixes
+
+Bellwick now flattens immutable scenery into a cached WebP and uses one coordinate-aware walking surface, while retaining live Gym/Shop/Market buildings, editable emblems/decorations and authored collisions. Walking updates the camera transform without invalidating inherited styles across the map. Rook uses the existing painted Hiker portrait. Guide, breeder, shopkeepers and challengers share the player’s tile-relative size, and disabled NPC buttons remain transparent.
+
+To regenerate the town backdrop after terrain/scenery changes: install Playwright Core, set `PLAYWRIGHT_MODULE` if needed, run `node scripts/build-town-backdrop.mjs` (set `CHROME_PATH` for your Chrome executable), then convert `/tmp/gymbound-town-backdrop.png` to `assets/town-backdrop.webp` at WebP quality90. The backdrop is checked in; a normal build does not require this step. `scripts/map-performance-smoke.mjs` checks real walking, zoomed tap coordinates, camera bounds, NPC sizing and disabled/near styling. Saves remain compatible.
+
+Artwork status: 103 Gen1 species still use labelled placeholders. The generation attempt for this release was rejected by the image service; no placeholder is misrepresented as finished painted art.
+
 ## v0.56.0 · Career, travel and map refinements
 
 Stat / EV / IV display changes only through clicking or Enter/Space. All displayed tiles remain synchronized, including Market cards, and the selected view survives UI redraws. There is no automatic rotation timer.
