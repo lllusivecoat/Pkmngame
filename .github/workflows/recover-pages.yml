@@ -1,0 +1,67 @@
+# Recover the v0.63 build whose game checks passed but artifact-service lookup failed.
+# The old artifact expires after one day; verification rejects expired/unverified builds.
+name: Recover tested Pages build
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/recover-pages.yml', '.github/scripts/deploy-pages.cjs']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  publish-tested:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[pages-recovery]')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify previously tested source and artifact
+        id: verified
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner=context.repo.owner, repo=context.repo.repo;
+            const runId=45255728556, source='ce39e02c365beb80b03e7deb6c9e4f5c4804731b';
+            const run=(await github.rest.actions.getWorkflowRun({owner,repo,run_id:runId})).data;
+            if(run.head_sha!==source)throw Error('Unexpected recovery source');
+            const jobs=(await github.rest.actions.listJobsForWorkflowRun({owner,repo,run_id:runId})).data.jobs;
+            for(const name of ['Run npm test','Browser gameplay checks']){
+              if(!jobs.some(job=>job.steps.some(step=>step.name===name&&step.conclusion==='success')))throw Error('Required checks did not pass: '+name);
+            }
+            const diff=(await github.rest.repos.compareCommitsWithBasehead({owner,repo,basehead:source+'...'+context.sha})).data;
+            if(!diff.files?.length||diff.files.some(file=>!file.filename.startsWith('.github/')))throw Error('Runtime source differs from the tested build');
+            const artifacts=(await github.rest.actions.listWorkflowRunArtifacts({owner,repo,run_id:runId})).data.artifacts;
+            const artifact=artifacts.find(a=>a.id===14858923706&&!a.expired);
+            if(!artifact||artifact.digest!=='sha256:bef145fff30980aeb2050d922b3b74c74554923b61e60e2fd702ffc63e8c6457')throw Error('Recovery artifact missing, expired, or changed');
+            core.setOutput('artifact_id',artifact.id);
+      - uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ steps.verified.outputs.artifact_id }}
+          run-id: 45255728556
+          github-token: ${{ github.token }}
+          path: recovered
+          merge-multiple: true
+      - name: Verify Pages archive
+        run: test -f recovered/artifact.tar
+      - uses: actions/upload-artifact@v4
+        id: upload
+        with:
+          name: github-pages-recovered-${{ github.run_id }}
+          path: recovered/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
+      - name: Deploy
+        id: deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deploy=require('./.github/scripts/deploy-pages.cjs');
+            await deploy({github,context,core,artifactId:'${{ steps.upload.outputs.artifact-id }}'});
