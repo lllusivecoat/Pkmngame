@@ -1,3 +1,7 @@
+Hoenn artwork — v0.61.0
+
+All 135 Gen 3 species now have artwork: 17 approved painted pairs remain and 118 pending pairs use 75 RK9 and 43 outlined Final drawings (RK1). Normal and Shiny retain identical silhouettes, transparency and outlines. All temporary species share the existing RK9 + RK1 gallery and assets folder. Source audit: docs/hoenn-temporary-artwork.json. Rebuild: python3 scripts/build-hoenn-replacements.py.
+
 Johto artwork — v0.60.0
 
 Gen 2 now has artwork for all 100 species: 15 existing painted chibis are preserved, and 85 temporary pairs use 69 RK9 and 16 outlined Final sprites (labelled RK1). Both generations share the RK9 + RK1 gallery and local assets folder. Shiny images recolour the same drawing; they do not redesign it. See docs/johto-temporary-artwork.json for sources. Rebuild with python3 scripts/build-johto-replacements.py (Pillow, NumPy and SciPy required).

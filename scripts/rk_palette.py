@@ -22,7 +22,7 @@ def recolor(base,id):
  out=rgb(mapped)
  # Explicit material corrections for stylised art whose warm fills overlap reference highlights.
  import colorsys
- if id in ['paras','marowak','clefable','chansey','grimer','muk','jumpluff','crobat','lugia','larvitar']:
+ if id in ['paras','marowak','clefable','chansey','grimer','muk','jumpluff','crobat','lugia','larvitar','lunatone']:
   for j,(r,g,b) in enumerate(flat):
    h,sat,val=colorsys.rgb_to_hsv(r/255,g/255,b/255);x=j%data.shape[1];y=j//data.shape[1]
    if ink[j] or alpha[j]==0:continue
@@ -35,6 +35,7 @@ def recolor(base,id):
    if id=='crobat' and .70<h<.9 and sat>.15:out[j]=np.array(colorsys.hsv_to_rgb(.86,max(.3,sat*.65),min(1,val*1.25)))*255
    if id=='lugia' and .52<h<.78 and sat>.2:out[j]=np.array(colorsys.hsv_to_rgb(.96,max(.55,sat),val))*255
    if id=='larvitar' and (h>.88 or h<.04) and sat>.3:out[j]=np.array(colorsys.hsv_to_rgb(.88,sat*.75,min(1,val*1.1)))*255
+   if id=='lunatone' and (h>.88 or h<.04) and sat>.3:out[j]=np.array(colorsys.hsv_to_rgb(.6,max(.55,sat),val))*255
  out[ink|white|(alpha==0)]=flat[ink|white|(alpha==0)].astype(np.uint8);data[:,:,:3]=out.reshape(data.shape[:2]+(3,));return Image.fromarray(data),int(ink.sum())
 def decode(file):
  s=file.read_text();encoded=re.search('base64,([^\"]+)',s).group(1);im=Image.open(io.BytesIO(base64.b64decode(encoded))).convert('RGBA');return im

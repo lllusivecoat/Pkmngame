@@ -97,3 +97,5 @@ From0.58.0 the user explicitly authorises canonical temporary Pokémon images fo
 From0.59.0 the user replaces HOME render fallbacks with PokeOS’s outlined Final icon set, labelled RK1, alongside64 actual RK9 drawings. Keep64 RK9 +39 RK1 entries in one shared gallery category and folder. RK1 is the user’s in-game name, not an artist credit. Every temporary Shiny must recolour the same Normal drawing using canonical references, preserving pose, alpha and dark outlines; label edits honestly. Never reintroduce smooth 3D render fallbacks into this temporary set or run retired HOME generators. Existing approved painted pairs remain untouched.
 
 Johto artwork v0.60: preserve approved paintings; pending Gen2 uses RK9 then outlined Final (RK1), shared temporary folder/gallery. Shiny edits must retain source drawing/alpha/ink. HOME models are colour references only. See docs/johto-temporary-artwork.json.
+
+Hoenn artwork v0.61: preserve 17 existing painted pairs and all Gen1/2 assets; fill118 pending species with75 RK9 +43 outlined Final/RK1 pairs. Keep one gallery/folder and same-drawing Shiny recolours. Source audit: docs/hoenn-temporary-artwork.json.

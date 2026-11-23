@@ -1,3 +1,7 @@
+Hoenn temporary artwork
+
+Gen 3 preserves 17 painted pairs and fills 118 pending pairs (75 RK9, 43 RK1). Registry total: 306 temporary species across Gen 1–3. Shiny variants are palette edits of the same drawings, using canonical colour references, never HOME render fallbacks. Source audit: docs/hoenn-temporary-artwork.json. Generator: scripts/build-hoenn-replacements.py.
+
 Johto temporary artwork
 
 85 pending Johto species use locally embedded RK9/RK1 drawings with matching code-edited Shiny palettes. Existing 15 approved painted pairs remain untouched. The shared registry now contains 188 temporary species. Source audit: docs/johto-temporary-artwork.json. Generator: scripts/build-johto-replacements.py; shared colour mapping: scripts/rk_palette.py. HOME model images are colour references only and are never displayed.
