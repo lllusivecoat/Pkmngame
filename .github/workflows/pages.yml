@@ -29,6 +29,7 @@ jobs:
         run: npm install --no-save --package-lock=false --ignore-scripts --no-audit --no-fund playwright-core@1.56.1
       - name: Browser gameplay checks
         run: |
+          node scripts/gen789-browser-smoke.mjs
           node scripts/temporary-art-browser-smoke.mjs
           node scripts/browser-smoke.mjs
           node scripts/gym-browser-smoke.mjs

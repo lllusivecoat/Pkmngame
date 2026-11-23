@@ -1,18 +1,18 @@
-import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261124-sinnohunova1';
-import {normalizeNursery} from './breeding.js?v=20261124-sinnohunova1';
-import {startBattleSummary} from './battle-summary.js?v=20261124-sinnohunova1';
-import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261124-sinnohunova1';
-import {normalizeFacilities} from './gym-commerce.js?v=20261124-sinnohunova1';
-import {normalizeGymDesign} from './gym-design.js?v=20261124-sinnohunova1';
-import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261124-sinnohunova1';
-import {normalizeReserve} from './gym-world.js?v=20261124-sinnohunova1';
-import {normalizeTown} from './town.js?v=20261124-sinnohunova1';
-import {expandedSpecies} from './engine-data.js?v=20261124-sinnohunova1';
-import {trainerDirectory} from './trainer-directory.js?v=20261124-sinnohunova1';
+import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261124-gen7891';
+import {normalizeNursery} from './breeding.js?v=20261124-gen7891';
+import {startBattleSummary} from './battle-summary.js?v=20261124-gen7891';
+import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261124-gen7891';
+import {normalizeFacilities} from './gym-commerce.js?v=20261124-gen7891';
+import {normalizeGymDesign} from './gym-design.js?v=20261124-gen7891';
+import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261124-gen7891';
+import {normalizeReserve} from './gym-world.js?v=20261124-gen7891';
+import {normalizeTown} from './town.js?v=20261124-gen7891';
+import {expandedSpecies} from './engine-data.js?v=20261124-gen7891';
+import {trainerDirectory} from './trainer-directory.js?v=20261124-gen7891';
 // Gym management domain. Storage is independent of the legacy adventure save.
-import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261124-sinnohunova1';
-import {healParty,addItem} from './items.js?v=20261124-sinnohunova1';
-import {beginDefenseBattle} from './battle.js?v=20261124-sinnohunova1';
+import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261124-gen7891';
+import {healParty,addItem} from './items.js?v=20261124-gen7891';
+import {beginDefenseBattle} from './battle.js?v=20261124-gen7891';
 export const GYM_SAVE_KEY='greenwood.gym.v1';
 const previousStock=[
  ['bulbasaur',550,8,0],['charmander',550,8,0],['squirtle',550,8,0],['pikachu',1000,10,0],['eevee',1100,10,0],['geodude',450,8,0],['oddish',450,8,0],['pidgey',400,8,0],

@@ -1,3 +1,11 @@
+Gen 7–9 data — v0.63.0
+
+The National Dex is complete from #001 to #1025: all 304 Gen7–9 species, preserving nine existing later-generation lines, plus eleven regional predecessors required for their evolutions. This adds306 records and brings permanent records to1044; the gallery has1066 entries including22 battle forms. New records include canonical six stats, types, abilities, gender ratios, catch rates, growth, friendship, EV yields, learnsets/TM compatibility, sizes and nursery metadata. Data is local/offline. Missing artwork stays explicitly labelled pending; existing paintings and RK9/RK1 pairs are unchanged. Gallery filters: Alola, Galar & Hisui, Paldea.
+
+Special evolution conditions are stored, but15 unsupported action/counter/location methods are explicitly unavailable rather than becoming free evolutions (including Meltan’s GO-only Candy evolution). Ordinary supported levels, items, moves and friendship still work. The nursery keeps its existing Gen8 inheritance/incense rules; Gen9-only species use canonical Gen9 Egg Move lists. No new battle gimmick or complete regional/cosmetic form collection is introduced.
+
+Builder: `node scripts/build-gen7891025.mjs --fetch` (Python3 standard library for development-time downloads). Inputs: pinned PokeAPI/api-data commit508fd7c3a7d54ac175e00afe420b11a5af983bd6 plus package-locked @pkmn/sim. Output: gen7891025-data.js; docs/gen7891025-status.json and docs/gen7891025-habitats.json distinguish canonical metadata from authored prototype habitats. Rebuild derived metadata with scripts/build-species-identity.mjs, scripts/build-breeding-data.mjs and scripts/build-pokemon-sizes.mjs.
+
 Gen 4 + 5 artwork — v0.62.0
 
 All 107 Sinnoh and 156 Unova species now have artwork. Preserve 16 approved painted pairs; fill 247 pending pairs with 162 RK9 and 85 outlined Final (RK1) drawings. Matching Shiny versions recolour the same drawing, preserving transparency and outlines. The shared gallery now contains 553 temporary species across Gen 1–5. Four RK9 images depict a different form, so Shellos/Gastrodon use West Sea Final artwork and Deerling/Sawsbuck use Spring Final artwork. Source audit: docs/sinnoh-unova-temporary-artwork.json. Rebuild: python3 scripts/build-sinnoh-unova-replacements.py.
