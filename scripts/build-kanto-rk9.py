@@ -1,3 +1,5 @@
+# Retired historical generator: current art uses RK9/RK1 matching pairs.
+raise SystemExit('Use scripts/build-rk-replacements.py; this historical HOME fallback generator is retired.')
 """Bundle PokeOS RK9 where listed; use canonical HOME for missing species/Shiny.
 Run build-kanto-temporary.py first to cache the canonical HOME pairs.
 """

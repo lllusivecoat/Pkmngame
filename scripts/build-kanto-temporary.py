@@ -1,3 +1,5 @@
+# Retired historical generator: current art uses RK9/RK1 matching pairs.
+raise SystemExit('Use scripts/build-rk-replacements.py; this historical HOME fallback generator is retired.')
 """Bundle canonical HOME renders for the approved Kanto placeholders. Requires Pillow.
 Pinned downloads; never required during a normal static build.
 """

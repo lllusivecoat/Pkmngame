@@ -1,3 +1,9 @@
+## Current RK9 / RK1 replacement set (v0.59.0)
+
+64 Normal drawings retain their RK9 source/credit.39 gaps use the current `https://assets.pokeos.com/pokemon/home/{number}.png` outlined Final sprites, rather than `home/render/{number}.png` or a PokeAPI HOME model. The user calls this outlined set RK1; it is not an attribution to an artist named RK1. Both families share the same gallery category and folder.
+
+Every Shiny replacement now edits the exact Normal drawing’s palette. Canonical paired Normal/Shiny render references are colour references only; none are displayed as replacement artwork. Palette mapping uses corresponding reference colours, protected dark ink and explicit material corrections where stylised fills overlap. Normal/Shiny alpha is checked byte-for-byte; the browser also checks protected ink and changed colours for all103 pairs. Audit URLs/IDs remain in `kanto-temporary-artwork.json`. Earlier documentation below is historical.
+
 ## Labelled Kanto replacements (v0.58.0)
 
 Source archive: https://www.pokeos.com/archive/assets/home ; public index: https://api.pokeos.com/api/poke/game/assets?versionGroupCode=home . RK9 credited as the original sprite artist.64 usable Normal images are bundled from the archive’s `home/rk9/broadcast` set.38 missing species plus Muk (non-transparent RK9 background) use39 Normal HOME images. The archive lists no Shiny RK9 images, so all103 Shiny replacements use canonical HOME images from PokeAPI/sprites commit `c0542f7c51215d9672439012838c99f520596cbd`.

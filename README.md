@@ -1,3 +1,11 @@
+## v0.59.0 — one RK9 / RK1 replacement gallery
+
+All103 temporary Kanto entries now use64 RK9 drawings and39 outlined Final sprites from PokeOS, labelled RK1 at the user’s request. Both are kept in the same gallery category, **RK9 + RK1 · temporary sprites**, and the existing `assets/temporary-pokemon/` folder. RK1 is an in-game classification, not an artist attribution. The smooth 3D HOME render fallbacks are no longer displayed for these entries.
+
+Shiny variants are canonical palette edits of the exact matching Normal drawing, not another pose/model. Black ink and alpha are preserved; canonical Normal/Shiny colour references and material corrections are recorded by `scripts/build-rk-replacements.py`. The browser check decodes all206 images and verifies each pair’s alpha/ink and actual palette changes. Existing approved painted sprites, species IDs and saves are preserved.
+
+Regenerate using `python scripts/build-rk-replacements.py` (Pillow, NumPy, SciPy; network required only for uncached source/reference downloads). Historical HOME fallback generators are retired. `temporary-artwork.js` and `docs/kanto-temporary-artwork.json` keep every source/classification replaceable; approved painted pairs still supersede temporary entries automatically. The earlier release notes below describe historical states.
+
 ## v0.58.0 — labelled Kanto temporary artwork
 
 The103 missing Generation1 paintings now display bundled full-body replacements:64 RK9 Normal images from PokeOS,39 canonical HOME Normal fallbacks, and103 canonical HOME Shiny images. The PokeOS RK9 archive has no Shiny set; Muk’s RK9 file was excluded because it has a rectangular semi-transparent background. Existing painted chibis are unchanged. Other generations’ pending art is unchanged.
