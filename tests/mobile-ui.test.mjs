@@ -7,7 +7,7 @@ const read = name => readFileSync(new URL(name, root), 'utf8');
 const html = read('index.html');
 const css = read('mobile.css');
 const app = read('app.js');
-const tag = '20261122-portraitgallery1';
+const tag = '20261123-career1';
 
 test('phones load the touch stylesheet with the current cache tag', () => {
   assert.match(html, new RegExp(`mobile\\.css\\?v=${tag}`));

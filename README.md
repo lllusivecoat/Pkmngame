@@ -1,3 +1,23 @@
+## v0.56.0 · Career, travel and map refinements
+
+Stat / EV / IV display changes only through clicking or Enter/Space. All displayed tiles remain synchronized, including Market cards, and the selected view survives UI redraws. There is no automatic rotation timer.
+
+Town walking updates the existing actor and follow camera in place. Static ground SVG is cached, the complete town scene is retained, and previous movement animations are cancelled before a new step. Ordinary movement no longer rebuilds the entire interface. Characters and roaming Pokémon render above scenery; the flowers in front of Mara are removed. Camera controls stay above actors.
+
+Abilities, natures and moves expose hover/focus popups and touch long-press explanations. Natures explain +10%/−10% modifiers or neutral stats. A long press on a move suppresses the following click so inspecting it does not choose an attack.
+
+Shop and Market each have one Leave action plus a separate Upgrade building action. Building management opens independently of counter proximity; the actual purchase catalogue still requires talking to the keeper.
+
+The user confirmed **ten active species/habitat slots**, retaining repeat encounters. The Market explains capacity and asks which habitat to replace when full. Purchased habitats are stored, not deleted, and may be restored free through reserve management. Legacy released individuals keep their UIDs in holding when their habitat is stored. Old saves with excess active species safely archive overflow. Stored purchased species cannot be sold to the player again.
+
+**Rook**, a painted travel-guide NPC south of the Gym, offers free trips to Bramble Grove, Tideglass Coast and Ember Hollow. Walk beside him and press E or interact. These have distinct authored maps, species pools, levels, day/night lighting and outdoor zoom. Walk to find and catch fresh wild individuals, then use Rook or the exit to return. Active outing battles survive refresh. Wild defeats/catches award no coins.
+
+Gym defences admit at most the challenger’s team size. Select eligible defenders before starting; your saved six-Pokémon party is retained. The battle engine also enforces the cap and swap controls show only admitted members. Previously running matches are preserved.
+
+Regular visitors use three difficulty classes: **Rookie** (0 reputation), **Journeyman** (60), **Ace** (300). Species evolve appropriately with trainer level. Rookies use low IVs and simple random legal choices; Journeymen use moderate IVs/EVs, coverage and damage-oriented decisions. Aces have 31 IVs, 508 assigned EVs, complementary natures, legal trained moves and held items. Their heuristic evaluates damage, immunities, health, healing, status/setup, priority knockouts and safer switches. It does not inspect the player’s queued move. Directory exhibitions use role-appropriate tiers; leaders, Elite Four, Champions, bosses and admins are Aces. This is strategic deterministic game AI, not online machine learning.
+
+Modules: `trainer-training.js`, `trainer-ai.js`, `reserve-capacity.js`, `travel-guide.js`, `excursions-data.js`, `excursion-art.js`, `help-popups.js`, `map-updates.js`. Tests add `tests/career-refinements.test.mjs` and `scripts/career-browser-smoke.mjs`, covering cap enforcement, trained teams, immunities/switching, habitat swaps/migration, actual travel/capture, manual-only stats, hover/hold behavior, stable town DOM and shop controls. Hosting and both existing save keys remain unchanged.
+
 ## v0.55.0 · Timed nursery, outdoor cameras and Generation 5–6
 
 All personal outdoor maps (Bellwick, reserve and breeding garden) share visible day/dusk/night lighting. Legacy outdoor adventure maps also reflect their current time; indoor maps stay lit. Each personal outdoor map has Close / Wide / Widest camera controls, saved separately, with responsive follow-camera framing and complete scenery at wider distances.

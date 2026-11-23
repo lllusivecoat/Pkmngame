@@ -1,7 +1,8 @@
-import {playerPeriod} from './world-time.js?v=20261122-portraitgallery1';
-import {gymWorldMaps} from './gym-world-data.js?v=20261122-portraitgallery1';
-import {townDistrict} from './town-map-data.js?v=20261122-portraitgallery1';
-export const outdoorMaps=['town','breeding','reserve'];
+import {excursionMaps} from './excursions-data.js?v=20261123-career1';
+import {playerPeriod} from './world-time.js?v=20261123-career1';
+import {gymWorldMaps} from './gym-world-data.js?v=20261123-career1';
+import {townDistrict} from './town-map-data.js?v=20261123-career1';
+export const outdoorMaps=['town','breeding','reserve',...Object.keys(excursionMaps)];
 export const mapZoom=(s,location=s.gym?.world.location)=>Math.max(0,Math.min(2,Math.floor(Number(s.gym?.mapZoom?.[location])||0)));
 export function changeMapZoom(s,delta){const location=s.gym.world.location;if(!outdoorMaps.includes(location))return 'Zoom is available outside.';s.gym.mapZoom??={};s.gym.mapZoom[location]=Math.max(0,Math.min(2,mapZoom(s)+delta));return 'Map zoom '+(mapZoom(s)===0?'close':mapZoom(s)===1?'wide':'widest')+'.'}
 export function cameraBounds(size,position,columns=11,rows=9){const cols=Math.min(columns,size),height=Math.min(rows,size);return {x:Math.max(0,Math.min(size-cols,position.x+.5-cols/2)),y:Math.max(0,Math.min(size-height,position.y+.5-height/2)),columns:cols,rows:height}}

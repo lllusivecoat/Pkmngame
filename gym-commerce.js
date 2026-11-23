@@ -1,8 +1,9 @@
-import {isLegendarySpecies,MARKET_SHINY_CHANCE} from './pokemon-individuals.js?v=20261122-portraitgallery1';
-import {expandedSpecies} from './engine-data.js?v=20261122-portraitgallery1';
-import {createCreature,catchCreature} from './core.js?v=20261122-portraitgallery1';
-import {buyItem,itemCatalog} from './items.js?v=20261122-portraitgallery1';
-import {gymClock,marketClock} from './gym-clock.js?v=20261122-portraitgallery1';
+import {activeHabitats,canAddHabitat,storeHabitat} from './reserve-capacity.js?v=20261123-career1';
+import {isLegendarySpecies,MARKET_SHINY_CHANCE} from './pokemon-individuals.js?v=20261123-career1';
+import {expandedSpecies} from './engine-data.js?v=20261123-career1';
+import {createCreature,catchCreature} from './core.js?v=20261123-career1';
+import {buyItem,itemCatalog} from './items.js?v=20261123-career1';
+import {gymClock,marketClock} from './gym-clock.js?v=20261123-career1';
 const babies=new Set('pichu cleffa igglybuff togepi tyrogue smoochum elekid magby azurill wynaut budew chingling bonsly mimejr happiny munchlax riolu mantyke toxel'.split(' '));
 const excluded=new Set('articuno zapdos moltres mewtwo mew lugia hooh celebi regirock regice registeel latias latios kyogre groudon rayquaza jirachi deoxys dialga palkia giratina darkrai arceus'.split(' '));
 const idOf=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -29,7 +30,7 @@ export function ensureMarketStock(s,now=Date.now()){
  const tier=marketTiers[level],pool=Object.keys(expandedSpecies).filter(id=>marketSpeciesEligible(id)&&evolutionStage(id)<=tier.stage&&(expandedSpecies[id].evoLevel||1)<=tier.max&&Object.values(expandedSpecies[id].baseStats).reduce((a,b)=>a+b,0)<=tier.bst),offers=[];
  for(const section of ['party','reserve']){
   const random=rng(hash(`${s.gym.clock.seed}:${key}:${section}`));
-  const candidates=section==='reserve'?pool.filter(id=>!s.gym.world.reserve.speciesUnlocks.some(u=>u.species===id)):pool;
+  const candidates=section==='reserve'?pool.filter(id=>![...s.gym.world.reserve.speciesUnlocks,...(s.gym.world.reserve.archivedUnlocks||[])].some(u=>u.species===id)):pool;
   const remaining=[...candidates];
   for(let i=0;i<marketListingCounts(level)[section]&&remaining.length;i++){
    const index=Math.floor(random()*remaining.length),id=remaining[index],species=expandedSpecies[id];if(section==='reserve')remaining.splice(index,1);
@@ -41,7 +42,7 @@ export function ensureMarketStock(s,now=Date.now()){
  }
  s.gym.marketStock={key,hour,level,offers,sold:old?.key===key&&Array.isArray(old.sold)?old.sold.filter(id=>offers.some(o=>o.id===id)):[]};return s.gym.marketStock;
 }
-export function buyMarketOffer(s,id,now=Date.now()){
+export function buyMarketOffer(s,id,now=Date.now(),replace=null){
  if(s.gym.world.location!=='market')return 'Visit the Pokémon Market first.';
  if(s.gym.session||s.gym.world.reserve.activeUid)return 'Finish the current challenge or encounter first.';
  if(!s.gym.starterClaimed&&!s.collection.length)return 'Choose your starting partner first.';
@@ -51,8 +52,9 @@ export function buyMarketOffer(s,id,now=Date.now()){
  if(offer.section==='reserve'&&reserve.speciesUnlocks.some(u=>u.species===offer.species))return 'This species is already established in your reserve.';
  if(s.coins<offer.price)return 'Not enough coins.';
  if(offer.section==='party'&&s.party.length>=6)return 'Your party is full. Remove a partner before buying.';
+ if(offer.section==='reserve'&&!canAddHabitat(reserve,offer.species)&&(!replace||!activeHabitats(reserve).includes(replace)))return 'Your reserve holds ten species. Choose a habitat to swap out.';
  const balance=s.coins-offer.price;
  if(offer.section==='party'){const c=structuredClone(offer.creature);catchCreature(s,c);s.coins=balance;stock.sold.push(id);return `${expandedSpecies[c.species].name} joined your party.`}
- s.coins=balance;reserve.speciesUnlocks.push({species:offer.species,minLevel:offer.minLevel,maxLevel:offer.maxLevel});stock.sold.push(id);
+ if(!canAddHabitat(reserve,offer.species))storeHabitat(reserve,replace);s.coins=balance;reserve.speciesUnlocks.push({species:offer.species,minLevel:offer.minLevel,maxLevel:offer.maxLevel});stock.sold.push(id);
  return `${expandedSpecies[offer.species].name} is established in your wild reserve. Each encounter finds a new individual.`;
 }
