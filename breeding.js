@@ -1,22 +1,22 @@
-import {breedingSpecies} from './breeding-data.js?v=20261124-gen7891';
-import {expandedSpecies} from './engine-data.js?v=20261124-gen7891';
-import {createCreature,catchCreature} from './core.js?v=20261124-gen7891';
-import {normalizeGender,rollGender} from './pokemon-individuals.js?v=20261124-gen7891';
-import {abilityOptions,toID} from './progression.js?v=20261124-gen7891';
-import {itemCount} from './items.js?v=20261124-gen7891';
+import {breedingSpecies} from './breeding-data.js?v=20261124-allforms1';
+import {expandedSpecies} from './engine-data.js?v=20261124-allforms1';
+import {createCreature,catchCreature} from './core.js?v=20261124-allforms1';
+import {normalizeGender,rollGender} from './pokemon-individuals.js?v=20261124-allforms1';
+import {abilityOptions,toID} from './progression.js?v=20261124-allforms1';
+import {itemCount} from './items.js?v=20261124-allforms1';
 export const BREEDING_RULESET=8,EGG_CHECK_STEPS=256,HATCH_CYCLE_STEPS=128,EGG_CAPACITY=10;
 const stats=['hp','attack','defence','specialAttack','specialDefence','speed'];
 const natures='Hardy Lonely Brave Adamant Naughty Bold Docile Relaxed Impish Lax Timid Hasty Serious Jolly Naive Modest Mild Quiet Bashful Rash Calm Gentle Sassy Careful Quirky'.split(' ');
 const power={powerweight:'hp',powerbracer:'attack',powerbelt:'defence',powerlens:'specialAttack',powerband:'specialDefence',poweranklet:'speed'};
 const incense={chansey:['happiny','luckincense'],snorlax:['munchlax','fullincense'],sudowoodo:['bonsly','rockincense'],mrmime:['mimejr','oddincense'],chimecho:['chingling','pureincense'],roselia:['budew','roseincense'],mantine:['mantyke','waveincense'],wobbuffet:['wynaut','laxincense'],marill:['azurill','seaincense']};
 const pick=(a,r)=>a[Math.min(a.length-1,Math.floor(r()*a.length))];
-const sameSpecies=(a,b)=>a.species.replace(/alola|galar|hisui|paldea/g,'')===b.species.replace(/alola|galar|hisui|paldea/g,'');
+const sameSpecies=(a,b)=>(expandedSpecies[a.species]?.formBase||a.species.replace(/alola|galar|hisui|paldea/g,''))===(expandedSpecies[b.species]?.formBase||b.species.replace(/alola|galar|hisui|paldea/g,''));
 const legal=c=>c&&expandedSpecies[c.species]&&breedingSpecies[c.species];
 export function breedingCompatibility(a,b,s){if(!legal(a)||!legal(b))return {ok:false,message:'Choose two Pokémon.'};if(a.uid===b.uid)return {ok:false,message:'Choose two different individuals.'};const ga=breedingSpecies[a.species].groups,gb=breedingSpecies[b.species].groups;if(ga.includes('Undiscovered')||gb.includes('Undiscovered'))return {ok:false,message:'Babies and Pokémon in the Undiscovered Egg Group cannot breed.'};const da=a.species==='ditto',db=b.species==='ditto';if(da&&db)return {ok:false,message:'Two Ditto cannot produce an Egg.'};if(!da&&!db){if(!ga.some(g=>gb.includes(g)))return {ok:false,message:'These Pokémon do not share an Egg Group.'};const sa=normalizeGender(a),sb=normalizeGender(b);if(sa==='N'||sb==='N'||sa===sb)return {ok:false,message:'This pair needs opposite genders, or a compatible Ditto.'}}
  const different=(a.originalTrainer||s?.trainerId||'player')!==(b.originalTrainer||s?.trainerId||'player'),same=sameSpecies(a,b),base=(same&&different)?0.7:(same||different)?0.5:0.2,charm=s&&itemCount(s,'ovalcharm')>0,chance=charm?(base===.7?.88:base===.5?.8:.4):base;
  return {ok:true,chance,message:(same?'Same species':'Compatible Egg Groups')+' · '+Math.round(chance*100)+'% chance at each one-minute nursery check.'}}
-function eggBase(id){let d=expandedSpecies[id];const seen=new Set();while(d?.prevo){const prev=toID(d.prevo);if(!expandedSpecies[prev]||seen.has(prev))break;seen.add(prev);d=expandedSpecies[prev]}return d.id}
-export function offspringSpecies(a,b,random=Math.random){const ditto=a.species==='ditto'?a:b.species==='ditto'?b:null,mother=ditto?(ditto===a?b:a):normalizeGender(a)==='F'?a:b;let id=mother.species;if(['manaphy','phione'].includes(id))return 'phione';if(['nidoranf','nidoranmale','nidoranm','nidorino','nidoking'].includes(id))return random()<.5?'nidoranf':'nidoranm';if(['volbeat','illumise'].includes(id))return random()<.5?'volbeat':'illumise';let result=eggBase(id);for(const [adult,[baby,item]]of Object.entries(incense)){if(result===baby&&BREEDING_RULESET<=8&&![a,b].some(p=>p.heldItem===item))result=adult}
+function eggBase(id){let d=expandedSpecies[id];const seen=new Set();while(d?.prevo){const prev=toID(d.prevo);if(!expandedSpecies[prev]||seen.has(prev))break;seen.add(prev);d=expandedSpecies[prev]}return d.hatchSpecies||d.id}
+export function offspringSpecies(a,b,random=Math.random){const ditto=a.species==='ditto'?a:b.species==='ditto'?b:null,mother=ditto?(ditto===a?b:a):normalizeGender(a)==='F'?a:b;let id=mother.species;if(['indeedee','indeedeef'].includes(id))return random()<.5?'indeedeef':'indeedee';if(['manaphy','phione'].includes(id))return 'phione';if(['nidoranf','nidoranmale','nidoranm','nidorino','nidoking'].includes(id))return random()<.5?'nidoranf':'nidoranm';if(['volbeat','illumise'].includes(id))return random()<.5?'volbeat':'illumise';let result=eggBase(id);for(const [adult,[baby,item]]of Object.entries(incense)){if(result===baby&&BREEDING_RULESET<=8&&![a,b].some(p=>p.heldItem===item))result=adult}
  const regional=/alola|galar|hisui|paldea/,strip=id=>id.replace(/alola|galar|hisui|paldea/g,'');
  const formParents=[a,b].filter(p=>p.species!=='ditto'&&p.heldItem==='everstone'&&strip(eggBase(p.species))===strip(eggBase(mother.species)));
  if(regional.test(eggBase(mother.species))||formParents.some(p=>regional.test(eggBase(p.species)))){if(formParents.length)result=eggBase(pick(formParents,random).species);else if(regional.test(result)&&expandedSpecies[strip(result)])result=eggBase(strip(result));}

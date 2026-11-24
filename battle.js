@@ -1,16 +1,16 @@
-import {isExcursion} from './excursions-data.js?v=20261124-gen7891';
-import {trainOpponent} from './trainer-training.js?v=20261124-gen7891';
-import {startBattleSummary} from './battle-summary.js?v=20261124-gen7891';
-import {earnGuildPoints} from './guild.js?v=20261124-gen7891';
-import {arenaOpponent,settleArena,arenaResultText} from './arena.js?v=20261124-gen7891';
-import {awardEVs,addExperience,validAbility} from './progression.js?v=20261124-gen7891';
-import {currentZone,trainerAt,returnToCenter} from './world.js?v=20261124-gen7891';
-import {createCreature,catchCreature,award,grow,updateAchievements,record} from './core.js?v=20261124-gen7891';
-import {statsFor,movesFor,moveCatalog,gameMoveId} from './rules.js?v=20261124-gen7891';
-import {abilityCatalog,expandedSpecies} from './engine-data.js?v=20261124-gen7891';
-import {ensureInventory,itemCount,spendItem,addItem,applyMedicine,itemCatalog,healParty,currentHP,itemContext,ppMaximum} from './items.js?v=20261124-gen7891';
-import {createSimulation,restoreSimulation,synchronize,settleSwitches,commitTurn,applyBattleMedicine,pokemonFor,Dex} from './sim-adapter.js?v=20261124-gen7891';
-import {fullCaptureChance,legacyBalls,captureChecks} from './capture.js?v=20261124-gen7891';
+import {isExcursion} from './excursions-data.js?v=20261124-allforms1';
+import {trainOpponent} from './trainer-training.js?v=20261124-allforms1';
+import {startBattleSummary} from './battle-summary.js?v=20261124-allforms1';
+import {earnGuildPoints} from './guild.js?v=20261124-allforms1';
+import {arenaOpponent,settleArena,arenaResultText} from './arena.js?v=20261124-allforms1';
+import {awardEVs,addExperience,validAbility} from './progression.js?v=20261124-allforms1';
+import {currentZone,trainerAt,returnToCenter} from './world.js?v=20261124-allforms1';
+import {createCreature,catchCreature,award,grow,updateAchievements,record} from './core.js?v=20261124-allforms1';
+import {statsFor,movesFor,moveCatalog,gameMoveId} from './rules.js?v=20261124-allforms1';
+import {abilityCatalog,expandedSpecies} from './engine-data.js?v=20261124-allforms1';
+import {ensureInventory,itemCount,spendItem,addItem,applyMedicine,itemCatalog,healParty,currentHP,itemContext,ppMaximum} from './items.js?v=20261124-allforms1';
+import {createSimulation,restoreSimulation,synchronize,settleSwitches,commitTurn,applyBattleMedicine,pokemonFor,Dex} from './sim-adapter.js?v=20261124-allforms1';
+import {fullCaptureChance,legacyBalls,captureChecks} from './capture.js?v=20261124-allforms1';
 export const maxHP=c=>statsFor(c).hp;
 export const combatState=(b,c)=>b.states[c.uid]||{};
 export const battleMoves=(b,c)=>c.uid===b.active?b.moveChoices||[]:movesFor(c);
@@ -38,4 +38,4 @@ export function battleAction(s,old,action,random=Math.random){if(!old)return {ba
  if(action.type==='catch'){if(b.arena)return {battle:b,event:'Cannot catch a trainer’s Pokémon.'};const id=action.ball||legacyBalls[Number(action.tool)||0];if(!itemCatalog[id]||itemCatalog[id].category!=='Balls'||itemContext(itemCatalog[id]))return {battle:b,event:'Choose a usable capture ball.'};if(!spendItem(s,id))return {battle:b,event:'No '+itemCatalog[id].name+' left.'};const chance=fullCaptureChance(s,b,id),capture=captureChecks(chance,random);if(capture.caught){const target=sim.p2.active[0],caught={...b.wild,heldItem:target.item||null,status:['healball'].includes(id)?'':b.status,currentHP:id==='healball'?target.maxhp:target.hp,ppRemaining:{},ball:id,friendship:id==='friendball'?200:b.wild.friendship};catchCreature(s,caught,{field:true});const active=s.collection.find(c=>c.uid===b.active);grow(active);finishGrowth(s,b);updateAchievements(s);return {battle:null,capture,reserveOutcome:b.reserve?'captured':undefined,event:`${b.wild.variant==='Shiny'?'✧ SHINY ':''}${expandedSpecies[b.wild.species].name} caught! Collection and Pokédex updated.`}}const err=commitTurn(sim,'',{pass:true});if(err)return {battle:b,event:err.includes('disabled')?'No PP or this move is disabled. Choose another move.':err};const r=afterTurn(s,b,sim);return r.battle?{...r,capture,event:'The Pokémon broke free after '+capture.shakes+' shake'+(capture.shakes===1?'':'s')+'. Try again.'}:{...r,capture}}
  if(action.type==='item'){const r=battleUse(s,b,sim,action.item||'potion',action.uid||b.active,action.moveSlot||0);if(!r.ok)return {battle:b,event:r.message};if(r.escape){synchronize(b,sim,s,{persist:true});return finish(s,b,sim,r.message)}const err=commitTurn(sim,'',{pass:true});if(err)return {battle:b,event:err.includes('disabled')?'No PP or this move is disabled. Choose another move.':err};const result=afterTurn(s,b,sim);return result.battle?{...result,event:r.message}:result}
  if(action.type==='swap'){const target=pokemonFor(sim,b,action.uid);if(!target||target.side!==sim.p1||target.fainted)return {battle:b,event:'That partner cannot fight.'};if(target===sim.p1.active[0])return {battle:b,event:'Already active.'};const err=commitTurn(sim,'switch '+(target.position+1));if(err)return {battle:b,event:err.includes('disabled')?'No PP or this move is disabled. Choose another move.':err};return afterTurn(s,b,sim)}
- if(action.type==='move'){if(action.gimmick==='mega'&&!b.gimmicks?.mega)return {battle:b,event:'That Mega Evolution is not available for this Pokémon and held stone.'};const m=b.moveChoices[Number(action.index)];if(!m||m.disabled||m.ppCurrent===0)return {battle:b,event:'No PP or this move is disabled. Choose another move.'};const gimmick=['mega','terastallize','zmove','dynamax'].includes(action.gimmick)?' '+action.gimmick:'';const err=commitTurn(sim,'move '+m.requestIndex+gimmick);if(err)return {battle:b,event:err.includes('disabled')?'No PP or this move is disabled. Choose another move.':err};return afterTurn(s,b,sim)}return {battle:b,event:'Choose an action.'}}
+ if(action.type==='move'){if(action.gimmick==='mega'&&!b.gimmicks?.mega)return {battle:b,event:'That Mega Evolution is not available for this Pokémon and held stone.'};const m=b.moveChoices[Number(action.index)];if(!m||m.disabled||m.ppCurrent===0)return {battle:b,event:'No PP or this move is disabled. Choose another move.'};const gimmick=['mega','ultra','terastallize','zmove','dynamax'].includes(action.gimmick)?' '+action.gimmick:'';const err=commitTurn(sim,'move '+m.requestIndex+gimmick);if(err)return {battle:b,event:err.includes('disabled')?'No PP or this move is disabled. Choose another move.':err};return afterTurn(s,b,sim)}return {battle:b,event:'Choose an action.'}}

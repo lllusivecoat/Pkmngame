@@ -1,13 +1,13 @@
-import {activeHabitats,canAddHabitat,storeHabitat} from './reserve-capacity.js?v=20261124-gen7891';
-import {isLegendarySpecies,MARKET_SHINY_CHANCE} from './pokemon-individuals.js?v=20261124-gen7891';
-import {expandedSpecies} from './engine-data.js?v=20261124-gen7891';
-import {createCreature,catchCreature} from './core.js?v=20261124-gen7891';
-import {buyItem,itemCatalog} from './items.js?v=20261124-gen7891';
-import {gymClock,marketClock} from './gym-clock.js?v=20261124-gen7891';
+import {activeHabitats,canAddHabitat,storeHabitat} from './reserve-capacity.js?v=20261124-allforms1';
+import {isLegendarySpecies,MARKET_SHINY_CHANCE} from './pokemon-individuals.js?v=20261124-allforms1';
+import {expandedSpecies} from './engine-data.js?v=20261124-allforms1';
+import {createCreature,catchCreature} from './core.js?v=20261124-allforms1';
+import {buyItem,itemCatalog} from './items.js?v=20261124-allforms1';
+import {gymClock,marketClock} from './gym-clock.js?v=20261124-allforms1';
 const babies=new Set('pichu cleffa igglybuff togepi tyrogue smoochum elekid magby azurill wynaut budew chingling bonsly mimejr happiny munchlax riolu mantyke toxel'.split(' '));
 const excluded=new Set('articuno zapdos moltres mewtwo mew lugia hooh celebi regirock regice registeel latias latios kyogre groudon rayquaza jirachi deoxys dialga palkia giratina darkrai arceus'.split(' '));
 const idOf=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
-export function evolutionStage(id){let stage=1,current=expandedSpecies[id],seen=new Set([id]);while(current?.prevo){const p=idOf(current.prevo);if(babies.has(p)||!expandedSpecies[p]||seen.has(p))break;seen.add(p);stage++;current=expandedSpecies[p]}return stage}
+export function evolutionStage(id){let stage=1,current=expandedSpecies[id];if(current?.formRecord&&!current.prevo&&expandedSpecies[current.lineageBase]?.prevo)current=expandedSpecies[current.lineageBase];let seen=new Set([id]);while(current?.prevo){const p=idOf(current.prevo);if(babies.has(p)||!expandedSpecies[p]||seen.has(p))break;seen.add(p);stage++;current=expandedSpecies[p]}return stage}
 export function normalizeFacilities(raw){return {shop:Math.min(5,Math.max(1,Math.floor(Number(raw?.shop)||1))),market:Math.min(5,Math.max(1,Math.floor(Number(raw?.market)||1)))}}
 export const marketTiers=[null,{min:6,max:10,stage:1,bst:360},{min:10,max:16,stage:1,bst:430},{min:16,max:23,stage:2,bst:470},{min:22,max:30,stage:2,bst:540},{min:28,max:38,stage:2,bst:650}];
 const prices={shop:[0,0,400,900,1800,3200],market:[0,0,800,1800,3500,6500]},gates={shop:[0,0,20,60,120,240],market:[0,0,40,100,220,400]};
@@ -22,7 +22,7 @@ export function claimGymStarter(s,id){if(s.gym.starterClaimed||s.collection.leng
 function hash(text){let n=2166136261;for(const c of text)n=Math.imul(n^c.charCodeAt(0),16777619);return n>>>0}
 function rng(seed){return ()=>{seed+=0x6D2B79F5;let t=seed;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296}}
 // Only species with a further permanent evolution are eligible, irrespective of Gym type.
-export const marketSpeciesEligible=id=>!!expandedSpecies[id]&&!isLegendarySpecies(id)&&evolutionStage(id)<=2&&(!!expandedSpecies[id].evos?.length||!expandedSpecies[id].prevo);
+export const marketSpeciesEligible=id=>!!expandedSpecies[id]&&!isLegendarySpecies(id)&&evolutionStage(id)<=2&&(()=>{const p=expandedSpecies[id],lineage=p.formRecord&&!p.prevo?expandedSpecies[p.lineageBase]||p:p;return p.formRecord?!!p.evos?.length||(!p.prevo&&evolutionStage(id)===1):!!lineage.evos?.length||!lineage.prevo})();
 export const marketListingCounts=level=>({party:[5,6,7,8,10][Math.max(0,Math.min(4,(level||1)-1))],reserve:[3,4,5,6,7][Math.max(0,Math.min(4,(level||1)-1))]});
 export function ensureMarketStock(s,now=Date.now()){
  const hour=marketClock(s,now).slotKey,level=normalizeFacilities(s.gym.facilities).market,key=`v5:${hour}:${level}`,old=s.gym.marketStock;

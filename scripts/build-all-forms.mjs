@@ -1,0 +1,53 @@
+// Development-only canonical form catalogue. Runtime data stays entirely offline.
+import {Dex} from '@pkmn/sim';import {readFile,writeFile,mkdir} from 'node:fs/promises';import {execFile} from 'node:child_process';import {promisify} from 'node:util';import {expandedSpecies as current,battleForms as currentBattle} from '../engine-data.js';
+const run=promisify(execFile),cache='/tmp/all-forms',ref='508fd7c3a7d54ac175e00afe420b11a5af983bd6';await mkdir(cache,{recursive:true});
+const official=p=>p.exists&&p.num>0&&p.num<=1025&&p.gen<=9&&!['CAP','Custom','Pokestar'].includes(p.isNonstandard);
+const map=new Map(Dex.species.all().filter(official).map(p=>[p.id,p]));
+for(const p of [...map.values()])for(const name of p.cosmeticFormes||[]){const c=Dex.species.get(name);if(official(c))map.set(c.id,c)}
+const idOf=x=>Dex.species.get(x).id,hasCosmetic=new Set([...map.values()].flatMap(p=>(p.cosmeticFormes||[]).map(idOf)));
+function kind(p){if(p.forme?.startsWith('Mega'))return 'mega';if(p.isPrimal)return 'primal';if(p.forme?.endsWith('Gmax'))return 'gmax';if(p.battleOnly||p.id==='eternatuseternamax')return 'battle';if(p.requiredItems?.length)return 'item';if(/Alola|Galar|Hisui|Paldea/.test(p.forme))return 'regional';if(hasCosmetic.has(p.id))return 'cosmetic';return 'alternate'}
+const temporary=p=>['mega','primal','gmax','battle','item'].includes(kind(p));
+const existing=Object.fromEntries(Object.entries(current).filter(([id])=>!current[id].formsExpansion)),existingBattle=Object.fromEntries(Object.entries(currentBattle).filter(([id])=>!currentBattle[id].formsExpansion));
+const forms=[...map.values()].filter(p=>p.forme),missing=forms.filter(p=>!existing[p.id]&&!existingBattle[p.id]),permanent=missing.filter(p=>!temporary(p)),transient=missing.filter(temporary),allPermanent=new Set([...Object.keys(existing),...permanent.map(p=>p.id)]);
+const pokemonIds=new Map();for(const p of permanent){const meta=JSON.parse(await readFile(`/tmp/breeding-meta/${p.num}.json`));const v=meta.varieties.find(v=>idOf(v.pokemon.name)===p.id||v.pokemon.name.replace(/[^a-z0-9]/g,'')===p.id);if(v)pokemonIds.set(p.id,Number(v.pokemon.url.split('/').filter(Boolean).at(-1)))}
+if(process.argv.includes('--fetch')){let next=0;await Promise.all(Array.from({length:6},async()=>{while(next<permanent.length){const p=permanent[next++],num=pokemonIds.get(p.id);if(!num)continue;try{JSON.parse(await readFile(`${cache}/${p.id}.json`));continue}catch{}const url=`https://raw.githubusercontent.com/PokeAPI/api-data/${ref}/data/api/v2/pokemon/${num}/index.json`,{stdout}=await run('python3',['-c','import urllib.request,sys;print(urllib.request.urlopen(sys.argv[1],timeout=60).read().decode())',url],{maxBuffer:20*1024*1024});JSON.parse(stdout);await writeFile(`${cache}/${p.id}.json`,stdout)}}));}
+const stats={hp:'hp',atk:'attack',def:'defence',spa:'specialAttack',spd:'specialDefence',spe:'speed'},apiStats={hp:'hp',attack:'attack',defense:'defence','special-attack':'specialAttack','special-defense':'specialDefence',speed:'speed'};
+const statData=p=>Object.fromEntries(Object.entries(p.baseStats).map(([k,v])=>[stats[k],v]));
+const catalogue={},species={},battle={},links={};
+function base(p){return idOf(p.changesFrom|| (Array.isArray(p.battleOnly)?p.battleOnly[0]:p.battleOnly)||p.baseSpecies)}
+function evolutionLinks(p){let targets=p.evos.map(idOf).filter(id=>allPermanent.has(id));if(hasCosmetic.has(p.id)){
+ const suffix=p.id.slice(idOf(p.baseSpecies).length);targets=targets.map(id=>allPermanent.has(id+suffix)?id+suffix:id);
+ if(p.id==='burmysandy')targets=targets.filter(id=>['wormadamsandy','mothim'].includes(id));
+ if(p.id==='burmytrash')targets=targets.filter(id=>['wormadamtrash','mothim'].includes(id));
+ }return [...new Set(targets)]}
+function learned(p,source){const raw=Dex.species.getLearnsetData(p.id).learnset||{},own=[];for(const [id,sources]of Object.entries(raw)){const levels=sources.filter(v=>/^[1-9]L\d+$/.test(v));if(levels.length){const gen=Math.max(...levels.map(v=>Number(v[0]))),level=Math.min(...levels.filter(v=>Number(v[0])===gen).map(v=>Number(v.slice(2))));own.push({id,number:Dex.moves.get(id).num,level})}}
+ const genCounts={};for(const v of Object.values(raw).flat().filter(v=>/^[1-9]L/.test(v)))genCounts[v[0]]=(genCounts[v[0]]||0)+1;
+ const dominant=Object.keys(genCounts).sort((a,b)=>Number(b)-Number(a))[0];const exclusive=own.length<4;
+ const picked=exclusive?[...(source.learnset||[]),...own]:own.filter(m=>(raw[m.id]||[]).some(v=>v.startsWith(dominant+'L')));
+ const unique=new Map(picked.map(m=>[m.id,m]));if(!unique.size)for(const m of source.learnset||[])unique.set(m.id,m);
+ return [...unique.values()].filter(m=>m.number>0).sort((a,b)=>a.level-b.level||a.number-b.number);
+}
+for(const p of forms){const k=kind(p),bases=[...new Set([base(p),...(Array.isArray(p.battleOnly)?p.battleOnly.map(idOf):[])])];if(k==='gmax')for(const q of map.values())if(q.canGigantamax===Dex.species.get(bases[0]).canGigantamax&&q.baseSpecies===p.baseSpecies&&!temporary(q))bases.push(q.id);
+ catalogue[p.id]={id:p.id,name:p.name,nationalNumber:p.num,base:bases[0],bases:[...new Set(bases)],kind:k,permanent:!temporary(p),gen:p.gen,types:p.types,baseStats:statData(p),abilities:p.abilities,height:p.heightm,weight:p.weightkg,requiredItems:p.requiredItems||[],requiredMove:p.requiredMove||null,trigger:k==='mega'?(p.requiredItems?.join(' / ')||p.requiredMove||'Mega Evolution'):k==='gmax'?'Gigantamax factor + Gen8 battle rules':k==='primal'?'Held '+p.requiredItem:k==='item'?'Held '+p.requiredItems.join(' / '):k==='battle'?'Ability, move or battle-state conditions':k==='regional'?'Regional lineage':k==='cosmetic'?'Cosmetic variety':'Alternate or event form',access:p.id==='eternatuseternamax'?'boss-only':/^(kyuremblack|kyuremwhite|necrozmaduskmane|necrozmadawnwings|calyrexice|calyrexshadow)$/.test(p.id)?'fusion-pending':'standard',artwork:'preserve existing or explicitly pending'};
+}
+for(const p of permanent){const source=existing[idOf(p.baseSpecies)];if(!source)throw Error('Missing permanent form base '+p.id);let raw;try{raw=JSON.parse(await readFile(`${cache}/${p.id}.json`))}catch{}const learnset=learned(p,source),tm=new Set(source.tmMoves||[]);for(const [move,sources]of Object.entries(Dex.species.getLearnsetData(p.id).learnset||{}))if(sources.some(v=>/^[1-9]M/.test(v)))tm.add(move);
+ let prevo=p.prevo;if(hasCosmetic.has(p.id)&&prevo){const suffix=p.id.slice(idOf(p.baseSpecies).length),candidate=idOf(prevo)+suffix;if(allPermanent.has(candidate))prevo=map.get(candidate).name}
+ const record={...source,id:p.id,name:p.name,number:p.num,nationalNumber:p.num,apiNumber:pokemonIds.get(p.id)||null,formBase:idOf(p.baseSpecies),formKind:kind(p),formRecord:true,formsExpansion:true,lineageBase:idOf(p.baseSpecies),types:p.types,baseStats:statData(p),abilities:p.abilities,weight:p.weightkg,gender:p.gender,genderRatio:p.genderRatio,prevo,evos:evolutionLinks(p),learnset,tmMoves:[...tm].sort(),description:`${p.name}, a ${p.forme} form of ${p.baseSpecies}. ${catalogue[p.id].trigger}.`,evolutionSupport:undefined};
+ for(const key of Object.keys(record))if(key.startsWith('evo')&&!['evos','evYield'].includes(key))delete record[key];for(const key of Object.keys(p))if(key.startsWith('evo')&&key!=='evos'&&p[key])record[key]=p[key];
+ if(p.evoType==='other'||p.evoType==='levelExtra'&&!/^(during the day|at night)$/.test(p.evoCondition||'')||/full moon|Legends|dusk|rare|spin/i.test(p.evoCondition||''))record.evolutionSupport='pending';
+ if(kind(p)==='regional'&&p.prevo&&!/Alola|Galar|Hisui|Paldea/.test(Dex.species.get(p.prevo).forme)){record.evolutionSupport='pending';record.evoCondition=p.evoCondition||`Regional evolution in ${p.evoRegion||p.forme}`}
+ if(p.id==='dudunsparcethreesegment'){record.evolutionSupport='pending';record.evoCondition='Rare Three-Segment form (personality-dependent)'}
+ if(p.id==='toxtricitylowkey'){record.evoNatures='Lonely Bold Relaxed Timid Serious Modest Mild Quiet Bashful Calm Gentle Careful'.split(' ');record.evoNatureLabel='Low Key nature'}
+ if(p.id==='lycanrocdusk'){delete record.evolutionSupport;record.evoTime='Dusk'}
+ if(raw)record.evYield=Object.fromEntries(raw.stats.filter(s=>s.effort).map(s=>[apiStats[s.stat.name],s.effort]));
+ if(/^(furfrou|burmy|deerling|sawsbuck|oricorio|rotom|sinistea|polteageist|poltchageist|sinistcha)/.test(p.id))record.hatchSpecies=source.origin&&existing[source.origin]?source.origin:idOf(p.baseSpecies);
+ species[p.id]=record;
+}
+for(const [id,p]of Object.entries({...existing,...species})){const d=map.get(id)||Dex.species.get(id);links[id]=evolutionLinks(d)}
+links.meltan=['melmetal'];
+for(const p of transient){const meta=catalogue[p.id];battle[p.id]={...meta,number:p.num,formsExpansion:true,ability:p.abilities['0'],stone:meta.kind==='mega'?Dex.items.get(meta.requiredItems[0]||'').id||null:null,gmaxMove:meta.kind==='gmax'?Dex.species.get(meta.base).canGigantamax:null,learnset:existing[meta.base]?.learnset||species[meta.base]?.learnset||existing[idOf(p.baseSpecies)]?.learnset||[]};}
+const formCosmeticOptions={alcremie:{creamSpecies:['alcremie',...(Dex.species.get('alcremie').cosmeticFormes||[]).map(idOf)],sweets:'strawberrysweet berrysweet lovesweet starsweet cloversweet flowersweet ribbonsweet'.split(' '),combinations:63},spinda:{procedural:true,source:'Individual personality spot pattern; not separate battle-species IDs'}};
+const counts=Object.fromEntries([...new Set(forms.map(kind))].map(k=>[k,forms.filter(p=>kind(p)===k).length]));
+await writeFile('all-forms-data.js','// Official Gen1–9 forms from package-locked @pkmn/sim; missing art remains explicitly pending.\n'+Object.entries({formCosmeticOptions,allFormsCatalogue:catalogue,additionalFormSpecies:species,additionalBattleForms:battle,allFormEvolutionLinks:links,formEvolutionOverrides:{maushold:{evolutionSupport:'pending',evoCondition:'Rare Family of Three (personality-dependent)'}}}).map(([name,data])=>'export const '+name+'='+JSON.stringify(data)+';').join('\n')+'\n');
+await writeFile('docs/all-forms-status.json',JSON.stringify({source:'package-locked @pkmn/sim; PokeAPI/api-data '+ref,totalSpeciesAndForms:map.size,existing:Object.keys(existing).length+Object.keys(existingBattle).length,added:missing.length,permanentAdded:permanent.length,battleFormsAdded:transient.length,counts,addedIds:missing.map(p=>p.id),cosmeticIds:[...hasCosmetic],limitations:['Procedural Spinda spot patterns and Alcremie Sweet decorations are not separate battle-species records.','Fusion/event acquisition and unsupported special evolutions remain explicitly pending.']},null,2)+'\n');
+console.log(JSON.stringify({added:missing.length,permanent:permanent.length,temporary:transient.length,counts,total:map.size}));
