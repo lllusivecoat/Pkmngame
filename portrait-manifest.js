@@ -274,5 +274,6 @@ export const portraitManifest=[
  {"id":"star-grunt_m","name":"Star Grunt","role":"Grunt · male","set":"team-star","sourceId":"grunt_m"},
  {"id":"star-grunt_f","name":"Star Grunt","role":"Grunt · female","set":"team-star","sourceId":"grunt_f"},
  {"id":"ash","name":"Ash Ketchum","role":"Anime hero","set":"special","note":"Classic Kanto outfit"},
- {"id":"green","name":"Green","role":"Protagonist","set":"special","note":"Pokémon Adventures / Let's Go"}
+ {"id":"green","name":"Green","role":"Protagonist","set":"special","note":"Pokémon Adventures / Let's Go"},
+ {"id":"nurse_joy","name":"Nurse Joy","role":"Pokémon Center nurse","set":"special"}
 ];

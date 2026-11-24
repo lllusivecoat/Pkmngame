@@ -1,9 +1,9 @@
-import {trainerDirectory} from './trainer-directory.js?v=20261125-visitors1';
-import {trainerTier,trainedSpecies} from './trainer-training.js?v=20261125-visitors1';
-import {expandedSpecies} from './engine-data.js?v=20261125-visitors1';
-import {evolutionStage} from './gym-commerce.js?v=20261125-visitors1';
-import {isLegendarySpecies} from './pokemon-individuals.js?v=20261125-visitors1';
-import {gymClock} from './gym-clock.js?v=20261125-visitors1';
+import {trainerDirectory} from './trainer-directory.js?v=20261126-nursejoy1';
+import {trainerTier,trainedSpecies} from './trainer-training.js?v=20261126-nursejoy1';
+import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy1';
+import {evolutionStage} from './gym-commerce.js?v=20261126-nursejoy1';
+import {isLegendarySpecies} from './pokemon-individuals.js?v=20261126-nursejoy1';
+import {gymClock} from './gym-clock.js?v=20261126-nursejoy1';
 export const galleryRooms=['gallery','gallery-leaders','gallery-stars'];
 export const galleryRoomNames=['Visitor’s Gallery','Leaders’ Lounge','Hall of Stars'];
 export const visitorPositions=[{x:3,y:3},{x:7,y:3},{x:11,y:3},{x:3,y:7},{x:11,y:7},{x:4,y:10},{x:10,y:10}];
