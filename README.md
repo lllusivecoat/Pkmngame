@@ -1,3 +1,9 @@
+Remaining artwork — v0.65.0
+
+Fills 646 missing catalogue entries with 1,292 local Normal/Shiny images. Prefer PokeOS RK9, otherwise use its outlined Final drawings labelled RK1. Together with earlier generations, the shared temporary gallery contains 1,199 species/forms. Existing approved paintings and all earlier assets are unchanged. Shiny versions recolour the same drawing, preserving pose, transparency and dark outlines; HOME renders are palette references only, never displayed assets.
+
+130 entries still lack a suitable drawing or reliable matching palette reference and remain explicitly pending, as requested. The gallery's “Art pending” category identifies them. No base-species image is passed off as an unavailable transformation. Audit: `docs/remaining-temporary-artwork.json`; reproducible builder: `python scripts/build-remaining-replacements.py` (Pillow, NumPy, SciPy; downloads development inputs to /tmp). Existing saves and catalogue data are unchanged.
+
 Complete form catalogue — v0.64.0
 
 Adds 402 supported Gen 1–9 form records: 218 permanent forms and 184 battle forms. The catalogue now contains 1,468 entries (1,262 permanent and 206 temporary), including 91 Megas, 34 Gigantamax variants, both Primals, regional, cosmetic, item and automatic forms exposed by the locked simulator. Existing painted and RK9/RK1 artwork is preserved; missing form artwork is clearly marked pending in both Normal and Shiny views.

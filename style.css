@@ -28,3 +28,4 @@
 .art.shiny:after{z-index:3;right:5%;top:8%;font-size:20px;text-shadow:0 0 8px #b99c4877;pointer-events:none}
 @media(max-width:1150px){.dashboard-grid .card .art{height:140px}}
 @media(max-width:560px){.card .art{height:150px}.dashboard-grid .card .art{height:112px}.dashboard-grid .card .art>.sprite{max-height:112px;padding:0}.battle-stage .art{height:155px}.detail>.art{height:190px}.detail>.art>.sprite{max-height:190px;max-width:240px}.starter .cards .art{height:105px}.starter .art>.sprite{max-height:105px;max-width:100px}.dex-grid .dex .art{height:145px}.hunt-portrait .art{height:120px}}
+.gallery-entry{content-visibility:auto;contain-intrinsic-size:auto 360px}

@@ -1,4 +1,4 @@
-import {emblemMark,normalizeGymDesign} from './gym-design.js?v=20261124-allforms1';
+import {emblemMark,normalizeGymDesign} from './gym-design.js?v=20261124-remainingart1';
 // Original reusable generated sprite atlas. Alpha and cell geometry stay intact.
 export const environmentCells={oak:[0,0],pine:[1,0],cottage:[2,0],gym:[3,0],training:[0,1],recovery:[1,1],tower:[2,1],market:[3,1],fountain:[0,2],garden:[1,2],rock:[2,2],lamp:[3,2]};
 const spriteBounds=[[30,10,325,319],[450,8,250,327],[795,40,327,288],[1152,5,383,330],[27,411,331,262],[395,377,362,297],[866,339,188,343],[1177,393,331,284],[36,734,306,276],[388,726,375,274],[799,752,321,246],[1248,701,171,305]];

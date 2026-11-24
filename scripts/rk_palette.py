@@ -11,12 +11,17 @@ def lab(rgb):
  x=rgb/255.;x=np.where(x>.04045,((x+.055)/1.055)**2.4,x/12.92);x=x@M.T/D65;f=np.where(x>.008856,np.cbrt(x),7.787*x+16/116);return np.stack([116*f[:,1]-16,500*(f[:,0]-f[:,1]),200*(f[:,1]-f[:,2])],axis=1)
 def rgb(l):
  fy=(l[:,0]+16)/116;f=np.stack([fy+l[:,1]/500,fy,fy-l[:,2]/200],axis=1);x=np.where(f**3>.008856,f**3,(f-16/116)/7.787)*D65;x=x@np.linalg.inv(M).T;x=np.maximum(x,0);x=np.where(x>.0031308,1.055*x**(1/2.4)-.055,x*12.92);return np.uint8(np.clip(np.rint(x*255),0,255))
-def recolor(base,id):
+def recolor(base,id,*,allow_white_materials=False,ink_threshold=None):
  a=np.array(Image.open(f'/tmp/gymbound-kanto-home/{id}-normal.png').convert('RGBA'));b=np.array(Image.open(f'/tmp/gymbound-kanto-home/{id}-shiny.png').convert('RGBA'));assert a.shape==b.shape
  valid=(a[:,:,3]>230)&(b[:,:,3]>230);n=a[:,:,:3][valid].astype(float);s=b[:,:,:3][valid].astype(float);keys=(n[:,0].astype(int)//8)*1024+(n[:,1].astype(int)//8)*32+n[:,2].astype(int)//8;_,inv=np.unique(keys,return_inverse=True);counts=np.bincount(inv);nc=np.stack([np.bincount(inv,weights=n[:,i])/counts for i in range(3)],axis=1);sc=np.stack([np.bincount(inv,weights=s[:,i])/counts for i in range(3)],axis=1);nl=lab(nc);delta=lab(sc)-nl
  data=np.array(base);flat=data[:,:,:3].reshape(-1,3).astype(float);alpha=data[:,:,3].ravel();l=lab(flat);dist,idx=cKDTree(nl).query(l,k=min(4,len(nl)));weights=1/(dist+1)**3;change=(delta[idx]*weights[:,:,None]).sum(axis=1)/weights.sum(axis=1)[:,None]
  # Exact dark ink/eye pupils and transparent pixels are retained. Coloured eyes still map canonically.
- ink=flat.max(axis=1)<ink_cutoff(id);white=(flat.min(axis=1)>245);target_n=(nl[idx]*weights[:,:,None]).sum(axis=1)/weights.sum(axis=1)[:,None];target_s=target_n+change
+ ink=flat.max(axis=1)<(ink_cutoff(id) if ink_threshold is None else ink_threshold);white=(flat.min(axis=1)>245)
+ if allow_white_materials:
+  # Large white fur/armour regions can change colour; small eye/teeth glints stay white.
+  from scipy.ndimage import label
+  labels,count=label(white.reshape(data.shape[:2]));sizes=np.bincount(labels.ravel());white=white&(sizes[labels.ravel()]<60)
+ target_n=(nl[idx]*weights[:,:,None]).sum(axis=1)/weights.sum(axis=1)[:,None];target_s=target_n+change
  chroma=np.linalg.norm(l[:,1:],axis=1);ref_chroma=np.linalg.norm(target_n[:,1:],axis=1);scale=np.clip(chroma/np.maximum(8,ref_chroma),.6,1.8)
  mapped=l+change;material_change=np.linalg.norm(change[:,1:],axis=1);blend=np.clip((material_change-3)/8,0,1);mapped[:,1:]=mapped[:,1:]*(1-blend[:,None])+target_s[:,1:]*scale[:,None]*blend[:,None]
  out=rgb(mapped)
