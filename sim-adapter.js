@@ -1,10 +1,10 @@
-import {chooseTrainerAI,replacementIndex} from './trainer-ai.js?v=20261126-nursejoy1';
+import {chooseTrainerAI,replacementIndex} from './trainer-ai.js?v=20261126-chibifix1';
 // The browser and Node tests run the same locally bundled, MIT-licensed simulator.
-import {Battle,Dex} from './vendor/simulator.js?v=20261126-nursejoy1';
-import {movesFor,moveCatalog,gameMoveId,statsFor} from './rules.js?v=20261126-nursejoy1';
-import {currentHP,remainingPP,ppMaximum,applyMedicine,itemCatalog} from './items.js?v=20261126-nursejoy1';
-import {validAbility,toID} from './progression.js?v=20261126-nursejoy1';
-import {expandedSpecies,battleForms} from './engine-data.js?v=20261126-nursejoy1';
+import {Battle,Dex} from './vendor/simulator.js?v=20261126-chibifix1';
+import {movesFor,moveCatalog,gameMoveId,statsFor} from './rules.js?v=20261126-chibifix1';
+import {currentHP,remainingPP,ppMaximum,applyMedicine,itemCatalog} from './items.js?v=20261126-chibifix1';
+import {validAbility,toID} from './progression.js?v=20261126-chibifix1';
+import {expandedSpecies,battleForms} from './engine-data.js?v=20261126-chibifix1';
 export {Dex};
 const longStatus={brn:'burn',par:'paralysis',psn:'poison',tox:'toxic',slp:'sleep',frz:'freeze','':''};
 const shortStatus=Object.fromEntries(Object.entries(longStatus).map(([a,b])=>[b,a]));

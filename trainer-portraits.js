@@ -1,7 +1,7 @@
 // Keep the original 4×4 atlas and its stable cell indices unchanged.
 // Brock's cell stays reserved so later atlas users keep their offsets.
-import {portraitManifest,portraitPath} from './portrait-manifest.js?v=20261126-nursejoy1';
-export const PORTRAIT_RELEASE='20261126-nursejoy1';
+import {portraitManifest,portraitPath} from './portrait-manifest.js?v=20261126-chibifix1';
+export const PORTRAIT_RELEASE='20261126-chibifix1';
 const portraits=['fern','milo','iris','hugo','ruby','ashby','skye','marin','rowan','lyra','flint','sera','brock','explorer-male','explorer-female','professor'];
 const atlasLocked=new Set(portraits.filter(id=>id!=='brock'));
 export const kantoPortraitIds=['brock','misty','lt-surge','erika','koga','sabrina','blaine','giovanni','lorelei','bruno','agatha','lance','blue','red'];

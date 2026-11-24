@@ -1,9 +1,9 @@
-import {breedingSpecies} from './breeding-data.js?v=20261126-nursejoy1';
-import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy1';
-import {createCreature,catchCreature} from './core.js?v=20261126-nursejoy1';
-import {normalizeGender,rollGender} from './pokemon-individuals.js?v=20261126-nursejoy1';
-import {abilityOptions,toID} from './progression.js?v=20261126-nursejoy1';
-import {itemCount} from './items.js?v=20261126-nursejoy1';
+import {breedingSpecies} from './breeding-data.js?v=20261126-chibifix1';
+import {expandedSpecies} from './engine-data.js?v=20261126-chibifix1';
+import {createCreature,catchCreature} from './core.js?v=20261126-chibifix1';
+import {normalizeGender,rollGender} from './pokemon-individuals.js?v=20261126-chibifix1';
+import {abilityOptions,toID} from './progression.js?v=20261126-chibifix1';
+import {itemCount} from './items.js?v=20261126-chibifix1';
 export const BREEDING_RULESET=8,EGG_CHECK_STEPS=256,HATCH_CYCLE_STEPS=128,EGG_CAPACITY=10;
 const stats=['hp','attack','defence','specialAttack','specialDefence','speed'];
 const natures='Hardy Lonely Brave Adamant Naughty Bold Docile Relaxed Impish Lax Timid Hasty Serious Jolly Naive Modest Mild Quiet Bashful Rash Calm Gentle Sassy Careful Quirky'.split(' ');

@@ -1,5 +1,5 @@
-import {expandedSpecies,engineMoves} from './engine-data.js?v=20261126-nursejoy1';
-import {learnedMoves,gameMoveId} from './rules.js?v=20261126-nursejoy1';
+import {expandedSpecies,engineMoves} from './engine-data.js?v=20261126-chibifix1';
+import {learnedMoves,gameMoveId} from './rules.js?v=20261126-chibifix1';
 export const trainerTiers=[{id:'rookie',name:'Rookie',reputation:0},{id:'journeyman',name:'Journeyman',reputation:60},{id:'ace',name:'Ace',reputation:300}];
 export const trainerTier=s=>s.gym.reputation>=300?'ace':s.gym.reputation>=60?'journeyman':'rookie';
 export function trainOpponent(c,tier='rookie'){const sp=expandedSpecies[c.species],physical=sp.baseStats.attack>=sp.baseStats.specialAttack,offence=physical?'attack':'specialAttack';c.ivs=Object.fromEntries(['hp','attack','defence','specialAttack','specialDefence','speed'].map(k=>[k,tier==='ace'?31:tier==='journeyman'?20:8]));c.evs=tier==='ace'?{[offence]:252,speed:252,hp:4}:tier==='journeyman'?{[offence]:80,speed:80,hp:40}:{};c.nature=tier==='rookie'?'Hardy':physical?'Adamant':'Modest';c.variant='Normal';if(tier==='rookie')return c;
