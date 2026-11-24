@@ -1,24 +1,25 @@
-import {rollGender,normalizeGender,rollWildShiny} from './pokemon-individuals.js?v=20261126-nursejoy2';
-import {kanto151EncounterSites} from './kanto151-data.js?v=20261126-nursejoy2';
-import {normalizeQuests,collectQuestReward} from './quests.js?v=20261126-nursejoy2';
-import {normalizeGuild,earnGuildPoints,collectGuildReward} from './guild.js?v=20261126-nursejoy2';
-import {normalizeArena,collectArenaReward} from './arena.js?v=20261126-nursejoy2';
-import {eventWeight,eventVisitors,eventStepBonus,WORLD_PERIOD} from './world-events.js?v=20261126-nursejoy2';
-import {normalizeHunts,activeHunt,targetHuntOdds,discoverHuntClue,recordHuntCapture,collectHuntReward} from './hunting.js?v=20261126-nursejoy2';
-import {normalizeResearch,observeResearch,collectResearchReward} from './journal.js?v=20261126-nursejoy2';
-import {masteryRank} from './mastery.js?v=20261126-nursejoy2';
-import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261126-nursejoy2';
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261126-nursejoy2';
-import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261126-nursejoy2';
-import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261126-nursejoy2';
-import {defaultMoveIds,moveIds} from './rules.js?v=20261126-nursejoy2';
-import {zones,allTrainers,currentZone,zoneByName,discoverLocation,zoneSpecies,normalizeAreas,areaKey,locationAt} from './world.js?v=20261126-nursejoy2';
-import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261126-nursejoy2';
-export {roster,get,map,signs,clues} from './data.js?v=20261126-nursejoy2';
+import {normalizeBattleReports} from './battle-report.js?v=20261126-nursejoy3';
+import {rollGender,normalizeGender,rollWildShiny} from './pokemon-individuals.js?v=20261126-nursejoy3';
+import {kanto151EncounterSites} from './kanto151-data.js?v=20261126-nursejoy3';
+import {normalizeQuests,collectQuestReward} from './quests.js?v=20261126-nursejoy3';
+import {normalizeGuild,earnGuildPoints,collectGuildReward} from './guild.js?v=20261126-nursejoy3';
+import {normalizeArena,collectArenaReward} from './arena.js?v=20261126-nursejoy3';
+import {eventWeight,eventVisitors,eventStepBonus,WORLD_PERIOD} from './world-events.js?v=20261126-nursejoy3';
+import {normalizeHunts,activeHunt,targetHuntOdds,discoverHuntClue,recordHuntCapture,collectHuntReward} from './hunting.js?v=20261126-nursejoy3';
+import {normalizeResearch,observeResearch,collectResearchReward} from './journal.js?v=20261126-nursejoy3';
+import {masteryRank} from './mastery.js?v=20261126-nursejoy3';
+import {defaultTrainer,normalizeTrainer,trainerName} from './trainer-customization.js?v=20261126-nursejoy3';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261126-nursejoy3';
+import {ensureInventory,itemCount,spendItem,addItem,healParty,useBagItem,evolveByLevel} from './items.js?v=20261126-nursejoy3';
+import {validAbility,abilityOptions,toID,migrateXP,addExperience} from './progression.js?v=20261126-nursejoy3';
+import {defaultMoveIds,moveIds} from './rules.js?v=20261126-nursejoy3';
+import {zones,allTrainers,currentZone,zoneByName,discoverLocation,zoneSpecies,normalizeAreas,areaKey,locationAt} from './world.js?v=20261126-nursejoy3';
+import {roster,get,map,signs,clues,events,starterRosterIds,explorationSpeciesIds} from './data.js?v=20261126-nursejoy3';
+export {roster,get,map,signs,clues} from './data.js?v=20261126-nursejoy3';
 export const PARTY_LIMIT=6;
 const pick=(a,r=Math.random)=>a[Math.floor(r()*a.length)];
 export function createCreature(id,level=5,random=Math.random){const c={uid:globalThis.crypto.randomUUID(),species:id,level,variant:random()<1/4096?'Shiny':'Normal',nature:pick(['Calm','Bold','Timid','Hardy'],random),size:pick(['Small','Average','Large'],random),trait:pick(['Alert','Resilient','Keen-eyed'],random),mastery:0,xp:0,xpRules:'canonical-v1',friendship:expandedSpecies[id]?.friendship??50,ability:toID(expandedSpecies[id]?.abilities['0']),heldItem:null,gigantamax:false,dynamaxLevel:0,evs:{},ivs:{},ppRemaining:{},ppUps:{},knownTM:[],knownEggMoves:[],currentHP:null,status:'',gender:rollGender(id,random),caughtAt:new Date().toISOString(),location:'Greenwood'};const options=abilityOptions(c),hidden=options.find(a=>a.slot==='H'),normal=options.filter(a=>a.slot!=='H');c.ability=(hidden&&random()<.05?hidden:normal[Math.min(normal.length-1,Math.floor(random()*normal.length))])?.id||validAbility(c);c.moves=defaultMoveIds(c);return c}
-export function fresh(){const s={version:3,trainerId:globalThis.crypto.randomUUID(),language:'en',started:false,name:'Shaun',trainer:{...defaultTrainer},level:18,xp:0,coins:8240,party:[],collection:[],dex:{},speciesDefeats:{},clues:[],steps:0,position:{x:2,y:3},facing:'down',followerPosition:null,region:'Greenwood',area:'hub',discoveredAreas:['Greenwood/hub'],claimedWorldSites:[],unlockedZones:['Greenwood'],discoveredLocations:[],visitedTiles:{},badges:[],defeatedTrainers:[],hunts:normalizeHunts(),weather:'Rain',time:'Dusk',traps:20,betterTraps:[8,3],potions:5,event:'stormfront',log:['Welcome to Greenwood. Choose a partner to begin.'],achievements:[],claimedQuest:false,quests:normalizeQuests(),wins:0,arenaWins:0,rating:1284,guild:normalizeGuild(),arena:normalizeArena(undefined,1284,0),showcase:[],purchased:[],artwork:true,artStyle:'home',motion:true,battleMode:'modern',joined:new Date().toISOString(),worldAt:Date.now()};ensureInventory(s);return s}
+export function fresh(){const s={version:3,battleReports:[],trainerId:globalThis.crypto.randomUUID(),language:'en',started:false,name:'Shaun',trainer:{...defaultTrainer},level:18,xp:0,coins:8240,party:[],collection:[],dex:{},speciesDefeats:{},clues:[],steps:0,position:{x:2,y:3},facing:'down',followerPosition:null,region:'Greenwood',area:'hub',discoveredAreas:['Greenwood/hub'],claimedWorldSites:[],unlockedZones:['Greenwood'],discoveredLocations:[],visitedTiles:{},badges:[],defeatedTrainers:[],hunts:normalizeHunts(),weather:'Rain',time:'Dusk',traps:20,betterTraps:[8,3],potions:5,event:'stormfront',log:['Welcome to Greenwood. Choose a partner to begin.'],achievements:[],claimedQuest:false,quests:normalizeQuests(),wins:0,arenaWins:0,rating:1284,guild:normalizeGuild(),arena:normalizeArena(undefined,1284,0),showcase:[],purchased:[],artwork:true,artStyle:'home',motion:true,battleMode:'modern',joined:new Date().toISOString(),worldAt:Date.now()};ensureInventory(s);return s}
 export function record(s,c,caught=false,context={}){const d=s.dex[c.species]??{seen:0,caught:0,variants:[],traits:[],research:normalizeResearch({})};d.seen++;if(caught)d.caught++;d.variants=[...new Set([...d.variants,c.variant])];d.traits=[...new Set([...(d.traits||[]),...(caught?[c.trait]:[])])];s.dex[c.species]=d;observeResearch(s,c,context)}
 export function claimJournalReward(s,id){if(!get(id))return 'Unknown species.';const r=collectResearchReward(s.dex[id]);if(!r.count)return 'No research reward ready.';s.coins+=r.coins;award(s,r.xp);updateAchievements(s);return `RESEARCH REWARD · +${r.coins} coins · +${r.xp} trainer XP`}
 
@@ -38,7 +39,7 @@ export function toggleParty(s,id){if(s.gym?.breeding?.parents.includes(id))retur
 export function setLead(s,id){if(!s.party.includes(id))return 'Add this companion to your party first.';s.party=[id,...s.party.filter(p=>p!==id)];return get(s.collection.find(c=>c.uid===id).species).name+' is now your lead and map companion.'}
 export function updateAchievements(s){const done=[s.collection.length>1,s.steps>=10,Object.keys(s.dex).length>=8,s.clues.length===3,s.collection.length>=10,s.collection.some(c=>c.variant==='Shiny'),s.arenaWins>0,s.collection.some(c=>c.mastery>=6),s.collection.some(c=>c.species==='dratini'),s.wins>=5];const ids=['first-catch','first-steps','research','hunter','collector','shiny','arena','mastery','dratini','battler'];s.achievements=[...new Set([...s.achievements,...ids.filter((_,i)=>done[i])])]}
 export function masteryLevel(c){return masteryRank(c)}
-export function grow(c){c.mastery++;addExperience(c,c.heldItem==='luckyegg'?45:30)}
+export function grow(c){c.mastery++}
 export function useInventoryItem(s,id,uid,options){const result=useBagItem(s,id,uid,options);if(result.evolved){const c=s.collection.find(c=>c.uid===uid);record(s,c,true)}updateAchievements(s);return result}
 export function evolveCompanion(s,uid,target){const result=evolveByLevel(s,uid,target);if(result.evolved)record(s,s.collection.find(c=>c.uid===uid),true);updateAchievements(s);return result}
 export function claimQuest(s){const reward=collectQuestReward(s,'curious');if(!reward)return false;s.coins+=reward.coins;award(s,reward.xp);return true}
@@ -46,7 +47,7 @@ export function claimAdventureQuest(s,id){const reward=collectQuestReward(s,id);
 export function tick(s,now=Date.now()){const n=Math.floor(Math.max(0,now-s.worldAt)/WORLD_PERIOD);if(n){const ws=['Clear','Rain','Storm','Fog'],ts=['Morning','Day','Dusk','Night'];s.weather=ws[(ws.indexOf(s.weather)+n)%4];s.time=ts[(ts.indexOf(s.time)+n)%4];s.event=events[(events.findIndex(e=>e.id===s.event)+n)%events.length].id;s.worldAt+=n*WORLD_PERIOD}return s}
 export function migrate(raw){
   if(!raw||![2,3].includes(raw.version)||!Array.isArray(raw.collection)||!raw.position||!raw.dex||typeof raw.dex!=='object')return fresh();
-  const d=fresh(),s={...d,...raw,version:3};s.speciesDefeats=Object.fromEntries(Object.entries(raw.speciesDefeats&&typeof raw.speciesDefeats==='object'?raw.speciesDefeats:{}).filter(([id])=>expandedSpecies[id]).map(([id,n])=>[id,Math.max(0,Math.min(1e7,Math.floor(Number(n)||0)))]));delete s.energy;delete s.energyAt;s.defeatedTrainers=[...new Set((Array.isArray(raw.defeatedTrainers)?raw.defeatedTrainers:[]).filter(id=>allTrainers.some(t=>t.id===id)))];
+  const d=fresh(),s={...d,...raw,version:3};s.battleReports=normalizeBattleReports(raw.battleReports);s.speciesDefeats=Object.fromEntries(Object.entries(raw.speciesDefeats&&typeof raw.speciesDefeats==='object'?raw.speciesDefeats:{}).filter(([id])=>expandedSpecies[id]).map(([id,n])=>[id,Math.max(0,Math.min(1e7,Math.floor(Number(n)||0)))]));delete s.energy;delete s.energyAt;s.defeatedTrainers=[...new Set((Array.isArray(raw.defeatedTrainers)?raw.defeatedTrainers:[]).filter(id=>allTrainers.some(t=>t.id===id)))];
   if(!['down','left','right','up'].includes(s.facing))s.facing='down';
   const num=(v,f,min=0,max=1e9)=>Number.isFinite(Number(v))?Math.max(min,Math.min(max,Math.floor(Number(v)))):f;
   s.collection=raw.collection.filter(c=>c&&get(c.species)&&typeof c.uid==='string'&&/^[a-zA-Z0-9-]+$/.test(c.uid)).map(c=>({...createCreature(c.species,num(c.level,5,1,100)),...c,gender:normalizeGender(c),level:num(c.level,5,1,100),xp:num(c.xp,0,0,1e9),mastery:num(c.mastery,0,0,100000),variant:c.variant==='Shiny'?'Shiny':'Normal',trait:['Alert','Resilient','Keen-eyed'].includes(c.trait)?c.trait:'Alert',nature:['Hardy','Lonely','Brave','Adamant','Naughty','Bold','Docile','Relaxed','Impish','Lax','Timid','Hasty','Serious','Jolly','Naive','Modest','Mild','Quiet','Bashful','Rash','Calm','Gentle','Sassy','Careful','Quirky','Curious'].includes(c.nature)?c.nature:'Calm',size:['Small','Average','Large'].includes(c.size)?c.size:'Average',caughtAt:Number.isFinite(Date.parse(c.caughtAt))?c.caughtAt:d.joined}));

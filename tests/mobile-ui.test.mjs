@@ -7,19 +7,15 @@ const read = name => readFileSync(new URL(name, root), 'utf8');
 const html = read('index.html');
 const css = read('mobile.css');
 const app = read('app.js');
-const tag = '20261126-nursejoy2';
+const tag = '20261126-nursejoy3';
 
 test('phones load the touch stylesheet with the current cache tag', () => {
   assert.match(html, new RegExp(`mobile\\.css\\?v=${tag}`));
   assert.match(html, new RegExp(`app\\.js\\?v=${tag}`));
   assert.equal(html.includes('20261113-art40'), false);
   assert.equal(app.includes('20261113-art40'), false);
-  assert.equal(html.includes('20261125-visitors1'), false);
-  assert.equal(app.includes('20261125-visitors1'), false);
-  assert.equal(html.includes('20261126-nursejoy1'), false);
-  assert.equal(app.includes('20261126-nursejoy1'), false);
-  assert.equal(html.includes('20261126-chibifix1'), false);
-  assert.equal(app.includes('20261126-chibifix1'), false);
+  assert.equal(html.includes('20261125-care1'), false);
+  assert.equal(app.includes('20261125-care1'), false);
   assert.match(html, /viewport-fit=cover/);
 });
 

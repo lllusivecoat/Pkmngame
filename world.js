@@ -1,10 +1,10 @@
-import {gen7891025EncounterSites} from './gen7891025-data.js?v=20261126-nursejoy2';
-import {unovakalos721EncounterSites} from './unovakalos721-data.js?v=20261126-nursejoy2';
-import {hoennsinnoh493EncounterSites} from './hoennsinnoh493-data.js?v=20261126-nursejoy2';
-import {johto251EncounterSites} from './johto251-data.js?v=20261126-nursejoy2';
-import {kanto151EncounterSites} from './kanto151-data.js?v=20261126-nursejoy2';
-import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261126-nursejoy2';
-import {areaDesigns} from './area-designs.js?v=20261126-nursejoy2';
+import {gen7891025EncounterSites} from './gen7891025-data.js?v=20261126-nursejoy3';
+import {unovakalos721EncounterSites} from './unovakalos721-data.js?v=20261126-nursejoy3';
+import {hoennsinnoh493EncounterSites} from './hoennsinnoh493-data.js?v=20261126-nursejoy3';
+import {johto251EncounterSites} from './johto251-data.js?v=20261126-nursejoy3';
+import {kanto151EncounterSites} from './kanto151-data.js?v=20261126-nursejoy3';
+import {kantoMaps,kantoLeaders} from './kanto-leaders.js?v=20261126-nursejoy3';
+import {areaDesigns} from './area-designs.js?v=20261126-nursejoy3';
 // Separate, connected areas. Only the active map is rendered.
 const greenwood=['FFFFGGGGGG','FGGGWWGFPP','FGPPWWGFPG','GGPPGBGPPP','FGPPGWRRPG','FGGPGWRRPG','FGGPGBGRPG','FFFGGWFPPR','FGGPPPPPGG','FFGGGFFFFF'];
 const ridge=['RRRRGGRRRR','RRGGPPPPPP','RRGPPWRGPG','RGPPGWRGPG','RGPPRBRGPG','RGGPGWRGPG','RGGPGGRGPG','RGGPPPPPPG','PPPPGRRGGG','RRRGGGGRRR'];

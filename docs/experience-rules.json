@@ -1,0 +1,7 @@
+{
+  "formula": "Generation VIII scaled XP; Gen IX species extend the same rules. Gym defence disables Exp. Share.",
+  "source": "https://bulbapedia.bulbagarden.net/wiki/List_of_Pokémon_by_effort_value_yield",
+  "growthSource": "https://github.com/PokeAPI/pokeapi/blob/master/data/v2/csv/experience.csv",
+  "registered": 1468,
+  "fallback": []
+}

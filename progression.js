@@ -1,6 +1,7 @@
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261126-nursejoy2';
+import {canonicalExperienceTables} from './experience-data.js?v=20261126-nursejoy3';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261126-nursejoy3';
 export const toID=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
-export function xpAtLevel(level,growth='medium'){const n=Math.max(1,Math.min(100,level)),cube=n**3;let xp=cube;if(growth==='fast')xp=cube*.8;else if(growth==='slow')xp=cube*1.25;else if(growth==='medium-slow')xp=1.2*cube-15*n*n+100*n-140;else if(growth==='erratic')xp=n<=50?cube*(100-n)/50:n<=68?cube*(150-n)/100:n<=98?cube*Math.floor((1911-10*n)/3)/500:cube*(160-n)/100;else if(growth==='fluctuating')xp=n<=15?cube*(Math.floor((n+1)/3)+24)/50:n<=36?cube*(n+14)/50:cube*(Math.floor(n/2)+32)/50;return Math.max(0,Math.floor(xp))}
+export function xpAtLevel(level,growth='medium'){const group={'slow':1,'medium':2,'fast':3,'medium-slow':4,'erratic':5,'slow-then-very-fast':5,'fluctuating':6,'fast-then-very-slow':6}[growth]||2;return canonicalExperienceTables[group][Math.max(1,Math.min(100,Math.floor(level)))-1]}
 export const levelXP=c=>c.level>=100?0:xpAtLevel(c.level+1,expandedSpecies[c.species]?.growth)-xpAtLevel(c.level,expandedSpecies[c.species]?.growth);
 export function migrateXP(c){if(c.xpRules!=='canonical-v1'){c.xp=Math.floor(Math.min(89,Math.max(0,c.xp||0))/90*levelXP(c));c.xpRules='canonical-v1'}return c}
 export function addExperience(c,n){migrateXP(c);const old=c.level;c.xp+=Math.max(0,Math.floor(n));while(c.level<100&&c.xp>=levelXP(c)){c.xp-=levelXP(c);c.level++}if(c.level>=100)c.xp=0;c.friendship=Math.min(255,(c.friendship??50)+Math.floor((c.level-old)*3*(c.heldItem==='soothebell'?1.5:1)*(c.ball==='luxuryball'?2:1)));return c.level-old}

@@ -37,6 +37,7 @@ jobs:
           broad_pid=$!
           (
             set -e
+            node scripts/care-services-browser-smoke.mjs
             node scripts/rk3-browser-smoke.mjs
             node scripts/all-forms-browser-smoke.mjs
             node scripts/gym-browser-smoke.mjs

@@ -1,8 +1,8 @@
-import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy2';
-import {isLegendarySpecies} from './pokemon-individuals.js?v=20261126-nursejoy2';
-import {evolutionStage} from './gym-commerce.js?v=20261126-nursejoy2';
-import {reserveAwake} from './world-time.js?v=20261126-nursejoy2';
-import {excursionMaps} from './excursions-data.js?v=20261126-nursejoy2';
+import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy3';
+import {isLegendarySpecies} from './pokemon-individuals.js?v=20261126-nursejoy3';
+import {evolutionStage} from './gym-commerce.js?v=20261126-nursejoy3';
+import {reserveAwake} from './world-time.js?v=20261126-nursejoy3';
+import {excursionMaps} from './excursions-data.js?v=20261126-nursejoy3';
 export const TRIP_ENCOUNTERS=6;
 export const tripStage=s=>s.gym.reputation>=300?3:s.gym.reputation>=60?2:1;
 export function tripOffer(s,id){const m=excursionMaps[id];if(!m)return null;const bonus=Math.min(20,Math.floor(s.gym.reputation/150)*2);return {id,name:m.name,fee:m.fee,reputation:m.reputation,unlocked:s.gym.reputation>=m.reputation,stage:tripStage(s),min:Math.min(85,m.levels[0]+bonus),max:Math.min(90,m.levels[1]+bonus)}}
