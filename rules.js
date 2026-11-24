@@ -1,6 +1,6 @@
-import {officialSpecies as originalSpecies,moveCatalog as originalMoves,typeChart} from './combat-data.js?v=20261126-chibifix1';
-import {expandedSpecies,engineMoves} from './engine-data.js?v=20261126-chibifix1';
-import {toID} from './progression.js?v=20261126-chibifix1';
+import {officialSpecies as originalSpecies,moveCatalog as originalMoves,typeChart} from './combat-data.js?v=20261126-nursejoy2';
+import {expandedSpecies,engineMoves} from './engine-data.js?v=20261126-nursejoy2';
+import {toID} from './progression.js?v=20261126-nursejoy2';
 export const officialSpecies={...originalSpecies,...expandedSpecies};
 const originalIDs=Object.fromEntries(Object.keys(originalMoves).map(id=>[toID(id),id]));
 export const gameMoveId=id=>originalIDs[toID(id)]||toID(id);

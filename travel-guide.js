@@ -1,8 +1,8 @@
-import {tripOffer,TRIP_ENCOUNTERS} from './excursion-rules.js?v=20261126-chibifix1';
-import {characterSize} from './world-characters.js?v=20261126-chibifix1';
-import {excursionMaps,isExcursion} from './excursions-data.js?v=20261126-chibifix1';
-import {expandedSpecies} from './engine-data.js?v=20261126-chibifix1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261126-chibifix1';
+import {tripOffer,TRIP_ENCOUNTERS} from './excursion-rules.js?v=20261126-nursejoy2';
+import {characterSize} from './world-characters.js?v=20261126-nursejoy2';
+import {excursionMaps,isExcursion} from './excursions-data.js?v=20261126-nursejoy2';
+import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy2';
+import {trainerPortrait} from './trainer-portraits.js?v=20261126-nursejoy2';
 export const guidePosition=location=>location==='town'?{x:18,y:18}:isExcursion(location)?{x:2,y:7}:null;
 export function canTalkGuide(s){const w=s.gym.world,p=guidePosition(w.location);return !!p&&!s.gym.session&&!w.reserve.activeUid&&Math.abs(p.x-w.position.x)+Math.abs(p.y-w.position.y)<=1}
 export function travelWithGuide(s,destination){if(!canTalkGuide(s))return 'Walk up to Rook first.';if(destination!=='town'&&!isExcursion(destination))return 'Choose one of Rook’s destinations.';const w=s.gym.world;if(destination!=='town'){if(w.location!=='town')return 'Return to Bellwick before booking another trip.';if(!s.party.length)return 'Bring a Pokémon in your party first.';const offer=tripOffer(s,destination);if(!offer.unlocked)return `Requires ${offer.reputation} Gym reputation.`;if(s.coins<offer.fee)return 'Not enough coins for this trip.';s.coins-=offer.fee;w.trip={destination,encounters:0,paid:offer.fee,startedAt:Date.now()};}else w.trip=null;w.location=destination;w.position=destination==='town'?{x:19,y:18}:{x:1,y:7};w.facing='right';w.excursionSteps=0;return 'Rook brought you to '+(destination==='town'?'Bellwick':excursionMaps[destination].name)+'.'}
