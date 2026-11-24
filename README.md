@@ -1,3 +1,11 @@
+Gymbound — visitors & catching trips · v0.67.0
+
+- Rook now stands beside the Gym entrance. Trips cost 150/250/400/650/900 coins and unlock at 0/60/180/400/800 reputation. Each fare covers six encounters, then the guide returns you to Bellwick. Catching, fleeing and defeating all count; early return has no refund. Higher reputation raises levels and unlocks intermediate/final stages. Legendary, Mythical and temporary battle forms are excluded.
+- Walk into the Visitor’s Gallery northwest of the Gym. Each unlocked room has 5–7 seeded daily visitors, refreshed at midnight on the saved game clock. Level 1 has regular trainers and villain grunts; level 2 adds Gym/villain leaders (1,200 coins, 60 reputation); level 3 adds Elite Four, Champions and special guests (3,500 coins, 300 reputation). Stand beside a guest to challenge them; each visitor pays once per day. Teams and training scale with reputation. Battles return you to the Gallery afterward.
+- Gym defence wins award +20 reputation; losses deduct 10, stopping at zero. Withdrawing stays neutral. Gallery victories/defeats show their own reputation changes.
+- Outdoor night scenes use cool terrain palettes, warm lamps/windows, moonlit glints and gentle fireflies. Indoor rooms and character art remain readable. Reduced-motion preferences stop the fireflies.
+- `excursion-rules.js` owns fares/pools/limits, `visitor-gallery.js` owns daily rosters/upgrades/scaling, and `world-lighting.js` supplies clock-driven lighting. Existing saves migrate in place; no reset is required.
+
 RK3 fallback artwork — v0.66.0
 
 Adds 125 paired Normal/Shiny official-source fallbacks for entries with no suitable RK9 or RK1 image. RK3 is a game category, not an artist credit. Prefer named official illustrations and Dream World art; use exact-form HOME renders/stills where no suitable illustration exists. Every card records which source kind it uses. All families share the temporary gallery and folder, with an additional RK3 filter. Existing approved art and all 1,199 earlier RK9/RK1 entries remain unchanged. Shiny images are colour edits of the same Normal drawing, preserving alpha and outlines.

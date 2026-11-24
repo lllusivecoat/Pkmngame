@@ -1,4 +1,4 @@
-import {abilityCatalog,engineMoves} from './engine-data.js?v=20261124-rk3art1';
+import {abilityCatalog,engineMoves} from './engine-data.js?v=20261125-visitors1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const id=v=>String(v).toLowerCase().replace(/[^a-z0-9]/g,'');
 const pairs={Lonely:['Attack','Defence'],Brave:['Attack','Speed'],Adamant:['Attack','Sp. Atk'],Naughty:['Attack','Sp. Def'],Bold:['Defence','Attack'],Docile:[],Relaxed:['Defence','Speed'],Impish:['Defence','Sp. Atk'],Lax:['Defence','Sp. Def'],Timid:['Speed','Attack'],Hasty:['Speed','Defence'],Jolly:['Speed','Sp. Atk'],Naive:['Speed','Sp. Def'],Modest:['Sp. Atk','Attack'],Mild:['Sp. Atk','Defence'],Quiet:['Sp. Atk','Speed'],Rash:['Sp. Atk','Sp. Def'],Calm:['Sp. Def','Attack'],Gentle:['Sp. Def','Defence'],Sassy:['Sp. Def','Speed'],Careful:['Sp. Def','Sp. Atk']};

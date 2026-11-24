@@ -83,3 +83,25 @@ body:not(.reduce-map-motion) .gym-visitor.hall-visitor.is-arriving{animation:gym
 .town-decoration{position:absolute;z-index:2;pointer-events:none;display:grid;place-items:center}
 
 .art-status-label{position:absolute;bottom:1px;left:50%;transform:translateX(-50%);z-index:3;max-width:95%;white-space:nowrap;font:9px/1.4 system-ui!important;background:#29404a;color:#fff3cd!important;border:1px solid #d4b76b;border-radius:6px;padding:2px 5px;pointer-events:none}.art[data-art-status="temporary"]{padding-bottom:20px}.battle .art-status-label{font-size:8px!important}.garden-roamer .art-status-label{display:none}
+
+/* Clock-driven terrain lighting: readable actors, cool moonlight and warm town lamps. */
+.world-viewport[data-outdoors="true"] .world-camera-scene,.map-world[data-outdoors="true"]{filter:none!important}
+.world-viewport[data-outdoors="true"][data-world-period="Night"] .town-backdrop,.world-viewport[data-outdoors="true"][data-world-period="Night"] .painted-personal-ground{filter:brightness(.67) saturate(.8) sepia(.18) hue-rotate(155deg)}
+.world-viewport[data-outdoors="true"][data-world-period="Dusk"] .town-backdrop,.world-viewport[data-outdoors="true"][data-world-period="Dusk"] .painted-personal-ground{filter:sepia(.2) saturate(1.12)}
+.world-viewport[data-outdoors="true"][data-world-period="Morning"] .town-backdrop,.world-viewport[data-outdoors="true"][data-world-period="Morning"] .painted-personal-ground{filter:sepia(.1) brightness(1.04)}
+.world-time-shade{background:none!important;pointer-events:none}
+.outdoor-lighting{position:absolute;inset:0;pointer-events:none;z-index:700;overflow:hidden}
+.moon-wash{position:absolute;inset:0;background:linear-gradient(145deg,#9ec6ff20,#163c7c35);opacity:0}
+.night-lantern{position:absolute;width:8%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(ellipse,#fff6bba8 0%,#ffc86345 22%,#ffc86300 70%);opacity:0;mix-blend-mode:screen}
+.night-firefly{position:absolute;width:3px;height:3px;border-radius:50%;background:#e6ffb8;box-shadow:0 0 7px 3px #c8fb7966;opacity:0}
+.moon-water{position:absolute;right:2%;bottom:10%;width:17%;height:32%;background:repeating-linear-gradient(173deg,transparent 0 13px,#bcdeff25 14px,transparent 16px);opacity:0;mask-image:radial-gradient(ellipse,#000,transparent 70%)}
+[data-world-period="Night"] .moon-wash,[data-world-period="Night"] .night-lantern,[data-world-period="Night"] .moon-water{opacity:1}
+[data-world-period="Dusk"] .night-lantern{opacity:.65}
+[data-world-period="Night"] .night-firefly{animation:firefly-glow 4s ease-in-out infinite}
+@keyframes firefly-glow{0%,100%{opacity:.15;transform:translateY(0)}50%{opacity:.9;transform:translateY(-5px)}}
+.gallery-person{position:absolute;transform:translate(-50%,-100%);z-index:10005;pointer-events:none}.gallery-person .trainer-portrait{width:100%;height:100%}.gallery-person span{position:absolute;left:50%;bottom:-.6rem;transform:translateX(-50%);white-space:nowrap;font-size:clamp(6px,1.1vw,12px);background:#18282de0;color:white;padding:2px 5px;border-radius:5px}.gallery-detail-portrait{width:110px;height:130px;margin:auto}.gallery-detail-portrait .trainer-portrait{width:100%;height:100%}
+@media(prefers-reduced-motion:reduce){[data-world-period="Night"] .night-firefly{animation:none;opacity:.6}}
+
+.gym-prize>span>small{display:block;margin-top:4px;font-size:10px}.world-viewport[data-outdoors="true"][data-world-period="Night"] .environment-sprite{filter:brightness(.8) saturate(.8)}
+
+.night-window{position:absolute;width:1%;height:.8%;background:#ffe3a0;box-shadow:0 0 10px 5px #ffd67b88;opacity:0;border-radius:25%;mix-blend-mode:screen}[data-world-period="Night"] .night-window{opacity:.9}[data-world-period="Dusk"] .night-window{opacity:.45}
