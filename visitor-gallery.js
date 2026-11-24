@@ -1,9 +1,9 @@
-import {trainerDirectory} from './trainer-directory.js?v=20261125-visitors1';
-import {trainerTier,trainedSpecies} from './trainer-training.js?v=20261125-visitors1';
-import {expandedSpecies} from './engine-data.js?v=20261125-visitors1';
-import {evolutionStage} from './gym-commerce.js?v=20261125-visitors1';
-import {isLegendarySpecies} from './pokemon-individuals.js?v=20261125-visitors1';
-import {gymClock} from './gym-clock.js?v=20261125-visitors1';
+import {trainerDirectory} from './trainer-directory.js?v=20261125-care1';
+import {trainerTier,trainedSpecies} from './trainer-training.js?v=20261125-care1';
+import {expandedSpecies} from './engine-data.js?v=20261125-care1';
+import {evolutionStage} from './gym-commerce.js?v=20261125-care1';
+import {isLegendarySpecies} from './pokemon-individuals.js?v=20261125-care1';
+import {gymClock} from './gym-clock.js?v=20261125-care1';
 export const galleryRooms=['gallery','gallery-leaders','gallery-stars'];
 export const galleryRoomNames=['Visitor’s Gallery','Leaders’ Lounge','Hall of Stars'];
 export const visitorPositions=[{x:3,y:3},{x:7,y:3},{x:11,y:3},{x:3,y:7},{x:11,y:7},{x:4,y:10},{x:10,y:10}];
@@ -23,7 +23,7 @@ export function galleryVisitors(s,location=s.gym.world.location){const room=gall
 export function visitorTeam(s,t,visitId,room){const rep=s.gym.reputation,level=Math.min(85,5+Math.floor(rep/25)+(room-1)*2),stage=rep>=300?3:rep>=60?2:1,bst=rep>=600?750:rep>=300?600:rep>=60?500:420,count=rep>=1000?6:rep>=600?5:rep>=300?4:rep>=120?3:rep>=40?2:1;
  const all=Object.keys(expandedSpecies).filter(id=>{const p=expandedSpecies[id];return !isLegendarySpecies(id)&&(!p.formRecord||p.formKind==='regional')&&evolutionStage(id)<=stage&&(p.evoLevel||1)<=level&&Object.values(p.baseStats).reduce((a,b)=>a+b,0)<=bst}),typed=all.filter(id=>t.type==='Mixed'||expandedSpecies[id].types.includes(t.type)),pool=typed.length?typed:all,random=seeded(visitId+':'+rep),team=[];
  for(let i=0;i<count&&pool.length;i++){const choices=pool.filter(id=>!team.includes(id));team.push((choices.length?choices:pool)[Math.floor(random()*(choices.length||pool.length))])}
- return {...t,id:visitId,team,level,aiTier:trainerTier(s),difficulty:rep>=300?'Ace':rep>=60?'Journeyman':'Rookie',reward:140+room*80+Math.floor(rep/20)*10,reputation:room*10,exhibition:true,galleryVisit:true,galleryRoom:room,lossReputation:5+room*5,style:`${t.type} visitor · team and level scale with your Gym reputation.`}}
+ return {...t,id:visitId,team,level,aiTier:trainerTier(s),difficulty:rep>=300?'Ace':rep>=60?'Journeyman':'Rookie',reward:140+room*80+Math.floor(rep/20)*10,reputation:0,exhibition:true,galleryVisit:true,galleryRoom:room,lossReputation:0,style:`${t.type} visitor · team and level scale with your Gym reputation.`}}
 export function nearbyVisitor(s){return galleryVisitors(s).find(v=>Math.abs(v.x-s.gym.world.position.x)+Math.abs(v.y-s.gym.world.position.y)<=1)}
 export function galleryOpponent(s,id){const v=galleryVisitors(s).find(v=>v.id===id);if(!v||s.gym.gallery.defeated.includes(id)||Math.abs(v.x-s.gym.world.position.x)+Math.abs(v.y-s.gym.world.position.y)>1)return null;return visitorTeam(s,v.trainer,id,galleryRoomLevel(s.gym.world.location))}
 export function galleryUpgrade(s){const level=galleryLevel(s);return level===3?null:{cost:level===1?1200:3500,reputation:level===1?60:300,next:galleryRoomNames[level]}}

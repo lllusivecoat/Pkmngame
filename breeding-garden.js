@@ -1,7 +1,7 @@
-import {characterSize} from './world-characters.js?v=20261125-visitors1';
-import {gymWalkable} from './gym-world-data.js?v=20261125-visitors1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261125-visitors1';
-import {canTalkBreeder} from './breeding.js?v=20261125-visitors1';
+import {characterSize} from './world-characters.js?v=20261125-care1';
+import {gymWalkable} from './gym-world-data.js?v=20261125-care1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261125-care1';
+import {canTalkBreeder} from './breeding.js?v=20261125-care1';
 const positions=new Map(),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key=p=>p.x+','+p.y;
 export function gardenResidents(s){const order=[...(s.gym.breeding?.parents||[]),...s.party,...s.collection.map(c=>c.uid)];return [...new Set(order)].map(id=>s.collection.find(c=>c.uid===id)).filter(Boolean).slice(0,16)}
