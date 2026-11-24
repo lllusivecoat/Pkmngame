@@ -115,3 +115,7 @@ body:not(.reduce-map-motion) .gym-visitor.hall-visitor.is-arriving{animation:gym
 :root[data-theme] #app .world-viewport .world-shop .shopkeeper-token,:root[data-theme] #app .world-viewport .world-market .shopkeeper-token{z-index:10998!important}:root[data-theme] #app .world-viewport .keeper-counter-front{z-index:10999!important}
 
 .pokemon-center-building img{object-position:center bottom}.reduce-map-motion [data-world-period="Night"] .night-firefly{animation:none!important;opacity:.6}
+
+#music-dock[hidden]{display:none!important}#app header .theme-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}#app header #music-toggle{position:static;flex:0 0 auto;min-height:36px;padding:7px 10px;white-space:nowrap}
+
+:root[data-theme] #app .workspace>header{height:auto!important;min-height:66px;flex-wrap:wrap!important;align-content:center;padding-top:8px;padding-bottom:8px;row-gap:8px}:root[data-theme] #app .workspace>header>.resource-bar{max-width:100%;min-width:0}
