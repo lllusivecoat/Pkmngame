@@ -1,4 +1,4 @@
-# Recover the v0.63 build whose game checks passed but artifact-service lookup failed.
+# Recover the v0.64 build whose game checks passed but Pages publishing failed.
 # The old artifact expires after one day; verification rejects expired/unverified builds.
 name: Recover tested Pages build
 on:
@@ -29,7 +29,7 @@ jobs:
         with:
           script: |
             const owner=context.repo.owner, repo=context.repo.repo;
-            const runId=45255728556, source='ce39e02c365beb80b03e7deb6c9e4f5c4804731b';
+            const runId=45348677885, source='b375181a630129aad7a29e6a3c109d2379ac77ea';
             const run=(await github.rest.actions.getWorkflowRun({owner,repo,run_id:runId})).data;
             if(run.head_sha!==source)throw Error('Unexpected recovery source');
             const jobs=(await github.rest.actions.listJobsForWorkflowRun({owner,repo,run_id:runId})).data.jobs;
@@ -39,13 +39,13 @@ jobs:
             const diff=(await github.rest.repos.compareCommitsWithBasehead({owner,repo,basehead:source+'...'+context.sha})).data;
             if(!diff.files?.length||diff.files.some(file=>!file.filename.startsWith('.github/')))throw Error('Runtime source differs from the tested build');
             const artifacts=(await github.rest.actions.listWorkflowRunArtifacts({owner,repo,run_id:runId})).data.artifacts;
-            const artifact=artifacts.find(a=>a.id===14858923706&&!a.expired);
-            if(!artifact||artifact.digest!=='sha256:bef145fff30980aeb2050d922b3b74c74554923b61e60e2fd702ffc63e8c6457')throw Error('Recovery artifact missing, expired, or changed');
+            const artifact=artifacts.find(a=>a.id===14899334345&&!a.expired);
+            if(!artifact||artifact.digest!=='sha256:2dea98fa68424ecd3c6219c1154b64c044f41173d5fe54d8d180f348498ea4fa')throw Error('Recovery artifact missing, expired, or changed');
             core.setOutput('artifact_id',artifact.id);
       - uses: actions/download-artifact@v4
         with:
           artifact-ids: ${{ steps.verified.outputs.artifact_id }}
-          run-id: 45255728556
+          run-id: 45348677885
           github-token: ${{ github.token }}
           path: recovered
           merge-multiple: true
