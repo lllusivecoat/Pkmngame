@@ -105,3 +105,5 @@ body:not(.reduce-map-motion) .gym-visitor.hall-visitor.is-arriving{animation:gym
 .gym-prize>span>small{display:block;margin-top:4px;font-size:10px}.world-viewport[data-outdoors="true"][data-world-period="Night"] .environment-sprite{filter:brightness(.8) saturate(.8)}
 
 .night-window{position:absolute;width:1%;height:.8%;background:#ffe3a0;box-shadow:0 0 10px 5px #ffd67b88;opacity:0;border-radius:25%;mix-blend-mode:screen}[data-world-period="Night"] .night-window{opacity:.9}[data-world-period="Dusk"] .night-window{opacity:.45}
+
+.reduce-map-motion .night-firefly{animation:none!important;opacity:.6}

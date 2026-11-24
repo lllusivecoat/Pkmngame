@@ -27,7 +27,7 @@ export function visitTownShop(s){if(s.gym.world.trip)return 'Return to town with
 
 export function canTalkToShopkeeper(s){const w=s.gym.world;return ['shop','market'].includes(w.location)&&!s.gym.session&&!w.reserve.activeUid&&Math.abs(w.position.x-5)+Math.abs(w.position.y-5)<=1}
 
-export function visitPokemonMarket(s){if(s.gym.session||s.gym.world.reserve.activeUid)return 'Finish the current challenge or encounter first.';s.gym.world.location='market';s.gym.world.position={x:5,y:9};s.gym.world.facing='up';return 'Welcome to the Pokémon Market.'}
+export function visitPokemonMarket(s){if(s.gym.world.trip)return 'Return to Bellwick with Rook before visiting the Market.';if(s.gym.session||s.gym.world.reserve.activeUid)return 'Finish the current challenge or encounter first.';s.gym.world.location='market';s.gym.world.position={x:5,y:9};s.gym.world.facing='up';return 'Welcome to the Pokémon Market.'}
 
 // Standard wild generation: independent uniform IVs, all 25 natures, normal ability slots, zero EVs.
 export const WILD_NATURES='Hardy Lonely Brave Adamant Naughty Bold Docile Relaxed Impish Lax Timid Hasty Serious Jolly Naive Modest Mild Quiet Bashful Rash Calm Gentle Sassy Careful Quirky'.split(' ');
