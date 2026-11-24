@@ -1,5 +1,5 @@
-import {gymEmblems,hallFurniture,normalizeGymDesign,designPresets,emblemMark} from './gym-design.js?v=20261125-care1';
-import {environmentSprite} from './environment-art.js?v=20261125-care1';
+import {gymEmblems,hallFurniture,normalizeGymDesign,designPresets,emblemMark} from './gym-design.js?v=20261126-nursejoy3';
+import {environmentSprite} from './environment-art.js?v=20261126-nursejoy3';
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const labels={floorColor:'Floor colour',borderColor:'Border colour',wallColor:'Wall colour',carpetColor:'Runner colour',courtColor:'Battle carpet colour',trimColor:'Trim colour',emblemColor:'Emblem colour'};
 const options=(items,selected)=>items.map(([id,label])=>`<option value="${id}" ${id===selected?'selected':''}>${label}</option>`).join('');

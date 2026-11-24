@@ -1,7 +1,7 @@
-import {expandedSpecies} from './engine-data.js?v=20261125-care1';
-import {modernExperienceYields} from './experience-data.js?v=20261125-care1';
-import {addExperience,awardEVs} from './progression.js?v=20261125-care1';
-import {statsFor} from './rules.js?v=20261125-care1';
+import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy3';
+import {modernExperienceYields} from './experience-data.js?v=20261126-nursejoy3';
+import {addExperience,awardEVs} from './progression.js?v=20261126-nursejoy3';
+import {statsFor} from './rules.js?v=20261126-nursejoy3';
 const maxHP=c=>statsFor(c).hp;
 // Gen VIII scaled experience; Gym defence intentionally disables party Exp. Share.
 export function experienceGain(c,foe,{participated=true,traded=false,foreign=false,charm=false}={}){if(c.level>=100)return 0;const p=expandedSpecies[foe.species],base=modernExperienceYields[foe.experienceSpecies]??modernExperienceYields[foe.species]??modernExperienceYields[p?.formBase]??p?.baseExperience;if(!base)return 0;const L=Math.max(1,foe.level),lp=c.level,s=participated?1:2;let xp=(base*L/5/s)*((2*L+10)/(L+lp+10))**2.5+1;const lateEvolution=expandedSpecies[c.species]?.evos.some(id=>{const next=expandedSpecies[id];return next?.evoLevel&&lp>=next.evoLevel});for(const modifier of[traded?(foreign?1.7:1.5):1,c.heldItem==='luckyegg'?1.5:1,lateEvolution?4915/4096:1,(c.friendship||0)>=220?4915/4096:1,charm?1.5:1])xp*=modifier;return Math.max(1,Math.floor(xp))}
