@@ -1,5 +1,5 @@
-import {gymClock} from './gym-clock.js?v=20261124-remainingart1';
-import {expandedSpecies} from './engine-data.js?v=20261124-remainingart1';
+import {gymClock} from './gym-clock.js?v=20261124-rk3art1';
+import {expandedSpecies} from './engine-data.js?v=20261124-rk3art1';
 export const playerPeriod=s=>s.gym?gymClock(s).period:s.time||'Day';
 export const isNight=period=>period==='Night';
 const nocturnal=new Set('hoothoot noctowl murkrow honchkrow misdreavus mismagius gastly haunter gengar zubat golbat crobat umbreon chingling chimecho sableye shuppet banette duskull dusclops dusknoir sneasel weavile gligar gliscor spinarak ariados cleffa clefairy clefable lunatone volbeat illumise'.split(' '));

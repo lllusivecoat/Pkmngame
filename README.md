@@ -1,3 +1,9 @@
+RK3 fallback artwork — v0.66.0
+
+Adds 125 paired Normal/Shiny official-source fallbacks for entries with no suitable RK9 or RK1 image. RK3 is a game category, not an artist credit. Prefer named official illustrations and Dream World art; use exact-form HOME renders/stills where no suitable illustration exists. Every card records which source kind it uses. All families share the temporary gallery and folder, with an additional RK3 filter. Existing approved art and all 1,199 earlier RK9/RK1 entries remain unchanged. Shiny images are colour edits of the same Normal drawing, preserving alpha and outlines.
+
+Five entries remain pending: Cosplay Pikachu (PokeOS's numeric asset depicts Detective Pikachu instead) and the four Ogerpon Terastal states (no exact-form source). The builder deliberately excludes incorrect or borrowed form images. Audit: `docs/rk3-temporary-artwork.json`; rebuild: `python scripts/build-rk3-replacements.py` (Pillow, NumPy, SciPy; CairoSVG is optional for available Dream World vectors). No authentication, gameplay, save identity or ownership changes.
+
 Remaining artwork — v0.65.0
 
 Fills 646 missing catalogue entries with 1,292 local Normal/Shiny images. Prefer PokeOS RK9, otherwise use its outlined Final drawings labelled RK1. Together with earlier generations, the shared temporary gallery contains 1,199 species/forms. Existing approved paintings and all earlier assets are unchanged. Shiny versions recolour the same drawing, preserving pose, transparency and dark outlines; HOME renders are palette references only, never displayed assets.

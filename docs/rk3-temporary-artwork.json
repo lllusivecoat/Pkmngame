@@ -1,0 +1,3325 @@
+{
+  "archive": "https://www.pokeos.com/archive/artworks",
+  "count": 125,
+  "pendingCount": 5,
+  "entries": [
+    {
+      "id": "minior",
+      "name": "Minior",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-red.png",
+          "pokeosAssetId": 142761,
+          "sha256": "c278dcc2b7275ce77f20f200112547c0fde5025e1aa9985e60083614c3ee6eed",
+          "file": "assets/temporary-pokemon/normal/minior.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/minior.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-red.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-red.png",
+          "file": "assets/temporary-pokemon/shiny/minior.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "raticatealolatotem",
+      "name": "Raticate-Alola-Totem",
+      "number": 20,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/20-regional-a.png",
+          "pokeosAssetId": 141910,
+          "sha256": "8655a332961ba444f4b688304c24b7b7772901c8b35080c565cd329baea4b46c",
+          "file": "assets/temporary-pokemon/normal/raticatealolatotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/raticatealolatotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/20-regional-a.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/20-regional-a.png",
+          "file": "assets/temporary-pokemon/shiny/raticatealolatotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pikachurockstar",
+      "name": "Pikachu-Rock-Star",
+      "number": 25,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/25-rock-star.png",
+          "pokeosAssetId": 141986,
+          "sha256": "900fcbf153c3eba347107c2f7639c7267d488910bb69e4af4fad2d6f015c999d",
+          "file": "assets/temporary-pokemon/normal/pikachurockstar.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pikachurockstar.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10080.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10080.png",
+          "file": "assets/temporary-pokemon/shiny/pikachurockstar.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pikachubelle",
+      "name": "Pikachu-Belle",
+      "number": 25,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/25-belle.png",
+          "pokeosAssetId": 141977,
+          "sha256": "c13ecd4ccd972e2f60df7d9170fad44ee762bf46c711caaa578cc701b4989188",
+          "file": "assets/temporary-pokemon/normal/pikachubelle.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pikachubelle.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10081.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10081.png",
+          "file": "assets/temporary-pokemon/shiny/pikachubelle.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pikachupopstar",
+      "name": "Pikachu-Pop-Star",
+      "number": 25,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/25-pop-star.png",
+          "pokeosAssetId": 141985,
+          "sha256": "c3c3c9b0676e3e1c398d711a0047f7eea499621497ff702003e9c42da198f6d5",
+          "file": "assets/temporary-pokemon/normal/pikachupopstar.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pikachupopstar.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10082.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10082.png",
+          "file": "assets/temporary-pokemon/shiny/pikachupopstar.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pikachuphd",
+      "name": "Pikachu-PhD",
+      "number": 25,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/25-phd.png",
+          "pokeosAssetId": 141984,
+          "sha256": "11f9ef816a360ec88067214606d3dca823d0d953c11bafcb0e869d1a29074e98",
+          "file": "assets/temporary-pokemon/normal/pikachuphd.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pikachuphd.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10083.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10083.png",
+          "file": "assets/temporary-pokemon/shiny/pikachuphd.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pikachulibre",
+      "name": "Pikachu-Libre",
+      "number": 25,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/25-libre.png",
+          "pokeosAssetId": 141981,
+          "sha256": "069e23176cddb83a9f30763754091f1a6f0d0737c29c2f4910b391c20e079b8c",
+          "file": "assets/temporary-pokemon/normal/pikachulibre.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pikachulibre.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10084.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10084.png",
+          "file": "assets/temporary-pokemon/shiny/pikachulibre.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pikachustarter",
+      "name": "Pikachu-Starter",
+      "number": 25,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/25.png",
+          "pokeosAssetId": 141990,
+          "sha256": "576825801b2a84a1252395c04c22b8fa372f0c16778812604524d19b26478a6c",
+          "file": "assets/temporary-pokemon/normal/pikachustarter.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pikachustarter.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/25.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/25.png",
+          "file": "assets/temporary-pokemon/shiny/pikachustarter.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "marowakalolatotem",
+      "name": "Marowak-Alola-Totem",
+      "number": 105,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/105-regional-a.png",
+          "pokeosAssetId": 141775,
+          "sha256": "baa9b59e4e686c83c04bd1714443ae573b3f510e4d28b0c87a65714f3723d923",
+          "file": "assets/temporary-pokemon/normal/marowakalolatotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/marowakalolatotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/105-regional-a.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/105-regional-a.png",
+          "file": "assets/temporary-pokemon/shiny/marowakalolatotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "eeveestarter",
+      "name": "Eevee-Starter",
+      "number": 133,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/133.png",
+          "pokeosAssetId": 141819,
+          "sha256": "cfae2b46b44cde052bb07ccb6b88b9e59b1b2bc5b54a99e44b112424714fb3c1",
+          "file": "assets/temporary-pokemon/normal/eeveestarter.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/eeveestarter.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/133.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/133.png",
+          "file": "assets/temporary-pokemon/shiny/eeveestarter.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "greninjabond",
+      "name": "Greninja-Bond",
+      "number": 658,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/658.png",
+          "pokeosAssetId": 142565,
+          "sha256": "7c0830b4a91deacd85dd2dce690c876c787c1d6cfa017f8e8b91c6b9592a09ab",
+          "file": "assets/temporary-pokemon/normal/greninjabond.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/greninjabond.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/658.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/658.png",
+          "file": "assets/temporary-pokemon/shiny/greninjabond.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "floetteeternal",
+      "name": "Floette-Eternal",
+      "number": 670,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": "Blue stems/body become pale pink; black/red flower remains unchanged.",
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/670-eternal.png",
+          "pokeosAssetId": 142600,
+          "sha256": "a5e6494fe0645eb5ec3c40ef1ffda6b9e1efcac9856b3214e44f454aa8d24781",
+          "file": "assets/temporary-pokemon/normal/floetteeternal.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/floetteeternal.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/670-eternal.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/670-eternal.png",
+          "file": "assets/temporary-pokemon/shiny/floetteeternal.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "gumshoostotem",
+      "name": "Gumshoos-Totem",
+      "number": 735,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/735.png",
+          "pokeosAssetId": 142697,
+          "sha256": "f66ad598ec11b285c9ef69123b655162a45886cb2daaf43efaa1ed59389ed078",
+          "file": "assets/temporary-pokemon/normal/gumshoostotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/gumshoostotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/735.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/735.png",
+          "file": "assets/temporary-pokemon/shiny/gumshoostotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "vikavolttotem",
+      "name": "Vikavolt-Totem",
+      "number": 738,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/738.png",
+          "pokeosAssetId": 142700,
+          "sha256": "1b8bc2119955e04235b30963445f9e471e74489ffc16e161c399c7609a543e33",
+          "file": "assets/temporary-pokemon/normal/vikavolttotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/vikavolttotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/738.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/738.png",
+          "file": "assets/temporary-pokemon/shiny/vikavolttotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "ribombeetotem",
+      "name": "Ribombee-Totem",
+      "number": 743,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/743.png",
+          "pokeosAssetId": 142711,
+          "sha256": "9daf8f4903d9111dd3fcec4d16f141919fc4e9a8c130c2904e487cd7949a0930",
+          "file": "assets/temporary-pokemon/normal/ribombeetotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/ribombeetotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/743.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/743.png",
+          "file": "assets/temporary-pokemon/shiny/ribombeetotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "rockruffdusk",
+      "name": "Rockruff-Dusk",
+      "number": 744,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/744.png",
+          "pokeosAssetId": 142712,
+          "sha256": "20b681af9efb6b3d721aefe0d46bd1bebd63362e63a43062593bf534f001a78a",
+          "file": "assets/temporary-pokemon/normal/rockruffdusk.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/rockruffdusk.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/744.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/744.png",
+          "file": "assets/temporary-pokemon/shiny/rockruffdusk.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "araquanidtotem",
+      "name": "Araquanid-Totem",
+      "number": 752,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/752.png",
+          "pokeosAssetId": 142725,
+          "sha256": "e33f88523223ae9769bd6fc2338bde4dbc43a2c7b90a3c742cd7da74399cd885",
+          "file": "assets/temporary-pokemon/normal/araquanidtotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/araquanidtotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/752.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/752.png",
+          "file": "assets/temporary-pokemon/shiny/araquanidtotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "lurantistotem",
+      "name": "Lurantis-Totem",
+      "number": 754,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/754.png",
+          "pokeosAssetId": 142727,
+          "sha256": "4cf8dfeef3d3ed223d118a902030c650775d1d25c4e0fe6d8fc18ff04b936c7c",
+          "file": "assets/temporary-pokemon/normal/lurantistotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/lurantistotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/754.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/754.png",
+          "file": "assets/temporary-pokemon/shiny/lurantistotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "salazzletotem",
+      "name": "Salazzle-Totem",
+      "number": 758,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/758.png",
+          "pokeosAssetId": 142731,
+          "sha256": "08356c430e14366bd42e3b8634249e9f97fe45461255a343c2460620b13f2643",
+          "file": "assets/temporary-pokemon/normal/salazzletotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/salazzletotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/758.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/758.png",
+          "file": "assets/temporary-pokemon/shiny/salazzletotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "miniororange",
+      "name": "Minior-Orange",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-orange.png",
+          "pokeosAssetId": 142760,
+          "sha256": "6a29f624317cb4403d6f82935fd37c83d34b04c64a86b9ef13194a63f75dc3e5",
+          "file": "assets/temporary-pokemon/normal/miniororange.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/miniororange.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-orange.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-orange.png",
+          "file": "assets/temporary-pokemon/shiny/miniororange.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "minioryellow",
+      "name": "Minior-Yellow",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-yellow.png",
+          "pokeosAssetId": 142765,
+          "sha256": "25c147192782c0a1fdc260a33cca3c91c82c30d5ef42aaa08ca17d72d31233dd",
+          "file": "assets/temporary-pokemon/normal/minioryellow.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/minioryellow.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-yellow.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-yellow.png",
+          "file": "assets/temporary-pokemon/shiny/minioryellow.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "miniorgreen",
+      "name": "Minior-Green",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-green.png",
+          "pokeosAssetId": 142755,
+          "sha256": "d97e47c93a060cb93c54ec45cde3f2bcd84168c31d667ef257f0a10e8b8ae8dd",
+          "file": "assets/temporary-pokemon/normal/miniorgreen.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/miniorgreen.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-green.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-green.png",
+          "file": "assets/temporary-pokemon/shiny/miniorgreen.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "miniorblue",
+      "name": "Minior-Blue",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-blue.png",
+          "pokeosAssetId": 142753,
+          "sha256": "66b12bab89852319aef355ed65dc970f5e9223a3415a091c15ad7b36db69830d",
+          "file": "assets/temporary-pokemon/normal/miniorblue.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/miniorblue.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-blue.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-blue.png",
+          "file": "assets/temporary-pokemon/shiny/miniorblue.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "miniorindigo",
+      "name": "Minior-Indigo",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-indigo.png",
+          "pokeosAssetId": 142757,
+          "sha256": "3c8ee128c29d51935b8bcdfb17cbccc1d74fee5f522f725313d302029f2e8a95",
+          "file": "assets/temporary-pokemon/normal/miniorindigo.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/miniorindigo.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-indigo.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-indigo.png",
+          "file": "assets/temporary-pokemon/shiny/miniorindigo.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "miniorviolet",
+      "name": "Minior-Violet",
+      "number": 774,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/774-violet.png",
+          "pokeosAssetId": 142763,
+          "sha256": "4ecc4e332796db0c48dbb45fd1512aa26439dee6bd023cec3faba425c3a13f9a",
+          "file": "assets/temporary-pokemon/normal/miniorviolet.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/miniorviolet.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/774-violet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/774-violet.png",
+          "file": "assets/temporary-pokemon/shiny/miniorviolet.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "togedemarutotem",
+      "name": "Togedemaru-Totem",
+      "number": 777,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/777.png",
+          "pokeosAssetId": 142769,
+          "sha256": "23c1a1b19fb3c6a5eee5c6dd14c16166adf81694d5ada9922ee71799c8dcd829",
+          "file": "assets/temporary-pokemon/normal/togedemarutotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/togedemarutotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/777.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/777.png",
+          "file": "assets/temporary-pokemon/shiny/togedemarutotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "mimikyutotem",
+      "name": "Mimikyu-Totem",
+      "number": 778,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "Canonically identical appearance; size/ability/starting moves differ.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/778.png",
+          "pokeosAssetId": 142770,
+          "sha256": "932f6c091db8971b3f63979045c9304f843153e41dd77a1e8ea0883f3aa1287e",
+          "file": "assets/temporary-pokemon/normal/mimikyutotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/mimikyutotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/778.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/778.png",
+          "file": "assets/temporary-pokemon/shiny/mimikyutotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremierubycream",
+      "name": "Alcremie-Ruby-Cream",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-ruby-cream-strawberry-sweet.png",
+          "pokeosAssetId": 102705,
+          "sha256": "27ce8e990360266e9477b9bd2c8089ad60e06e56fdc17573f944c0996c9b88b8",
+          "file": "assets/temporary-pokemon/normal/alcremierubycream.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremierubycream.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-ruby-cream-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremierubycream.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremiematchacream",
+      "name": "Alcremie-Matcha-Cream",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-matcha-cream-strawberry-sweet.png",
+          "pokeosAssetId": 102984,
+          "sha256": "3a6e856083d043a98a0df2c9c27c0fa43b6a8a6969dcab5e01c265542d5dfd28",
+          "file": "assets/temporary-pokemon/normal/alcremiematchacream.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremiematchacream.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-matcha-cream-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremiematchacream.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremiemintcream",
+      "name": "Alcremie-Mint-Cream",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-mint-cream-strawberry-sweet.png",
+          "pokeosAssetId": 102955,
+          "sha256": "107c6617da0871d558d1d1a21c8b40fab54397ff8d2d1d17f555ede4cd74756a",
+          "file": "assets/temporary-pokemon/normal/alcremiemintcream.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremiemintcream.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-mint-cream-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremiemintcream.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremielemoncream",
+      "name": "Alcremie-Lemon-Cream",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-lemon-cream-strawberry-sweet.png",
+          "pokeosAssetId": 102815,
+          "sha256": "9f4b35f6109f781445053f81443c67dfdb4448a0834c62d9d00b2eda9f767bcb",
+          "file": "assets/temporary-pokemon/normal/alcremielemoncream.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremielemoncream.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-lemon-cream-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremielemoncream.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremierubyswirl",
+      "name": "Alcremie-Ruby-Swirl",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-ruby-swirl-strawberry-sweet.png",
+          "pokeosAssetId": 105161,
+          "sha256": "00d51f21fb27b6d6ffd53e32c80707e653d9348b7c21ba0445c522f20b2099bc",
+          "file": "assets/temporary-pokemon/normal/alcremierubyswirl.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremierubyswirl.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-ruby-swirl-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremierubyswirl.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremierainbowswirl",
+      "name": "Alcremie-Rainbow-Swirl",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-rainbow-swirl-strawberry-sweet.png",
+          "pokeosAssetId": 92587,
+          "sha256": "d8112d5df81d36deeb059531add57a6f077f03f0868e9e251bc223ce0c30157b",
+          "file": "assets/temporary-pokemon/normal/alcremierainbowswirl.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremierainbowswirl.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-rainbow-swirl-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremierainbowswirl.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremiesaltedcream",
+      "name": "Alcremie-Salted-Cream",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/869-salted-cream-strawberry-sweet.png",
+          "pokeosAssetId": 105056,
+          "sha256": "f1793dcd04a30f614259316c0c23cf9690455c9e22af0cdfc1dc4cff18cf1f7a",
+          "file": "assets/temporary-pokemon/normal/alcremiesaltedcream.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremiesaltedcream.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/869-salted-cream-strawberry-sweet.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/869.png",
+          "file": "assets/temporary-pokemon/shiny/alcremiesaltedcream.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "clefablemega",
+      "name": "Clefable-Mega",
+      "number": 36,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/36-mega.png",
+          "pokeosAssetId": 142140,
+          "sha256": "018c03e309ced015caec9c41797b0694caf434c81bca440e2c74bd9cab5aa130",
+          "file": "assets/temporary-pokemon/normal/clefablemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/clefablemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/36-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/36-mega.png",
+          "file": "assets/temporary-pokemon/shiny/clefablemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "meowthgmax",
+      "name": "Meowth-Gmax",
+      "number": 52,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/52-gmax.png",
+          "pokeosAssetId": 142363,
+          "sha256": "b54c6750c84100940a56fb17e3de6e4ee450d75b3e65bc6fa1a75b6869da6126",
+          "file": "assets/temporary-pokemon/normal/meowthgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/meowthgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/52-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/52-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/meowthgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "machampgmax",
+      "name": "Machamp-Gmax",
+      "number": 68,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/68-gmax.png",
+          "pokeosAssetId": 142617,
+          "sha256": "a530fde54a435381205cd0d2b12c0fc3926b88bc54496c311a77e83003b5afd1",
+          "file": "assets/temporary-pokemon/normal/machampgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/machampgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/68-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/68-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/machampgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "victreebelmega",
+      "name": "Victreebel-Mega",
+      "number": 71,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/71-mega.png",
+          "pokeosAssetId": 142659,
+          "sha256": "a29f8236c2dbc6f5d728b190f55eebf2d974b94514f3501f7885213baa2a6b5a",
+          "file": "assets/temporary-pokemon/normal/victreebelmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/victreebelmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/71-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/71-mega.png",
+          "file": "assets/temporary-pokemon/shiny/victreebelmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "kinglergmax",
+      "name": "Kingler-Gmax",
+      "number": 99,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/99-gmax.png",
+          "pokeosAssetId": 143061,
+          "sha256": "4561a4041c0707fb78e9d558b355dc0391fcb6f583d442b2b6dea9a70de231c7",
+          "file": "assets/temporary-pokemon/normal/kinglergmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/kinglergmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/99-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/99-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/kinglergmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "starmiemega",
+      "name": "Starmie-Mega",
+      "number": 121,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/121-mega.png",
+          "pokeosAssetId": 141797,
+          "sha256": "47d2b3cf04b942a6eda10570a08e5c711eaccd50339e883472fc1c511969bd62",
+          "file": "assets/temporary-pokemon/normal/starmiemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/starmiemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/121-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/121-mega.png",
+          "file": "assets/temporary-pokemon/shiny/starmiemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "snorlaxgmax",
+      "name": "Snorlax-Gmax",
+      "number": 143,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/143-gmax.png",
+          "pokeosAssetId": 141831,
+          "sha256": "816c5531346160367ea0adaa258972bdd4d77da1af5f2c4690dafe0dcd84858b",
+          "file": "assets/temporary-pokemon/normal/snorlaxgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/snorlaxgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/143-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/143-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/snorlaxgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "meganiummega",
+      "name": "Meganium-Mega",
+      "number": 154,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/154-mega.png",
+          "pokeosAssetId": 141851,
+          "sha256": "579699725a166f106e06628138c619dc62541b2b2bcf2440c6ba607e0bf77c27",
+          "file": "assets/temporary-pokemon/normal/meganiummega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/meganiummega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/154-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/154-mega.png",
+          "file": "assets/temporary-pokemon/shiny/meganiummega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "feraligatrmega",
+      "name": "Feraligatr-Mega",
+      "number": 160,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/160-mega.png",
+          "pokeosAssetId": 141860,
+          "sha256": "b3cc138e71fc90804d800fa7e4d22023c39d4aca2a5de7cebc93042db133f349",
+          "file": "assets/temporary-pokemon/normal/feraligatrmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/feraligatrmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/160-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/160-mega.png",
+          "file": "assets/temporary-pokemon/shiny/feraligatrmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "skarmorymega",
+      "name": "Skarmory-Mega",
+      "number": 227,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/227-mega.png",
+          "pokeosAssetId": 141948,
+          "sha256": "6d1e80849f51588bc1932c650e7ff2387c7ac082823ebee3788b025e2687337a",
+          "file": "assets/temporary-pokemon/normal/skarmorymega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/skarmorymega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/227-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/227-mega.png",
+          "file": "assets/temporary-pokemon/shiny/skarmorymega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "chimechomega",
+      "name": "Chimecho-Mega",
+      "number": 358,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/358-mega.png",
+          "pokeosAssetId": 142135,
+          "sha256": "9a46ba246cd11f127e334053333a30185b425164a4fa703eae36ca067417ab25",
+          "file": "assets/temporary-pokemon/normal/chimechomega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/chimechomega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/358-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/358-mega.png",
+          "file": "assets/temporary-pokemon/shiny/chimechomega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "absolmegaz",
+      "name": "Absol-Mega-Z",
+      "number": 359,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/359-mega-z.png",
+          "pokeosAssetId": 142137,
+          "sha256": "417d797d514f01895d4a8e5ba2c2816b942c722e78d70dea0d743d31bd7a289a",
+          "file": "assets/temporary-pokemon/normal/absolmegaz.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/absolmegaz.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/359-mega-z.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/359-mega-z.png",
+          "file": "assets/temporary-pokemon/shiny/absolmegaz.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "staraptormega",
+      "name": "Staraptor-Mega",
+      "number": 398,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/398-mega.png",
+          "pokeosAssetId": 142196,
+          "sha256": "a8aebadb8004ebd49af13b2028ebd3c399d12941602d9b9c49a91db95ece3893",
+          "file": "assets/temporary-pokemon/normal/staraptormega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/staraptormega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/398-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/398-mega.png",
+          "file": "assets/temporary-pokemon/shiny/staraptormega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "garchompmegaz",
+      "name": "Garchomp-Mega-Z",
+      "number": 445,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/445-mega-z.png",
+          "pokeosAssetId": 147569,
+          "sha256": "d38355894ec5a3d360356bc2e91f77ca18b5943a8e93180fe9be6b0550f640a9",
+          "file": "assets/temporary-pokemon/normal/garchompmegaz.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/garchompmegaz.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/445-mega-z.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/445-mega-z.png",
+          "file": "assets/temporary-pokemon/shiny/garchompmegaz.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "lucariomegaz",
+      "name": "Lucario-Mega-Z",
+      "number": 448,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/448-mega-z.png",
+          "pokeosAssetId": 142262,
+          "sha256": "e8df463c6c603640e3dfb91518c4f12e5bb8fadf01b0bcc84693a3614bb6e08b",
+          "file": "assets/temporary-pokemon/normal/lucariomegaz.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/lucariomegaz.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/448-mega-z.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/448-mega-z.png",
+          "file": "assets/temporary-pokemon/shiny/lucariomegaz.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "froslassmega",
+      "name": "Froslass-Mega",
+      "number": 478,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/478-mega.png",
+          "pokeosAssetId": 142299,
+          "sha256": "a0bb8ff942c59d707b65416560b8159b3afea23e87a8781c99cf9a48e20e69ed",
+          "file": "assets/temporary-pokemon/normal/froslassmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/froslassmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/478-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/478-mega.png",
+          "file": "assets/temporary-pokemon/shiny/froslassmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "heatranmega",
+      "name": "Heatran-Mega",
+      "number": 485,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/485-mega.png",
+          "pokeosAssetId": 142315,
+          "sha256": "b8687f0be1c6424abfa19f31c112cdecc2dc83ef9c480792cb35a951862f2876",
+          "file": "assets/temporary-pokemon/normal/heatranmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/heatranmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/485-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/485-mega.png",
+          "file": "assets/temporary-pokemon/shiny/heatranmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "darkraimega",
+      "name": "Darkrai-Mega",
+      "number": 491,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/491-mega.png",
+          "pokeosAssetId": 142324,
+          "sha256": "011ab4603f806be6b400ad66498f94748cf5fc31d5360911ed120afe8d04d2e5",
+          "file": "assets/temporary-pokemon/normal/darkraimega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/darkraimega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/491-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/491-mega.png",
+          "file": "assets/temporary-pokemon/shiny/darkraimega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "emboarmega",
+      "name": "Emboar-Mega",
+      "number": 500,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/500-mega.png",
+          "pokeosAssetId": 142339,
+          "sha256": "7d088f18373895518560abf1af7a5b969a69a6b753e8367755c7670ebf9388b7",
+          "file": "assets/temporary-pokemon/normal/emboarmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/emboarmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/500-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/500-mega.png",
+          "file": "assets/temporary-pokemon/shiny/emboarmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "excadrillmega",
+      "name": "Excadrill-Mega",
+      "number": 530,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/530-mega.png",
+          "pokeosAssetId": 142380,
+          "sha256": "c08a05f6f2dd9629788afbce2e46e1e93bdd5d08f6092f38d72e09002114a407",
+          "file": "assets/temporary-pokemon/normal/excadrillmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/excadrillmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/530-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/530-mega.png",
+          "file": "assets/temporary-pokemon/shiny/excadrillmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "scolipedemega",
+      "name": "Scolipede-Mega",
+      "number": 545,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/545-mega.png",
+          "pokeosAssetId": 142398,
+          "sha256": "6142fbc3946c7ab28a9331968be77f0528a43c098607c5bdb27e3f091a081e20",
+          "file": "assets/temporary-pokemon/normal/scolipedemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/scolipedemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/545-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/545-mega.png",
+          "file": "assets/temporary-pokemon/shiny/scolipedemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "scraftymega",
+      "name": "Scrafty-Mega",
+      "number": 560,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/560-mega.png",
+          "pokeosAssetId": 142421,
+          "sha256": "3d7e9fd3657bf37b1574ed46e496c1be410cd9c8bad45ad7923c873145aa402c",
+          "file": "assets/temporary-pokemon/normal/scraftymega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/scraftymega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/560-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/560-mega.png",
+          "file": "assets/temporary-pokemon/shiny/scraftymega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "garbodorgmax",
+      "name": "Garbodor-Gmax",
+      "number": 569,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/569-gmax.png",
+          "pokeosAssetId": 142432,
+          "sha256": "bb45f8cf615919180627e34e8d5d1c5fc7461411c3f72f688303f575fd9b991f",
+          "file": "assets/temporary-pokemon/normal/garbodorgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/garbodorgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/569-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/569-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/garbodorgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "eelektrossmega",
+      "name": "Eelektross-Mega",
+      "number": 604,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/604-mega.png",
+          "pokeosAssetId": 142488,
+          "sha256": "b92bb9e8cdc41e0fc6a0d566fff35c3a9d8d9b911d84c5e04e1e149db9b97222",
+          "file": "assets/temporary-pokemon/normal/eelektrossmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/eelektrossmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/604-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/604-mega.png",
+          "file": "assets/temporary-pokemon/shiny/eelektrossmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "chandeluremega",
+      "name": "Chandelure-Mega",
+      "number": 609,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/609-mega.png",
+          "pokeosAssetId": 142494,
+          "sha256": "dcadda1fd31f29fdcd35cd637228d4c2362fc9434a878003cd7114e75541ecdb",
+          "file": "assets/temporary-pokemon/normal/chandeluremega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/chandeluremega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/609-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/609-mega.png",
+          "file": "assets/temporary-pokemon/shiny/chandeluremega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "golurkmega",
+      "name": "Golurk-Mega",
+      "number": 623,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/623-mega.png",
+          "pokeosAssetId": 142512,
+          "sha256": "75574741461d0a44bfeadf0718f982cbf3eb8ce9b7a72093fa8a538276539a8e",
+          "file": "assets/temporary-pokemon/normal/golurkmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/golurkmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/623-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/623-mega.png",
+          "file": "assets/temporary-pokemon/shiny/golurkmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "chesnaughtmega",
+      "name": "Chesnaught-Mega",
+      "number": 652,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/652-mega.png",
+          "pokeosAssetId": 142554,
+          "sha256": "1a151f03ba42a172b6326374cab358f61db06c58b17c4c805a5bf01d8c8ab877",
+          "file": "assets/temporary-pokemon/normal/chesnaughtmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/chesnaughtmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/652-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/652-mega.png",
+          "file": "assets/temporary-pokemon/shiny/chesnaughtmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "delphoxmega",
+      "name": "Delphox-Mega",
+      "number": 655,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/655-mega.png",
+          "pokeosAssetId": 142558,
+          "sha256": "f248b38b88c4e84d4ce250ce9903d2aceca78103ddac3ecb2db51cb266702b3a",
+          "file": "assets/temporary-pokemon/normal/delphoxmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/delphoxmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/655-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/655-mega.png",
+          "file": "assets/temporary-pokemon/shiny/delphoxmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "greninjamega",
+      "name": "Greninja-Mega",
+      "number": 658,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/658-mega.png",
+          "pokeosAssetId": 142564,
+          "sha256": "016a4be533c887a494f8dbdb84b67aed6d8740409e99ab0e024d1f148b83b876",
+          "file": "assets/temporary-pokemon/normal/greninjamega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/greninjamega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/658-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/658-mega.png",
+          "file": "assets/temporary-pokemon/shiny/greninjamega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "pyroarmega",
+      "name": "Pyroar-Mega",
+      "number": 668,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/668-mega.png",
+          "pokeosAssetId": 142596,
+          "sha256": "421b989f0a8b33694cddcd468543f3a0dfc49b47e899d49943f9f02a92014c98",
+          "file": "assets/temporary-pokemon/normal/pyroarmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/pyroarmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/668-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/668-mega.png",
+          "file": "assets/temporary-pokemon/shiny/pyroarmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "floettemega",
+      "name": "Floette-Mega",
+      "number": 670,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/670-mega.png",
+          "pokeosAssetId": 142601,
+          "sha256": "abd6b7e91e0d7e92cf4359fd5586dec710c60263a5fb0aa97fb024a47f05175f",
+          "file": "assets/temporary-pokemon/normal/floettemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/floettemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/670-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/670-mega.png",
+          "file": "assets/temporary-pokemon/shiny/floettemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "meowsticmmega",
+      "name": "Meowstic-M-Mega",
+      "number": 678,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "This transformed appearance is shared by both base forms.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/678-mega.png",
+          "pokeosAssetId": 142615,
+          "sha256": "bfede21396c44bd833d475aee5a9d66c6c1ee972ecf0a4c40f983b0f1e39c261",
+          "file": "assets/temporary-pokemon/normal/meowsticmmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/meowsticmmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/678-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/678-mega.png",
+          "file": "assets/temporary-pokemon/shiny/meowsticmmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "meowsticfmega",
+      "name": "Meowstic-F-Mega",
+      "number": 678,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "This transformed appearance is shared by both base forms.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/678-mega.png",
+          "pokeosAssetId": 142615,
+          "sha256": "bfede21396c44bd833d475aee5a9d66c6c1ee972ecf0a4c40f983b0f1e39c261",
+          "file": "assets/temporary-pokemon/normal/meowsticfmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/meowsticfmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/678-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/678-mega.png",
+          "file": "assets/temporary-pokemon/shiny/meowsticfmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "malamarmega",
+      "name": "Malamar-Mega",
+      "number": 687,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/687-mega.png",
+          "pokeosAssetId": 142627,
+          "sha256": "76b8e443711a1a039b320b64bccd59494adc17cab55c5d9c23b66a108c8a1486",
+          "file": "assets/temporary-pokemon/normal/malamarmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/malamarmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/687-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/687-mega.png",
+          "file": "assets/temporary-pokemon/shiny/malamarmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "barbaraclemega",
+      "name": "Barbaracle-Mega",
+      "number": 689,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/689-mega.png",
+          "pokeosAssetId": 142630,
+          "sha256": "d01d7117e05fd1ef7a24a2417d88ed7b04313d046ab5e05a4ebc4bf7fa4321d8",
+          "file": "assets/temporary-pokemon/normal/barbaraclemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/barbaraclemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/689-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/689-mega.png",
+          "file": "assets/temporary-pokemon/shiny/barbaraclemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "dragalgemega",
+      "name": "Dragalge-Mega",
+      "number": 691,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/691-mega.png",
+          "pokeosAssetId": 142634,
+          "sha256": "6c59f64c7ec05c297af6829b2f73eef948f59bfaa1dcb61d857bfcc3d227f843",
+          "file": "assets/temporary-pokemon/normal/dragalgemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/dragalgemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/691-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/691-mega.png",
+          "file": "assets/temporary-pokemon/shiny/dragalgemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "hawluchamega",
+      "name": "Hawlucha-Mega",
+      "number": 701,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/701-mega.png",
+          "pokeosAssetId": 142647,
+          "sha256": "8094bef89db6d50dfc38d1e523e380720c19499f26b4118fd03cbc4bbc63c849",
+          "file": "assets/temporary-pokemon/normal/hawluchamega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/hawluchamega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/701-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/701-mega.png",
+          "file": "assets/temporary-pokemon/shiny/hawluchamega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "zygardemega",
+      "name": "Zygarde-Mega",
+      "number": 718,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/718-mega.png",
+          "pokeosAssetId": 142675,
+          "sha256": "ee17561d5a51fcf95009ca45dffd29be95a6b59c3e6d50cb0baafd7f2cd18aab",
+          "file": "assets/temporary-pokemon/normal/zygardemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/zygardemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/718-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/718-mega.png",
+          "file": "assets/temporary-pokemon/shiny/zygardemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "crabominablemega",
+      "name": "Crabominable-Mega",
+      "number": 740,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/740-mega.png",
+          "pokeosAssetId": 142704,
+          "sha256": "5f61bc062db5f72927ac8fcb0b1447c10c82e333ca31f980dce4f2ddcdaa4931",
+          "file": "assets/temporary-pokemon/normal/crabominablemega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/crabominablemega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/740-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/740-mega.png",
+          "file": "assets/temporary-pokemon/shiny/crabominablemega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "golisopodmega",
+      "name": "Golisopod-Mega",
+      "number": 768,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/768-mega.png",
+          "pokeosAssetId": 142743,
+          "sha256": "93ef6d05477e15d8695e8d0e7146a4fcae5e2a23858b9c0063fd1546b34712c8",
+          "file": "assets/temporary-pokemon/normal/golisopodmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/golisopodmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/768-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/768-mega.png",
+          "file": "assets/temporary-pokemon/shiny/golisopodmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallybug",
+      "name": "Silvally-Bug",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-bug.png",
+          "pokeosAssetId": 104739,
+          "sha256": "bcb842992b4d032eabd84260b0242072f07c7e6a0535073a0efda018b39438fc",
+          "file": "assets/temporary-pokemon/normal/silvallybug.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallybug.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-bug.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-bug.png",
+          "file": "assets/temporary-pokemon/shiny/silvallybug.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallydark",
+      "name": "Silvally-Dark",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-dark.png",
+          "pokeosAssetId": 104827,
+          "sha256": "d2ab8540d25e5834d29ccb1a8c8e937be4111a0fff1b60a97662dc9a085553a2",
+          "file": "assets/temporary-pokemon/normal/silvallydark.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallydark.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-dark.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-dark.png",
+          "file": "assets/temporary-pokemon/shiny/silvallydark.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallydragon",
+      "name": "Silvally-Dragon",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-dragon.png",
+          "pokeosAssetId": 99632,
+          "sha256": "5208cc9a8962210787e851c8f9dab66a1877953dea48ac364047d6b759f4889e",
+          "file": "assets/temporary-pokemon/normal/silvallydragon.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallydragon.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-dragon.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-dragon.png",
+          "file": "assets/temporary-pokemon/shiny/silvallydragon.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyelectric",
+      "name": "Silvally-Electric",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-electric.png",
+          "pokeosAssetId": 92439,
+          "sha256": "dc52a65c8067e930876c5ccf0353de44d08e0d551330c1c3377e91436e51856c",
+          "file": "assets/temporary-pokemon/normal/silvallyelectric.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyelectric.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-electric.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-electric.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyelectric.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyfairy",
+      "name": "Silvally-Fairy",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-fairy.png",
+          "pokeosAssetId": 99524,
+          "sha256": "14032a52a64aa51dcaee4cdcee87a20be6353f7320bb9a58d58dae68baff9a7e",
+          "file": "assets/temporary-pokemon/normal/silvallyfairy.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyfairy.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-fairy.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-fairy.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyfairy.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyfighting",
+      "name": "Silvally-Fighting",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-fighting.png",
+          "pokeosAssetId": 99469,
+          "sha256": "29e5dbcaffe37eaf21a324d0d28bbab08dc1c2f4b2ebbb0f1df22e902b60414a",
+          "file": "assets/temporary-pokemon/normal/silvallyfighting.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyfighting.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-fighting.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-fighting.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyfighting.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyfire",
+      "name": "Silvally-Fire",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-fire.png",
+          "pokeosAssetId": 99502,
+          "sha256": "c916e27fcce80e0ac0c1bbdda4007721edbfa553ce90247fd0678140c2af15ae",
+          "file": "assets/temporary-pokemon/normal/silvallyfire.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyfire.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-fire.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-fire.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyfire.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyflying",
+      "name": "Silvally-Flying",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-flying.png",
+          "pokeosAssetId": 99570,
+          "sha256": "f2690ad2a33c1e3c0660901b24912a460704411af37eb3ae48b4370aef8c1a32",
+          "file": "assets/temporary-pokemon/normal/silvallyflying.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyflying.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-flying.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-flying.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyflying.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyghost",
+      "name": "Silvally-Ghost",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-ghost.png",
+          "pokeosAssetId": 105038,
+          "sha256": "03527a52e89faef7bdcd257b86d97e1a59b3894c3c8182bbe54c88020b5150b2",
+          "file": "assets/temporary-pokemon/normal/silvallyghost.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyghost.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-ghost.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-ghost.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyghost.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallygrass",
+      "name": "Silvally-Grass",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-grass.png",
+          "pokeosAssetId": 104757,
+          "sha256": "c37457ea309600f9018adaf4cd78f5993877d6463113d9914c6603e49f88d9ba",
+          "file": "assets/temporary-pokemon/normal/silvallygrass.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallygrass.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-grass.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-grass.png",
+          "file": "assets/temporary-pokemon/shiny/silvallygrass.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyground",
+      "name": "Silvally-Ground",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-ground.png",
+          "pokeosAssetId": 104530,
+          "sha256": "21ede514f0024d0f4d801d183989454e9117e6c3192397603d195e9be847d71c",
+          "file": "assets/temporary-pokemon/normal/silvallyground.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyground.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-ground.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-ground.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyground.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyice",
+      "name": "Silvally-Ice",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-ice.png",
+          "pokeosAssetId": 92498,
+          "sha256": "c37050027fcb3de97db1cd9bbda761dc9180f565f82fa41284626b78b6c8c642",
+          "file": "assets/temporary-pokemon/normal/silvallyice.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyice.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-ice.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-ice.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyice.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallypoison",
+      "name": "Silvally-Poison",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-poison.png",
+          "pokeosAssetId": 102902,
+          "sha256": "5198c3bf08d3b8c6569f441f7a1a5dd4e7ae833584c981c659f4632c9aad9ded",
+          "file": "assets/temporary-pokemon/normal/silvallypoison.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallypoison.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-poison.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-poison.png",
+          "file": "assets/temporary-pokemon/shiny/silvallypoison.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallypsychic",
+      "name": "Silvally-Psychic",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-psychic.png",
+          "pokeosAssetId": 99466,
+          "sha256": "fbf0c37c6ef006f89e92f65be0a6dce7b4b969be89ae33379f51bb686ee844b2",
+          "file": "assets/temporary-pokemon/normal/silvallypsychic.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallypsychic.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-psychic.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-psychic.png",
+          "file": "assets/temporary-pokemon/shiny/silvallypsychic.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallyrock",
+      "name": "Silvally-Rock",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-rock.png",
+          "pokeosAssetId": 104628,
+          "sha256": "a72d53e3e79537db6b649a109483ea270d0b76bebb6c1e4baf8b685abbf5958b",
+          "file": "assets/temporary-pokemon/normal/silvallyrock.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallyrock.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-rock.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-rock.png",
+          "file": "assets/temporary-pokemon/shiny/silvallyrock.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallysteel",
+      "name": "Silvally-Steel",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-steel.png",
+          "pokeosAssetId": 92394,
+          "sha256": "556198c446926de02dd4e1d4f46bbde513ee3f2aa8122fb36b4209706b594f73",
+          "file": "assets/temporary-pokemon/normal/silvallysteel.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallysteel.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-steel.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-steel.png",
+          "file": "assets/temporary-pokemon/shiny/silvallysteel.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "silvallywater",
+      "name": "Silvally-Water",
+      "number": 773,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/773-water.png",
+          "pokeosAssetId": 104500,
+          "sha256": "30218fb67a7fcd1a1222ab42dc97f30df6e63bb4e7041099e8a03b32461ead56",
+          "file": "assets/temporary-pokemon/normal/silvallywater.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/silvallywater.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/773-water.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/773-water.png",
+          "file": "assets/temporary-pokemon/shiny/silvallywater.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "mimikyubusted",
+      "name": "Mimikyu-Busted",
+      "number": 778,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form still",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/animated/778-busted.gif",
+          "pokeosAssetId": 108134,
+          "sha256": "a3455d9088011c5e49a0f2a85b94a29271b026784e61c1fc0de7bb04927bfe26",
+          "file": "assets/temporary-pokemon/normal/mimikyubusted.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/mimikyubusted.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/animated/778-busted.gif",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/animated/shiny/778-busted.gif",
+          "file": "assets/temporary-pokemon/shiny/mimikyubusted.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "mimikyubustedtotem",
+      "name": "Mimikyu-Busted-Totem",
+      "number": 778,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form still",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/animated/778-busted.gif",
+          "pokeosAssetId": 108134,
+          "sha256": "a3455d9088011c5e49a0f2a85b94a29271b026784e61c1fc0de7bb04927bfe26",
+          "file": "assets/temporary-pokemon/normal/mimikyubustedtotem.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/mimikyubustedtotem.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/animated/778-busted.gif",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/animated/shiny/778-busted.gif",
+          "file": "assets/temporary-pokemon/shiny/mimikyubustedtotem.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "drampamega",
+      "name": "Drampa-Mega",
+      "number": 780,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/780-mega.png",
+          "pokeosAssetId": 142774,
+          "sha256": "f7d13f57ecefcce7290e996a84ac1c8e42ccc8bba056da265164ce049f7cecec",
+          "file": "assets/temporary-pokemon/normal/drampamega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/drampamega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/780-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/780-mega.png",
+          "file": "assets/temporary-pokemon/shiny/drampamega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "magearnamega",
+      "name": "Magearna-Mega",
+      "number": 801,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/801-mega.png",
+          "pokeosAssetId": 142805,
+          "sha256": "b95f0f536ab962d240b941f91e5d1e97e059c638e9f9933537f538ce7ba63faa",
+          "file": "assets/temporary-pokemon/normal/magearnamega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/magearnamega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/801-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/801-mega.png",
+          "file": "assets/temporary-pokemon/shiny/magearnamega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "magearnaoriginalmega",
+      "name": "Magearna-Original-Mega",
+      "number": 801,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/801-mega-original.png",
+          "pokeosAssetId": 154495,
+          "sha256": "d783116a39c6cc4545ba5722c5958e76ad00fabcac968b152f0568ba25684198",
+          "file": "assets/temporary-pokemon/normal/magearnaoriginalmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/magearnaoriginalmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/801-mega-original.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/801-mega-original.png",
+          "file": "assets/temporary-pokemon/shiny/magearnaoriginalmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "zeraoramega",
+      "name": "Zeraora-Mega",
+      "number": 807,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/807-mega.png",
+          "pokeosAssetId": 142812,
+          "sha256": "7f4b67eb4317b19c97d9b308cc0d326c1915e8f3a587358bbcd400d4aecae130",
+          "file": "assets/temporary-pokemon/normal/zeraoramega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/zeraoramega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/807-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/807-mega.png",
+          "file": "assets/temporary-pokemon/shiny/zeraoramega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "melmetalgmax",
+      "name": "Melmetal-Gmax",
+      "number": 809,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/809-gmax.png",
+          "pokeosAssetId": 142815,
+          "sha256": "4909911336483132acb148368da6a93a9523e3975c3b2f1548418f698e24a57f",
+          "file": "assets/temporary-pokemon/normal/melmetalgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/melmetalgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/809-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/809-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/melmetalgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "rillaboomgmax",
+      "name": "Rillaboom-Gmax",
+      "number": 812,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/812-gmax.png",
+          "pokeosAssetId": 142820,
+          "sha256": "aa4e79b02719cb3fab8cfbef99bbba6abbdbc6b93ee5dfe0d97fc6a9d54ddd9e",
+          "file": "assets/temporary-pokemon/normal/rillaboomgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/rillaboomgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/812-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/812-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/rillaboomgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "cinderacegmax",
+      "name": "Cinderace-Gmax",
+      "number": 815,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/815-gmax.png",
+          "pokeosAssetId": 142824,
+          "sha256": "07f20875b42611d88dcee08f022d6164d6141f937df57a35a7d8aa33818353b4",
+          "file": "assets/temporary-pokemon/normal/cinderacegmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/cinderacegmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/815-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/815-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/cinderacegmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "inteleongmax",
+      "name": "Inteleon-Gmax",
+      "number": 818,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/818-gmax.png",
+          "pokeosAssetId": 142828,
+          "sha256": "dfb68a2669d6e9e17276b9aef31487ef47f1eedcef7d18f4943bfe47bf282c31",
+          "file": "assets/temporary-pokemon/normal/inteleongmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/inteleongmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/818-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/818-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/inteleongmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "corviknightgmax",
+      "name": "Corviknight-Gmax",
+      "number": 823,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/823-gmax.png",
+          "pokeosAssetId": 142835,
+          "sha256": "b82d4fdb8f67c63da70de15fde2d680ae695eb24647d30f680af42448875dcd6",
+          "file": "assets/temporary-pokemon/normal/corviknightgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/corviknightgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/823-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/823-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/corviknightgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "orbeetlegmax",
+      "name": "Orbeetle-Gmax",
+      "number": 826,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/826-gmax.png",
+          "pokeosAssetId": 142839,
+          "sha256": "d099b2ac09e66b151aad0f6860942c3248ed728c66b43ee79e7e92528292366a",
+          "file": "assets/temporary-pokemon/normal/orbeetlegmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/orbeetlegmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/826-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/826-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/orbeetlegmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "drednawgmax",
+      "name": "Drednaw-Gmax",
+      "number": 834,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/834-gmax.png",
+          "pokeosAssetId": 142850,
+          "sha256": "fd42e811a822771b01c05cd2a53528e264c97adac1ed59e6e6f1cd78b5b4d990",
+          "file": "assets/temporary-pokemon/normal/drednawgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/drednawgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/834-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/834-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/drednawgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "coalossalgmax",
+      "name": "Coalossal-Gmax",
+      "number": 839,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/839-gmax.png",
+          "pokeosAssetId": 142856,
+          "sha256": "9d419c6302c88cc1a705e7cd91f9f95db895a6d6441da869c366b8a460e77e48",
+          "file": "assets/temporary-pokemon/normal/coalossalgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/coalossalgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/839-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/839-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/coalossalgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "flapplegmax",
+      "name": "Flapple-Gmax",
+      "number": 841,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/841-gmax.png",
+          "pokeosAssetId": 142860,
+          "sha256": "8cf971d80142c5dd0d00a8d029747c60123fbed2952e98cd94cc43861249aaad",
+          "file": "assets/temporary-pokemon/normal/flapplegmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/flapplegmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/841-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/841-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/flapplegmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "appletungmax",
+      "name": "Appletun-Gmax",
+      "number": 842,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/842-gmax.png",
+          "pokeosAssetId": 142862,
+          "sha256": "8cf971d80142c5dd0d00a8d029747c60123fbed2952e98cd94cc43861249aaad",
+          "file": "assets/temporary-pokemon/normal/appletungmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/appletungmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/842-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/842-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/appletungmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "sandacondagmax",
+      "name": "Sandaconda-Gmax",
+      "number": 844,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/844-gmax.png",
+          "pokeosAssetId": 142865,
+          "sha256": "8f99b0404db55a5c19b67b26d3ee2b0317545bf857874968d632f4548114a396",
+          "file": "assets/temporary-pokemon/normal/sandacondagmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/sandacondagmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/844-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/844-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/sandacondagmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "toxtricitygmax",
+      "name": "Toxtricity-Gmax",
+      "number": 849,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/849-gmax.png",
+          "pokeosAssetId": 142872,
+          "sha256": "e047e8e07793bc573ca45fbdcc84920f259f7c1fd9b38980615ad5ef5fb46e51",
+          "file": "assets/temporary-pokemon/normal/toxtricitygmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/toxtricitygmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/849-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/849-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/toxtricitygmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "toxtricitylowkeygmax",
+      "name": "Toxtricity-Low-Key-Gmax",
+      "number": 849,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": "This transformed appearance is shared by both base forms.",
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/849-gmax.png",
+          "pokeosAssetId": 142872,
+          "sha256": "e047e8e07793bc573ca45fbdcc84920f259f7c1fd9b38980615ad5ef5fb46e51",
+          "file": "assets/temporary-pokemon/normal/toxtricitylowkeygmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/toxtricitylowkeygmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/849-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/849-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/toxtricitylowkeygmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "centiskorchgmax",
+      "name": "Centiskorch-Gmax",
+      "number": 851,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/851-gmax.png",
+          "pokeosAssetId": 142876,
+          "sha256": "cb12ac80cbd28dfd63dcac99adbf02be11878bbaec83ebd704ec04a9933197fb",
+          "file": "assets/temporary-pokemon/normal/centiskorchgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/centiskorchgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/851-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/851-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/centiskorchgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "hatterenegmax",
+      "name": "Hatterene-Gmax",
+      "number": 858,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/858-gmax.png",
+          "pokeosAssetId": 142884,
+          "sha256": "9e9251631f953b4b9bb9f0310548c043d7899faaebde47823d2b3514ea67676a",
+          "file": "assets/temporary-pokemon/normal/hatterenegmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/hatterenegmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/858-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/858-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/hatterenegmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "grimmsnarlgmax",
+      "name": "Grimmsnarl-Gmax",
+      "number": 861,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/861-gmax.png",
+          "pokeosAssetId": 142889,
+          "sha256": "ae3b6bc6aa0a49cb2c741c666ceefe4a3a1d61b9d94b8847a1ba30894b513f50",
+          "file": "assets/temporary-pokemon/normal/grimmsnarlgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/grimmsnarlgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/861-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/861-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/grimmsnarlgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "alcremiegmax",
+      "name": "Alcremie-Gmax",
+      "number": 869,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/869-gmax.png",
+          "pokeosAssetId": 142898,
+          "sha256": "f500c18374abb090c623f9ee627f7fefee5583ed22122ff4512a4266a9fca501",
+          "file": "assets/temporary-pokemon/normal/alcremiegmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/alcremiegmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/869-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/869-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/alcremiegmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "falinksmega",
+      "name": "Falinks-Mega",
+      "number": 870,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/870-mega.png",
+          "pokeosAssetId": 142901,
+          "sha256": "7c96c41ed4825c1b80ebc366642e6077d92b4b3709efc3f4720f877b590dee9e",
+          "file": "assets/temporary-pokemon/normal/falinksmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/falinksmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/870-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/870-mega.png",
+          "file": "assets/temporary-pokemon/shiny/falinksmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "copperajahgmax",
+      "name": "Copperajah-Gmax",
+      "number": 879,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/879-gmax.png",
+          "pokeosAssetId": 142913,
+          "sha256": "3f18ebb997d80bbe67cc10a56d23fe19939cf323993285e8606eca049c614364",
+          "file": "assets/temporary-pokemon/normal/copperajahgmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/copperajahgmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/879-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/879-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/copperajahgmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "duraludongmax",
+      "name": "Duraludon-Gmax",
+      "number": 884,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/884-gmax.png",
+          "pokeosAssetId": 142921,
+          "sha256": "91fce2657211886f9bc410d9affd83ee5100e7a61a4f99b58f20cd1b1b2049da",
+          "file": "assets/temporary-pokemon/normal/duraludongmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/duraludongmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/884-gmax.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/versions/v1.0.0/shiny/884-gmax.png",
+          "file": "assets/temporary-pokemon/shiny/duraludongmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "eternatuseternamax",
+      "name": "Eternatus-Eternamax",
+      "number": 890,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/10190.png",
+          "pokeosAssetId": 147481,
+          "sha256": "ca5647d2024a0fd1c5b30f4f13dca81e48e7743db96f4e3ff50076abb5f31c80",
+          "file": "assets/temporary-pokemon/normal/eternatuseternamax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/eternatuseternamax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10190.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10190.png",
+          "file": "assets/temporary-pokemon/shiny/eternatuseternamax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "urshifugmax",
+      "name": "Urshifu-Gmax",
+      "number": 892,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/892-single-strike-gmax.png",
+          "pokeosAssetId": 142936,
+          "sha256": "d1351b62c11044ab6183be1c67c761b5c29b53f3192fb81d846fd7f77a060ae5",
+          "file": "assets/temporary-pokemon/normal/urshifugmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/urshifugmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10226.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10226.png",
+          "file": "assets/temporary-pokemon/shiny/urshifugmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "urshifurapidstrikegmax",
+      "name": "Urshifu-Rapid-Strike-Gmax",
+      "number": 892,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/892-rapid-strike-gmax.png",
+          "pokeosAssetId": 142934,
+          "sha256": "9ea900fbd84e30aeb5872d8a6a3fa5d8f4c47ef974338ef8242dab70b32c7f02",
+          "file": "assets/temporary-pokemon/normal/urshifurapidstrikegmax.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/urshifurapidstrikegmax.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/10227.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/10227.png",
+          "file": "assets/temporary-pokemon/shiny/urshifurapidstrikegmax.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "scovillainmega",
+      "name": "Scovillain-Mega",
+      "number": 952,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/952-mega.png",
+          "pokeosAssetId": 143014,
+          "sha256": "b5686c4c85ace8d76a34454f13491e42bb2ba00dc67cb410b25e3d88e05424b2",
+          "file": "assets/temporary-pokemon/normal/scovillainmega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/scovillainmega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/952-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/952-mega.png",
+          "file": "assets/temporary-pokemon/shiny/scovillainmega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "glimmoramega",
+      "name": "Glimmora-Mega",
+      "number": 970,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/970-mega.png",
+          "pokeosAssetId": 143036,
+          "sha256": "0745a0f19d2c20a60d7b167644e84a7ed956f4bbefc4bbda88fb2680a6bd067c",
+          "file": "assets/temporary-pokemon/normal/glimmoramega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/glimmoramega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/970-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/970-mega.png",
+          "file": "assets/temporary-pokemon/shiny/glimmoramega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "tatsugiricurlymega",
+      "name": "Tatsugiri-Curly-Mega",
+      "number": 978,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/978-mega.png",
+          "pokeosAssetId": 154553,
+          "sha256": "1b2c2311437bdd338c3c7b3157021d64e6274f5d3c9cdf12d0334ae0deaa9bef",
+          "file": "assets/temporary-pokemon/normal/tatsugiricurlymega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/tatsugiricurlymega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/978-mega.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/978-mega.png",
+          "file": "assets/temporary-pokemon/shiny/tatsugiricurlymega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "tatsugiridroopymega",
+      "name": "Tatsugiri-Droopy-Mega",
+      "number": 978,
+      "artFamily": "RK3",
+      "sourceKind": "Official HOME form render",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/home/render/978-mega-droopy.png",
+          "pokeosAssetId": 154551,
+          "sha256": "3abc6cda69dd90ab1c69b35ed3899771d964b5fcca05e28473dadd25e3ceaeef",
+          "file": "assets/temporary-pokemon/normal/tatsugiridroopymega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/tatsugiridroopymega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/978-mega-droopy.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/978-mega-droopy.png",
+          "file": "assets/temporary-pokemon/shiny/tatsugiridroopymega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    },
+    {
+      "id": "tatsugiristretchymega",
+      "name": "Tatsugiri-Stretchy-Mega",
+      "number": 978,
+      "artFamily": "RK3",
+      "sourceKind": "Official illustration",
+      "visualAlias": null,
+      "manualPalette": null,
+      "palettes": {
+        "normal": {
+          "source": "https://assets.pokeos.com/pokemon/artworks/official/978-mega-stretchy.png",
+          "pokeosAssetId": 143047,
+          "sha256": "a32ee6fcbbe86206dd6403f6b9f5bf509ba8a58865e968e6dba85ff78f4b9bed",
+          "file": "assets/temporary-pokemon/normal/tatsugiristretchymega.svg"
+        },
+        "shiny": {
+          "sourceDrawing": "assets/temporary-pokemon/normal/tatsugiristretchymega.svg",
+          "canonicalNormal": "https://assets.pokeos.com/pokemon/home/render/978-mega-stretchy.png",
+          "canonicalShiny": "https://assets.pokeos.com/pokemon/home/render/shiny/978-mega-stretchy.png",
+          "file": "assets/temporary-pokemon/shiny/tatsugiristretchymega.svg",
+          "alphaPreserved": true,
+          "inkCutoff": 43,
+          "paletteIdentical": false
+        }
+      }
+    }
+  ],
+  "pending": [
+    {
+      "id": "pikachucosplay",
+      "name": "Pikachu-Cosplay",
+      "number": 25,
+      "forme": "Cosplay",
+      "kind": "alternate",
+      "stem": "10085",
+      "candidates": [],
+      "references": {
+        "normal": {
+          "id": 104536,
+          "pokemon_species_id": "10085",
+          "path": "./home/render/10085.png"
+        },
+        "shiny": {
+          "id": 103810,
+          "pokemon_species_id": "10085",
+          "path": "./home/render/shiny/10085.png"
+        }
+      },
+      "reason": "PokeOS file 10085 depicts Detective Pikachu, not Cosplay Pikachu."
+    },
+    {
+      "id": "ogerpontealtera",
+      "name": "Ogerpon-Teal-Tera",
+      "number": 1017,
+      "forme": "Teal-Tera",
+      "kind": "battle",
+      "stem": "1017-teal-tera",
+      "candidates": [],
+      "references": null,
+      "reason": "No exact-form source or reliable paired palette reference in PokeOS."
+    },
+    {
+      "id": "ogerponwellspringtera",
+      "name": "Ogerpon-Wellspring-Tera",
+      "number": 1017,
+      "forme": "Wellspring-Tera",
+      "kind": "battle",
+      "stem": "1017-wellspring-tera",
+      "candidates": [],
+      "references": null,
+      "reason": "No exact-form source or reliable paired palette reference in PokeOS."
+    },
+    {
+      "id": "ogerponhearthflametera",
+      "name": "Ogerpon-Hearthflame-Tera",
+      "number": 1017,
+      "forme": "Hearthflame-Tera",
+      "kind": "battle",
+      "stem": "1017-hearthflame-tera",
+      "candidates": [],
+      "references": null,
+      "reason": "No exact-form source or reliable paired palette reference in PokeOS."
+    },
+    {
+      "id": "ogerponcornerstonetera",
+      "name": "Ogerpon-Cornerstone-Tera",
+      "number": 1017,
+      "forme": "Cornerstone-Tera",
+      "kind": "battle",
+      "stem": "1017-cornerstone-tera",
+      "candidates": [],
+      "references": null,
+      "reason": "No exact-form source or reliable paired palette reference in PokeOS."
+    }
+  ]
+}

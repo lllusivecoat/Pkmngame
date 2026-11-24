@@ -1,7 +1,7 @@
-import {characterSize} from './world-characters.js?v=20261124-remainingart1';
-import {excursionMaps,isExcursion} from './excursions-data.js?v=20261124-remainingart1';
-import {expandedSpecies} from './engine-data.js?v=20261124-remainingart1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261124-remainingart1';
+import {characterSize} from './world-characters.js?v=20261124-rk3art1';
+import {excursionMaps,isExcursion} from './excursions-data.js?v=20261124-rk3art1';
+import {expandedSpecies} from './engine-data.js?v=20261124-rk3art1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261124-rk3art1';
 export const guidePosition=location=>location==='town'?{x:18,y:21}:isExcursion(location)?{x:2,y:7}:null;
 export function canTalkGuide(s){const w=s.gym.world,p=guidePosition(w.location);return !!p&&!s.gym.session&&!w.reserve.activeUid&&Math.abs(p.x-w.position.x)+Math.abs(p.y-w.position.y)<=1}
 export function travelWithGuide(s,destination){if(!canTalkGuide(s))return 'Walk up to Rook first.';if(destination!=='town'&&!isExcursion(destination))return 'Choose one of Rook’s destinations.';const w=s.gym.world;w.location=destination;w.position=destination==='town'?{x:19,y:21}:{x:1,y:7};w.facing='right';w.excursionSteps=0;return 'Rook brought you to '+(destination==='town'?'Bellwick':excursionMaps[destination].name)+'.'}
