@@ -30,20 +30,32 @@ jobs:
         run: npm install --no-save --package-lock=false --ignore-scripts --no-audit --no-fund playwright-core@1.56.1
       - name: Browser gameplay checks
         run: |
-          node scripts/all-forms-browser-smoke.mjs
-          node scripts/gym-browser-smoke.mjs
-          node scripts/gen789-browser-smoke.mjs
-          node scripts/temporary-art-browser-smoke.mjs
-          node scripts/browser-smoke.mjs
-          node scripts/battle-scroll-smoke.mjs
-          node scripts/gym-design-smoke.mjs
-          node scripts/shop-developer-smoke.mjs
-          node scripts/battle-presentation-smoke.mjs
-          node scripts/welcome-rewards-smoke.mjs
-          node scripts/johto-hunting-smoke.mjs
-          node scripts/nursery-browser-smoke.mjs
-          node scripts/career-browser-smoke.mjs
-          node scripts/map-performance-smoke.mjs
+          (
+            set -e
+            node scripts/browser-smoke.mjs
+          ) &
+          broad_pid=$!
+          (
+            set -e
+            node scripts/all-forms-browser-smoke.mjs
+            node scripts/gym-browser-smoke.mjs
+            node scripts/gen789-browser-smoke.mjs
+            node scripts/temporary-art-browser-smoke.mjs
+            node scripts/battle-scroll-smoke.mjs
+            node scripts/gym-design-smoke.mjs
+            node scripts/shop-developer-smoke.mjs
+            node scripts/battle-presentation-smoke.mjs
+            node scripts/welcome-rewards-smoke.mjs
+            node scripts/johto-hunting-smoke.mjs
+            node scripts/nursery-browser-smoke.mjs
+            node scripts/career-browser-smoke.mjs
+            node scripts/map-performance-smoke.mjs
+          ) &
+          focused_pid=$!
+          checks_status=0
+          wait "$broad_pid" || checks_status=1
+          wait "$focused_pid" || checks_status=1
+          exit "$checks_status"
       - name: Save browser failure screenshots
         if: failure()
         uses: actions/upload-artifact@v4
