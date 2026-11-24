@@ -1,7 +1,7 @@
-import {characterSize} from './world-characters.js?v=20261126-nursejoy3';
-import {trainerPortrait} from './trainer-portraits.js?v=20261126-nursejoy3';
-import {healParty} from './items.js?v=20261126-nursejoy3';
-import {terrainPatterns} from './terrain-art.js?v=20261126-nursejoy3';
+import {characterSize} from './world-characters.js?v=20261125-trainers1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261125-trainers1';
+import {healParty} from './items.js?v=20261125-trainers1';
+import {terrainPatterns} from './terrain-art.js?v=20261125-trainers1';
 export const facilityNpcs={center:{name:'Nurse Joy',portrait:'nurse_joy',x:5,y:3},training:{name:'Kenji · Black Belt',portrait:'class_black_belt',x:5,y:3}};
 export function nearFacility(s){const w=s.gym.world,n=facilityNpcs[w.location];return !!n&&!s.gym.session&&!w.reserve.activeUid&&Math.abs(w.position.x-n.x)+Math.abs(w.position.y-n.y)<=2}
 export function facilityService(s){if(!nearFacility(s))return 'Walk up to the attendant first.';if(s.gym.world.location==='center'){healParty(s);return 'Nurse Joy: Your party is fully recovered! HP, status and move PP are restored, free of charge.'}return 'Kenji: Welcome to the training room! Personal training, practice drills and coaching services are planned for a future update.'}

@@ -754,3 +754,7 @@ From 0.52.0 the user replaces defeat-driven Shiny odds with mastery. Use the hig
 
 
 From 0.53.0: Market/Shop upgrade copy briefly previews only the next level’s actual unlocks. Market introductions are one sentence describing the destination: directly into the party, or available to encounter/catch in the wild reserve. Preserve all purchase mechanics, stock rules, prices and saved progress.
+
+### Live trainer spreadsheet · v0.69
+
+Gym defence and the Visitor’s Gallery now read editable teams, per-Pokémon levels and reputation bands from a live Google Sheet. Open **Settings → Live trainer teams → Edit trainer sheet**. Edit the Trainers tab using the Species ID reference; the game checks every 60 seconds, or use **Sync now**. Google may cache edits briefly. Accepted/active battles remain unchanged; invalid edits or offline access retain a last-valid/bundled backup. AI strategy stays automatic. See [editing instructions and integration details](docs/live-trainer-sheet.md).

@@ -1,24 +1,24 @@
-import {queueExperience,applyExperience} from './battle-experience.js?v=20261126-nursejoy3';
-import {isExcursion} from './excursions-data.js?v=20261126-nursejoy3';
-import {trainOpponent} from './trainer-training.js?v=20261126-nursejoy3';
-import {startBattleSummary} from './battle-summary.js?v=20261126-nursejoy3';
-import {earnGuildPoints} from './guild.js?v=20261126-nursejoy3';
-import {arenaOpponent,settleArena,arenaResultText} from './arena.js?v=20261126-nursejoy3';
-import {awardEVs,addExperience,validAbility} from './progression.js?v=20261126-nursejoy3';
-import {currentZone,trainerAt,returnToCenter} from './world.js?v=20261126-nursejoy3';
-import {createCreature,catchCreature,award,grow,updateAchievements,record} from './core.js?v=20261126-nursejoy3';
-import {statsFor,movesFor,moveCatalog,gameMoveId} from './rules.js?v=20261126-nursejoy3';
-import {abilityCatalog,expandedSpecies} from './engine-data.js?v=20261126-nursejoy3';
-import {ensureInventory,itemCount,spendItem,addItem,applyMedicine,itemCatalog,healParty,currentHP,itemContext,ppMaximum} from './items.js?v=20261126-nursejoy3';
-import {createSimulation,restoreSimulation,synchronize,settleSwitches,commitTurn,applyBattleMedicine,pokemonFor,Dex} from './sim-adapter.js?v=20261126-nursejoy3';
-import {fullCaptureChance,legacyBalls,captureChecks} from './capture.js?v=20261126-nursejoy3';
+import {queueExperience,applyExperience} from './battle-experience.js?v=20261125-trainers1';
+import {isExcursion} from './excursions-data.js?v=20261125-trainers1';
+import {trainOpponent} from './trainer-training.js?v=20261125-trainers1';
+import {startBattleSummary} from './battle-summary.js?v=20261125-trainers1';
+import {earnGuildPoints} from './guild.js?v=20261125-trainers1';
+import {arenaOpponent,settleArena,arenaResultText} from './arena.js?v=20261125-trainers1';
+import {awardEVs,addExperience,validAbility} from './progression.js?v=20261125-trainers1';
+import {currentZone,trainerAt,returnToCenter} from './world.js?v=20261125-trainers1';
+import {createCreature,catchCreature,award,grow,updateAchievements,record} from './core.js?v=20261125-trainers1';
+import {statsFor,movesFor,moveCatalog,gameMoveId} from './rules.js?v=20261125-trainers1';
+import {abilityCatalog,expandedSpecies} from './engine-data.js?v=20261125-trainers1';
+import {ensureInventory,itemCount,spendItem,addItem,applyMedicine,itemCatalog,healParty,currentHP,itemContext,ppMaximum} from './items.js?v=20261125-trainers1';
+import {createSimulation,restoreSimulation,synchronize,settleSwitches,commitTurn,applyBattleMedicine,pokemonFor,Dex} from './sim-adapter.js?v=20261125-trainers1';
+import {fullCaptureChance,legacyBalls,captureChecks} from './capture.js?v=20261125-trainers1';
 export const maxHP=c=>statsFor(c).hp;
 export const combatState=(b,c)=>b.states[c.uid]||{};
 export const battleMoves=(b,c)=>c.uid===b.active?b.moveChoices||[]:movesFor(c);
 export const usableMoves=(b,c)=>battleMoves(b,c).filter(m=>!m.disabled&&(m.ppCurrent??b.pp[c.uid]?.[m.id]??1)>0);
 function make(s,team,{arena=false,gym=null,leader=null,trainer=null,gymData=null,rated=true}={}){ensureInventory(s);if(!s.party.length)throw Error('Party is empty');if(s.party.every(uid=>currentHP(s.collection.find(c=>c.uid===uid))<=0))healParty(s);const b={rewardStart:startBattleSummary(s),team,index:0,wild:team[0],active:s.party[0],hp:maxHP(team[0]),max:maxHP(team[0]),health:{},pp:{},states:{},fields:{ally:{},enemy:{}},turn:0,arena,rated,matchId:arena?globalThis.crypto.randomUUID():null,gym,leader,trainer,gymData,effects:[],damage:null,status:'',playerStatus:{},rewarded:[],log:[trainer?`${leader} challenges you to a friendly battle!`:gym?`${leader} welcomes you to ${gym} Gym.`:arena?'AI practice · three opponents. HP and PP restored.':'A wild '+expandedSpecies[team[0].species].name+' appeared!']};const sim=createSimulation(b,s,{restored:arena});return synchronize(b,sim,s,{persist:true})}
 export function beginBattle(s,wild,arena=false,{rated=true}={}){if(!arena)return make(s,[wild]);const level=Math.max(6,Math.min(35,Math.round(s.party.reduce((n,id)=>n+s.collection.find(c=>c.uid===id).level,0)/s.party.length))),opponent=arenaOpponent(s);return make(s,opponent.team.map((id,i)=>createCreature(id,Math.min(100,level+(i===2?1:0)))),{arena,rated,leader:opponent.name})}
-export function beginDefenseBattle(s,challenger){const tier=challenger.aiTier||'rookie',limited={...s,party:challenger.galleryVisit?s.party:s.party.slice(0,challenger.team.length)};const b=make(limited,challenger.team.map(id=>trainOpponent(createCreature(id,challenger.level),tier)),{arena:true,trainer:'gym-visitor',leader:challenger.name,rated:false});b.defense=true;b.gymDefence=!challenger.galleryVisit;b.aiDifficulty=tier;b.aiMemory={lastSwitchTurn:-99};b.defenderLimit=challenger.galleryVisit?6:challenger.team.length;return b}
+export function beginDefenseBattle(s,challenger){const tier=challenger.aiTier||'rookie',limited={...s,party:challenger.galleryVisit?s.party:s.party.slice(0,challenger.team.length)};const b=make(limited,challenger.team.map((id,i)=>trainOpponent(createCreature(id,challenger.teamLevels?.[i]??challenger.level),tier)),{arena:true,trainer:'gym-visitor',leader:challenger.name,rated:false});b.defense=true;b.gymDefence=!challenger.galleryVisit;b.aiDifficulty=tier;b.aiMemory={lastSwitchTurn:-99};b.defenderLimit=challenger.galleryVisit?6:challenger.team.length;return b}
 export function beginGymBattle(s){const z=currentZone(s);if(!z.gym||s.position.x!==z.gym.x||s.position.y!==z.gym.y||!s.started||!s.party.length)return null;return make(s,z.gym.team.map((id,i)=>createCreature(id,z.levels[1]+i)),{arena:true,gym:z.name,leader:z.gym.leader})}
 export function beginTrainerBattle(s){const t=trainerAt(s);if(!s.started||!t||!s.party.length)return null;return make(s,t.team.map((id,i)=>createCreature(id,t.level+i)),{arena:true,trainer:t.id,leader:t.name,gym:t.challenge?.name||null,gymData:t.challenge||null})}
 function rewards(s,b,sim){for(const p of sim.p2.pokemon){const uid=b.names[p.set.name];if(!p.fainted||b.rewarded.includes(uid))continue;b.rewarded.push(uid);if(!b.arena){s.speciesDefeats??={};const species=b.creatures[uid].species;s.speciesDefeats[species]=(s.speciesDefeats[species]||0)+1}earnGuildPoints(s,5);record(s,b.creatures[uid],false,{battle:true});s.wins++;const active=s.collection.find(c=>c.uid===b.active),money=active?.heldItem==='amuletcoin'||active?.heldItem==='luckincense'?160:80;if(b.arena&&!b.defense)s.coins+=money;award(s,60);queueExperience(s,b,{...b.creatures[uid],experienceSpecies:p.species.id},sim);}}

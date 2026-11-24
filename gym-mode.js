@@ -1,19 +1,20 @@
-import {normalizeGallery,ensureGallery,galleryOpponent} from './visitor-gallery.js?v=20261126-nursejoy3';
-import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261126-nursejoy3';
-import {normalizeNursery} from './breeding.js?v=20261126-nursejoy3';
-import {startBattleSummary} from './battle-summary.js?v=20261126-nursejoy3';
-import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261126-nursejoy3';
-import {normalizeFacilities} from './gym-commerce.js?v=20261126-nursejoy3';
-import {normalizeGymDesign} from './gym-design.js?v=20261126-nursejoy3';
-import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261126-nursejoy3';
-import {normalizeReserve} from './gym-world.js?v=20261126-nursejoy3';
-import {normalizeTown} from './town.js?v=20261126-nursejoy3';
-import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy3';
-import {trainerDirectory} from './trainer-directory.js?v=20261126-nursejoy3';
+import {trainerFeed,applyTrainerTeam} from './trainer-feed.js?v=20261125-trainers1';
+import {normalizeGallery,ensureGallery,galleryOpponent} from './visitor-gallery.js?v=20261125-trainers1';
+import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261125-trainers1';
+import {normalizeNursery} from './breeding.js?v=20261125-trainers1';
+import {startBattleSummary} from './battle-summary.js?v=20261125-trainers1';
+import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261125-trainers1';
+import {normalizeFacilities} from './gym-commerce.js?v=20261125-trainers1';
+import {normalizeGymDesign} from './gym-design.js?v=20261125-trainers1';
+import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261125-trainers1';
+import {normalizeReserve} from './gym-world.js?v=20261125-trainers1';
+import {normalizeTown} from './town.js?v=20261125-trainers1';
+import {expandedSpecies} from './engine-data.js?v=20261125-trainers1';
+import {trainerDirectory} from './trainer-directory.js?v=20261125-trainers1';
 // Gym management domain. Storage is independent of the legacy adventure save.
-import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261126-nursejoy3';
-import {healParty,addItem} from './items.js?v=20261126-nursejoy3';
-import {beginDefenseBattle} from './battle.js?v=20261126-nursejoy3';
+import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261125-trainers1';
+import {healParty,addItem} from './items.js?v=20261125-trainers1';
+import {beginDefenseBattle} from './battle.js?v=20261125-trainers1';
 export const GYM_SAVE_KEY='greenwood.gym.v1';
 const previousStock=[
  ['bulbasaur',550,8,0],['charmander',550,8,0],['squirtle',550,8,0],['pikachu',1000,10,0],['eevee',1100,10,0],['geodude',450,8,0],['oddish',450,8,0],['pidgey',400,8,0],
@@ -48,8 +49,9 @@ export function buyGymPokemon(s,id){if(s.gym.session)return 'Finish the current 
 export function buyDecoration(s,id){if(s.gym.session)return 'Finish the current challenge first.';if(!s.collection.length)return 'Buy your first Pokémon before decorations.';const d=decorations.find(d=>d.id===id);if(!d||s.coins<d.price)return 'Not enough coins.';if((s.gym.ownedDecor[id]||0)>=20)return 'You already own 20 of this decoration.';s.coins-=d.price;s.gym.ownedDecor[id]=(s.gym.ownedDecor[id]||0)+1;return d.name+' purchased. Select it and tap a floor tile.'}
 export function canPlace(s,x,y){return Number.isInteger(x)&&Number.isInteger(y)&&x>=0&&x<9&&y>=0&&y<9&&!(x===4||y<=1||y===8||(x>=2&&x<=6&&y>=3&&y<=5))&&!s.gym.decor.some(d=>d.x===x&&d.y===y)}
 export function placeDecoration(s,id,x,y){if(s.gym.session)return 'Finish the current challenge before decorating.';if(id==='remove'){s.gym.decor=s.gym.decor.filter(d=>d.x!==x||d.y!==y);return 'Decoration returned to storage.'}if(!canPlace(s,x,y))return 'Keep the entrance, battle court and centre aisle clear.';const available=(s.gym.ownedDecor[id]||0)-s.gym.decor.filter(d=>d.id===id).length;if(available<=0)return 'Buy another copy first.';s.gym.decor.push({id,x,y});return 'Decoration placed.'}
-export function nextChallenger(s){const g=s.gym,eligible=challengerUnlocks.filter(u=>g.reputation>=u.reputation).length,profile=profiles[g.visits%eligible],tier=Math.min(20,Math.floor(g.reputation/40)),level=Math.min(65,5+tier*3),limit=g.reputation<40?1:g.reputation<120?2:g.reputation<300?3:g.reputation<600?4:g.reputation<1000?5:6,count=Math.min(limit,profile.team.length);return {...profile,id:'visitor-'+g.visits,team:profile.team.slice(0,count).map(id=>trainedSpecies(id,level,trainerTier(s))),level,reward:260+tier*100+count*40,reputation:20,aiTier:trainerTier(s),difficulty:trainerTiers.find(t=>t.id===trainerTier(s)).name}}
-export function acceptChallenger(s){if(s.gym.world.trip)return 'Return to Bellwick with Rook before accepting a Gym challenger.';if(s.gym.world.reserve.activeUid)return 'Finish the reserve encounter first.';if(s.gym.session)return 'A challenger is already visiting.';if(!s.gym.type)return 'Choose your Gym specialisation first.';if(!gymDefenders(s).length)return 'Buy a Pokémon matching your Gym type and add it to your team first.';s.gym.session={challenger:nextChallenger(s),defenders:gymDefenders(s).slice(0,nextChallenger(s).team.length).map(c=>c.uid),status:'arriving',arrivalStartedAt:Date.now(),coinsBefore:s.coins,battle:null};enterBattleHall(s);return 'A challenger is entering your Gym battle hall.'}
+export function nextChallenger(s){const g=s.gym,keys=['milo','iris','marin','ruby','flint','skye','rowan','seren'],available=keys.map((id,i)=>({profile:profiles[i],row:trainerFeed.row('defence-'+id,g.reputation)})).filter(x=>x.row),tier=Math.min(20,Math.floor(g.reputation/40));if(!available.length)return {id:'unavailable',name:'No challengers available',title:'Trainer sheet',portrait:'milo',team:[],level:1,reward:0,reputation:20,difficulty:'Unavailable',style:'Enable a Defence row for your reputation in the trainer sheet.',unavailable:true};const {profile,row}=available[g.visits%available.length],c=applyTrainerTeam(profile,row);return {...c,id:'visitor-'+g.visits,reward:260+tier*100+c.team.length*40,reputation:20,aiTier:trainerTier(s),difficulty:trainerTiers.find(t=>t.id===trainerTier(s)).name}}
+
+export function acceptChallenger(s){if(s.gym.world.trip)return 'Return to Bellwick with Rook before accepting a Gym challenger.';if(s.gym.world.reserve.activeUid)return 'Finish the reserve encounter first.';if(s.gym.session)return 'A challenger is already visiting.';if(!s.gym.type)return 'Choose your Gym specialisation first.';if(!gymDefenders(s).length)return 'Buy a Pokémon matching your Gym type and add it to your team first.';const challenger=nextChallenger(s);if(challenger.unavailable)return 'No enabled challenger team matches your reputation. Check the trainer sheet.';s.gym.session={challenger,defenders:gymDefenders(s).slice(0,challenger.team.length).map(c=>c.uid),status:'arriving',arrivalStartedAt:Date.now(),coinsBefore:s.coins,battle:null};enterBattleHall(s);return 'A challenger is entering your Gym battle hall.'}
 export function startDefense(s){const session=s.gym.session;if(!session||session.status!=='ready'||s.gym.world.location!=='hall'||!(session.challenger.galleryVisit?s.party.length:gymDefenders(s).length))return null;const eligible=new Set(session.challenger.galleryVisit?s.party:gymDefenders(s).map(c=>c.uid)),chosen=(session.defenders||[...eligible].slice(0,session.challenger.team.length)).filter(id=>eligible.has(id));if(!chosen.length||chosen.length>(session.challenger.galleryVisit?6:session.challenger.team.length)||new Set(chosen).size!==chosen.length)return null;session.defenders=chosen;healParty(s);session.status='battle';session.battle=beginDefenseBattle({...s,party:chosen},session.challenger);session.battle.rewardStart=startBattleSummary(s);session.battle.defenseType=session.challenger.galleryVisit?null:s.gym.type;return session.battle}
 export function settleDefense(s,outcome){const session=s.gym.session;if(!session||!['win','loss','withdraw'].includes(outcome))return null;const c=session.challenger,win=outcome==='win',oldRep=s.gym.reputation;const reputation=win?(c.reputation||20):outcome==='loss'?-(c.lossReputation||10):0;s.coins=session.coinsBefore+(win?c.reward:0);if(c.galleryVisit){if(win&&!s.gym.gallery.defeated.includes(c.id))s.gym.gallery.defeated.push(c.id);/* Gallery exhibitions never change Gym reputation. */}else if(c.exhibition){if(win&&!s.gym.leagueWins.includes(c.id))s.gym.leagueWins.push(c.id)}else{if(win)s.gym.wins++;else if(outcome==='loss')s.gym.losses++;s.gym.reputation=Math.max(0,s.gym.reputation+reputation);s.gym.visits++;}const delta=s.gym.reputation-oldRep;s.gym.history.unshift({id:c.id,name:c.name,exhibition:!!c.exhibition,outcome,reward:win?c.reward:0,reputation:delta,at:new Date().toISOString()});s.gym.history=s.gym.history.slice(0,12);s.gym.session=null;if(c.galleryVisit&&session.returnLocation){s.gym.world.location=session.returnLocation;s.gym.world.position={...session.returnPosition}}healParty(s);return {title:win?(c.exhibition?'Visitor challenge won.':'Your Gym stands strong.'):outcome==='withdraw'?'Challenge withdrawn.':'A lesson for the next challenger.',message:(win?`+${c.reward} coins · `:'')+(delta?`${delta>0?'+':''}${delta} Gym reputation. `:'')+'Your team is fully recovered.'}}
 

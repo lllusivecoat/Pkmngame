@@ -1,6 +1,6 @@
-import {playerArt} from './visuals.js?v=20261126-nursejoy3';
-import {gymWorldMaps} from './gym-world-data.js?v=20261126-nursejoy3';
-import {townDistrict} from './town-map-data.js?v=20261126-nursejoy3';
+import {playerArt} from './visuals.js?v=20261125-trainers1';
+import {gymWorldMaps} from './gym-world-data.js?v=20261125-trainers1';
+import {townDistrict} from './town-map-data.js?v=20261125-trainers1';
 const cameraMetrics=new WeakMap();
 function moveCamera(viewport,position,size){const scene=viewport.querySelector('.world-camera-scene');if(!scene)return;const width=viewport.clientWidth;let metrics=cameraMetrics.get(viewport);if(!metrics||metrics.width!==width){const style=getComputedStyle(viewport);metrics={width,columns:Number(style.getPropertyValue('--view-cols')),rows:Number(style.getPropertyValue('--view-rows'))};cameraMetrics.set(viewport,metrics)}const axis=(v,count)=>Math.min(0,(size-count)/2)+Math.max(0,Math.min(Math.max(0,size-count),v+.5-count/2));scene.style.transform=`translate3d(${-axis(position.x,metrics.columns)/size*100}%,${-axis(position.y,metrics.rows)/size*100}%,0)`}
 // Walking updates only the actor and camera, preserving the expensive painted town DOM.

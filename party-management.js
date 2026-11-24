@@ -1,5 +1,5 @@
-import {PARTY_LIMIT} from './core.js?v=20261126-nursejoy3';
-import {expandedSpecies} from './engine-data.js?v=20261126-nursejoy3';
+import {PARTY_LIMIT} from './core.js?v=20261125-trainers1';
+import {expandedSpecies} from './engine-data.js?v=20261125-trainers1';
 const locked=s=>!!s.gym?.session||!!s.gym?.world.reserve.activeUid;
 export function reorderParty(s,uid,delta){if(locked(s))return 'Finish your current battle or challenge first.';if(![-1,1].includes(delta))return 'Choose an adjacent party position.';const index=s.party.indexOf(uid),next=index+delta;if(index<0||next<0||next>=s.party.length)return 'Choose a valid party position.';[s.party[index],s.party[next]]=[s.party[next],s.party[index]];return 'Party order saved. Position 1 is your lead.'}
 export function replaceParty(s,outgoing,incoming){if(locked(s))return 'Finish your current battle or challenge first.';const c=s.collection.find(c=>c.uid===incoming),index=s.party.indexOf(outgoing);if(index<0||!c||s.party.includes(incoming)||s.gym?.breeding.parents.includes(incoming))return 'Choose an available Pokémon from your collection.';s.party[index]=incoming;return expandedSpecies[c.species].name+' joined your party.'}
