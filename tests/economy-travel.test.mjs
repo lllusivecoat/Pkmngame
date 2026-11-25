@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {freshGym,chooseGymType,buyGymPokemon,saveGym,loadGym} from '../gym-mode.js';
 import {buyShopItem} from '../gym-commerce.js';
-import {shopFromCSV,createShopFeed,SHOP_CACHE_KEY,shopFeed} from '../shop-feed.js?v=20261126-trainers1';
+import {shopFromCSV,createShopFeed,SHOP_CACHE_KEY,shopFeed} from '../shop-feed.js?v=20261126-world1';
 import {defaultShopRows,shopHeaders} from '../shop-stock-data.js';
 import {ensureInventory,itemCatalog} from '../items.js';
 import {trainNature,trainingNatures} from '../nature-training.js';

@@ -37,6 +37,7 @@ jobs:
           broad_pid=$!
           (
             set -e
+            node scripts/world-polish73-browser-smoke.mjs
             node scripts/music-window-browser-smoke.mjs
             node scripts/economy-travel-browser-smoke.mjs
             node scripts/companion-life-browser-smoke.mjs

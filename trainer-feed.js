@@ -1,6 +1,6 @@
 // Public configuration only. Never send player saves or credentials to Google.
-import {expandedSpecies} from './engine-data.js?v=20261126-trainers1';
-import {trainerTeamDefaults,trainerSheetHeader} from './trainer-teams-data.js?v=20261126-trainers1';
+import {expandedSpecies} from './engine-data.js?v=20261126-world1';
+import {trainerTeamDefaults,trainerSheetHeader} from './trainer-teams-data.js?v=20261126-world1';
 export const TRAINER_SHEET_ID='1RPZC7zcc6_5lOpPGd94Vdz_o6XV-hx-1b3AF2YET5QE';
 export const TRAINER_SHEET_URL=`https://docs.google.com/spreadsheets/d/${TRAINER_SHEET_ID}/edit#gid=69001`;
 export const TRAINER_CSV_URL=`https://docs.google.com/spreadsheets/d/${TRAINER_SHEET_ID}/gviz/tq?tqx=out:csv&sheet=Trainers&headers=1`;

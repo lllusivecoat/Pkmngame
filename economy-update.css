@@ -8,3 +8,5 @@
 #music-dock.music-minimized{width:1px;height:1px;overflow:hidden;clip-path:inset(50%);pointer-events:none}
 /* The dock lives outside #app so it needs the shared theme tokens explicitly. */
 #music-panel{background:var(--surface);color:var(--text);border:1px solid var(--line-color);border-radius:12px;font:14px/1.5 system-ui,sans-serif}#music-panel #music-heading{display:block;color:var(--text)}#music-panel .hint{color:var(--muted-text);font-size:12px}#music-panel button,#music-panel select{background:var(--surface-soft);color:var(--text);border:1px solid var(--line-color);border-radius:8px;min-height:36px;padding:6px 10px;font:inherit}#music-panel button:focus-visible,#music-panel select:focus-visible{outline:2px solid var(--focus);outline-offset:2px}#music-panel button:disabled{opacity:.5}#music-panel #music-source{color:var(--accent-text)}
+
+.battle-enemy-types{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.battle-enemy-types .element-tag{padding:2px 7px!important;border:1px solid var(--line-color)!important;border-radius:7px;font-size:12px!important}.gym-walk-pad button,.dpad button{touch-action:none}

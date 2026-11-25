@@ -1,9 +1,9 @@
-import {isKeyItem,ownsUniqueItem,normalizeUniquePurchases} from './key-items.js?v=20261126-trainers1';
-import {playerPeriod} from './world-time.js?v=20261126-trainers1';
-import {supportsGmax} from './forms.js?v=20261126-trainers1';
-import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261126-trainers1';
-import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261126-trainers1';
-import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261126-trainers1';
+import {isKeyItem,ownsUniqueItem,normalizeUniquePurchases} from './key-items.js?v=20261126-world1';
+import {playerPeriod} from './world-time.js?v=20261126-world1';
+import {supportsGmax} from './forms.js?v=20261126-world1';
+import {itemCatalog,expandedSpecies,abilityCatalog} from './engine-data.js?v=20261126-world1';
+import {statsFor,movesFor,moveCatalog,gameMoveId,learnedMoves} from './rules.js?v=20261126-world1';
+import {toID,abilityOptions,validAbility,evolutionOptions,evolve,addExperience,levelXP} from './progression.js?v=20261126-world1';
 export {itemCatalog,abilityCatalog};
 export const ITEM_CATEGORIES=['All','Key items','Balls','Medicine','Battle items','Berries','Held items','TMs','Evolution'];
 const aliases={pokeball:'traps',potion:'potions'};
