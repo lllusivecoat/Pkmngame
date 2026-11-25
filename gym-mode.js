@@ -1,20 +1,21 @@
-import {trainerFeed,applyTrainerTeam} from './trainer-feed.js?v=20261125-care2';
-import {normalizeGallery,ensureGallery,galleryOpponent} from './visitor-gallery.js?v=20261125-care2';
-import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261125-care2';
-import {normalizeNursery} from './breeding.js?v=20261125-care2';
-import {startBattleSummary} from './battle-summary.js?v=20261125-care2';
-import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261125-care2';
-import {normalizeFacilities} from './gym-commerce.js?v=20261125-care2';
-import {normalizeGymDesign} from './gym-design.js?v=20261125-care2';
-import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261125-care2';
-import {normalizeReserve} from './gym-world.js?v=20261125-care2';
-import {normalizeTown} from './town.js?v=20261125-care2';
-import {expandedSpecies} from './engine-data.js?v=20261125-care2';
-import {trainerDirectory} from './trainer-directory.js?v=20261125-care2';
+import {gymReputationTier,nextReputationTier} from './gym-reputation.js?v=20261125-economy1';
+import {trainerFeed,applyTrainerTeam} from './trainer-feed.js?v=20261125-economy1';
+import {normalizeGallery,ensureGallery,galleryOpponent} from './visitor-gallery.js?v=20261125-economy1';
+import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261125-economy1';
+import {normalizeNursery} from './breeding.js?v=20261125-economy1';
+import {startBattleSummary} from './battle-summary.js?v=20261125-economy1';
+import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261125-economy1';
+import {normalizeFacilities} from './gym-commerce.js?v=20261125-economy1';
+import {normalizeGymDesign} from './gym-design.js?v=20261125-economy1';
+import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261125-economy1';
+import {normalizeReserve} from './gym-world.js?v=20261125-economy1';
+import {normalizeTown} from './town.js?v=20261125-economy1';
+import {expandedSpecies} from './engine-data.js?v=20261125-economy1';
+import {trainerDirectory} from './trainer-directory.js?v=20261125-economy1';
 // Gym management domain. Storage is independent of the legacy adventure save.
-import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261125-care2';
-import {healParty,addItem,currentHP} from './items.js?v=20261125-care2';
-import {beginDefenseBattle} from './battle.js?v=20261125-care2';
+import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261125-economy1';
+import {healParty,addItem,currentHP} from './items.js?v=20261125-economy1';
+import {beginDefenseBattle} from './battle.js?v=20261125-economy1';
 export const GYM_SAVE_KEY='greenwood.gym.v1';
 const previousStock=[
  ['bulbasaur',550,8,0],['charmander',550,8,0],['squirtle',550,8,0],['pikachu',1000,10,0],['eevee',1100,10,0],['geodude',450,8,0],['oddish',450,8,0],['pidgey',400,8,0],
@@ -44,8 +45,8 @@ const profiles=[
 export function freshGym(){const s=fresh();s.started=true;s.mapMotion=true;s.level=1;s.xp=0;s.coins=2000;s.bag={};s.traps=0;s.betterTraps=[0,0];s.potions=0;s.log=['Your Gym charter includes 2,000 coins and 10 Poké Balls. Choose your starting partner.'];s.gym={clock:newGymClock(),marketClock:{startedAt:Date.now()},facilities:normalizeFacilities(),marketStock:null,starterClaimed:false,design:normalizeGymDesign(),version:4,world:normalizeGymWorld(),town:normalizeTown(),type:null,leagueWins:[],name:'Bellwick Gym',theme:'woodland',reputation:0,wins:0,losses:0,visits:0,decor:[],ownedDecor:Object.fromEntries(decorations.map(d=>[d.id,d.id==='fern'?2:0])),history:[],session:null};s.gym.gallery=normalizeGallery();ensureGallery(s);addItem(s,'pokeball',10);s.gym.world.reserve.welcomeKit=true;s.gym.breeding=normalizeNursery(null,s);s.time=gymClock(s).period;return s}
 export function loadGym(storage){try{const raw=JSON.parse(storage.getItem(GYM_SAVE_KEY));if(!raw?.gym)return freshGym();const s=migrate(raw),g=raw.gym;const int=(n,max=1e7)=>Number.isFinite(n)?Math.min(max,Math.max(0,Math.floor(n))):0;s.gym={...g,clock:normalizeGymClock(g.clock),marketClock:{startedAt:Number.isFinite(g.marketClock?.startedAt)?Math.min(Date.now(),g.marketClock.startedAt):(g.clock?.startedAt||Date.now())},facilities:normalizeFacilities(g.facilities),marketStock:g.marketStock?{...g.marketStock,offers:[]}:null,starterClaimed:!!g.starterClaimed||s.collection.length>0,design:normalizeGymDesign(g.design),version:4,world:normalizeGymWorld(g.world,g.town,g.design),town:normalizeTown(g.town),type:gymTypes.includes(g.type)?g.type:null,leagueWins:Array.isArray(g.leagueWins)?[...new Set(g.leagueWins.filter(id=>trainerDirectory.some(t=>t.id===id)))]:[],name:String(!g.name||g.name==='Greenwood Gym'?'Bellwick Gym':g.name).slice(0,40),theme:gymThemes.some(([id])=>id===g.theme)?g.theme:'woodland',reputation:int(g.reputation),wins:int(g.wins),losses:int(g.losses),visits:int(g.visits),ownedDecor:Object.fromEntries(decorations.map(d=>[d.id,int(g.ownedDecor?.[d.id],99)])),decor:[],history:Array.isArray(g.history)?g.history.slice(0,12):[],session:g.session?.challenger&&['arriving','ready','battle'].includes(g.session.status)?g.session:null};for(const d of Array.isArray(g.decor)?g.decor:[])if(canPlace(s,d.x,d.y)&&decorations.some(a=>a.id===d.id)&&s.gym.decor.filter(a=>a.id===d.id).length<(s.gym.ownedDecor[d.id]||0))s.gym.decor.push({id:d.id,x:d.x,y:d.y});s.started=true;s.mapMotion=s.mapMotion!==false;if(s.gym.session?.status==='arriving'&&!Number.isFinite(s.gym.session.arrivalStartedAt))s.gym.session.arrivalStartedAt=Date.now();s.gym.breeding=normalizeNursery(g.breeding,s);s.party=s.party.filter(id=>!s.gym.breeding.parents.includes(id));if(s.gym.session&&s.gym.session.status!=='battle'&&!s.gym.session.challenger.aiTier){s.gym.session.challenger.aiTier=s.gym.session.challenger.exhibition?'ace':trainerTier(s);s.gym.session.challenger.difficulty=trainerTiers.find(t=>t.id===s.gym.session.challenger.aiTier).name;}if(s.gym.session&&s.gym.session.status!=='battle'&&!Array.isArray(s.gym.session.defenders))s.gym.session.defenders=gymDefenders(s).slice(0,s.gym.session.challenger.team.length).map(c=>c.uid);s.time=gymClock(s).period;s.gym.gallery=normalizeGallery(g.gallery);ensureGallery(s);normalizeReserve(s);if(s.gym.world.location==='gallery-leaders'&&s.gym.gallery.level<2||s.gym.world.location==='gallery-stars'&&s.gym.gallery.level<3){s.gym.world.location='gallery';s.gym.world.position={x:7,y:12}};if(s.gym.session&&!g.world)enterBattleHall(s);return s}catch{return freshGym()}}
 export function saveGym(storage,s){storage.setItem(GYM_SAVE_KEY,JSON.stringify(s))}
-export function nextGymPromotion(s){const rep=s.gym.reputation;return rep<60?{name:'Recognised Gym',target:60,remaining:60-rep}:rep<180?{name:'Established Gym',target:180,remaining:180-rep}:null}
-export function gymRank(s){return s.gym.reputation>=180?'Established Gym':s.gym.reputation>=60?'Recognised Gym':'Local Gym'}
+export function nextGymPromotion(s){const next=nextReputationTier(s.gym.reputation);return next?{name:next.name,target:next.reputation,remaining:next.reputation-s.gym.reputation}:null}
+export function gymRank(s){return gymReputationTier(s.gym.reputation).name}
 export function buyGymPokemon(s,id){if(s.gym.session)return 'Finish the current challenge first.';const item=gymStock.find(p=>p.species===id);if(!item||s.gym.reputation<item.reputation)return 'This Pokémon is not unlocked yet.';if(s.coins<item.price)return 'Not enough coins.';s.gym.starterClaimed=true;const c=createCreature(id,item.level);c.variant='Normal';c.location='Gym Pokémon shop';const balance=s.coins-item.price;catchCreature(s,c);s.coins=balance;healParty(s);return 'New partner purchased. Open Team to manage your party.'}
 export function buyDecoration(s,id){if(s.gym.session)return 'Finish the current challenge first.';if(!s.collection.length)return 'Buy your first Pokémon before decorations.';const d=decorations.find(d=>d.id===id);if(!d||s.coins<d.price)return 'Not enough coins.';if((s.gym.ownedDecor[id]||0)>=20)return 'You already own 20 of this decoration.';s.coins-=d.price;s.gym.ownedDecor[id]=(s.gym.ownedDecor[id]||0)+1;return d.name+' purchased. Select it and tap a floor tile.'}
 export function canPlace(s,x,y){return Number.isInteger(x)&&Number.isInteger(y)&&x>=0&&x<9&&y>=0&&y<9&&!(x===4||y<=1||y===8||(x>=2&&x<=6&&y>=3&&y<=5))&&!s.gym.decor.some(d=>d.x===x&&d.y===y)}

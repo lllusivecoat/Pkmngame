@@ -1,5 +1,5 @@
-import {masteryRank} from './mastery.js?v=20261125-care2';
-import {canonicalIdentity} from './species-identity-data.js?v=20261125-care2';
+import {masteryRank} from './mastery.js?v=20261125-economy1';
+import {canonicalIdentity} from './species-identity-data.js?v=20261125-economy1';
 const metadata=id=>canonicalIdentity[id];
 export function rollGender(species,random=Math.random){const m=metadata(species);return m?.gender||((random()<(m?.female??.5))?'F':'M')}
 export function normalizeGender(c){const m=metadata(c.species);if(m?.gender)return m.gender;if(['M','F'].includes(c.gender)&&!(c.gender==='F'&&m?.female===0)&&!(c.gender==='M'&&m?.female===1))return c.gender;let seed=0;for(const ch of c.uid||c.species)seed=(Math.imul(seed,31)+ch.charCodeAt(0))>>>0;return rollGender(c.species,()=>seed/4294967296)}

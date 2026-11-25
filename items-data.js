@@ -4,4 +4,4 @@ export const itemCatalog={"masterball":{"id":"masterball","name":"Master Ball","
 itemCatalog.maxsoup={id:"maxsoup",name:"Max Soup",category:"Medicine",subtype:"form-training",description:"Adds or removes the Gigantamax factor on a compatible Pokémon. Use outside battle; activate in the Generation 8 Gigantamax ruleset.",cost:10000,engine:false,holdable:false,legacy:false};
 
 // Gymbound key item: enables party-wide XP without occupying a held-item slot.
-itemCatalog.expshareall={id:'expshareall',name:'Exp. Share All',category:'Battle items',subtype:'key-item',description:'Key item: while enabled, healthy party members that did not participate receive half XP. Participants still receive full XP. Works in Gym defence too. Toggle in your Bag.',cost:2000,engine:false,holdable:false,legacy:false,fling:0};
+itemCatalog.expshareall={id:'expshareall',name:'Exp. Share All',category:'Key items',subtype:'key-item',description:'Key item: while enabled, healthy party members that did not participate receive half XP. Participants still receive full XP. Works in Gym defence too. Toggle in your Bag.',cost:50000,engine:false,holdable:false,legacy:false,fling:0};

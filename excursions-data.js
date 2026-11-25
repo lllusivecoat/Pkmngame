@@ -1,4 +1,5 @@
-const trip=(name,theme,pool,levels,tiles)=>({name,theme,pool:pool.split(' '),levels,size:15,spawn:{x:1,y:7},portals:[{x:0,y:7,to:'town',arrival:{x:19,y:18},label:'Return to Bellwick'}],tiles:tiles.map((row,y)=>y===6?row.slice(0,1)+'P'+row.slice(2):row)});
+import {reputationTiers} from './gym-reputation.js?v=20261125-economy1';
+const trip=(name,theme,pool,levels,tiles)=>({name,theme,pool:pool.split(' '),levels,size:15,spawn:{x:1,y:7},portals:[],tiles:tiles.map((row,y)=>y===6?row.slice(0,1)+'P'+row.slice(2):y===7?'X'+row.slice(1):row)});
 export const excursionMaps={
  bramble:trip('Bramble Grove','forest','caterpie oddish shroomish sewaddle petilil fletchling heracross',[6,12],[
  'XXXXXXXXXXXXXXX','XGGFFFGGGFFFGGX','XGPFFFGPGFFFGGX','XGPPPPPPGFFFGGX','XFFGFGGPGGGGGGX','XFFGFGGPPPPPGGX','XGGGGGGPGGGPGGX','PPPPPPPPGGGPGGX','XGGGFGGPGGGPGGX','XGFFFGGPPPPPGGX','XGFFFGGGGGGGGGX','XGGGGPPPPGGFFFX','XGGGGPGGPGGFFFX','XGGGGPPPPGGGGGX','XXXXXXXXXXXXXXX']),
@@ -9,7 +10,14 @@ export const excursionMaps={
 };
 const summitTiles=['XXXXXXXXXXXXXXX','XRRRRGGGGRRRRRX','XRRGGGGGGRRRRRX','XGGPPPPPPGGGRRX','XGGPGGGGPGGGRRX','XGGPGGGGPPPPGGX','XGGPGGGGGGGPGGX','PPPPGGGWWWGPGGX','XGGGGGGWWWGPGGX','XGGPPPGGGGGPGGX','XGGPGPPPPPPPGGX','XGGPGGGGGGGGGRX','XGGPPPPPGGRRRRX','XGGGGGGPGGRRRRX','XXXXXXXXXXXXXXX'];
 const marshTiles=['XXXXXXXXXXXXXXX','XFFFGGGWWWGGFFX','XFFFGGGWWWGGFFX','XGGGPPPGGGGGGGX','XGGGPGPPPPGWWWX','XWWWPGGGGPGWWWX','XWWWPPPPGPGGGGX','PPPPPGGPGPPPPGX','XGGGGGGPGGGGPGX','XGGWWWGPPPPPPGX','XGGWWWGGGGGPGGX','XGGGGGGPPPPPGGX','XFFGGGGPGGGGFFX','XFFGGGGGGGGGFFX','XXXXXXXXXXXXXXX'];
-excursionMaps.moonfen=trip('Moonfen Wetlands','forest','wooper poliwag gastly spinarak croagunk',[28,42],marshTiles);
-excursionMaps.frostwatch=trip('Frostwatch Summit','highland','swinub snorunt snover sneasel bergmite',[38,55],summitTiles);
-for(const [id,fee,reputation,types]of [['bramble',150,0,['Grass','Bug','Normal']],['tideglass',250,60,['Water','Flying']],['emberhollow',400,180,['Fire','Rock','Ground']],['moonfen',650,400,['Ghost','Poison','Water']],['frostwatch',900,800,['Ice','Dragon','Rock']]])Object.assign(excursionMaps[id],{fee,reputation,types});
+excursionMaps.moonfen=trip('Moonfen Wetlands','marsh','wooper poliwag gastly spinarak croagunk',[28,42],marshTiles);
+excursionMaps.frostwatch=trip('Frostwatch Summit','snow','swinub snorunt snover sneasel bergmite',[38,55],summitTiles);
+excursionMaps.sunscar=trip('Sunscar Dunes','desert','hippowdon flygon sandslash krookodile cacturne',[51,60],[
+ 'XXXXXXXXXXXXXXX','XRRRRRRRRRRRRRX','XRGGGGGRGGGGGRX','XRGPPRGRGPPGGRX','XRGPGGGGGGPGGRX','XRGPPPRRPPPGGRX','XGGGGPGGPGGGGRX','PPPPPPGGPPPPPGX','XRRGGPGGPGGGPGX','XRGGPPPPPGGGPGX','XRGGPGGGPGPPPGX','XRGGPGWWPGPGGRX','XRGGPGWWPPPGGRX','XRRRGGGGGGRRRRX','XXXXXXXXXXXXXXX']);
+excursionMaps.ironroot=trip('Ironroot Highlands','ruins','metang aggron lucario magnezone scizor',[61,70],[
+ 'XXXXXXXXXXXXXXX','XRRRRGGGGGRRRRX','XRGGPPPGGGRRRGX','XRGGPGPGGPPPPGX','XGGGPGPPPPGGPGX','XGPPPGGGGRRGPGX','XGPGGGRRRRGGPGX','PPPGGGRRRRPPPGX','XGPGGGRRGGPGGGX','XGPPPPPPGGPGGGX','XGGGGGGPGGPPPGX','XGWWGGGPGGGGPGX','XGWWGGGPPPPPPGX','XGGGGGGGGGRRRRX','XXXXXXXXXXXXXXX']);
+excursionMaps.astralcrown=trip('Astral Crown','astral','dragonite salamence hydreigon gardevoir goodra',[71,80],[
+ 'XXXXXXXXXXXXXXX','XRRRGGGGGGGRRRX','XRRGPPPPPPPGGRX','XRGGPGWWWGPGGRX','XGGGPGWWWGPGGGX','XGPPPPGGGPPPPGX','XGPGGPGGGPGGPGX','PPPGGPPPPPGGPGX','XGPGGGGGGGGGPGX','XGPPPGXXXGPPPGX','XGGGPGXGXGPGGGX','XGGGPPPPPPPGGGX','XRGGGGGGGGGGGRX','XRRRGGGGGGGRRRX','XXXXXXXXXXXXXXX']);
+const themes={bramble:['Grass','Bug','Normal'],tideglass:['Water','Flying'],emberhollow:['Fire','Rock','Ground'],moonfen:['Ghost','Poison','Water'],frostwatch:['Ice','Dragon','Rock'],sunscar:['Ground','Fire','Dragon'],ironroot:['Steel','Fighting','Electric'],astralcrown:['Dragon','Psychic','Fairy']};
+for(const [i,t]of reputationTiers.entries())Object.assign(excursionMaps[t.map],{tier:i+1,fee:[150,250,400,650,900,1200,1600,2000][i],reputation:t.reputation,types:themes[t.map],levels:[i*10+1,(i+1)*10]});
 export const isExcursion=location=>Object.hasOwn(excursionMaps,location);
