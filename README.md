@@ -758,3 +758,13 @@ From 0.53.0: Market/Shop upgrade copy briefly previews only the next level’s a
 ### Live trainer spreadsheet · v0.69
 
 Gym defence and the Visitor’s Gallery now read editable teams, per-Pokémon levels and reputation bands from a live Google Sheet. Open **Settings → Live trainer teams → Edit trainer sheet**. Edit the Trainers tab using the Species ID reference; the game checks every 60 seconds, or use **Sync now**. Google may cache edits briefly. Accepted/active battles remain unchanged; invalid edits or offline access retain a last-valid/bundled backup. AI strategy stays automatic. See [editing instructions and integration details](docs/live-trainer-sheet.md).
+
+### Companion care & town · v0.70
+
+Rename an owned Pokémon in its details (12 characters; blank restores the species name). Nicknames survive saves/evolution and appear in party, storage and battles. **Team → Party & boxes** opens30-slot boxes: deposit, withdraw, move and rename boxes. There are32 initially, expanding as needed. Existing Pokémon keep their identities, health, training, held items and Shiny palettes.
+
+Only eligible Pokémon sent out earn XP by default. Buy **Exp. Share All** from level1 Bellwick Goods for2,000 coins to share half XP with other healthy party members. Toggle it in the Bag. Captured Pokémon never reward themselves. HP/status/PP persist through trainer fights. Speak to Nurse Joy in the Gym’s upper-left corner or Center for free manual recovery. When your active Pokémon faints, choose a healthy replacement; reload retains the pending choice. The last faint ends battle. Losing on a trip returns you to town without healing.
+
+Shop purchases accept quantities1–99 and validate full cost/stack before charging. Exp. Share All is a one-time key item. Rook has a proximity-enabled Travel button and stands beside arrivals. Main buildings have more walking clearance and the avenue has a bridge. Gallery rooms share painted architecture with distinct palettes; Leader career shows remaining reputation to the next current promotion.
+
+Implementation: `companion-care.js`, `storage-ui.js`, `battle-experience.js`, `sim-adapter.js`, `interior-style.js`. Save keys stay unchanged. Box slots reference existing UIDs. Tests cover storage/nickname round trips, quantities, XP, manual replacements, final fainting, care and walking routes.

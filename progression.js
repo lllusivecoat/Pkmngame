@@ -1,5 +1,5 @@
-import {canonicalExperienceTables} from './experience-data.js?v=20261125-trainers1';
-import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261125-trainers1';
+import {canonicalExperienceTables} from './experience-data.js?v=20261125-care2';
+import {expandedSpecies,abilityCatalog} from './engine-data.js?v=20261125-care2';
 export const toID=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 export function xpAtLevel(level,growth='medium'){const group={'slow':1,'medium':2,'fast':3,'medium-slow':4,'erratic':5,'slow-then-very-fast':5,'fluctuating':6,'fast-then-very-slow':6}[growth]||2;return canonicalExperienceTables[group][Math.max(1,Math.min(100,Math.floor(level)))-1]}
 export const levelXP=c=>c.level>=100?0:xpAtLevel(c.level+1,expandedSpecies[c.species]?.growth)-xpAtLevel(c.level,expandedSpecies[c.species]?.growth);

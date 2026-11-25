@@ -1,8 +1,8 @@
-import {outdoorLighting} from './world-lighting.js?v=20261125-trainers1';
-import {excursionMaps} from './excursions-data.js?v=20261125-trainers1';
-import {playerPeriod} from './world-time.js?v=20261125-trainers1';
-import {gymWorldMaps} from './gym-world-data.js?v=20261125-trainers1';
-import {townDistrict} from './town-map-data.js?v=20261125-trainers1';
+import {outdoorLighting} from './world-lighting.js?v=20261125-care2';
+import {excursionMaps} from './excursions-data.js?v=20261125-care2';
+import {playerPeriod} from './world-time.js?v=20261125-care2';
+import {gymWorldMaps} from './gym-world-data.js?v=20261125-care2';
+import {townDistrict} from './town-map-data.js?v=20261125-care2';
 export const outdoorMaps=['town','breeding','reserve',...Object.keys(excursionMaps)];
 export const mapZoom=(s,location=s.gym?.world.location)=>Math.max(0,Math.min(2,Math.floor(Number(s.gym?.mapZoom?.[location])||0)));
 export function changeMapZoom(s,delta){const location=s.gym.world.location;if(!outdoorMaps.includes(location))return 'Zoom is available outside.';s.gym.mapZoom??={};s.gym.mapZoom[location]=Math.max(0,Math.min(2,mapZoom(s)+delta));return 'Map zoom '+(mapZoom(s)===0?'close':mapZoom(s)===1?'wide':'widest')+'.'}

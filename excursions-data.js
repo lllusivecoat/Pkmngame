@@ -1,4 +1,4 @@
-const trip=(name,theme,pool,levels,tiles)=>({name,theme,pool:pool.split(' '),levels,size:15,spawn:{x:1,y:7},portals:[{x:0,y:7,to:'town',arrival:{x:19,y:18},label:'Return to Bellwick'}],tiles});
+const trip=(name,theme,pool,levels,tiles)=>({name,theme,pool:pool.split(' '),levels,size:15,spawn:{x:1,y:7},portals:[{x:0,y:7,to:'town',arrival:{x:19,y:18},label:'Return to Bellwick'}],tiles:tiles.map((row,y)=>y===6?row.slice(0,1)+'P'+row.slice(2):row)});
 export const excursionMaps={
  bramble:trip('Bramble Grove','forest','caterpie oddish shroomish sewaddle petilil fletchling heracross',[6,12],[
  'XXXXXXXXXXXXXXX','XGGFFFGGGFFFGGX','XGPFFFGPGFFFGGX','XGPPPPPPGFFFGGX','XFFGFGGPGGGGGGX','XFFGFGGPPPPPGGX','XGGGGGGPGGGPGGX','PPPPPPPPGGGPGGX','XGGGFGGPGGGPGGX','XGFFFGGPPPPPGGX','XGFFFGGGGGGGGGX','XGGGGPPPPGGFFFX','XGGGGPGGPGGFFFX','XGGGGPPPPGGGGGX','XXXXXXXXXXXXXXX']),

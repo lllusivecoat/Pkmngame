@@ -1,4 +1,4 @@
-import {emblemMark} from './gym-design.js?v=20261125-trainers1';
+import {emblemMark} from './gym-design.js?v=20261125-care2';
 const materials={cloth:0,stone:1,wood:2};
 function patterns(){return Object.entries(materials).map(([name,col])=>`<pattern id="hall-rich-${name}" width="${name==='cloth'?96:180}" height="${name==='cloth'?96:180}" patternUnits="userSpaceOnUse"><svg width="${name==='cloth'?96:180}" height="${name==='cloth'?96:180}" viewBox="${col*724} 0 724 724"><image href="assets/gym-materials.webp" width="2172" height="724"/></svg></pattern>`).join('')}
 function tint(id,color){const channels=[1,3,5].map(i=>parseInt(color.slice(i,i+2),16)/255);const rows=channels.map(c=>[.2126*c*.75,.7152*c*.75,.0722*c*.75,0,c*.55].join(' '));return `<filter id="${id}" data-colour="${color}" filterUnits="userSpaceOnUse" x="0" y="0" width="1400" height="1400" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${rows.join(' ')} 0 0 0 1 0"/></filter>`}
