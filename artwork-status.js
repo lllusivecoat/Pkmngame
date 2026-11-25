@@ -1,11 +1,11 @@
-import {additionalFormSpecies,additionalBattleForms} from './all-forms-data.js?v=20261125-economy1';
-import {gen7891025Species} from './gen7891025-data.js?v=20261125-economy1';
-import {temporaryArtwork} from './temporary-artwork.js?v=20261125-economy1';
-import {unovakalos721Species} from './unovakalos721-data.js?v=20261125-economy1';
-import {hoennsinnoh493Species} from './hoennsinnoh493-data.js?v=20261125-economy1';
-import {johto251Species} from './johto251-data.js?v=20261125-economy1';
-import {kanto151Species} from './kanto151-data.js?v=20261125-economy1';
-import {chibiAtlas,shinyChibiAtlas} from './chibi-sources.js?v=20261125-economy1';
+import {additionalFormSpecies,additionalBattleForms} from './all-forms-data.js?v=20261126-trainers1';
+import {gen7891025Species} from './gen7891025-data.js?v=20261126-trainers1';
+import {temporaryArtwork} from './temporary-artwork.js?v=20261126-trainers1';
+import {unovakalos721Species} from './unovakalos721-data.js?v=20261126-trainers1';
+import {hoennsinnoh493Species} from './hoennsinnoh493-data.js?v=20261126-trainers1';
+import {johto251Species} from './johto251-data.js?v=20261126-trainers1';
+import {kanto151Species} from './kanto151-data.js?v=20261126-trainers1';
+import {chibiAtlas,shinyChibiAtlas} from './chibi-sources.js?v=20261126-trainers1';
 // Explicit temporary art approved for the requested evolution-line expansion. Remove an ID when both painted palettes are bundled.
 export const pendingChibiIds=new Set(["larvitar", "tyranitar", "shelgon",...Object.keys({...additionalFormSpecies,...additionalBattleForms}).filter(id=>!chibiAtlas[id]||!shinyChibiAtlas[id]),...Object.keys(gen7891025Species).filter(id=>!chibiAtlas[id]||!shinyChibiAtlas[id]),...Object.keys(unovakalos721Species).filter(id=>!chibiAtlas[id]||!shinyChibiAtlas[id]),...Object.keys(hoennsinnoh493Species).filter(id=>!chibiAtlas[id]||!shinyChibiAtlas[id]),...Object.keys(johto251Species).filter(id=>!chibiAtlas[id]||!shinyChibiAtlas[id]),...Object.keys(kanto151Species).filter(id=>!chibiAtlas[id]||!shinyChibiAtlas[id])]);
 export const artworkPending=c=>pendingChibiIds.has(typeof c==='string'?c:c.form||c.species);

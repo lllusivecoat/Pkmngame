@@ -1,4 +1,4 @@
-import {expandedSpecies} from './engine-data.js?v=20261125-economy1';
+import {expandedSpecies} from './engine-data.js?v=20261126-trainers1';
 export const cleanNickname=value=>typeof value==='string'?[...value.normalize('NFC').replace(/[\x00-\x1f\x7f<>]/g,'').trim()].slice(0,12).join(''):'';
 export const companionName=c=>cleanNickname(c?.nickname)||expandedSpecies[c?.species]?.name||'Pokémon';
 export const careLocked=(s,inBattle=false)=>inBattle||!!s.gym?.session||!!s.gym?.world?.reserve?.activeUid;

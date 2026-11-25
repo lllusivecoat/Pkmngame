@@ -1,7 +1,7 @@
-import {characterSize} from './world-characters.js?v=20261125-economy1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261125-economy1';
-import {healParty} from './items.js?v=20261125-economy1';
-import {terrainPatterns} from './terrain-art.js?v=20261125-economy1';
+import {characterSize} from './world-characters.js?v=20261126-trainers1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261126-trainers1';
+import {healParty} from './items.js?v=20261126-trainers1';
+import {terrainPatterns} from './terrain-art.js?v=20261126-trainers1';
 export const facilityNpcs={hall:{name:'Nurse Joy',portrait:'nurse_joy',x:3,y:2},center:{name:'Nurse Joy',portrait:'nurse_joy',x:5,y:3},training:{name:'Kenji · Black Belt',portrait:'class_black_belt',x:5,y:3}};
 export function nearFacility(s){const w=s.gym.world,n=facilityNpcs[w.location];return !!n&&s.gym.session?.status!=='battle'&&!w.reserve.activeUid&&Math.abs(w.position.x-n.x)+Math.abs(w.position.y-n.y)<=2}
 export function facilityService(s){if(!nearFacility(s))return 'Walk up to the attendant first.';if(['center','hall'].includes(s.gym.world.location)){healParty(s);return 'Nurse Joy: Your party is fully recovered! HP, status and move PP are restored, free of charge.'}return 'Kenji: Nature coaching costs 10,000 Coins for a party Pokémon. Practice drills and more coaching services are planned for a future update.'}

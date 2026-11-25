@@ -1,4 +1,4 @@
-import {reputationTiers} from './gym-reputation.js?v=20261125-economy1';
+import {reputationTiers} from './gym-reputation.js?v=20261126-trainers1';
 const trip=(name,theme,pool,levels,tiles)=>({name,theme,pool:pool.split(' '),levels,size:15,spawn:{x:1,y:7},portals:[],tiles:tiles.map((row,y)=>y===6?row.slice(0,1)+'P'+row.slice(2):y===7?'X'+row.slice(1):row)});
 export const excursionMaps={
  bramble:trip('Bramble Grove','forest','caterpie oddish shroomish sewaddle petilil fletchling heracross',[6,12],[

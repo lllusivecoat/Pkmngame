@@ -787,3 +787,7 @@ The music window’s minus button switches to a compact visible player without r
 
 ### v0.71.2 — fully minimized background music
 The user supersedes the earlier compact-video design. Minimize now hides the entire window, including video and controls, with no screen footprint or pointer target. It clips the existing dock rather than destroying/reloading the iframe, so active playback continues across navigation. The hidden dock is inert and removed from the accessibility tree; focus moves to the header Music button, which restores the player. Stop/Close still end playback. No fresh-visit autoplay.
+
+
+### v0.72.0 — trainer move progression
+NPC Gym/Gallery opponents use natural level-up moves available at each individual’s level. Compatible TM/HM moves become eligible from level25 onward, including on mixed-level teams; AI tier never bypasses this threshold. Rookie teams retain natural moves; Journeymen/Aces can choose compatible machines after unlocking them. Trainer builds discard injected TM/egg-move knowledge before constructing a legal moveset. Player move learning is unchanged. Existing in-progress battle snapshots finish with their accepted teams; the rule applies when a new trainer battle starts. `trainerMovePool` in `trainer-training.js` is the shared NPC move boundary. `tests/trainer-move-levels.test.mjs` covers the entire registered roster at24, early level boundaries, the24/25 machine unlock, player independence and actual simulator Gym/Gallery teams.

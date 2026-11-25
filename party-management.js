@@ -1,6 +1,6 @@
-import {companionName} from './companion-care.js?v=20261125-economy1';
-import {PARTY_LIMIT} from './core.js?v=20261125-economy1';
-import {expandedSpecies} from './engine-data.js?v=20261125-economy1';
+import {companionName} from './companion-care.js?v=20261126-trainers1';
+import {PARTY_LIMIT} from './core.js?v=20261126-trainers1';
+import {expandedSpecies} from './engine-data.js?v=20261126-trainers1';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const locked=s=>!!s.gym?.session||!!s.gym?.world.reserve.activeUid;
 export function reorderParty(s,uid,delta){if(locked(s))return 'Finish your current battle or challenge first.';if(![-1,1].includes(delta))return 'Choose an adjacent party position.';const index=s.party.indexOf(uid),next=index+delta;if(index<0||next<0||next>=s.party.length)return 'Choose a valid party position.';[s.party[index],s.party[next]]=[s.party[next],s.party[index]];return 'Party order saved. Position 1 is your lead.'}
