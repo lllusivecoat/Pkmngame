@@ -783,3 +783,7 @@ Implementation: `companion-care.js`, `storage-ui.js`, `battle-experience.js`, `s
 
 ### v0.71.1 — compact music window
 The music window’s minus button switches to a compact visible player without replacing, reloading or stopping the YouTube iframe. The header Music button also minimizes/restores while playing, including after navigating. Restore expands the controls; Stop or Close explicitly ends playback. Fresh visits/reopening a closed player never autoplay. The compact embed stays at least200×200px on supported320px+ screens. Desktop/mobile behavior is checked by `scripts/music-window-browser-smoke.mjs`.
+
+
+### v0.71.2 — fully minimized background music
+The user supersedes the earlier compact-video design. Minimize now hides the entire window, including video and controls, with no screen footprint or pointer target. It clips the existing dock rather than destroying/reloading the iframe, so active playback continues across navigation. The hidden dock is inert and removed from the accessibility tree; focus moves to the header Music button, which restores the player. Stop/Close still end playback. No fresh-visit autoplay.
