@@ -779,3 +779,7 @@ Implementation: `companion-care.js`, `storage-ui.js`, `battle-experience.js`, `s
 - Building nameplates are live, above buildings in draw order but physically below entrances, and scale with town zoom. Currency is explicitly labelled Coins.
 - The opt-in Music menu groups Champion, Gym Leader, Elite Four, Super-Ancient, wild and town themes, retaining earlier selections. Collections cover multiple versions and use YouTube chapters; embeds require internet and can vary by region/availability. `docs/music-sources.json` records the sources. No music is downloaded or bundled.
 - Regression checks: `tests/economy-travel.test.mjs` and `scripts/economy-travel-browser-smoke.mjs`. Existing saves, art and the separate adventure save remain compatible.
+
+
+### v0.71.1 — compact music window
+The music window’s minus button switches to a compact visible player without replacing, reloading or stopping the YouTube iframe. The header Music button also minimizes/restores while playing, including after navigating. Restore expands the controls; Stop or Close explicitly ends playback. Fresh visits/reopening a closed player never autoplay. The compact embed stays at least200×200px on supported320px+ screens. Desktop/mobile behavior is checked by `scripts/music-window-browser-smoke.mjs`.
