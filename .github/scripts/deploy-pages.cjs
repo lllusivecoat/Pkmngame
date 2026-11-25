@@ -3,9 +3,12 @@
 module.exports=async({github,context,core,artifactId})=>{
   const owner=context.repo.owner,repo=context.repo.repo,id=Number(artifactId);
   if(!Number.isSafeInteger(id)||id<=0)throw Error('Invalid Pages artifact ID');
-  const artifact=(await github.rest.actions.getArtifact({owner,repo,artifact_id:id})).data;
+  // Use the run-scoped listing: the standalone artifact endpoint can return
+  // 404 immediately after upload even when this verified run lists the file.
+  const artifacts=(await github.rest.actions.listWorkflowRunArtifacts({owner,repo,run_id:context.runId,per_page:100})).data.artifacts;
+  const artifact=artifacts.find(a=>a.id===id);
+  if(!artifact)throw Error('Pages artifact must belong to this run');
   if(artifact.expired)throw Error('Pages artifact has expired');
-  if(artifact.workflow_run?.id!==context.runId)throw Error('Pages artifact must belong to this run');
   core.info(`Publishing verified Pages artifact ${id}`);
   const oidc_token=await core.getIDToken();
   const deployment=(await github.request('POST /repos/{owner}/{repo}/pages/deployments',{owner,repo,artifact_id:id,pages_build_version:context.sha,oidc_token})).data;

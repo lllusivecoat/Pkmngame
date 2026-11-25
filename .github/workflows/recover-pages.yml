@@ -1,4 +1,4 @@
-# Recover the v0.65 build whose game checks passed but Pages publishing failed.
+# Recover the v0.69 build whose game checks passed but Pages publishing failed.
 # The old artifact expires after one day; verification rejects expired/unverified builds.
 name: Recover tested Pages build
 on:
@@ -23,13 +23,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Check deployment validation
+        run: node .github/scripts/deploy-pages.test.cjs
       - name: Verify previously tested source and artifact
         id: verified
         uses: actions/github-script@v7
         with:
           script: |
             const owner=context.repo.owner, repo=context.repo.repo;
-            const runId=45355835625, source='55b185b6fd03a61fdd0c46deedaa593555422607';
+            const runId=45484838941, source='e425d73324e17e7cfec16c57d9fb3303931bfdda';
             const run=(await github.rest.actions.getWorkflowRun({owner,repo,run_id:runId})).data;
             if(run.head_sha!==source)throw Error('Unexpected recovery source');
             const jobs=(await github.rest.actions.listJobsForWorkflowRun({owner,repo,run_id:runId})).data.jobs;
@@ -39,13 +41,13 @@ jobs:
             const diff=(await github.rest.repos.compareCommitsWithBasehead({owner,repo,basehead:source+'...'+context.sha})).data;
             if(!diff.files?.length||diff.files.some(file=>!file.filename.startsWith('.github/')))throw Error('Runtime source differs from the tested build');
             const artifacts=(await github.rest.actions.listWorkflowRunArtifacts({owner,repo,run_id:runId})).data.artifacts;
-            const artifact=artifacts.find(a=>a.id===14903440861&&!a.expired);
-            if(!artifact||artifact.digest!=='sha256:49e1304190ecd715214c90da8df72d19f8f1c9faa337499335474cdf9fb2b15f')throw Error('Recovery artifact missing, expired, or changed');
+            const artifact=artifacts.find(a=>a.id===14965115222&&!a.expired);
+            if(!artifact||artifact.digest!=='sha256:88a8134f979baf6326cd53c5c74d4b6cb2586ae2f8131fce07bb1ab4546e33db')throw Error('Recovery artifact missing, expired, or changed');
             core.setOutput('artifact_id',artifact.id);
       - uses: actions/download-artifact@v4
         with:
           artifact-ids: ${{ steps.verified.outputs.artifact_id }}
-          run-id: 45355835625
+          run-id: 45484838941
           github-token: ${{ github.token }}
           path: recovered
           merge-multiple: true
