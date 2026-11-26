@@ -12,5 +12,5 @@ export const legacyProfiles=[
 const keys=['milo','iris','marin','ruby','flint','skye','rowan','seren'];
 export const careerTrainers=[...legacyProfiles.map((t,i)=>({...t,id:'defence-'+keys[i],category:'Trainer',group:'classes',type:'Mixed',exhibition:false})),...trainerDirectory];
 export const trainerById=new Map(careerTrainers.map(t=>[t.id,t]));
-export function trainerReputation(id){const t=trainerById.get(id);if(!t)return Infinity;if(t.category==='Champion')return 2250;if(t.category==='Elite Four'||t.group==='special')return 1750;if(t.category==='Boss')return 1250;if(t.category==='Gym Leader'||t.category==='Admin')return 750;return 0}
+export function trainerReputation(id){const t=trainerById.get(id);if(!t)return Infinity;if(t.category==='Champion')return 2250;if(t.category==='Elite Four'||t.group==='special')return 1750;if(t.category==='Boss')return 1250;if(t.category==='Gym Leader'||t.category==='Admin')return 750;return id.startsWith('defence-')?0:750}
 export const trainerUnlocked=(id,rep)=>rep>=trainerReputation(id);
