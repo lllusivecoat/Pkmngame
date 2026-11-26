@@ -802,3 +802,9 @@ Current opponent types now appear in the HP/status panel for wild and trainer en
 ### v0.74 · Party drag/drop, trainer rosters and status feedback
 
 Party & boxes supports drag/drop between party and storage, occupied-slot swaps and party reordering; touch users press briefly then drag, with edge scrolling. Buttons remain available. Transactions preserve individual Pokémon and never heal; challenges lock edits. The live trainer sheet now has12 roster slots, configurable battle size (maximum6), evolution stage and roster offset for eight reputation bands. See `docs/live-trainer-sheet.md`. New turn feedback explains blocked actions, major status effects, confusion, residual damage and recovery; battle reports retain these explanations.
+
+### v0.75 · Shared trainer pool and focused releases
+
+All career trainers can challenge the player's Gym and visit the Gallery. Leaders unlock at750 reputation, villain bosses1250, Elite Four/special guests1750, Champions2250. Gallery building rooms still apply. Existing accepted matches and daily rewards are preserved. Kind is now Both in the live trainer sheet; legacy labels load compatibly.
+
+Routine publishing selects relevant unit tests from source dependencies and browser flows from changed features; unchanged artwork is not decoded. Dependencies and the simulator build are cached independently of application version. The GitHub Actions run summary lists selected checks. Use Actions → Publish Gymbound → Run workflow → Full checks for a complete regression. See `docs/release-checks.md`.

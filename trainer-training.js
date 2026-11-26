@@ -1,5 +1,5 @@
-import {expandedSpecies,engineMoves} from './engine-data.js?v=20261126-roster1';
-import {learnedMoves,gameMoveId,moveIds} from './rules.js?v=20261126-roster1';
+import {expandedSpecies,engineMoves} from './engine-data.js?v=20261127-unified1';
+import {learnedMoves,gameMoveId,moveIds} from './rules.js?v=20261127-unified1';
 export const trainerTiers=[{id:'rookie',name:'Rookie',reputation:0},{id:'journeyman',name:'Journeyman',reputation:500},{id:'ace',name:'Ace',reputation:1250}];
 export const trainerTier=s=>s.gym.reputation>=1250?'ace':s.gym.reputation>=500?'journeyman':'rookie';
 export const TRAINER_MACHINE_LEVEL=25;

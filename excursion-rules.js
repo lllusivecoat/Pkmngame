@@ -1,7 +1,7 @@
-import {expandedSpecies} from './engine-data.js?v=20261126-roster1';
-import {isLegendarySpecies} from './pokemon-individuals.js?v=20261126-roster1';
-import {reserveAwake} from './world-time.js?v=20261126-roster1';
-import {excursionMaps} from './excursions-data.js?v=20261126-roster1';
+import {expandedSpecies} from './engine-data.js?v=20261127-unified1';
+import {isLegendarySpecies} from './pokemon-individuals.js?v=20261127-unified1';
+import {reserveAwake} from './world-time.js?v=20261127-unified1';
+import {excursionMaps} from './excursions-data.js?v=20261127-unified1';
 export const TRIP_ENCOUNTERS=6;
 export const tripStage=(s,id)=>excursionMaps[id]?.tier<=2?1:excursionMaps[id]?.tier<=4?2:3;
 export function tripOffer(s,id){const m=excursionMaps[id];return m?{id,name:m.name,fee:m.fee,reputation:m.reputation,unlocked:s.gym.reputation>=m.reputation,tier:m.tier,stage:tripStage(s,id),min:m.levels[0],max:m.levels[1]}:null}

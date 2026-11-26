@@ -1,4 +1,4 @@
-import {expandedSpecies} from './engine-data.js?v=20261126-roster1';
+import {expandedSpecies} from './engine-data.js?v=20261127-unified1';
 const key=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 export const rosterColumns=[...Array.from({length:6},(_,i)=>['Pokemon '+(i+7),'Level '+(i+7)]).flat(),'Battle team size','Evolution stage'];
 export function rosterSpecies(id,level,stage=0){
