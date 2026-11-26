@@ -61,10 +61,13 @@ jobs:
             node scripts/temporary-art-browser-smoke.mjs
           ) &
           focused_pid=$!
-          checks_status=0
-          wait "$broad_pid" || checks_status=1
-          wait "$focused_pid" || checks_status=1
-          exit "$checks_status"
+          # Functional failures should surface immediately; the broad suite includes offline/PWA coverage.
+          if ! wait "$focused_pid"; then
+            kill "$broad_pid" 2>/dev/null || true
+            wait "$broad_pid" 2>/dev/null || true
+            exit 1
+          fi
+          wait "$broad_pid"
       - name: Save browser failure screenshots
         if: failure()
         uses: actions/upload-artifact@v4
