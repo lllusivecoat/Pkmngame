@@ -798,3 +798,7 @@ Keyboard WASD/arrows and held direction buttons repeat at a200ms tile cadence vi
 Nurse Joy stands below the upper-left Gym pillar (following custom layout where practical) and beside the lower-left planter in the Gallery lobby. Both are player-sized, collision-aware and provide explicit free party recovery; active battles block healing.
 The eight career/travel reputation thresholds are0,250,500,750,1250,1750,2250,2750; existing numeric reputation is preserved. Live trainer/shop spreadsheet bands remain independently editable. The first two Rook destinations are free, with normal rank/healthy-party/encounter limits; later fares remain listed and charged once.
 Current opponent types now appear in the HP/status panel for wild and trainer encounters, reflecting simulator type changes. Tests: `tests/world-polish73.test.mjs`, `tests/world-motion.test.mjs`, `scripts/world-polish73-browser-smoke.mjs`.
+
+### v0.74 · Party drag/drop, trainer rosters and status feedback
+
+Party & boxes supports drag/drop between party and storage, occupied-slot swaps and party reordering; touch users press briefly then drag, with edge scrolling. Buttons remain available. Transactions preserve individual Pokémon and never heal; challenges lock edits. The live trainer sheet now has12 roster slots, configurable battle size (maximum6), evolution stage and roster offset for eight reputation bands. See `docs/live-trainer-sheet.md`. New turn feedback explains blocked actions, major status effects, confusion, residual damage and recovery; battle reports retain these explanations.

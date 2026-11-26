@@ -1,6 +1,6 @@
-import {nearFacility} from './facility-rooms.js?v=20261126-world1';
-import {helpInfo} from './help-popups.js?v=20261126-world1';
-import {companionName} from './companion-care.js?v=20261126-world1';
+import {nearFacility} from './facility-rooms.js?v=20261126-roster1';
+import {helpInfo} from './help-popups.js?v=20261126-roster1';
+import {companionName} from './companion-care.js?v=20261126-roster1';
 export const NATURE_TRAINING_COST=10000;
 export const trainingNatures=['Hardy','Lonely','Brave','Adamant','Naughty','Bold','Docile','Relaxed','Impish','Lax','Timid','Hasty','Serious','Jolly','Naive','Modest','Mild','Quiet','Bashful','Rash','Calm','Gentle','Sassy','Careful','Quirky'];
 export function canTrainNature(s){return s.gym?.world?.location==='training'&&!s.gym.session&&!s.gym.world.reserve.activeUid&&nearFacility(s)}

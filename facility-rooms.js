@@ -1,9 +1,9 @@
-import {characterSize} from './world-characters.js?v=20261126-world1';
-import {trainerPortrait} from './trainer-portraits.js?v=20261126-world1';
-import {healParty} from './items.js?v=20261126-world1';
-import {terrainPatterns} from './terrain-art.js?v=20261126-world1';
-export {facilityNpcs} from './facility-positions.js?v=20261126-world1';
-import {facilityNpc} from './facility-positions.js?v=20261126-world1';
+import {characterSize} from './world-characters.js?v=20261126-roster1';
+import {trainerPortrait} from './trainer-portraits.js?v=20261126-roster1';
+import {healParty} from './items.js?v=20261126-roster1';
+import {terrainPatterns} from './terrain-art.js?v=20261126-roster1';
+export {facilityNpcs} from './facility-positions.js?v=20261126-roster1';
+import {facilityNpc} from './facility-positions.js?v=20261126-roster1';
 export function nearFacility(s){const w=s.gym.world,n=facilityNpc(w.location,s.gym.design);return !!n&&s.gym.session?.status!=='battle'&&!w.reserve.activeUid&&Math.abs(w.position.x-n.x)+Math.abs(w.position.y-n.y)<=2}
 export function facilityService(s){if(!nearFacility(s))return 'Walk up to the attendant first.';if(['center','hall','gallery'].includes(s.gym.world.location)){healParty(s);return 'Nurse Joy: Your party is fully recovered! HP, status and move PP are restored, free of charge.'}return 'Kenji: Nature coaching costs 10,000 Coins for a party Pokémon. Practice drills and more coaching services are planned for a future update.'}
 export function facilityTokens(s){const w=s.gym.world,n=facilityNpc(w.location,s.gym.design);if(!n)return '';const size=['hall','gallery'].includes(w.location)?15:11;return `<button id="facility-attendant" class="facility-attendant ${w.location==='center'?'center-nurse':''}" style="left:${(n.x+.5)/size*100}%;top:${(n.y+1)/size*100}%;width:${characterSize.width/size*100}%;height:${characterSize.height/size*100}%" ${nearFacility(s)?'':'disabled'}>${trainerPortrait(n.portrait)}<span>${n.name}</span></button>`}

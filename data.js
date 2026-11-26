@@ -1,11 +1,11 @@
-import {gen7891025EncounterSites} from './gen7891025-data.js?v=20261126-world1';
-import {unovakalos721EncounterSites} from './unovakalos721-data.js?v=20261126-world1';
-import {hoennsinnoh493EncounterSites} from './hoennsinnoh493-data.js?v=20261126-world1';
-import {johto251EncounterSites} from './johto251-data.js?v=20261126-world1';
-import {kanto151EncounterSites} from './kanto151-data.js?v=20261126-world1';
-import {expandedSpecies} from './engine-data.js?v=20261126-world1';
-import {officialSpecies} from './combat-data.js?v=20261126-world1';
-import {zones} from './world.js?v=20261126-world1';
+import {gen7891025EncounterSites} from './gen7891025-data.js?v=20261126-roster1';
+import {unovakalos721EncounterSites} from './unovakalos721-data.js?v=20261126-roster1';
+import {hoennsinnoh493EncounterSites} from './hoennsinnoh493-data.js?v=20261126-roster1';
+import {johto251EncounterSites} from './johto251-data.js?v=20261126-roster1';
+import {kanto151EncounterSites} from './kanto151-data.js?v=20261126-roster1';
+import {expandedSpecies} from './engine-data.js?v=20261126-roster1';
+import {officialSpecies} from './combat-data.js?v=20261126-roster1';
+import {zones} from './world.js?v=20261126-roster1';
 // Static species data and encounter configuration. No network is required.
 export const roster = [
   ['bulbasaur',1,'Bulbasaur','Grass',45,49,49,45,'Common','A quiet woodland partner that thrives in the morning rain.','Forest','Morning','Rain','Overgrow'],
@@ -38,7 +38,7 @@ export const signs={'3,3':0,'6,4':1,'3,6':2};
 export const clues=['Dratini has been spotted along the eastern shoreline. Search east of column 5.','Rain brings it out of hiding. Return when rain falls.','It surfaces at dusk. Watch the water as daylight fades.'];
 export const weatherOptions=['Clear','Rain','Storm','Fog'];
 export const timeOptions=['Morning','Day','Dusk','Night'];
-export {worldEvents as events} from './world-events.js?v=20261126-world1';
+export {worldEvents as events} from './world-events.js?v=20261126-roster1';
 export const tools=[{name:'Poké Ball',price:150,count:10,bonus:0},{name:'Great Ball',price:240,count:5,bonus:.18},{name:'Ultra Ball',price:300,count:3,bonus:.35}];
 export const achievementData=[['first-catch','First catch','Catch a Pokémon beyond your starter.'],['first-steps','Trailblazer','Explore 10 tiles.'],['research','Field researcher','See 8 different species.'],['hunter','Follow the signs','Discover all three Dratini clues.'],['collector','Collector 10','Own 10 individuals.'],['shiny','A different sparkle','Catch a Shiny Pokémon.'],['arena','Arena initiate','Win an AI arena match.'],['mastery','Old friends','Reach Mastery III.'],['dratini','Patient hunter','Catch Dratini.'],['battler','Finding your rhythm','Win 5 battles.']];
 export const masteryRewards=['Profile badge','Passive insight','Ability insight','Cosmetic aura','Companion title'];

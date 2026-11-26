@@ -1,21 +1,21 @@
-import {gymReputationTier,nextReputationTier} from './gym-reputation.js?v=20261126-world1';
-import {trainerFeed,applyTrainerTeam} from './trainer-feed.js?v=20261126-world1';
-import {normalizeGallery,ensureGallery,galleryOpponent} from './visitor-gallery.js?v=20261126-world1';
-import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261126-world1';
-import {normalizeNursery} from './breeding.js?v=20261126-world1';
-import {startBattleSummary} from './battle-summary.js?v=20261126-world1';
-import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261126-world1';
-import {normalizeFacilities} from './gym-commerce.js?v=20261126-world1';
-import {normalizeGymDesign} from './gym-design.js?v=20261126-world1';
-import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261126-world1';
-import {normalizeReserve} from './gym-world.js?v=20261126-world1';
-import {normalizeTown} from './town.js?v=20261126-world1';
-import {expandedSpecies} from './engine-data.js?v=20261126-world1';
-import {trainerDirectory} from './trainer-directory.js?v=20261126-world1';
+import {gymReputationTier,nextReputationTier} from './gym-reputation.js?v=20261126-roster1';
+import {trainerFeed,applyTrainerTeam} from './trainer-feed.js?v=20261126-roster1';
+import {normalizeGallery,ensureGallery,galleryOpponent} from './visitor-gallery.js?v=20261126-roster1';
+import {trainerTier,trainerTiers,trainedSpecies} from './trainer-training.js?v=20261126-roster1';
+import {normalizeNursery} from './breeding.js?v=20261126-roster1';
+import {startBattleSummary} from './battle-summary.js?v=20261126-roster1';
+import {newGymClock,normalizeGymClock,gymClock} from './gym-clock.js?v=20261126-roster1';
+import {normalizeFacilities} from './gym-commerce.js?v=20261126-roster1';
+import {normalizeGymDesign} from './gym-design.js?v=20261126-roster1';
+import {normalizeGymWorld,enterBattleHall} from './gym-world-data.js?v=20261126-roster1';
+import {normalizeReserve} from './gym-world.js?v=20261126-roster1';
+import {normalizeTown} from './town.js?v=20261126-roster1';
+import {expandedSpecies} from './engine-data.js?v=20261126-roster1';
+import {trainerDirectory} from './trainer-directory.js?v=20261126-roster1';
 // Gym management domain. Storage is independent of the legacy adventure save.
-import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261126-world1';
-import {healParty,addItem,currentHP} from './items.js?v=20261126-world1';
-import {beginDefenseBattle} from './battle.js?v=20261126-world1';
+import {fresh,migrate,createCreature,catchCreature} from './core.js?v=20261126-roster1';
+import {healParty,addItem,currentHP} from './items.js?v=20261126-roster1';
+import {beginDefenseBattle} from './battle.js?v=20261126-roster1';
 export const GYM_SAVE_KEY='greenwood.gym.v1';
 const previousStock=[
  ['bulbasaur',550,8,0],['charmander',550,8,0],['squirtle',550,8,0],['pikachu',1000,10,0],['eevee',1100,10,0],['geodude',450,8,0],['oddish',450,8,0],['pidgey',400,8,0],
@@ -31,7 +31,7 @@ export function chooseGymType(s,type){if(!gymTypes.includes(type))return 'Choose
 export function acceptLeagueTrainer(s,id){if(s.gym.world.reserve.activeUid)return 'Finish the reserve encounter first.';if(s.gym.session)return 'Finish your current challenge first.';if(!s.party.length)return 'Add a Pokémon to your active party first.';if(!s.party.some(uid=>currentHP(s.collection.find(c=>c.uid===uid))>0))return 'Your party needs care. Visit Nurse Joy first.';const trainer=galleryOpponent(s,id);if(!trainer)return 'Visit an available trainer inside the Visitor’s Gallery and stand beside them.';s.gym.session={challenger:trainer,defenders:[...s.party],status:'ready',coinsBefore:s.coins,battle:null,returnLocation:s.gym.world.location,returnPosition:{...s.gym.world.position}};enterBattleHall(s);return 'Visitor challenge ready in your Gym battle hall.'}
 export const decorations=[{id:'fern',name:'Potted fern',price:80,icon:'♣'},{id:'flowers',name:'Flower bed',price:100,icon:'✿'},{id:'rock',name:'Stone sculpture',price:150,icon:'◆'},{id:'lamp',name:'Amber lantern',price:120,icon:'◈'},{id:'banner',name:'Leader banner',price:180,icon:'⚑'},{id:'pond',name:'Reflecting pool',price:250,icon:'≈'}];
 export const gymThemes=[['woodland','Woodland'],['coastal','Coastal'],['midnight','Midnight']];
-export const challengerUnlocks=[{reputation:0,label:'Rookie visitors'},{reputation:20,label:'Woodland specialists'},{reputation:60,label:'Coastal challengers'},{reputation:100,label:'Ember specialists'},{reputation:180,label:'Veteran battlers'},{reputation:300,label:'Travelling rivals'},{reputation:500,label:'Ace trainers'},{reputation:900,label:'Elite challengers'}];
+export const challengerUnlocks=[{reputation:0,label:'Rookie visitors'},{reputation:250,label:'Woodland specialists'},{reputation:500,label:'Coastal challengers'},{reputation:750,label:'Ember specialists'},{reputation:1250,label:'Veteran battlers'},{reputation:1750,label:'Travelling rivals'},{reputation:2250,label:'Ace trainers'},{reputation:2750,label:'Elite challengers'}];
 const profiles=[
  {name:'Milo',portrait:'milo',title:'New challenger',team:['pidgey','caterpie'],style:'A balanced first test.'},
  {name:'Iris',portrait:'iris',title:'Woodland specialist',team:['oddish','paras','bulbasaur'],style:'Nature and status moves.'},
